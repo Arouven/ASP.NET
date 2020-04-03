@@ -3,15 +3,12 @@
 <!DOCTYPE html>
 
 <script runat="server">
-    Sub Page_Load()
-        Label1.Text = "Page Load"
-    End Sub
-    Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Label1.Text &= "<br />Button Click"
-    End Sub
-    Sub Page_PreRender()
-        Label1.Text &= "<br />Page PreRender"
-    End Sub
+	Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
+		Label1.Text &= "<br />Button Click"
+	End Sub
+	Sub Page_PreRender()
+		Label1.Text &= "<br />Page PreRender"
+	End Sub
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
