@@ -137,9 +137,20 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\classy-nav.min.css" />
+    <Content Include="css\custom-icon.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\owl.carousel.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\classy.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -149,15 +160,72 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="hoho\style.css.map" />
+    <Content Include="img\bg-img\bg-1.jpg" />
+    <Content Include="img\bg-img\bg-2.jpg" />
+    <Content Include="img\bg-img\bg-3.jpg" />
+    <Content Include="img\bg-img\bg-4.jpg" />
+    <Content Include="img\bg-img\breadcumb.jpg" />
+    <Content Include="img\bg-img\gallery1.jpg" />
+    <Content Include="img\bg-img\gallery2.jpg" />
+    <Content Include="img\bg-img\gallery3.jpg" />
+    <Content Include="img\bg-img\gallery4.jpg" />
+    <Content Include="img\bg-img\gallery5.jpg" />
+    <Content Include="img\bg-img\gallery6.jpg" />
+    <Content Include="img\bg-img\pc-1.jpg" />
+    <Content Include="img\bg-img\pc-2.jpg" />
+    <Content Include="img\bg-img\pc-3.jpg" />
+    <Content Include="img\bg-img\pc-4.jpg" />
+    <Content Include="img\bg-img\pc-5.jpg" />
+    <Content Include="img\bg-img\pc-6.jpg" />
+    <Content Include="img\bg-img\t1.jpg" />
+    <Content Include="img\bg-img\t2.jpg" />
+    <Content Include="img\bg-img\t3.jpg" />
+    <Content Include="img\bg-img\t4.jpg" />
+    <Content Include="img\bg-img\tea1.jpg" />
+    <Content Include="img\bg-img\tea2.jpg" />
+    <Content Include="img\bg-img\tea3.jpg" />
+    <Content Include="img\bg-img\tea4.jpg" />
+    <Content Include="img\blog-img\1.jpg" />
+    <Content Include="img\blog-img\2.jpg" />
+    <Content Include="img\blog-img\3.jpg" />
+    <Content Include="img\blog-img\add.png" />
+    <Content Include="img\blog-img\lb-1.jpg" />
+    <Content Include="img\blog-img\lb-2.jpg" />
+    <Content Include="img\blog-img\lb-3.jpg" />
+    <Content Include="img\blog-img\lb-4.jpg" />
+    <Content Include="img\clients-img\partner-1.png" />
+    <Content Include="img\clients-img\partner-2.png" />
+    <Content Include="img\clients-img\partner-3.png" />
+    <Content Include="img\clients-img\partner-4.png" />
+    <Content Include="img\clients-img\partner-5.png" />
+    <Content Include="img\core-img\favicon.ico" />
+    <Content Include="img\core-img\logo.png" />
+    <Content Include="img\core-img\logo2.png" />
+    <Content Include="js\active.js" />
+    <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\bootstrap\popper.min.js" />
+    <Content Include="js\google-map\map-active.js" />
+    <Content Include="js\jquery\jquery-2.2.4.min.js" />
+    <Content Include="js\plugins\plugins.js" />
+    <Content Include="master1.Master" />
+    <Content Include="Content\style.css.map" />
+    <Content Include="fonts\classy.eot" />
+    <Content Include="fonts\classy.ttf" />
+    <Content Include="fonts\classy.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\style.scssc" />
+    <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_mixin.scssc" />
+    <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_responsive.scssc" />
+    <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_theme_color.scssc" />
+    <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_variables.scssc" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="hoho\about-us.html" />
-    <Content Include="hoho\blog.html" />
-    <Content Include="hoho\contact.html" />
-    <Content Include="hoho\course.html" />
-    <Content Include="hoho\elements.html" />
-    <Content Include="hoho\index.html" />
-    <Content Include="hoho\style.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -215,6 +283,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="master1.Master.designer.vb">
+      <DependentUpon>master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master1.Master.vb">
+      <DependentUpon>master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -281,6 +356,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\_mixin.scss" />
+    <Content Include="scss\_responsive.scss" />
+    <Content Include="scss\_theme_color.scss" />
+    <Content Include="scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
