@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="Elements.aspx.vb" Inherits="TeacherStudent.Elements" %>
+﻿<%@ Page Title="Elements" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="Elements.aspx.vb" Inherits="TeacherStudent.Elements" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -25,9 +25,9 @@
 					<!-- Selene Button -->
 					<div class="academy-buttons-area mb-100">
 						<a href="#" class="btn academy-btn m-2">Contact Us</a>
-						<a href="#" class="btn academy-btn btn-2 m-2">Contact Us</a>
-						<a href="#" class="btn academy-btn btn-3 m-2">Contact Us</a>
-						<a href="#" class="btn academy-btn btn-4 m-2">Contact Us</a>
+						<a href="Contact" class="btn academy-btn btn-2 m-2">Contact Us</a>
+						<a href="Contact" class="btn academy-btn btn-3 m-2">Contact Us</a>
+						<a href="Contact" class="btn academy-btn btn-4 m-2">Contact Us</a>
 					</div>
 				</div>
 

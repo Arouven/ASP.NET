@@ -33,12 +33,12 @@
 
 									<!-- Contact Social Info -->
 									<div class="contact-social-info d-flex mb-30">
-										<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+										<a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+										<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+										<a href="http://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										<a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+										<a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a>
+										<a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 									</div>
 
 									<!-- Single Contact Info -->

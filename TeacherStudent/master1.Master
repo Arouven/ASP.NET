@@ -53,11 +53,11 @@
 					<div class="col-12 h-100">
 						<div class="header-content h-100 d-flex align-items-center justify-content-between">
 							<div class="academy-logo">
-								<a href="home">
+								<a href="Home">
 									<img src="img/core-img/logo.png" alt=""></a>
 							</div>
 							<div class="login-content">
-								<a href="#">Register / Login</a>
+								<a href="RrgisterLogin">Register / Login</a>
 							</div>
 						</div>
 					</div>
@@ -88,35 +88,35 @@
 							<!-- Nav Start -->
 							<div class="classynav">
 								<ul>
-									<li><a href="home">Home</a></li>
+									<li><a href="Home">Home</a></li>
 									<li><a href="#">Pages</a>
 										<ul class="dropdown">
-											<li><a href="#">Home</a></li>
-											<li><a href="#">About Us</a></li>
-											<li><a href="#">Course</a></li>
-											<li><a href="#">Blog</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Elements</a></li>
+											<li><a href="Home">Home</a></li>
+											<li><a href="About">About Us</a></li>
+											<li><a href="Course">Course</a></li>
+											<li><a href="Blog">Blog</a></li>
+											<li><a href="Contact">Contact</a></li>
+											<li><a href="Elements">Elements</a></li>
 										</ul>
 									</li>
 									<li><a href="#">Mega Menu</a>
 										<div class="megamenu">
 											<ul class="single-mega cn-col-4">
-												<li><a href="#">Home</a></li>
+												<li><a href="Home">Home</a></li>
 												<li><a href="#">Services &amp; Features</a></li>
 												<li><a href="#">Accordions and tabs</a></li>
 												<li><a href="#">Menu ideas</a></li>
 												<li><a href="#">Students Gallery</a></li>
 											</ul>
 											<ul class="single-mega cn-col-4">
-												<li><a href="#">Home</a></li>
+												<li><a href="Home">Home</a></li>
 												<li><a href="#">Services &amp; Features</a></li>
 												<li><a href="#">Accordions and tabs</a></li>
 												<li><a href="#">Menu ideas</a></li>
 												<li><a href="#">Students Gallery</a></li>
 											</ul>
 											<ul class="single-mega cn-col-4">
-												<li><a href="#">Home</a></li>
+												<li><a href="HHome">Home</a></li>
 												<li><a href="#">Services &amp; Features</a></li>
 												<li><a href="#">Accordions and tabs</a></li>
 												<li><a href="#">Menu ideas</a></li>
@@ -127,9 +127,9 @@
 											</div>
 										</div>
 									</li>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Course</a></li>
-									<li><a href="#">Contact</a></li>
+									<li><a href="About">About Us</a></li>
+									<li><a href="Course">Course</a></li>
+									<li><a href="Contact">Contact</a></li>
 								</ul>
 							</div>
 							<!-- Nav End -->
@@ -168,11 +168,11 @@
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
 							<div class="footer-social-info">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-dribbble"></i></a>
-								<a href="#"><i class="fa fa-behance"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+								<a href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+								<a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a>
+								<a href="https://www.behance.net/"><i class="fa fa-behance"></i></a>
+								<a href="https://www.linkedin.com/"><i class="fa fa-instagram"></i></a>
 							</div>
 						</div>
 					</div>
@@ -184,7 +184,7 @@
 							</div>
 							<nav>
 								<ul class="useful-links">
-									<li><a href="#">Home</a></li>
+									<li><a href="Home">Home</a></li>
 									<li><a href="#">Services &amp; Features</a></li>
 									<li><a href="#">Accordions and tabs</a></li>
 									<li><a href="#">Menu ideas</a></li>
