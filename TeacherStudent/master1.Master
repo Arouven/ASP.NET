@@ -14,6 +14,7 @@
 	<title><%: Page.Title %> - Academy</title>
 
 	<link rel="icon" href="img/core-img/favicon.ico">
+	<link rel="stylesheet" href="css/loginStyle.css">
 
 	<!-- Core Stylesheet -->
 	<link rel="stylesheet" href="style.css">
@@ -39,8 +40,9 @@
 									<img src="img/core-img/logo.png" alt=""></a>
 							</div>
 							<div class="login-content">
-								<a href="Login">
-									<asp:Label ID="LabelUsername" runat="server" ></asp:Label></a>
+								<a href="Login" id="logout">
+									<asp:Label ID="LabelUsername" runat="server"></asp:Label>
+								</a>
 							</div>
 						</div>
 					</div>

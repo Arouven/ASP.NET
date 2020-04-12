@@ -4,9 +4,14 @@
 		If (Session("un") Is Nothing) Or (Session("un") = "Register / Login") Then
 			LabelUsername.Text = "Register / Login"
 		Else
-			LabelUsername.Text = Session("un")
+			LabelUsername.Text = Session("un") & " | Logout"
+			LabelUsername.
 		End If
 	End Sub
 
 
+
+	'Session.Abandon()
+	'           Session.Clear()
+	'           Response.Redirect("Login.aspx")
 End Class
