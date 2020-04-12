@@ -34,8 +34,6 @@
 				<asp:Button ID="ButtonLogin" CssClass="logreg" runat="server" Text="login" />
 
 				<p class="message">Not registered? <a href="#">Create an account</a></p>
-				<asp:Button ID="Button1" runat="server" Text="Button" />
-				<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 			</div>
 
 
