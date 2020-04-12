@@ -1,47 +1,10 @@
 ﻿
 Imports System.Data.SqlClient
-Imports System.Web.Mail
-'Imports System.Net.Mail
+Imports System.Data
 
 Public Class Login
 	Inherits System.Web.UI.Page
-
-
-	Protected Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
-		' https://www.thaicreate.com/free-web-script/asp.net-register-login-reset-password-update-profile.html
-
-		Dim objConn As SqlConnection
-		Dim strConnString As String
-		Dim strSQL As StringBuilder
-		Dim objCmd As SqlCommand
-		Dim intCount As Integer = 0
-
-		'*** Open Connection ***'
-		strConnString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Arouven\Source\Repos\ASP.NET\TeacherStudent\App_Data\TeacherStudentDB.mdf;Integrated Security=True"
-		objConn = New SqlConnection
-		objConn.ConnectionString = strConnString
-		objConn.Open()
-
-		'*** Check Login ***'
-		strSQL = New StringBuilder
-		strSQL.Append(" SELECT COUNT(*) FROM [dbo].[RegisterTable]  WHERE [Name] = @sUsername  AND [Password] = @sPassword ")
-		objCmd = New SqlCommand(strSQL.ToString(), objConn)
-		objCmd.Parameters.Add("@sUsername", SqlDbType.VarChar).Value = Me.TextBoxUsernameLog.Text
-		objCmd.Parameters.Add("@sPassword", SqlDbType.VarChar).Value = Me.TextBoxPasswordLog.Text
-		intCount = objCmd.ExecuteScalar()
-
-		objConn.Close()
-		objConn = Nothing
-
-		If intCount <= 0 Then
-			Me.lblStatus.ForeColor = Drawing.Color.Red
-			Me.lblStatus.Text = "Username or Password wrong!"
-		Else
-			Session("un") = Me.TextBoxUsernameLog.Text
-			Response.Redirect("Home")
-		End If
-
-	End Sub
+	''#######' https://www.thaicreate.com/free-web-script/asp.net-register-login-reset-password-update-profile.html
 
 	Protected Sub ButtonRegister_Click(sender As Object, e As EventArgs) Handles ButtonRegister.Click
 		Dim objConn As SqlConnection
@@ -97,6 +60,43 @@ Public Class Login
 
 	End Sub
 
+	Protected Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
 
+
+		Response.Write("<script>alert('login click');</script>")
+
+		Dim objConn As SqlConnection
+		Dim strConnString As String
+		Dim strSQL As StringBuilder
+		Dim objCmd As SqlCommand
+		Dim intCount As Integer = 0
+
+		'*** Open Connection ***'
+		strConnString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Arouven\Source\Repos\ASP.NET\TeacherStudent\App_Data\TeacherStudentDB.mdf;Integrated Security=True"
+		objConn = New SqlConnection
+		objConn.ConnectionString = strConnString
+		objConn.Open()
+
+		'*** Check Login ***'
+		strSQL = New StringBuilder
+		strSQL.Append(" SELECT COUNT(*) FROM [dbo].[RegisterTable]  WHERE [Name] = @sUsername  AND [Password] = @sPassword ")
+		objCmd = New SqlCommand(strSQL.ToString(), objConn)
+		objCmd.Parameters.Add("@sUsername", SqlDbType.VarChar).Value = Me.TextBoxUsernameLog.Text
+		objCmd.Parameters.Add("@sPassword", SqlDbType.VarChar).Value = Me.TextBoxPasswordLog.Text
+
+		intCount = objCmd.ExecuteScalar()
+
+		objConn.Close()
+		objConn = Nothing
+
+		If intCount <= 0 Then
+			Me.lblStatus.ForeColor = Drawing.Color.Red
+			Me.lblStatus.Text = "Username or Password wrong!"
+		Else
+			Session("un") = Me.TextBoxUsernameLog.Text
+			Response.Redirect("Home")
+		End If
+
+	End Sub
 
 End Class

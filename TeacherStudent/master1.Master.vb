@@ -3,15 +3,10 @@
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		If (Session("un") Is Nothing) Or (Session("un") = "Register / Login") Then
 			LabelUsername.Text = "Register / Login"
+			logout.HRef = "Login"
 		Else
 			LabelUsername.Text = Session("un") & " | Logout"
-			LabelUsername.
+			logout.HRef = "Logout"
 		End If
 	End Sub
-
-
-
-	'Session.Abandon()
-	'           Session.Clear()
-	'           Response.Redirect("Login.aspx")
 End Class

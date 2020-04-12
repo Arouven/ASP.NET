@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class master1
 
 	'''<summary>
+	'''logout control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents logout As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
 	'''LabelUsername control.
 	'''</summary>
 	'''<remarks>

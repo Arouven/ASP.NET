@@ -19,19 +19,23 @@
 	<div class="login-page">
 		<form class="form" runat="server">
 			<div class="register-form">
-				<asp:TextBox ID="TextBoxUsernameReg" runat="server" placeholder="Username" required />
-				<asp:TextBox ID="TextBoxPasswordReg" runat="server" TextMode="Password" placeholder="Password" required />
-				<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss" required />
+				<asp:TextBox ID="TextBoxUsernameReg" runat="server" placeholder="Username" />
+				<asp:TextBox ID="TextBoxPasswordReg" runat="server" TextMode="Password" placeholder="Password" />
+				<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss"  />
 				<asp:Button ID="ButtonRegister" CssClass="logreg" runat="server" Text="create" />
 				<p class="message">Already registered? <a href="#">Sign In</a></p>
 			</div>
 
 
 			<div class="login-form">
-				<asp:TextBox ID="TextBoxUsernameLog" runat="server" placeholder="Username" required />
-				<asp:TextBox ID="TextBoxPasswordLog" runat="server" TextMode="Password" placeholder="Password" required />
+				<asp:TextBox ID="TextBoxUsernameLog" runat="server" placeholder="Username" ></asp:TextBox>
+				<asp:TextBox ID="TextBoxPasswordLog" runat="server" TextMode="Password" placeholder="Password" ></asp:TextBox>
+
 				<asp:Button ID="ButtonLogin" CssClass="logreg" runat="server" Text="login" />
+
 				<p class="message">Not registered? <a href="#">Create an account</a></p>
+				<asp:Button ID="Button1" runat="server" Text="Button" />
+				<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 			</div>
 
 

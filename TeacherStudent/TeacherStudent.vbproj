@@ -217,6 +217,7 @@
     <Content Include="js\login.js" />
     <Content Include="js\plugins\plugins.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="master1.Master" />
     <Content Include="fonts\classy.eot" />
     <Content Include="fonts\classy.ttf" />
@@ -329,6 +330,13 @@
     </Compile>
     <Compile Include="Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="master1.Master.designer.vb">
