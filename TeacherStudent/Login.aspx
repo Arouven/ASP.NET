@@ -7,9 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Sign Up Form by Colorlib</title>
-
+	
+	<link rel="icon" href="img/core-img/favicon.ico">
 	<!-- Font Icon -->
-	<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+	<%--<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">--%>
 
 	<!-- Main css -->
 	<link rel="stylesheet" href="css/loginStyle.css">
@@ -27,12 +28,13 @@
 
 
 			<div class="login-form">
-				<asp:TextBox ID="TextBoxUsernameLog" runat="server"  placeholder="Username"></asp:TextBox>
+				<asp:TextBox ID="TextBoxUsernameLog" runat="server" placeholder="Username"></asp:TextBox>
 				<asp:TextBox ID="TextBoxPasswordLog" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
 				<asp:Button ID="ButtonLogin" CssClass="logreg" runat="server" Text="login" />
 				<p class="message">Not registered? <a href="#">Create an account</a></p>
 			</div>
 		</form>
+		<asp:Label ID="lblStatus" runat="server" Text="Label"></asp:Label>
 	</div>
 
 
