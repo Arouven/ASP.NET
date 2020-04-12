@@ -21,15 +21,15 @@
 			<div class="register-form">
 				<asp:TextBox ID="TextBoxUsernameReg" runat="server" placeholder="Username" />
 				<asp:TextBox ID="TextBoxPasswordReg" runat="server" TextMode="Password" placeholder="Password" />
-				<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss"  />
+				<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss" />
 				<asp:Button ID="ButtonRegister" CssClass="logreg" runat="server" Text="create" />
 				<p class="message">Already registered? <a href="#">Sign In</a></p>
 			</div>
 
 
 			<div class="login-form">
-				<asp:TextBox ID="TextBoxUsernameLog" runat="server" placeholder="Username" ></asp:TextBox>
-				<asp:TextBox ID="TextBoxPasswordLog" runat="server" TextMode="Password" placeholder="Password" ></asp:TextBox>
+				<asp:TextBox ID="TextBoxUsernameLog" runat="server" placeholder="Username"></asp:TextBox>
+				<asp:TextBox ID="TextBoxPasswordLog" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
 
 				<asp:Button ID="ButtonLogin" CssClass="logreg" runat="server" Text="login" />
 
