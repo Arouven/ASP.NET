@@ -14,11 +14,12 @@
 	<title><%: Page.Title %> - Academy</title>
 
 	<link rel="icon" href="img/core-img/favicon.ico">
+
+	<!-- login Stylesheet -->
 	<link rel="stylesheet" href="css/loginStyle.css">
 
 	<!-- Core Stylesheet -->
 	<link rel="stylesheet" href="style.css">
-	
 </head>
 <body>
 
@@ -41,7 +42,7 @@
 									<img src="img/core-img/logo.png" alt=""></a>
 							</div>
 							<div class="login-content">
-								<a id="logout" runat="server" href="#">
+								<a id="loginout" runat="server" href="#">
 									<asp:Label ID="LabelUsername" runat="server"></asp:Label>
 								</a>
 							</div>
@@ -135,11 +136,35 @@
 
 
 
+	<div class="login-page" id="logindiv" style="position: fixed; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 99999; display: none;">
+		<form class="form" runat="server">
+			<div class="register-form">
+				<asp:TextBox ID="TextBoxUsernameReg" runat="server" placeholder="Username" />
+				<asp:TextBox ID="TextBoxPasswordReg" runat="server" TextMode="Password" placeholder="Password" />
+				<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss" />
+				<asp:Button ID="ButtonRegister" CssClass="logreg" runat="server" Text="create" />
+				<p class="message">Already registered? <a href="#">Sign In</a></p>
+			</div>
+
+			<div class="login-form">
+				<asp:TextBox ID="TextBoxUsernameLog" runat="server" placeholder="Username"></asp:TextBox>
+				<asp:TextBox ID="TextBoxPasswordLog" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+				<asp:Button ID="ButtonLogin" CssClass="logreg" runat="server" Text="login" />
+				<p class="message">Not registered? <a href="#">Create an account</a></p>
+			</div>
+			<br />
+			<asp:Label ID="lblStatus" runat="server"></asp:Label>
+		</form>
+	</div>
+
+
+	<div id="blurme">
+
 	<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 	</asp:ContentPlaceHolder>
 
 
-
+	</div>
 	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">
 		<div class="main-footer-area section-padding-100-0">
@@ -245,7 +270,49 @@
 	<!-- ##### Footer Area Start ##### -->
 
 
+
+
+
+
+
+
+	<%--	<!-- form itself end-->
+	<form id="test-form" class="white-popup-block mfp-hide">
+		<div class="popup_box ">
+			<div class="popup_inner">
+				<div class="logo text-center">
+					<a href="#">
+						<img src="img/form-logo.png" alt="">
+					</a>
+				</div>
+				<h3>Sign in</h3>
+				<form action="#">
+					<div class="row">
+						<div class="col-xl-12 col-md-12">
+							<input type="email" placeholder="Enter email">
+						</div>
+						<div class="col-xl-12 col-md-12">
+							<input type="password" placeholder="Password">
+						</div>
+						<div class="col-xl-12">
+							<button type="submit" class="boxed_btn_orange">Sign in</button>
+						</div>
+					</div>
+				</form>
+				<p class="doen_have_acc">
+					Don’t have an account? <a class="dont-hav-acc" href="#test-form2">Sign Up</a>
+				</p>
+			</div>
+		</div>
+	</form>
+	<!-- form itself end -->
+
+	<!-- form itself end-->
+
+	<!-- form itself end -->--%>
+
 	<!-- ##### All Javascript Script ##### -->
+
 	<!-- jQuery-2.2.4 js -->
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->
@@ -256,5 +323,9 @@
 	<script src="js/plugins/plugins.js"></script>
 	<!-- Active js -->
 	<script src="js/active.js"></script>
+	<!-- loginregister js -->
+	<script src="js/login.js"></script>
+
 </body>
+
 </html>
