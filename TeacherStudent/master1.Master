@@ -42,7 +42,7 @@
 									<img src="img/core-img/logo.png" alt=""></a>
 							</div>
 							<div class="login-content">
-								<a id="loginout" runat="server" href="#">
+								<a id="Logout" runat="server" href="#">
 									<asp:Label ID="LabelUsername" runat="server"></asp:Label>
 								</a>
 							</div>
@@ -136,12 +136,18 @@
 
 
 
-	<div class="login-page" id="logindiv" style="position: fixed; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 99999; display: none;">
+<%--	<div class="login-page" id="logindiv" style="position: fixed; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 99999; display: none;">
 		<form class="form" runat="server">
 			<div class="register-form">
 				<asp:TextBox ID="TextBoxUsernameReg" runat="server" placeholder="Username" />
 				<asp:TextBox ID="TextBoxPasswordReg" runat="server" TextMode="Password" placeholder="Password" />
 				<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss" />
+				
+				<asp:TextBox runat="server" placeholder="Username" />
+				<asp:TextBox runat="server" TextMode="Password" placeholder="Password" />
+				<asp:TextBox  runat="server" TextMode="Email" placeholder="Email adderss" /><asp:TextBox  runat="server" placeholder="Username" />
+				<asp:TextBox runat="server" TextMode="Password" placeholder="Password" />
+				<asp:TextBox  runat="server" TextMode="Email" placeholder="Email adderss" />
 				<asp:Button ID="ButtonRegister" CssClass="logreg" runat="server" Text="create" />
 				<p class="message">Already registered? <a href="#">Sign In</a></p>
 			</div>
@@ -158,13 +164,13 @@
 	</div>
 
 
-	<div id="blurme">
+	<div id="blurme">--%>
 
 	<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 	</asp:ContentPlaceHolder>
 
 
-	</div>
+	<%--</div>--%>
 	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">
 		<div class="main-footer-area section-padding-100-0">
