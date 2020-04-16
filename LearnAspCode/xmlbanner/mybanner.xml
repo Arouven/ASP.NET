@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<advertisements>
+  <!-- Banner Advertisements -->
+  <Ad>
+    <ImageUrl>~/images/ad1.jpg</ImageUrl>
+    <Width>300</Width>
+    <Height>50</Height>
+    <NavigateUrl>http://www.aspnet.com</NavigateUrl>
+    <AlternateText>Banner Advertisement 1</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/ad2.jpg</ImageUrl>
+    <Width>300</Width>
+    <Height>50</Height>
+    <NavigateUrl>http://www.php.com</NavigateUrl>
+    <AlternateText>Banner Advertisement 2</AlternateText>
+    <Impressions>25</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/ad3.jpg</ImageUrl>
+    <Width>300</Width>
+    <Height>50</Height>
+    <NavigateUrl>http://www.jsp.com</NavigateUrl>
+    <AlternateText>Banner Advertisement 3</AlternateText>
+    <Impressions>25</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <!-- Box Advertisements -->
+  <Ad>
+    <ImageUrl>~/images/ad4.jpg</ImageUrl>
+    <Width>150</Width>
+    <Height>150</Height>
+    <NavigateUrl>http://www.coldfusion.com</NavigateUrl>
+    <AlternateText>Box Advertisement 1</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>box</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/ad5.jpg</ImageUrl>
+    <Width>150</Width>
+    <Height>150</Height>
+    <NavigateUrl>http://www.csp.com</NavigateUrl>
+    <AlternateText>Box Advertisement 2</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>box</Keyword>
+  </Ad>
+</advertisements>
+
