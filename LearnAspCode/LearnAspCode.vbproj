@@ -192,9 +192,35 @@
     <Content Include="Tutorials\Week1\SParameter.aspx" />
     <Content Include="Tutorials\Week1\ViewState.aspx" />
     <Content Include="Tutorials\Week1\Welcome.aspx" />
+    <Content Include="Tutorials\Week3\AccessingRandomFilesWithTheHyperLinkControl.aspx" />
+    <Content Include="Tutorials\Week3\ChangingButtonLayoutWithHandlers.aspx" />
+    <Content Include="Tutorials\Week3\CreatingPop-upDatePicker.aspx" />
+    <Content Include="Tutorials\Week3\DetectingWhichRadioButtonControlHasBeenChecked.aspx" />
+    <Content Include="Tutorials\Week3\DisplayingAClient-sideConfirmationDialogBox.aspx" />
+    <Content Include="Tutorials\Week3\DisplayingAdvertisementsFromXML.aspx" />
+    <Content Include="Tutorials\Week3\DisplayingMulti-PartForm.aspx" />
+    <Content Include="Tutorials\Week3\DisplayingTabbedPageWithMultiViewControl.aspx" />
+    <Content Include="Tutorials\Week3\DisplayingTextBoxControlsUsingDifferentValuesForTextMode.aspx" />
+    <Content Include="Tutorials\Week3\FormattingLabel.aspx" />
+    <Content Include="Tutorials\Week3\ReloadingFormAutomaticallyOnceControlLosesFocus.aspx" />
+    <Content Include="Tutorials\Week3\SavingFilesToFileSystemToDisplayPhotoGallery.aspx" />
+    <Content Include="Tutorials\Week3\SelectingWeeksAndMonthsWithCalendarControl.aspx" />
+    <Content Include="Tutorials\Week3\SettingFocusAndUsingAutoCompleteWithTheTextBoxControl.aspx" />
+    <Content Include="Tutorials\Week3\SettingTheGroupingTextPropertyInAPanelControl.aspx" />
+    <Content Include="Tutorials\Week3\UsingTheLinkButtonControlToSubmitAForm.aspx" />
+    <Content Include="Tutorials\Week3\VerifyingStateOfACheckBoxControl.aspx" />
+    <Content Include="Tutorials\Week4\ComparingFormFieldAgainstFixedValue.aspx" />
+    <Content Include="Tutorials\Week4\DemonstratingValidationgroupProperty.aspx" />
+    <Content Include="Tutorials\Week4\DisablingValidation.aspx" />
+    <Content Include="Tutorials\Week4\DisplayingImageForValidationError.aspx" />
+    <Content Include="Tutorials\Week4\DisplayingValidationSummary.aspx" />
     <Content Include="Tutorials\Week4\RangeValidator.aspx" />
+    <Content Include="Tutorials\Week4\RegularExpressionValidatorControlToValidateProductCode.aspx" />
     <Content Include="Tutorials\Week4\RequiredFieldValidator.aspx" />
-    <Content Include="xmlbanner\mybanner.xml" />
+    <Content Include="Tutorials\Week4\ShowCustomValidatorWithJavaScript.aspx" />
+    <Content Include="Tutorials\Week4\ValidateEmptyTextPropertyUsingCustomvalidatorControl.aspx" />
+    <Content Include="Tutorials\Week4\ValidatingFieldLengthWithTheCustomValidatorControl.aspx" />
+    <Content Include="App_Data\AdList.xml" />
     <Content Include="guestMasterPage.Master" />
     <Content Include="App_Themes\Classic\Classic.skin" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -555,6 +581,160 @@
       <DependentUpon>Welcome.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week3\AccessingRandomFilesWithTheHyperLinkControl.aspx.designer.vb">
+      <DependentUpon>AccessingRandomFilesWithTheHyperLinkControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\AccessingRandomFilesWithTheHyperLinkControl.aspx.vb">
+      <DependentUpon>AccessingRandomFilesWithTheHyperLinkControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\ChangingButtonLayoutWithHandlers.aspx.designer.vb">
+      <DependentUpon>ChangingButtonLayoutWithHandlers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\ChangingButtonLayoutWithHandlers.aspx.vb">
+      <DependentUpon>ChangingButtonLayoutWithHandlers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\CreatingPop-upDatePicker.aspx.designer.vb">
+      <DependentUpon>CreatingPop-upDatePicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\CreatingPop-upDatePicker.aspx.vb">
+      <DependentUpon>CreatingPop-upDatePicker.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DetectingWhichRadioButtonControlHasBeenChecked.aspx.designer.vb">
+      <DependentUpon>DetectingWhichRadioButtonControlHasBeenChecked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DetectingWhichRadioButtonControlHasBeenChecked.aspx.vb">
+      <DependentUpon>DetectingWhichRadioButtonControlHasBeenChecked.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingAClient-sideConfirmationDialogBox.aspx.designer.vb">
+      <DependentUpon>DisplayingAClient-sideConfirmationDialogBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingAClient-sideConfirmationDialogBox.aspx.vb">
+      <DependentUpon>DisplayingAClient-sideConfirmationDialogBox.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingAdvertisementsFromXML.aspx.designer.vb">
+      <DependentUpon>DisplayingAdvertisementsFromXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingAdvertisementsFromXML.aspx.vb">
+      <DependentUpon>DisplayingAdvertisementsFromXML.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingMulti-PartForm.aspx.designer.vb">
+      <DependentUpon>DisplayingMulti-PartForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingMulti-PartForm.aspx.vb">
+      <DependentUpon>DisplayingMulti-PartForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingTabbedPageWithMultiViewControl.aspx.designer.vb">
+      <DependentUpon>DisplayingTabbedPageWithMultiViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingTabbedPageWithMultiViewControl.aspx.vb">
+      <DependentUpon>DisplayingTabbedPageWithMultiViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingTextBoxControlsUsingDifferentValuesForTextMode.aspx.designer.vb">
+      <DependentUpon>DisplayingTextBoxControlsUsingDifferentValuesForTextMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\DisplayingTextBoxControlsUsingDifferentValuesForTextMode.aspx.vb">
+      <DependentUpon>DisplayingTextBoxControlsUsingDifferentValuesForTextMode.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\FormattingLabel.aspx.designer.vb">
+      <DependentUpon>FormattingLabel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\FormattingLabel.aspx.vb">
+      <DependentUpon>FormattingLabel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\ReloadingFormAutomaticallyOnceControlLosesFocus.aspx.designer.vb">
+      <DependentUpon>ReloadingFormAutomaticallyOnceControlLosesFocus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\ReloadingFormAutomaticallyOnceControlLosesFocus.aspx.vb">
+      <DependentUpon>ReloadingFormAutomaticallyOnceControlLosesFocus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SavingFilesToFileSystemToDisplayPhotoGallery.aspx.designer.vb">
+      <DependentUpon>SavingFilesToFileSystemToDisplayPhotoGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SavingFilesToFileSystemToDisplayPhotoGallery.aspx.vb">
+      <DependentUpon>SavingFilesToFileSystemToDisplayPhotoGallery.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SelectingWeeksAndMonthsWithCalendarControl.aspx.designer.vb">
+      <DependentUpon>SelectingWeeksAndMonthsWithCalendarControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SelectingWeeksAndMonthsWithCalendarControl.aspx.vb">
+      <DependentUpon>SelectingWeeksAndMonthsWithCalendarControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SettingFocusAndUsingAutoCompleteWithTheTextBoxControl.aspx.designer.vb">
+      <DependentUpon>SettingFocusAndUsingAutoCompleteWithTheTextBoxControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SettingFocusAndUsingAutoCompleteWithTheTextBoxControl.aspx.vb">
+      <DependentUpon>SettingFocusAndUsingAutoCompleteWithTheTextBoxControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SettingTheGroupingTextPropertyInAPanelControl.aspx.designer.vb">
+      <DependentUpon>SettingTheGroupingTextPropertyInAPanelControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\SettingTheGroupingTextPropertyInAPanelControl.aspx.vb">
+      <DependentUpon>SettingTheGroupingTextPropertyInAPanelControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\UsingTheLinkButtonControlToSubmitAForm.aspx.designer.vb">
+      <DependentUpon>UsingTheLinkButtonControlToSubmitAForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\UsingTheLinkButtonControlToSubmitAForm.aspx.vb">
+      <DependentUpon>UsingTheLinkButtonControlToSubmitAForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\VerifyingStateOfACheckBoxControl.aspx.designer.vb">
+      <DependentUpon>VerifyingStateOfACheckBoxControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\VerifyingStateOfACheckBoxControl.aspx.vb">
+      <DependentUpon>VerifyingStateOfACheckBoxControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ComparingFormFieldAgainstFixedValue.aspx.designer.vb">
+      <DependentUpon>ComparingFormFieldAgainstFixedValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ComparingFormFieldAgainstFixedValue.aspx.vb">
+      <DependentUpon>ComparingFormFieldAgainstFixedValue.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DemonstratingValidationgroupProperty.aspx.designer.vb">
+      <DependentUpon>DemonstratingValidationgroupProperty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DemonstratingValidationgroupProperty.aspx.vb">
+      <DependentUpon>DemonstratingValidationgroupProperty.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DisablingValidation.aspx.designer.vb">
+      <DependentUpon>DisablingValidation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DisablingValidation.aspx.vb">
+      <DependentUpon>DisablingValidation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DisplayingImageForValidationError.aspx.designer.vb">
+      <DependentUpon>DisplayingImageForValidationError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DisplayingImageForValidationError.aspx.vb">
+      <DependentUpon>DisplayingImageForValidationError.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DisplayingValidationSummary.aspx.designer.vb">
+      <DependentUpon>DisplayingValidationSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\DisplayingValidationSummary.aspx.vb">
+      <DependentUpon>DisplayingValidationSummary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutorials\Week4\RangeValidator.aspx.designer.vb">
       <DependentUpon>RangeValidator.aspx</DependentUpon>
     </Compile>
@@ -562,11 +742,39 @@
       <DependentUpon>RangeValidator.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week4\RegularExpressionValidatorControlToValidateProductCode.aspx.designer.vb">
+      <DependentUpon>RegularExpressionValidatorControlToValidateProductCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\RegularExpressionValidatorControlToValidateProductCode.aspx.vb">
+      <DependentUpon>RegularExpressionValidatorControlToValidateProductCode.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutorials\Week4\RequiredFieldValidator.aspx.designer.vb">
       <DependentUpon>RequiredFieldValidator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutorials\Week4\RequiredFieldValidator.aspx.vb">
       <DependentUpon>RequiredFieldValidator.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ShowCustomValidatorWithJavaScript.aspx.designer.vb">
+      <DependentUpon>ShowCustomValidatorWithJavaScript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ShowCustomValidatorWithJavaScript.aspx.vb">
+      <DependentUpon>ShowCustomValidatorWithJavaScript.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ValidateEmptyTextPropertyUsingCustomvalidatorControl.aspx.designer.vb">
+      <DependentUpon>ValidateEmptyTextPropertyUsingCustomvalidatorControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ValidateEmptyTextPropertyUsingCustomvalidatorControl.aspx.vb">
+      <DependentUpon>ValidateEmptyTextPropertyUsingCustomvalidatorControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ValidatingFieldLengthWithTheCustomValidatorControl.aspx.designer.vb">
+      <DependentUpon>ValidatingFieldLengthWithTheCustomValidatorControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week4\ValidatingFieldLengthWithTheCustomValidatorControl.aspx.vb">
+      <DependentUpon>ValidatingFieldLengthWithTheCustomValidatorControl.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
@@ -615,9 +823,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
