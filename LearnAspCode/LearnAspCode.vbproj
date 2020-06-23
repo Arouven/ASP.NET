@@ -202,11 +202,13 @@
     <Content Include="Tutorials\Week3\DisplayingTabbedPageWithMultiViewControl.aspx" />
     <Content Include="Tutorials\Week3\DisplayingTextBoxControlsUsingDifferentValuesForTextMode.aspx" />
     <Content Include="Tutorials\Week3\FormattingLabel.aspx" />
+    <Content Include="Tutorials\Week3\FormControlDemo.aspx" />
     <Content Include="Tutorials\Week3\ReloadingFormAutomaticallyOnceControlLosesFocus.aspx" />
     <Content Include="Tutorials\Week3\SavingFilesToFileSystemToDisplayPhotoGallery.aspx" />
     <Content Include="Tutorials\Week3\SelectingWeeksAndMonthsWithCalendarControl.aspx" />
     <Content Include="Tutorials\Week3\SettingFocusAndUsingAutoCompleteWithTheTextBoxControl.aspx" />
     <Content Include="Tutorials\Week3\SettingTheGroupingTextPropertyInAPanelControl.aspx" />
+    <Content Include="Tutorials\Week3\TableDemo.aspx" />
     <Content Include="Tutorials\Week3\UsingTheLinkButtonControlToSubmitAForm.aspx" />
     <Content Include="Tutorials\Week3\VerifyingStateOfACheckBoxControl.aspx" />
     <Content Include="Tutorials\Week4\ComparingFormFieldAgainstFixedValue.aspx" />
@@ -651,6 +653,13 @@
       <DependentUpon>FormattingLabel.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week3\FormControlDemo.aspx.designer.vb">
+      <DependentUpon>FormControlDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\FormControlDemo.aspx.vb">
+      <DependentUpon>FormControlDemo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutorials\Week3\ReloadingFormAutomaticallyOnceControlLosesFocus.aspx.designer.vb">
       <DependentUpon>ReloadingFormAutomaticallyOnceControlLosesFocus.aspx</DependentUpon>
     </Compile>
@@ -684,6 +693,13 @@
     </Compile>
     <Compile Include="Tutorials\Week3\SettingTheGroupingTextPropertyInAPanelControl.aspx.vb">
       <DependentUpon>SettingTheGroupingTextPropertyInAPanelControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week3\TableDemo.aspx.designer.vb">
+      <DependentUpon>TableDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week3\TableDemo.aspx.vb">
+      <DependentUpon>TableDemo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week3\UsingTheLinkButtonControlToSubmitAForm.aspx.designer.vb">
