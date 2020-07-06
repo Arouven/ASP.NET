@@ -17,18 +17,7 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Protected Sub btnLogin_Click(ByVal sender As Object, ByVal e As EventArgs)
-			If Page.IsValid() Then
-				lblLoginResult.Text = "Log in successful!"
-			End If
-		End Sub
-		Protected Sub btnRegister_Click(ByVal sender As Object, ByVal e As EventArgs)
-			If Page.IsValid() Then
-				lblRegisterResult.Text = "Registration successful!"
-			End If
-		End Sub
-	</script>
+
 	<div class="column">
 		<fieldset>
 			<legend>Login</legend>

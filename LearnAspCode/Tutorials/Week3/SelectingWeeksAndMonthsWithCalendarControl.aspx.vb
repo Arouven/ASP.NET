@@ -5,4 +5,9 @@
 
 	End Sub
 
+	Sub btnSubmit_Click(sender As Object, e As EventArgs)
+		bltResults.DataSource = Calendar1.SelectedDates
+		bltResults.DataBind()
+	End Sub
+
 End Class

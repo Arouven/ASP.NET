@@ -1,8 +1,11 @@
 ﻿Public Class CreatingPop_upDatePicker
 	Inherits System.Web.UI.Page
 
-	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+	Sub calEventDate_SelectionChanged(ByVal sender As Object, ByVal e As EventArgs)
+		txtEventDate.Text = calEventDate.SelectedDate.ToString("d")
 	End Sub
-
+	Sub btnSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
+		lblResult.Text = "You picked: " & txtEventDate.Text
+	End Sub
 End Class

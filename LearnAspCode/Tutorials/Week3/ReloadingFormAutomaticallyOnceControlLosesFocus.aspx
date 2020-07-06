@@ -3,11 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub txtSearch_TextChanged(ByVal sender As Object, ByVal e As EventArgs)
-			lblSearchResults.Text = "Search for: " & txtSearch.Text
-		End Sub
-	</script>
+	
 	<div>
 		<asp:Label ID="lblSearch" Text="Search:" runat="server" />
 		<asp:TextBox ID="txtSearch" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" runat="server" />

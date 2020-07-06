@@ -156,6 +156,7 @@
     <Content Include="Images\house.jpg" />
     <Content Include="Images\LabWeek3Pic1.png" />
     <Content Include="Images\LabWeek3Pic2.png" />
+    <Content Include="Labs\Week1\CreatingWebForm.aspx" />
     <Content Include="Labs\Week1\Task1.aspx" />
     <Content Include="Labs\Week1\Task2.aspx" />
     <Content Include="Labs\Week1\Task3.aspx" />
@@ -258,9 +259,11 @@
     <Content Include="Tutorials\Week5\addressform.ascx" />
     <Content Include="Tutorials\Week5\FeaturedProducts\featuredproduct1.ascx" />
     <Content Include="Tutorials\Week5\FeaturedProducts\featuredproduct2.ascx" />
-    <Content Include="Tutorials\Week5\images\1.jpg" />
-    <Content Include="Tutorials\Week5\images\2.jpg" />
-    <Content Include="Tutorials\Week5\images\3.jpg" />
+    <Content Include="Tutorials\Week5\Images\Images2\1.jpg" />
+    <Content Include="Tutorials\Week5\Images\Images2\2.jpg" />
+    <Content Include="Tutorials\Week5\Images\1.jpg" />
+    <Content Include="Tutorials\Week5\Images\2.jpg" />
+    <Content Include="Tutorials\Week5\Images\3.jpg" />
     <Content Include="Tutorials\Week5\logincrtl.ascx" />
     <Content Include="Tutorials\Week5\proprndimg.ascx" />
     <Content Include="Tutorials\Week5\rndquotation.ascx" />
@@ -318,6 +321,13 @@
     </Compile>
     <Compile Include="home.aspx.vb">
       <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week1\CreatingWebForm.aspx.designer.vb">
+      <DependentUpon>CreatingWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week1\CreatingWebForm.aspx.vb">
+      <DependentUpon>CreatingWebForm.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Labs\Week1\Task1.aspx.designer.vb">
@@ -931,7 +941,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UploadImages\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

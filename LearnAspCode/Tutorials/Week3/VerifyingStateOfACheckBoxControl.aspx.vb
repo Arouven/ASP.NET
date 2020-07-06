@@ -5,4 +5,8 @@
 
 	End Sub
 
+	Sub btnSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
+		lblResult.Text = chkNewsletter.Checked.ToString()
+	End Sub
+
 End Class

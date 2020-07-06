@@ -5,4 +5,9 @@
 
 	End Sub
 
+	Sub lnkSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
+		lblResults.Text = "First Name: " & txtFirstName.Text
+		lblResults.Text &= "<br />Last Name: " & txtLastName.Text
+	End Sub
+
 End Class

@@ -3,11 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub btnSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
-			lblResult.Text = chkNewsletter.Checked.ToString()
-		End Sub
-	</script>
+
 	<div>
 		<asp:CheckBox ID="chkNewsletter" Text="Receive Newsletter?" runat="server" />
 		<br />

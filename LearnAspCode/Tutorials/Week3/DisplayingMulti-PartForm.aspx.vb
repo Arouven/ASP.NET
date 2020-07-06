@@ -5,4 +5,9 @@
 
 	End Sub
 
+	Sub View3_Activate(ByVal sender As Object, ByVal e As EventArgs)
+		lblFirstNameResult.Text = txtFirstName.Text
+		lblColorResult.Text = txtColor.Text
+	End Sub
+
 End Class

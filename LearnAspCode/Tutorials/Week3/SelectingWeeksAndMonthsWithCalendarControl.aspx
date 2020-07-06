@@ -3,12 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub btnSubmit_Click(sender As Object, e As EventArgs)
-			bltResults.DataSource = Calendar1.SelectedDates
-			bltResults.DataBind()
-		End Sub
-	</script>
+
 	<div>
 		<asp:Calendar ID="Calendar1" SelectionMode="DayWeekMonth" runat="server" />
 		<br />

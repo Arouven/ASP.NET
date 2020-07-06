@@ -3,12 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub lnkSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
-			lblResults.Text = "First Name: " & txtFirstName.Text
-			lblResults.Text &= "<br />Last Name: " & txtLastName.Text
-		End Sub
-	</script>
+
 	<div>
 		<asp:Label ID="lblFirstName" Text="First Name:" AssociatedControlID="txtFirstName" runat="server" />
 		<br />

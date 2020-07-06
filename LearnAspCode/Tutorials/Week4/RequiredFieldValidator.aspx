@@ -5,9 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
 	<asp:Label ID="lblFirstName" Text="First Name:" AssociatedControlID="txtFirstName" runat="server" />
 	<br />
-	<asp:TextBox
-		ID="txtFirstName"
-		runat="server" />
+	<asp:TextBox ID="txtFirstName" runat="server" />
 	<asp:RequiredFieldValidator ID="reqFirstName" ControlToValidate="txtFirstName" Text="(Required)" runat="server" />
 	<br />
 	<br />

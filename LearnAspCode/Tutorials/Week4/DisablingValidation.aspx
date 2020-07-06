@@ -3,11 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Protected Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-			Response.Redirect("Default.aspx")
-		End Sub
-	</script>
+
 	<div>
 		<asp:Label ID="lblFirstName" Text="First Name:" AssociatedControlID="txtFirstName" runat="server" />
 		<asp:TextBox ID="txtFirstName" runat="server" />

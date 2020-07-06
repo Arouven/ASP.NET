@@ -14,38 +14,38 @@ Option Explicit On
 Partial Public Class ComparingFormFieldAgainstFixedValue
 
 	'''<summary>
-	'''Label1 control.
+	'''lblDate control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents lblDate As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBox1 control.
+	'''txtDate control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents txtDate As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''CompareValidator1 control.
+	'''cmpDate control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents CompareValidator1 As Global.System.Web.UI.WebControls.CompareValidator
+	Protected WithEvents cmpDate As Global.System.Web.UI.WebControls.CompareValidator
 
 	'''<summary>
-	'''Button1 control.
+	'''btnSubmit control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class

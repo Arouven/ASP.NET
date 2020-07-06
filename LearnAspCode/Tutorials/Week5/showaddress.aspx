@@ -35,19 +35,18 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<form id="form1" runat="server">
-		<div class="content">
-			<user:Address id="ucBillingAddr" runat="server" />
-			<hr />
-			<user:Address id="ucShippingAddr" runat="server" />
-			<asp:Button
-				ID="btnSubmit"
-				Text="Submit Form"
-				runat="server" />
-			<hr />
-			<asp:Literal
-				ID="ltlResults"
-				runat="server" />
-		</div>
-	</form>
+
+	<div class="content">
+		<user:Address ID="ucBillingAddr" runat="server" />
+		<hr />
+		<user:Address ID="ucShippingAddr" runat="server" />
+		<asp:Button
+			ID="btnSubmit"
+			Text="Submit Form"
+			runat="server" />
+		<hr />
+		<asp:Literal
+			ID="ltlResults"
+			runat="server" />
+	</div>
 </asp:Content>

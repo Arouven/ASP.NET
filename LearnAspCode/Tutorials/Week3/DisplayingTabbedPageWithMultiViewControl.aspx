@@ -31,12 +31,7 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As MenuEventArgs)
-			Dim index As Integer = Int32.Parse(e.Item.Value)
-			MultiView1.ActiveViewIndex = index
-		End Sub
-	</script>
+
 	<div>
 		<asp:Menu ID="Menu1" Orientation="Horizontal" StaticMenuItemStyle-CssClass="tab" StaticSelectedStyle-CssClass="selectedTab" CssClass="tabs" OnMenuItemClick="Menu1_MenuItemClick" runat="server">
 			<Items>

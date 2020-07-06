@@ -6,7 +6,7 @@
 	<div>
 		<asp:Label ID="lblProduct" Text="Product code:" AssociatedControlID="txtProduct" runat="server" />
 		<asp:TextBox ID="txtProduct" runat="server" />
-		<asp:RegularExpressionValidator ID="regproduct" ControlToValidate="txtProduct" Text="(Invalid Product code)" ValidationExpression="”\d{3}" runat="server" />
+		<asp:RegularExpressionValidator ID="regproduct" ControlToValidate="txtProduct" Text="(Invalid Product code)" ValidationExpression="\d{3}" runat="server" />
 		<br />
 		<br />
 		<asp:Button ID="btnSubmit" Text="Submit" runat="server" />

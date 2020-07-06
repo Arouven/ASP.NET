@@ -3,12 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub View3_Activate(ByVal sender As Object, ByVal e As EventArgs)
-			lblFirstNameResult.Text = txtFirstName.Text
-			lblColorResult.Text = txtColor.Text
-		End Sub
-	</script>
+
 	<div>
 		<asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
 			<asp:View ID="View1" runat="server">

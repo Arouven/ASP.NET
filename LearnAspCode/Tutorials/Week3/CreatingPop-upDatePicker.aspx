@@ -28,14 +28,7 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Sub calEventDate_SelectionChanged(ByVal sender As Object, ByVal e As EventArgs)
-			txtEventDate.Text = calEventDate.SelectedDate.ToString("d")
-		End Sub
-		Sub btnSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
-			lblResult.Text = "You picked: " & txtEventDate.Text
-		End Sub
-	</script>
+
 	<div class="content">
 		<asp:Label ID="lblEventDate" Text="Event Date:" AssociatedControlID="txtEventDate" runat="server" />
 		<asp:TextBox ID="txtEventDate" runat="server" />

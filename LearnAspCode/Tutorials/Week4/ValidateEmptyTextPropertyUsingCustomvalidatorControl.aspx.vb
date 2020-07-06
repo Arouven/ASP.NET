@@ -5,4 +5,12 @@
 
 	End Sub
 
+	Sub valProductCode_ServerValidate(ByVal source As Object, ByVal args As ServerValidateEventArgs)
+		If args.Value.Length = 4 Then
+			args.IsValid = True
+		Else
+			args.IsValid = False
+		End If
+	End Sub
+
 End Class

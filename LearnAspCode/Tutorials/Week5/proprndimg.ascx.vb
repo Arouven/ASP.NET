@@ -2,7 +2,9 @@
 Imports System.IO
 Public Class proprndimg
 	Inherits System.Web.UI.UserControl
+
 	Private _imageFolderPath As String = "~/Images"
+
 	Public Property ImageFolderPath() As String
 		Get
 			Return _imageFolderPath

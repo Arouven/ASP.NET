@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="showrndquotation.aspx.vb" Inherits="LearnAspCode.showrndquotation" %>
 
 <%@ Register TagPrefix="user" TagName="Randomquote" Src="~/Tutorials/Week5/rndquotation.ascx" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 	<style>
 		.quote {
@@ -14,13 +15,11 @@
 	<title>Show Random Quotation</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<form id="form1" runat="server">
-		<div>
-			<%= DateTime.Now %>
-			<br />
-			<user:Radomquote id="rndquote" runat="server"></user:Radomquote>
-			<asp:UpdatePanel ID="UpdatePanel1" runat="server"></asp:UpdatePanel>
+	<div>
+		<%= DateTime.Now %>
+		<br />
+		<user:Randomquote ID="rndquote" runat="server"></user:Randomquote>
+		<asp:UpdatePanel ID="UpdatePanel1" runat="server"></asp:UpdatePanel>
 
-		</div>
-	</form>
+	</div>
 </asp:Content>

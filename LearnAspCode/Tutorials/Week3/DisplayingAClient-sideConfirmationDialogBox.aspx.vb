@@ -1,8 +1,8 @@
 ﻿Public Class DisplayingAClient_sideConfirmationDialogBox
 	Inherits System.Web.UI.Page
 
-	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+	Sub btnDelete_Click(sender As Object, e As EventArgs)
+		lblResult.Text = "All pages deleted!"
 	End Sub
 
 End Class

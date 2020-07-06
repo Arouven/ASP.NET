@@ -11,15 +11,7 @@
 	</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<script runat="server">
-		Protected Sub valComments_ServerValidate(ByVal source As Object, ByVal args As ServerValidateEventArgs)
-			If args.Value.Length > 10 Then
-				args.IsValid = False
-			Else
-				args.IsValid = True
-			End If
-		End Sub
-	</script>
+	
 	<div>
 		<asp:Label ID="lblComments" Text="Comments:" AssociatedControlID="txtComments" runat="server" />
 		<br />

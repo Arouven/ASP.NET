@@ -5,4 +5,8 @@
 
 	End Sub
 
+	Sub txtSearch_TextChanged(ByVal sender As Object, ByVal e As EventArgs)
+		lblSearchResults.Text = "Search for: " & txtSearch.Text
+	End Sub
+
 End Class
