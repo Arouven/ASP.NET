@@ -11,16 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class guestMasterPage
-
-	'''<summary>
-	'''head control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
+Partial Public Class showaddress
 
 	'''<summary>
 	'''form1 control.
@@ -32,47 +23,38 @@ Partial Public Class guestMasterPage
 	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 	'''<summary>
-	'''pnllog control.
+	'''ucBillingAddr control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents pnllog As Global.System.Web.UI.WebControls.Panel
+	Protected WithEvents ucBillingAddr As Global.LearnAspCode.addressform
 
 	'''<summary>
-	'''maincontent control.
+	'''ucShippingAddr control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents maincontent As Global.System.Web.UI.WebControls.ContentPlaceHolder
+	Protected WithEvents ucShippingAddr As Global.LearnAspCode.addressform
 
 	'''<summary>
-	'''ucadminlogin control.
+	'''btnSubmit control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents ucadminlogin As Global.LearnAspCode.logincrtl
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''lblmsg control.
+	'''ltlResults control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents lblmsg As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''btnLogin control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents ltlResults As Global.System.Web.UI.WebControls.Literal
 End Class

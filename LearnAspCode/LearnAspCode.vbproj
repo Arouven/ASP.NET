@@ -137,6 +137,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ddmenu.css" />
     <Content Include="Content\Site.css" />
     <Content Include="courses.aspx" />
     <Content Include="Default.aspx" />
@@ -254,6 +255,20 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Tutorials\Week5\addressform.ascx" />
+    <Content Include="Tutorials\Week5\FeaturedProducts\featuredproduct1.ascx" />
+    <Content Include="Tutorials\Week5\FeaturedProducts\featuredproduct2.ascx" />
+    <Content Include="Tutorials\Week5\images\1.jpg" />
+    <Content Include="Tutorials\Week5\images\2.jpg" />
+    <Content Include="Tutorials\Week5\images\3.jpg" />
+    <Content Include="Tutorials\Week5\logincrtl.ascx" />
+    <Content Include="Tutorials\Week5\proprndimg.ascx" />
+    <Content Include="Tutorials\Week5\rndquotation.ascx" />
+    <Content Include="Tutorials\Week5\showdeclarative.aspx" />
+    <Content Include="Tutorials\Week5\FeaturedProducts\showfeaturedproduct.aspx" />
+    <Content Include="Tutorials\Week5\showrndquotation.aspx" />
+    <Content Include="Tutorials\Week5\uc\randomimage.ascx" />
+    <Content Include="Tutorials\Week5\showaddress.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -791,6 +806,83 @@
     </Compile>
     <Compile Include="Tutorials\Week4\ValidatingFieldLengthWithTheCustomValidatorControl.aspx.vb">
       <DependentUpon>ValidatingFieldLengthWithTheCustomValidatorControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\addressform.ascx.designer.vb">
+      <DependentUpon>addressform.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\addressform.ascx.vb">
+      <DependentUpon>addressform.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\FeaturedProducts\featuredproduct1.ascx.designer.vb">
+      <DependentUpon>featuredproduct1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\FeaturedProducts\featuredproduct1.ascx.vb">
+      <DependentUpon>featuredproduct1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\FeaturedProducts\featuredproduct2.ascx.designer.vb">
+      <DependentUpon>featuredproduct2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\FeaturedProducts\featuredproduct2.ascx.vb">
+      <DependentUpon>featuredproduct2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\logincrtl.ascx.designer.vb">
+      <DependentUpon>logincrtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\logincrtl.ascx.vb">
+      <DependentUpon>logincrtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\proprndimg.ascx.designer.vb">
+      <DependentUpon>proprndimg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\proprndimg.ascx.vb">
+      <DependentUpon>proprndimg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\rndquotation.ascx.designer.vb">
+      <DependentUpon>rndquotation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\rndquotation.ascx.vb">
+      <DependentUpon>rndquotation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\showdeclarative.aspx.designer.vb">
+      <DependentUpon>showdeclarative.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\showdeclarative.aspx.vb">
+      <DependentUpon>showdeclarative.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\FeaturedProducts\showfeaturedproduct.aspx.designer.vb">
+      <DependentUpon>showfeaturedproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\FeaturedProducts\showfeaturedproduct.aspx.vb">
+      <DependentUpon>showfeaturedproduct.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\showrndquotation.aspx.designer.vb">
+      <DependentUpon>showrndquotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\showrndquotation.aspx.vb">
+      <DependentUpon>showrndquotation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\uc\randomimage.ascx.designer.vb">
+      <DependentUpon>randomimage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\uc\randomimage.ascx.vb">
+      <DependentUpon>randomimage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\showaddress.aspx.designer.vb">
+      <DependentUpon>showaddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\showaddress.aspx.vb">
+      <DependentUpon>showaddress.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
