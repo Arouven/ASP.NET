@@ -169,7 +169,7 @@
     <Content Include="Labs\Week3\Task10.aspx" />
     <Content Include="Labs\Week3\Task11.aspx" />
     <Content Include="Labs\Week3\Task12.aspx" />
-    <Content Include="Labs\Week3\Task13.aspx" />
+    <Content Include="Labs\Week3\Task13Problem.aspx" />
     <Content Include="Labs\Week3\Task02.aspx" />
     <Content Include="Labs\Week3\Task03.aspx" />
     <Content Include="Labs\Week3\Task04.aspx" />
@@ -414,11 +414,11 @@
       <DependentUpon>Task12.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task13.aspx.designer.vb">
-      <DependentUpon>Task13.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task13Problem.aspx.designer.vb">
+      <DependentUpon>Task13Problem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task13.aspx.vb">
-      <DependentUpon>Task13.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task13Problem.aspx.vb">
+      <DependentUpon>Task13Problem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Labs\Week3\Task02.aspx.designer.vb">

@@ -34,7 +34,6 @@
 </head>
 <body>
 	<form id="form1" runat="server">
-
 		<div id="wrapper">
 			<div id="heads" class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
@@ -153,19 +152,33 @@
 									<li class="dropdown-submenu">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 1</a>
 										<ul class="dropdown-menu">
-											<li><a runat="server" href="~/Tutorials/Week1/ControlEvents">Control Events</a></li>
-										</ul>
-									</li>
-									<li class="dropdown-submenu">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 2</a>
-										<ul class="dropdown-menu">
-											<li><a runat="server" href="~/Tutorials/Week1/ControlEvents">Control Events</a></li>
+											<li><a runat="server" href="~/Labs/Week1/CreatingWebForm.aspx">Creating Web Form</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task1.aspx">Task1</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task2.aspx">Task2</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task3.aspx">Task3</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task4.aspx">Task4</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task5.aspx">Task5</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task6.aspx">Task6</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task7.aspx">Task7</a></li>
+											<li><a runat="server" href="~/Labs/Week1/Task8.aspx">Task8</a></li>
 										</ul>
 									</li>
 									<li class="dropdown-submenu">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 3</a>
 										<ul class="dropdown-menu">
-											<li><a runat="server" href="~/Tutorials/Week3/AccessingRandomFilesWithTheHyperLinkControl">Accessing Random Files With The Hyper Link Control</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task01.aspx">Task01</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task02.aspx">Task02</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task03.aspx">Task03</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task04.aspx">Task04</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task05.aspx">Task05</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task06.aspx">Task06</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task07.aspx">Task07</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task08.aspx">Task08</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task09.aspx">Task09</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task10.aspx">Task10</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task11.aspx">Task11</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task12.aspx">Task12</a></li>
+											<li><a runat="server" href="~/Labs/Week3/Task13Problem.aspx">Task13Problem</a></li>
 										</ul>
 									</li>
 									<li class="dropdown-submenu">
@@ -212,8 +225,25 @@
 			</div>
 			<div id="main" class="container body-content">
 				<div class="outer">
-					<asp:ContentPlaceHolder ID="maincontent" runat="server">
-					</asp:ContentPlaceHolder>
+
+
+
+
+
+
+					<asp:ContentPlaceHolder ID="maincontent" runat="server">					</asp:ContentPlaceHolder>
+
+
+
+
+
+
+
+
+
+
+
+
 				</div>
 			</div>
 			<footer>
