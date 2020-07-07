@@ -165,17 +165,17 @@
     <Content Include="Labs\Week1\Task6.aspx" />
     <Content Include="Labs\Week1\Task7.aspx" />
     <Content Include="Labs\Week1\Task8.aspx" />
-    <Content Include="Labs\Week3\Task1.aspx" />
+    <Content Include="Labs\Week3\Task01.aspx" />
     <Content Include="Labs\Week3\Task10.aspx" />
     <Content Include="Labs\Week3\Task11.aspx" />
     <Content Include="Labs\Week3\Task12.aspx" />
     <Content Include="Labs\Week3\Task13.aspx" />
-    <Content Include="Labs\Week3\Task2.aspx" />
-    <Content Include="Labs\Week3\Task3.aspx" />
-    <Content Include="Labs\Week3\Task4.aspx" />
-    <Content Include="Labs\Week3\Task5.aspx" />
-    <Content Include="Labs\Week3\Task6.aspx" />
-    <Content Include="Labs\Week3\Task7.aspx" />
+    <Content Include="Labs\Week3\Task02.aspx" />
+    <Content Include="Labs\Week3\Task03.aspx" />
+    <Content Include="Labs\Week3\Task04.aspx" />
+    <Content Include="Labs\Week3\Task05.aspx" />
+    <Content Include="Labs\Week3\Task06.aspx" />
+    <Content Include="Labs\Week3\Task07.aspx" />
     <Content Include="Labs\Week3\Task8.aspx" />
     <Content Include="Labs\Week3\Task9.aspx" />
     <Content Include="Labs\Week4\Task1.aspx" />
@@ -386,11 +386,11 @@
       <DependentUpon>Task8.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task1.aspx.designer.vb">
-      <DependentUpon>Task1.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task01.aspx.designer.vb">
+      <DependentUpon>Task01.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task1.aspx.vb">
-      <DependentUpon>Task1.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task01.aspx.vb">
+      <DependentUpon>Task01.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Labs\Week3\Task10.aspx.designer.vb">
@@ -421,46 +421,46 @@
       <DependentUpon>Task13.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task2.aspx.designer.vb">
-      <DependentUpon>Task2.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task02.aspx.designer.vb">
+      <DependentUpon>Task02.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task2.aspx.vb">
-      <DependentUpon>Task2.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task02.aspx.vb">
+      <DependentUpon>Task02.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task3.aspx.designer.vb">
-      <DependentUpon>Task3.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task03.aspx.designer.vb">
+      <DependentUpon>Task03.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task3.aspx.vb">
-      <DependentUpon>Task3.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task03.aspx.vb">
+      <DependentUpon>Task03.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task4.aspx.designer.vb">
-      <DependentUpon>Task4.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task04.aspx.designer.vb">
+      <DependentUpon>Task04.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task4.aspx.vb">
-      <DependentUpon>Task4.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task04.aspx.vb">
+      <DependentUpon>Task04.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task5.aspx.designer.vb">
-      <DependentUpon>Task5.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task05.aspx.designer.vb">
+      <DependentUpon>Task05.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task5.aspx.vb">
-      <DependentUpon>Task5.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task05.aspx.vb">
+      <DependentUpon>Task05.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task6.aspx.designer.vb">
-      <DependentUpon>Task6.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task06.aspx.designer.vb">
+      <DependentUpon>Task06.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task6.aspx.vb">
-      <DependentUpon>Task6.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task06.aspx.vb">
+      <DependentUpon>Task06.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task7.aspx.designer.vb">
-      <DependentUpon>Task7.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task07.aspx.designer.vb">
+      <DependentUpon>Task07.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task7.aspx.vb">
-      <DependentUpon>Task7.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task07.aspx.vb">
+      <DependentUpon>Task07.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Labs\Week3\Task8.aspx.designer.vb">

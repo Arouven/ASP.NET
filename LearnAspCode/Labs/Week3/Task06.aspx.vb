@@ -5,10 +5,7 @@
 
 	End Sub
 
-	Private Sub Shop_Click(sender As Object, e As ImageMapEventArgs) Handles Shop.Click
-
-
-		Label1.Text = "Hit"
+	Protected Sub shoot_Click(sender As Object, e As ImageMapEventArgs) Handles shoot.Click
+		Label1.Text = e.PostBackValue.ToString()
 	End Sub
-
 End Class

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Task71
+Partial Public Class Task61
 
 	'''<summary>
 	'''form1 control.
@@ -23,20 +23,20 @@ Partial Public Class Task71
 	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 	'''<summary>
-	'''Image1 control.
+	'''shoot control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
+	Protected WithEvents shoot As Global.System.Web.UI.WebControls.ImageMap
 
 	'''<summary>
-	'''Button1 control.
+	'''Label1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 End Class

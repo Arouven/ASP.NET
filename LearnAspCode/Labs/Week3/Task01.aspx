@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task1.aspx.vb" Inherits="LearnAspCode.Task11" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task01.aspx.vb" Inherits="LearnAspCode.Task11" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="TextBox1" runat="server" Text="Hello" onblur="tf"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" Text="Hello" onblur=""></asp:TextBox>
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         </div>
     </form>
