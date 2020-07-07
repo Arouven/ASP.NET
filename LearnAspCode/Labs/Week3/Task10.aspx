@@ -14,12 +14,11 @@
 			<br />
 			<asp:CheckBoxList ID="CheckBoxList1" SelectionMode="multiple" runat="server" Style="text-align: left">
 				<asp:ListItem>Juice</asp:ListItem>
-				<asp:ListItem>Soda</asp:ListItem>
 				<asp:ListItem>Cola</asp:ListItem>
-				<asp:ListItem>Beer</asp:ListItem>
-				<asp:ListItem>Alcohol</asp:ListItem>
+				<asp:ListItem>Pepsi</asp:ListItem>
+				<asp:ListItem>Larak</asp:ListItem>
 			</asp:CheckBoxList>
-			<asp:Button ID="Button1" runat="server" Text="Add" />
+			<asp:Button ID="btnAdd" runat="server" Text="Add" />
 		</div>
 		<div class="shopping">
 			<asp:Label ID="Label2" runat="server" Text="Shopping Cart" Style="text-align: right"></asp:Label>
@@ -27,7 +26,7 @@
 			<br />
 			<asp:ListBox ID="ListBox1" runat="server" Style="text-align: left" SelectionMode="Multiple" Width="136px"></asp:ListBox>
 			<br />
-			<asp:Button ID="Button2" runat="server" Text="Remove" />
+			<asp:Button ID="btnRemove" runat="server" Text="Remove" />
 		</div>
 	</form>
 </body>

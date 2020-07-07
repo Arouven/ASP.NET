@@ -41,13 +41,13 @@ Partial Public Class Task10
 	Protected WithEvents CheckBoxList1 As Global.System.Web.UI.WebControls.CheckBoxList
 
 	'''<summary>
-	'''Button1 control.
+	'''btnAdd control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
 	'''Label2 control.
@@ -68,11 +68,11 @@ Partial Public Class Task10
 	Protected WithEvents ListBox1 As Global.System.Web.UI.WebControls.ListBox
 
 	'''<summary>
-	'''Button2 control.
+	'''btnRemove control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btnRemove As Global.System.Web.UI.WebControls.Button
 End Class
