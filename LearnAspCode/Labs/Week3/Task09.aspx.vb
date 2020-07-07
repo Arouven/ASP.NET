@@ -8,8 +8,8 @@
 			For Each plang In plangs
 				RadioButtonList1.Items.Add(plang)
 			Next
-		Else
 		End If
+		RadioButtonList1.SelectedIndex = 0
 	End Sub
 
 	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -20,7 +20,4 @@
 		End If
 	End Sub
 
-	Protected Sub RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList1.SelectedIndexChanged
-
-	End Sub
 End Class
