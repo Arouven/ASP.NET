@@ -16,7 +16,7 @@
 			</asp:TemplateField>
 		</Columns>
 	</asp:GridView>
-	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MoviesCS %>" SelectCommand="SELECT [Moviename], [Description], [Boxofficetotals], [Director], [Status], [Movie_Id] FROM [tblMovies] WHERE ([Movie_Id] = @Movie_Id)">
+	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MoviesCS %>" SelectCommand="SELECT [Moviename], [Description], [Boxofficetotals], [Director],[Poster], [Status], [Movie_Id] FROM [tblMovies] WHERE ([Movie_Id] = @Movie_Id)">
 		<SelectParameters>
 			<asp:QueryStringParameter Name="Movie_Id" QueryStringField="Movie_Id" Type="Int32" />
 		</SelectParameters>
