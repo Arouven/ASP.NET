@@ -131,6 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\MoviesDB.mdf" />
+    <Content Include="App_Data\MoviesDB_log.ldf">
+      <DependentUpon>MoviesDB.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Classic\Classic.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -153,9 +157,34 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="home.aspx" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\1917.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\blade.jpg" />
+    <Content Include="Images\brave.jpg" />
+    <Content Include="Images\deer.jpg" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\game.jpg" />
+    <Content Include="Images\ghost.jpg" />
+    <Content Include="Images\grey.jpg" />
+    <Content Include="Images\harry.jpg" />
+    <Content Include="Images\home.jpg" />
+    <Content Include="Images\Home.png" />
     <Content Include="Images\house.jpg" />
+    <Content Include="Images\joker.jpg" />
+    <Content Include="Images\jumanji.jpg" />
     <Content Include="Images\LabWeek3Pic1.png" />
     <Content Include="Images\LabWeek3Pic2.png" />
+    <Content Include="Images\Last.png" />
+    <Content Include="Images\lion.jpg" />
+    <Content Include="Images\moonlight.jpg" />
+    <Content Include="Images\Next.png" />
+    <Content Include="Images\OK.png" />
+    <Content Include="Images\Previous.png" />
+    <Content Include="Images\replicas.jpg" />
+    <Content Include="Images\s2.jpg" />
+    <Content Include="Images\tarzan.jpg" />
+    <Content Include="Images\titanic.jpg" />
     <Content Include="Labs\Week1\CreatingWebForm.aspx" />
     <Content Include="Labs\Week1\Task1.aspx" />
     <Content Include="Labs\Week1\Task2.aspx" />
@@ -272,6 +301,12 @@
     <Content Include="Tutorials\Week5\showrndquotation.aspx" />
     <Content Include="Tutorials\Week5\uc\randomimage.ascx" />
     <Content Include="Tutorials\Week5\showaddress.aspx" />
+    <Content Include="Tutorials\Week7\details.aspx" />
+    <Content Include="Tutorials\Week7\Exercise1.aspx" />
+    <Content Include="Tutorials\Week7\Exercise2.aspx" />
+    <Content Include="Tutorials\Week7\Exercise6.aspx" />
+    <Content Include="Tutorials\Week7\Exercise7.aspx" />
+    <Content Include="Tutorials\Week7\Exercise8.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -895,6 +930,48 @@
       <DependentUpon>showaddress.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week7\details.aspx.designer.vb">
+      <DependentUpon>details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\details.aspx.vb">
+      <DependentUpon>details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise1.aspx.designer.vb">
+      <DependentUpon>Exercise1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise1.aspx.vb">
+      <DependentUpon>Exercise1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise2.aspx.designer.vb">
+      <DependentUpon>Exercise2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise2.aspx.vb">
+      <DependentUpon>Exercise2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise6.aspx.designer.vb">
+      <DependentUpon>Exercise6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise6.aspx.vb">
+      <DependentUpon>Exercise6.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise7.aspx.designer.vb">
+      <DependentUpon>Exercise7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise7.aspx.vb">
+      <DependentUpon>Exercise7.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise8.aspx.designer.vb">
+      <DependentUpon>Exercise8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\Exercise8.aspx.vb">
+      <DependentUpon>Exercise8.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -942,6 +1019,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="NewFolder1\" />
     <Folder Include="UploadImages\" />
   </ItemGroup>
   <PropertyGroup>
