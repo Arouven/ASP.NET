@@ -11,7 +11,7 @@
 			<asp:TemplateField HeaderText="Moviename &amp; BoxOfficeTotal">
 				<ItemTemplate>
 					<asp:Label ID="lblname" runat="server" Text='<%# Eval("Moviename") %>' />
-						<asp:Label ID="lblBoxOfficeTotals" runat="server" Text='<%# Eval("Boxofficetotals") %>' />
+						<asp:Label ID="lblBoxOfficeTotals" runat="server" Text='<%# Eval("Boxofficetotals", "{0:C}") %>' />
 				</ItemTemplate>
 			</asp:TemplateField>
 		</Columns>
