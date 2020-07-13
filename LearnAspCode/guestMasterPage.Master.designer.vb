@@ -32,15 +32,6 @@ Partial Public Class guestMasterPage
 	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 	'''<summary>
-	'''pnllog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents pnllog As Global.System.Web.UI.WebControls.Panel
-
-	'''<summary>
 	'''maincontent control.
 	'''</summary>
 	'''<remarks>

@@ -1,13 +1,11 @@
-﻿
+﻿Public Class task16
+    Inherits System.Web.UI.Page
 
-Imports System.Web.Script.Serialization
-Public Class Task14
-	Inherits System.Web.UI.Page
-
-	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-	End Sub
-
+    Protected Sub CVCountryDropDown_ServerValidate(source As Object, args As ServerValidateEventArgs)
+        If ddCountry.SelectedValue = -1 Then
+            args.IsValid = False
+        End If
+    End Sub
 
     'Dim url As String
     'Dim secretKey As String = "SECRET_KEY_HERE"
@@ -46,5 +44,4 @@ Public Class Task14
     '    End If
 
     '    reader.Close()  
-
 End Class

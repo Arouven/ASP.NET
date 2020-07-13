@@ -11,106 +11,115 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Task14
+Partial Public Class task16
 
 	'''<summary>
-	'''Label2 control.
+	'''textBoxFirstName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents textBoxFirstName As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''TextBox4 control.
+	'''requiredFieldVallidatorFirstname control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents requiredFieldVallidatorFirstname As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
 	'''<summary>
-	'''RequiredFieldValidator2 control.
+	'''textBoxSurName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents textBoxSurName As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''Label4 control.
+	'''requiredFieldVallidatorSurname control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents requiredFieldVallidatorSurname As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
 	'''<summary>
-	'''TextBox3 control.
+	'''textBoxUserName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents textBoxUserName As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''RequiredFieldValidator3 control.
+	'''requiredFieldVallidatorUsername control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents RequiredFieldValidator3 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents requiredFieldVallidatorUsername As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
 	'''<summary>
-	'''Label5 control.
+	'''txtPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''TextBox5 control.
+	'''RFVPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBox5 As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents RFVPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
 	'''<summary>
-	'''RequiredFieldValidator4 control.
+	'''REVPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents RequiredFieldValidator4 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents REVPassword As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
 	'''<summary>
-	'''Label6 control.
+	'''txtConfirmPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents txtConfirmPassword As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''TextBox2 control.
+	'''CVConfirmPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents CVConfirmPassword As Global.System.Web.UI.WebControls.CompareValidator
+
+	'''<summary>
+	'''textBoxEmail control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents textBoxEmail As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
 	'''RequiredFieldValidator5 control.
@@ -122,74 +131,47 @@ Partial Public Class Task14
 	Protected WithEvents RequiredFieldValidator5 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
 	'''<summary>
-	'''Label1 control.
+	'''textBoxPhoneNumber control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents textBoxPhoneNumber As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''password control.
+	'''textBoxZipCode control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents password As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents textBoxZipCode As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''pass control.
+	'''ddCountry control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents pass As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents ddCountry As Global.System.Web.UI.WebControls.DropDownList
 
 	'''<summary>
-	'''Label3 control.
+	'''CVCountryDropDown control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents CVCountryDropDown As Global.System.Web.UI.WebControls.CustomValidator
 
 	'''<summary>
-	'''TextBox1 control.
+	'''btnSubmit control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''RequiredFieldValidator1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-	'''<summary>
-	'''CompareValidator1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents CompareValidator1 As Global.System.Web.UI.WebControls.CompareValidator
-
-	'''<summary>
-	'''Button1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class

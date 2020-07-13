@@ -301,12 +301,18 @@
     <Content Include="Tutorials\Week5\showrndquotation.aspx" />
     <Content Include="Tutorials\Week5\uc\randomimage.ascx" />
     <Content Include="Tutorials\Week5\showaddress.aspx" />
+    <Content Include="Tutorials\Week7\DeletingARecordWithTheFormViewControl.aspx" />
     <Content Include="Tutorials\Week7\details.aspx" />
+    <Content Include="Tutorials\Week7\DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx" />
     <Content Include="Tutorials\Week7\Exercise1.aspx" />
     <Content Include="Tutorials\Week7\Exercise2.aspx" />
+    <Content Include="Tutorials\Week7\FormattingADetailsViewControlUsingCSS.aspx" />
     <Content Include="Tutorials\Week7\Exercise6.aspx" />
     <Content Include="Tutorials\Week7\Exercise7.aspx" />
     <Content Include="Tutorials\Week7\Exercise8.aspx" />
+    <Content Include="Tutorials\Week7\InsertingARecordWithTheDetailsViewControl.aspx" />
+    <Content Include="Tutorials\Week7\EditAndUpdateARecordWithTheFormViewControl.aspx" />
+    <Content Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -517,7 +523,7 @@
     </Compile>
     <Compile Include="Labs\Week4\Task1.aspx.vb">
       <DependentUpon>Task1.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.vb">
       <DependentUpon>login.aspx</DependentUpon>
@@ -930,11 +936,25 @@
       <DependentUpon>showaddress.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week7\DeletingARecordWithTheFormViewControl.aspx.designer.vb">
+      <DependentUpon>DeletingARecordWithTheFormViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\DeletingARecordWithTheFormViewControl.aspx.vb">
+      <DependentUpon>DeletingARecordWithTheFormViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutorials\Week7\details.aspx.designer.vb">
       <DependentUpon>details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutorials\Week7\details.aspx.vb">
       <DependentUpon>details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx.designer.vb">
+      <DependentUpon>DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx.vb">
+      <DependentUpon>DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week7\Exercise1.aspx.designer.vb">
@@ -949,6 +969,13 @@
     </Compile>
     <Compile Include="Tutorials\Week7\Exercise2.aspx.vb">
       <DependentUpon>Exercise2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\FormattingADetailsViewControlUsingCSS.aspx.designer.vb">
+      <DependentUpon>FormattingADetailsViewControlUsingCSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\FormattingADetailsViewControlUsingCSS.aspx.vb">
+      <DependentUpon>FormattingADetailsViewControlUsingCSS.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week7\Exercise6.aspx.designer.vb">
@@ -970,6 +997,27 @@
     </Compile>
     <Compile Include="Tutorials\Week7\Exercise8.aspx.vb">
       <DependentUpon>Exercise8.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\InsertingARecordWithTheDetailsViewControl.aspx.designer.vb">
+      <DependentUpon>InsertingARecordWithTheDetailsViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\InsertingARecordWithTheDetailsViewControl.aspx.vb">
+      <DependentUpon>InsertingARecordWithTheDetailsViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\EditAndUpdateARecordWithTheFormViewControl.aspx.designer.vb">
+      <DependentUpon>EditAndUpdateARecordWithTheFormViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\EditAndUpdateARecordWithTheFormViewControl.aspx.vb">
+      <DependentUpon>EditAndUpdateARecordWithTheFormViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx.designer.vb">
+      <DependentUpon>InsertNewRecordWithTheFormViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx.vb">
+      <DependentUpon>InsertNewRecordWithTheFormViewControl.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
@@ -1019,7 +1067,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
     <Folder Include="UploadImages\" />
   </ItemGroup>
   <PropertyGroup>

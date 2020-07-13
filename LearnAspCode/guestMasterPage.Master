@@ -44,27 +44,10 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" runat="server" href="~/home">Application name</a>
+						<a class="navbar-brand" runat="server" href="~/home">Asp.net + vb.net</a>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<asp:Panel runat="server" CssClass="nav navbar-nav navbar-right" ID="pnllog">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span
-										class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="<%=ResolveClientUrl("~/Tutorials/Week5/login") %>">User</a></li>
-										<li><a id="logstu" href="#" data-toggle="modal"
-											data-target="#lgstu">Student</a></li>
-										<li role="separator" class="divider"></li>
-										<li><a rel="modal:open" id="modopen" data-toggle="modal" href="#modadmin">Admin Login</a></li>
-									</ul>
-								</li>
-							</asp:Panel>
-
-
-
 							<li class="dropdown">
 								<a id="hov" class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span class="caret"></span></a>
 								<ul class="dropdown-menu">
@@ -139,9 +122,22 @@
 											<li><a runat="server" href="~/Tutorials/Week5/showrndquotation">Show Random Quotation</a></li>
 										</ul>
 									</li>
-
-
-
+									<li class="dropdown-submenu">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 7</a>
+										<ul class="dropdown-menu">
+											<li><a runat="server" href="~/Tutorials/Week7/Exercise1.aspx">Exercise1</a></li>
+											<li><a runat="server" href="Tutorials/Week7/Exercise2.aspx">Exercise2</a></li>
+											<li><a runat="server" href="Tutorials/Week7/Exercise6.aspx">Exercise6</a></li>
+											<li><a runat="server" href="Tutorials/Week7/Exercise7.aspx">Exercise7</a></li>
+											<li><a runat="server" href="Tutorials/Week7/Exercise8.aspx">Exercise8</a></li>
+											<li><a runat="server" href="Tutorials/Week7/FormattingADetailsViewControlUsingCSS.aspx">Formatting A Details View Control Using CSS</a></li>
+											<li><a runat="server" href="Tutorials/Week7/InsertingARecordWithTheDetailsViewControl.aspx">Inserting A Record With The Details View Control</a></li>
+											<li><a runat="server" href="Tutorials/Week7/InsertNewRecordWithTheFormViewControl.aspx">Insert New Record With The FormView Control</a></li>
+											<li><a runat="server" href="Tutorials/Week7/EditAndUpdateARecordWithTheFormViewControl.aspx">Edit And Update A Record With The FormView Control</a></li>
+											<li><a runat="server" href="Tutorials/Week7/DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx">Displaying Data With The FormView Control And Enable Paging Mode</a></li>
+											<li><a runat="server" href="Tutorials/Week7/DeletingARecordWithTheFormViewControl.aspx">Deleting A Record With The FormView Control</a></li>
+										</ul>
+									</li>
 								</ul>
 							</li>
 
@@ -210,7 +206,23 @@
 							<AnonymousTemplate>
 								<ul class="nav navbar-nav navbar-right">
 									<li><a runat="server" href="~/register">Register</a></li>
-									<li><a runat="server" href="~/login">Log in</a></li>
+									<li>
+										<asp:Panel runat="server" CssClass="nav navbar-nav navbar-right" ID="pnllog">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span
+													class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="<%=ResolveClientUrl("~/login") %>">User</a></li>
+													<li><a id="logstu" href="#" data-toggle="modal"
+														data-target="#lgstu">Student</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a rel="modal:open" id="modopen" data-toggle="modal" href="#modadmin">Admin Login</a></li>
+												</ul>
+											</li>
+										</asp:Panel>
+										<%--<a runat="server" href="~/login">Log in</a>--%>
+									</li>
 								</ul>
 							</AnonymousTemplate>
 							<LoggedInTemplate>
@@ -231,7 +243,7 @@
 
 
 
-					<asp:ContentPlaceHolder ID="maincontent" runat="server">					</asp:ContentPlaceHolder>
+					<asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
 
 
 

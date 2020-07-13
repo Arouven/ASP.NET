@@ -1,51 +1,56 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task1.aspx.vb" Inherits="LearnAspCode.Task14" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task1.aspx.vb" Inherits="LearnAspCode.task16" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-	<script src="https://www.google.com/recaptcha/api.js?render=SITE_KEY_HERE"></script>        
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+	<script src="https://www.google.com/recaptcha/api.js?render=SITE_KEY_HERE"></script>
 </asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
+	<div>
+		<h1 style="text-align: center">Registration Form</h1>
+	</div>
 
+	<br />
+	<div>
+		<asp:TextBox ID="textBoxFirstName" CssClass="form-control" placeholder="First Name" runat="server"></asp:TextBox>
+		<asp:RequiredFieldValidator ID="requiredFieldVallidatorFirstname" runat="server" SetFocusOnError="true" ErrorMessage="*Please enter first name" ForeColor="Red" ControlToValidate="textBoxFirstName"></asp:RequiredFieldValidator>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
-	<br />
-	<br />
-	<asp:Label ID="Label2" runat="server" Text="First Name: "></asp:Label>
-	<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-	<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox4" ErrorMessage="Please enter first name" ForeColor="Red"></asp:RequiredFieldValidator>
-	<br />
+		<asp:TextBox ID="textBoxSurName" CssClass="form-control" placeholder="Surname" runat="server"></asp:TextBox>
+		<asp:RequiredFieldValidator ID="requiredFieldVallidatorSurname" runat="server" SetFocusOnError="true" ErrorMessage="*Please enter last name" ForeColor="Red" ControlToValidate="textBoxSurName"></asp:RequiredFieldValidator>
 
-	<asp:Label ID="Label4" runat="server" Text="Last Name: "></asp:Label>
-	<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-	<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Please enter last name" ForeColor="Red"></asp:RequiredFieldValidator>
-	<br />
+		<asp:TextBox ID="textBoxUserName" CssClass="form-control" placeholder="Username" runat="server"></asp:TextBox>
+		<asp:RequiredFieldValidator ID="requiredFieldVallidatorUsername" runat="server" SetFocusOnError="true" ErrorMessage="*Please enter user name" ForeColor="Red" ControlToValidate="textBoxUserName"></asp:RequiredFieldValidator>
 
-	<asp:Label ID="Label5" runat="server" Text="User Name: "></asp:Label>
-	<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-	<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox5" ErrorMessage="Please enter user name" ForeColor="Red"></asp:RequiredFieldValidator>
-	<br />
+		<asp:TextBox ID="txtPassword" CssClass="form-control" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
+		<asp:RequiredFieldValidator ID="RFVPassword" runat="server" SetFocusOnError="true" ForeColor="Red" ErrorMessage="*Password Required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+		<asp:RegularExpressionValidator ID="REVPassword" runat="server" ForeColor="Red" ValidateEmptyText="true" ErrorMessage="*Password must be between 5 and 10 characters" ControlToValidate="txtPassword" ValidationExpression="[0-9a-zA-Z]{5,10}" SetFocusOnError="True"></asp:RegularExpressionValidator>
+		<asp:TextBox ID="txtConfirmPassword" CssClass="form-control" placeholder="Confirm Password" runat="server"></asp:TextBox>
+		<asp:CompareValidator ID="CVConfirmPassword" runat="server" ForeColor="Red" ErrorMessage="*Password not match" ControlToValidate="txtPassword" ValueToCompare="txtPassword" ControlToCompare="txtConfirmPassword" SetFocusOnError="True"></asp:CompareValidator>
 
-	<asp:Label ID="Label6" runat="server" Text="email: "></asp:Label>
-	<asp:TextBox ID="TextBox2" runat="server" TextMode="Email"></asp:TextBox>
-	<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBox2" ErrorMessage="Please enter email" ForeColor="Red"></asp:RequiredFieldValidator>
-	<br />
+		<asp:TextBox ID="textBoxEmail" CssClass="form-control" placeholder="Email" TextMode="Email" runat="server"></asp:TextBox>
+		<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="textBoxEmail" ErrorMessage="*Please enter email" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
 
-	<asp:Label ID="Label1" runat="server" Text="Password: "></asp:Label>
-	<asp:TextBox ID="password" runat="server"></asp:TextBox>
-	<asp:RequiredFieldValidator ID="pass" runat="server" ControlToValidate="password" ErrorMessage="Please enter a password" ForeColor="Red"></asp:RequiredFieldValidator>
-	<br />
+		<asp:TextBox ID="textBoxPhoneNumber" CssClass="form-control" placeholder="Phone Number" TextMode="Phone" runat="server"></asp:TextBox>
+		<br />
 
-	<asp:Label ID="Label3" runat="server" Text="Confirm Password: "></asp:Label>
-	<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-	<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Please confirm password" ForeColor="Red"></asp:RequiredFieldValidator>
-	<asp:CompareValidator ID="CompareValidator1" runat="server"
-		ControlToCompare="password" ControlToValidate="TextBox1" ErrorMessage="Password not match" ForeColor="Red">
-	</asp:CompareValidator>
-	<br />
-	<script>
-		grecaptcha.ready(function () {
-			grecaptcha.execute('SITE_KEY_HERE', { action: 'homepage' }).then(function (token) {
-				document.getElementById("g-recaptcha-response").value = token;
+		<asp:TextBox ID="textBoxZipCode" CssClass="form-control" placeholder="Zip Code" TextMode="Number" runat="server"></asp:TextBox>
+		<br />
+		<asp:DropDownList CssClass="form-control" ID="ddCountry" runat="server">
+			<asp:ListItem Selected="True">Choose Country</asp:ListItem>
+			<asp:ListItem Value="1">Mauritius</asp:ListItem>
+			<asp:ListItem Value="2">Rodrigues</asp:ListItem>
+			<asp:ListItem Value="3">Reunion</asp:ListItem>
+		</asp:DropDownList>
+		<asp:CustomValidator ID="CVCountryDropDown" runat="server" ControlToValidate="ddCountry" OnServerValidate="CVCountryDropDown_ServerValidate" ForeColor="Red" ErrorMessage="*Select a Country"></asp:CustomValidator>
+
+		<br />
+		<script>
+			grecaptcha.ready(function () {
+				grecaptcha.execute('SITE_KEY_HERE', { action: 'homepage' }).then(function (token) {
+					document.getElementById("g-recaptcha-response").value = token;
+				});
 			});
-		});
-	</script>
-	<asp:Button ID="Button1" runat="server" Text="Button" />
+		</script>
+		<br />
+
+		<asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-success" Text="Submit" Style="float: right" />
+	</div>
 </asp:Content>
