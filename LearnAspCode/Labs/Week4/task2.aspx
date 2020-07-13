@@ -1,4 +1,7 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="task2.aspx.vb" Inherits="MasterPageSite.task22" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="task2.aspx.vb" Inherits="LearnAspCode.task22" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
 
     

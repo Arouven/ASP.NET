@@ -208,6 +208,10 @@
     <Content Include="Labs\Week3\Task08.aspx" />
     <Content Include="Labs\Week3\Task09.aspx" />
     <Content Include="Labs\Week4\Task1.aspx" />
+    <Content Include="Labs\Week4\task2.aspx" />
+    <Content Include="Labs\Week4\task3.aspx" />
+    <Content Include="Labs\Week4\task4.aspx" />
+    <Content Include="Labs\Week4\task5.aspx" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
     <Content Include="reviews.aspx" />
@@ -523,6 +527,34 @@
     </Compile>
     <Compile Include="Labs\Week4\Task1.aspx.vb">
       <DependentUpon>Task1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week4\task2.aspx.designer.vb">
+      <DependentUpon>task2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week4\task2.aspx.vb">
+      <DependentUpon>task2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week4\task3.aspx.designer.vb">
+      <DependentUpon>task3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week4\task3.aspx.vb">
+      <DependentUpon>task3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week4\task4.aspx.designer.vb">
+      <DependentUpon>task4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week4\task4.aspx.vb">
+      <DependentUpon>task4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week4\task5.aspx.designer.vb">
+      <DependentUpon>task5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week4\task5.aspx.vb">
+      <DependentUpon>task5.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.vb">

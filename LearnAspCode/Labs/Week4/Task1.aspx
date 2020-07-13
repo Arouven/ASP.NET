@@ -29,10 +29,16 @@
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="textBoxEmail" ErrorMessage="*Please enter email" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
 
 		<asp:TextBox ID="textBoxPhoneNumber" CssClass="form-control" placeholder="Phone Number" TextMode="Phone" runat="server"></asp:TextBox>
+		<asp:RegularExpressionValidator ID="REVPhonenumber" runat="server" ErrorMessage="*Invalid Phone Number" ForeColor="Red" SetFocusOnError="True" ControlToValidate="textBoxPhoneNumber" ValidationExpression="\d{8}" ></asp:RegularExpressionValidator>
 		<br />
 
 		<asp:TextBox ID="textBoxZipCode" CssClass="form-control" placeholder="Zip Code" TextMode="Number" runat="server"></asp:TextBox>
+		<asp:RegularExpressionValidator ID="REVZipcode" runat="server" ForeColor="Red" ErrorMessage="*5 digits" ControlToValidate="textBoxZipCode" ValidationExpression="[0-9a-zA-Z]{5}" SetFocusOnError="True"></asp:RegularExpressionValidator>
 		<br />
+
+		<asp:TextBox ID="textBoxDOB" CssClass="form-control" placeholder="Date of Birth" TextMode="Date" SetFocusOnError="True" runat="server"></asp:TextBox>
+		<br />
+
 		<asp:DropDownList CssClass="form-control" ID="ddCountry" runat="server">
 			<asp:ListItem Selected="True">Choose Country</asp:ListItem>
 			<asp:ListItem Value="1">Mauritius</asp:ListItem>

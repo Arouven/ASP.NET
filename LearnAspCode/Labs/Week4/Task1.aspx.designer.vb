@@ -140,6 +140,15 @@ Partial Public Class task16
 	Protected WithEvents textBoxPhoneNumber As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
+	'''REVPhonenumber control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents REVPhonenumber As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+	'''<summary>
 	'''textBoxZipCode control.
 	'''</summary>
 	'''<remarks>
@@ -147,6 +156,24 @@ Partial Public Class task16
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents textBoxZipCode As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''REVZipcode control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents REVZipcode As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+	'''<summary>
+	'''textBoxDOB control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents textBoxDOB As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
 	'''ddCountry control.
