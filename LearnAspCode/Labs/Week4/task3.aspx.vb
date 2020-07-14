@@ -6,8 +6,14 @@
     End Sub
 
     Protected Sub CVCheckThirdNumber_ServerValidate(source As Object, args As ServerValidateEventArgs)
-        If (Integer.Parse(txtThirdNumber.Text) > Integer.Parse(txtFirstNumber.Text)) And (Integer.Parse(txtThirdNumber.Text) < Integer.Parse(txtSecondNumber.Text)) Then
-            args.IsValid = True
+        Dim no1 As Integer = Integer.Parse(txtFirstNumber.Text)
+        Dim no2 As Integer = Integer.Parse(txtSecondNumber.Text)
+        Dim no3 As Integer = Integer.Parse(txtThirdNumber.Text)
+
+        If no1 < no2 Then
+            If ((no3 >= no1) And (no3 <= no2)) Then
+                args.IsValid = True
+            End If
         Else
             args.IsValid = False
         End If

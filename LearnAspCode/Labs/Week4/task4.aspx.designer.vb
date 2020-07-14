@@ -12,40 +12,40 @@ Option Explicit On
 
 
 Partial Public Class task42
-    
-    '''<summary>
-    '''lblCurrentBid control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblCurrentBid As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''txtYourBid control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtYourBid As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''CVBidCheck control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents CVBidCheck As Global.System.Web.UI.WebControls.CustomValidator
-    
-    '''<summary>
-    '''btnSubmitBid control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnSubmitBid As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''lblCurrentBid control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents lblCurrentBid As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''txtYourBid control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents txtYourBid As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''CVBidCheck control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents CVBidCheck As Global.System.Web.UI.WebControls.CustomValidator
+
+	'''<summary>
+	'''btnSubmitBid control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnSubmitBid As Global.System.Web.UI.WebControls.Button
 End Class

@@ -1,17 +1,11 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="task5.aspx.vb" Inherits="MasterPageSite.task52" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task5.aspx.vb" Inherits="LearnAspCode.task52" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
-
-    <div>
-        <h1 style="text-align:center">Credit Card Information</h1>
-    </div>
-
-    <br />
-    <br />
-
-    <asp:TextBox ID="txtCreditCard" CssClass="form-control" runat="server"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="RFVCreditCard" ControlToValidate="txtCreditCard" runat="server" ErrorMessage="*Credit Card Number Required!"></asp:RequiredFieldValidator>
-    <br /> <asp:RegularExpressionValidator ID="REVCreditCard" ControlToValidate="txtCreditCard" runat="server" ErrorMessage="*Credit Card Number Must be 16 digits" ValidationExpression="[0-9]{16}"></asp:RegularExpressionValidator>
-    <br /><br />
-    
-    <asp:Button ID="btnSubmitCreditCard" CssClass="btn btn-primary" runat="server" Text="Submit CreditCard" OnClick="btnSubmitCreditCard_Click" />
+	<div>
+		<asp:Label ID="Label1" runat="server" Text="Credit card"></asp:Label>
+		<asp:TextBox ID="txtCreditCard" runat="server"></asp:TextBox>
+		<asp:RequiredFieldValidator ID="RFVCreditCard" ForeColor="Red" ControlToValidate="txtCreditCard" runat="server" ErrorMessage="*required"></asp:RequiredFieldValidator>
+		<asp:RegularExpressionValidator ID="REVCreditCard" ForeColor="Red" ControlToValidate="txtCreditCard" runat="server" ErrorMessage="*Must be 16 digits" ValidationExpression="[0-9]{16}"></asp:RegularExpressionValidator>
+	</div>
+	<asp:Button ID="btnSubmit" CssClass="btn btn-primary" runat="server" Text="Submit" />
 </asp:Content>

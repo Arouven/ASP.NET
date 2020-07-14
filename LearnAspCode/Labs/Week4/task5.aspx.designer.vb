@@ -12,40 +12,49 @@ Option Explicit On
 
 
 Partial Public Class task52
-    
-    '''<summary>
-    '''txtCreditCard control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtCreditCard As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''RFVCreditCard control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RFVCreditCard As Global.System.Web.UI.WebControls.RequiredFieldValidator
-    
-    '''<summary>
-    '''REVCreditCard control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents REVCreditCard As Global.System.Web.UI.WebControls.RegularExpressionValidator
-    
-    '''<summary>
-    '''btnSubmitCreditCard control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnSubmitCreditCard As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''Label1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''txtCreditCard control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents txtCreditCard As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''RFVCreditCard control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RFVCreditCard As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+	'''<summary>
+	'''REVCreditCard control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents REVCreditCard As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+	'''<summary>
+	'''btnSubmit control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class
