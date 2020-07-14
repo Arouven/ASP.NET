@@ -168,7 +168,10 @@
 									<li class="dropdown-submenu">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 4</a>
 										<ul class="dropdown-menu">
-											<li></li>
+											<li><a runat="server" href="Labs/Week4/Task1And2.aspx">Task1 And 2</a></li>
+											<li><a runat="server" href="Labs/Week4/Task3.aspx">Task3</a></li>
+											<li><a runat="server" href="Labs/Week4/Task4.aspx">Task4</a></li>
+											<li><a runat="server" href="Labs/Week4/Task5.aspx">Task5</a></li>
 										</ul>
 									</li>
 									<li class="dropdown-submenu">
