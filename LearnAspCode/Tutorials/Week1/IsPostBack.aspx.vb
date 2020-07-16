@@ -12,5 +12,7 @@
 			DropDownList1.DataBind()
 		End If
 	End Sub
-
+	Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
+		Label1.Text = DropDownList1.SelectedItem.Text
+	End Sub
 End Class

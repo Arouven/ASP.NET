@@ -5,4 +5,8 @@
 
     End Sub
 
+    Sub btnSubmit_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Label1.Text = "Thanks!"
+    End Sub
+
 End Class
