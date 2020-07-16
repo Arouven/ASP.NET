@@ -126,6 +126,18 @@
 											<li><a runat="server" href="Tutorials/Week7/DeletingARecordWithTheFormViewControl.aspx">Deleting A Record With The FormView Control</a></li>
 										</ul>
 									</li>
+									<li class="dropdown-submenu">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 8</a>
+										<ul class="dropdown-menu">
+											<li><a runat="server" href="Tutorials/Week8/CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx">Creating A DataSet To Work With The Disconnected DataModel</a></li>
+											<li><a runat="server" href="Tutorials/Week8/DropDownDemo.aspx">DropDown Demo</a></li>
+											<li><a runat="server" href="Tutorials/Week8/ListBoxDemo.aspx">ListBox Demo</a></li>
+											<li><a runat="server" href="Tutorials/Week8/RadioButtonList.aspx">RadioButtonList</a></li>
+											<li><a runat="server" href="Tutorials/Week8/stats.aspx">Movies stats</a></li>
+											<li><a runat="server" href="Tutorials/Week8/WorkingWithTheBulletedListControl.aspx">Working With The BulletedList Control</a></li>
+											<li><a runat="server" href="Tutorials/Week8/WorkingWithTheCheckBoxListControls.aspx">Working With The CheckBoxList Controls</a></li>
+										</ul>
+									</li>
 								</ul>
 							</li>
 

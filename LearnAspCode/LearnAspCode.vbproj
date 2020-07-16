@@ -315,6 +315,13 @@
     <Content Include="Tutorials\Week7\InsertingARecordWithTheDetailsViewControl.aspx" />
     <Content Include="Tutorials\Week7\EditAndUpdateARecordWithTheFormViewControl.aspx" />
     <Content Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx" />
+    <Content Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx" />
+    <Content Include="Tutorials\Week8\DropDownDemo.aspx" />
+    <Content Include="Tutorials\Week8\ListBoxDemo.aspx" />
+    <Content Include="Tutorials\Week8\RadioButtonList.aspx" />
+    <Content Include="Tutorials\Week8\stats.aspx" />
+    <Content Include="Tutorials\Week8\WorkingWithTheBulletedListControl.aspx" />
+    <Content Include="Tutorials\Week8\WorkingWithTheCheckBoxListControls.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -1034,6 +1041,55 @@
     </Compile>
     <Compile Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx.vb">
       <DependentUpon>InsertNewRecordWithTheFormViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx.designer.vb">
+      <DependentUpon>CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx.vb">
+      <DependentUpon>CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\DropDownDemo.aspx.designer.vb">
+      <DependentUpon>DropDownDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\DropDownDemo.aspx.vb">
+      <DependentUpon>DropDownDemo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\ListBoxDemo.aspx.designer.vb">
+      <DependentUpon>ListBoxDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\ListBoxDemo.aspx.vb">
+      <DependentUpon>ListBoxDemo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\RadioButtonList.aspx.designer.vb">
+      <DependentUpon>RadioButtonList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\RadioButtonList.aspx.vb">
+      <DependentUpon>RadioButtonList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\stats.aspx.designer.vb">
+      <DependentUpon>stats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\stats.aspx.vb">
+      <DependentUpon>stats.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\WorkingWithTheBulletedListControl.aspx.designer.vb">
+      <DependentUpon>WorkingWithTheBulletedListControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\WorkingWithTheBulletedListControl.aspx.vb">
+      <DependentUpon>WorkingWithTheBulletedListControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week8\WorkingWithTheCheckBoxListControls.aspx.designer.vb">
+      <DependentUpon>WorkingWithTheCheckBoxListControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week8\WorkingWithTheCheckBoxListControls.aspx.vb">
+      <DependentUpon>WorkingWithTheCheckBoxListControls.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
