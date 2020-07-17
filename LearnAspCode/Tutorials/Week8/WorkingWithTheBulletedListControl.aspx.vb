@@ -21,7 +21,7 @@
 		While dr.Read()
 			Dim newItem As New ListItem()
 			newItem.Text = dr("category_name") & ": " & dr("MovieName") & ", $ " & dr("Boxofficetotals")
-			'newItem.Value = dr(“Movie_Id”)
+			'newItem.Value = dr("Movie_Id")
 			list1.Items.Add(newItem)
 		End While
 		dr.Close()

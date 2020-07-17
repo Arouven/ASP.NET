@@ -41,6 +41,15 @@ Partial Public Class Login
 	Protected WithEvents TextBoxEmail As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
+	'''RadioButtonList2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
+
+	'''<summary>
 	'''ButtonRegister control.
 	'''</summary>
 	'''<remarks>
@@ -75,6 +84,15 @@ Partial Public Class Login
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents ButtonLogin As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''RememberMe control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
 
 	'''<summary>
 	'''lblStatus control.

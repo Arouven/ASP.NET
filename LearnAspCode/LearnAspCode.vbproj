@@ -315,6 +315,7 @@
     <Content Include="Tutorials\Week7\InsertingARecordWithTheDetailsViewControl.aspx" />
     <Content Include="Tutorials\Week7\EditAndUpdateARecordWithTheFormViewControl.aspx" />
     <Content Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx" />
+    <Content Include="WebForm3.aspx" />
     <Content Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx" />
     <Content Include="Tutorials\Week8\DropDownDemo.aspx" />
     <Content Include="Tutorials\Week8\ListBoxDemo.aspx" />
@@ -1041,6 +1042,13 @@
     </Compile>
     <Compile Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx.vb">
       <DependentUpon>InsertNewRecordWithTheFormViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.vb">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.vb">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx.designer.vb">

@@ -11,50 +11,68 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class master1
+Partial Public Class logincrtl
 
 	'''<summary>
-	'''headPlaceHolder1 control.
+	'''lblUsername control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents headPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+	Protected WithEvents lblUsername As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''form control.
+	'''txtUsername control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents form As Global.System.Web.UI.HtmlControls.HtmlForm
+	Protected WithEvents txtUsername As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''Logout control.
+	'''RequiredFieldValidator1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Logout As Global.System.Web.UI.HtmlControls.HtmlAnchor
+	Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
 	'''<summary>
-	'''LabelUsername control.
+	'''lblPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelUsername As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents lblPassword As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''ContentPlaceHolder1 control.
+	'''txtPassword control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+	Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''RequiredFieldValidator2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+	'''<summary>
+	'''chkremem control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents chkremem As Global.System.Web.UI.WebControls.CheckBox
 End Class

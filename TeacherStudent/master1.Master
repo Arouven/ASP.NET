@@ -15,14 +15,16 @@
 
 	<link rel="icon" href="img/core-img/favicon.ico">
 
-	<!-- login Stylesheet -->
-	<link rel="stylesheet" href="css/loginStyle.css">
-
 	<!-- Core Stylesheet -->
 	<link rel="stylesheet" href="style.css">
+
+
+
+	<asp:ContentPlaceHolder ID="headPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
 </head>
 <body>
-
+	<form id="form" runat="server">
 	<!-- ##### Preloader ##### -->
 	<div id="preloader">
 		<i class="circle-preloader"></i>
@@ -42,6 +44,16 @@
 									<img src="img/core-img/logo.png" alt=""></a>
 							</div>
 							<div class="login-content">
+
+
+
+
+
+
+
+
+
+
 								<a id="Logout" runat="server" href="#">
 									<asp:Label ID="LabelUsername" runat="server"></asp:Label>
 								</a>
@@ -162,12 +174,37 @@
 			<asp:Label ID="lblStatus" runat="server"></asp:Label>
 		</form>
 	</div>
-
+	<asp:LoginView runat="server" ViewStateMode="Disabled">
+							<AnonymousTemplate>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a runat="server" href="~/register">Register</a></li>
+									<li>
+										<asp:Panel runat="server" CssClass="nav navbar-nav navbar-right" ID="pnllog">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="<%=ResolveClientUrl("~/login") %>">User</a></li>
+													<li><a id="logstu" href="#" data-toggle="modal"
+														data-target="#lgstu">Student</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a rel="modal:open" id="modopen" data-toggle="modal" href="#modadmin">Admin Login</a></li>
+												</ul>
+											</li>
+										</asp:Panel>
+									</li>
+								</ul>
+							</AnonymousTemplate>
+							<LoggedInTemplate>
+								<ul class="nav navbar-nav navbar-right">
+									<li></li>
+									<li></li>
+								</ul>
+							</LoggedInTemplate>
 
 	<div id="blurme">--%>
 
-	<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-	</asp:ContentPlaceHolder>
+	<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">	</asp:ContentPlaceHolder>
 
 
 	<%--</div>--%>
@@ -273,9 +310,9 @@
 			</div>
 		</div>
 	</footer>
-	<!-- ##### Footer Area Start ##### -->
+	<!-- ##### Footer Area End ##### -->
 
-
+	</form>
 
 
 
@@ -299,5 +336,5 @@
 	<script src="js/login.js"></script>
 
 </body>
-
+	
 </html>

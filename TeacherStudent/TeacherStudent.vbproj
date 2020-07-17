@@ -131,6 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\MyDB.mdf" />
+    <Content Include="App_Data\MyDB_log.ldf">
+      <DependentUpon>MyDB.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\TeacherStudentDB.mdf" />
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
@@ -237,6 +241,7 @@
     <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_variables.scssc" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="userControl\logincrtl.ascx" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -330,7 +335,7 @@
     </Compile>
     <Compile Include="Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.vb">
       <DependentUpon>Logout.aspx</DependentUpon>
@@ -364,6 +369,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="userControl\logincrtl.ascx.designer.vb">
+      <DependentUpon>logincrtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\logincrtl.ascx.vb">
+      <DependentUpon>logincrtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Registration.aspx.designer.vb">
       <DependentUpon>Registration.aspx</DependentUpon>
