@@ -22,6 +22,7 @@
 			text-align: center;
 			font-size: 30px;
 		}
+
 		.modal-footer {
 			background-color: #f9f9f9;
 		}
@@ -214,10 +215,8 @@
 											<li class="dropdown">
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
 												<ul class="dropdown-menu">
-													<li>
-														<a href="<%=ResolveClientUrl("~/login") %>">User</a></li>
-													<li><a id="logstu" href="#" data-toggle="modal"
-														data-target="#lgstu">Student</a></li>
+													<li><a href="<%=ResolveClientUrl("~/login") %>">User</a></li>
+													<li><a id="logstu" href="#" data-toggle="modal" data-target="#lgstu">Student</a></li>
 													<li role="separator" class="divider"></li>
 													<li><a rel="modal:open" id="modopen" data-toggle="modal" href="#modadmin">Admin Login</a></li>
 												</ul>

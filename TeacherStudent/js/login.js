@@ -1,7 +1,13 @@
 (function ($) {
 
-    $('.message a').click(function changeForm() {
-        $('.form div').animate({ height: "toggle", opacity: "toggle" }, "slow");
+
+    $(".openRegForm").click(function () {
+        $('.login-form').hide();
+        $('.register-form').show("slow");
+    });
+    $(".openLoginForm").click(function () {
+        $('.register-form').hide();
+        $('.login-form').show("slow");
     });
 
     $(document).keypress(function EnterEvent(e) {
@@ -9,6 +15,44 @@
             e.preventDefault();
         }
     });
+    function loginRegisterModal() {
+        $(document).ready(function () {
+            $('#modLoginRegister').modal('show');
+        });
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //$('.message a').click(function changeForm() {
+    //    $('.form div').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    //});
+
+    //$(document).keypress(function EnterEvent(e) {
+    //    if (e.which == '13') {
+    //        e.preventDefault();
+    //    }
+    //});
 
 
     //$(document).ready(function () {
