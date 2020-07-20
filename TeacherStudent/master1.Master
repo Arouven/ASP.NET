@@ -288,18 +288,18 @@
 									<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxPasswordReg" CssClass="text-danger" ValidationGroup="registerGroup" ErrorMessage="The password field is required." />
 									<asp:RegularExpressionValidator ID="REVPassword" runat="server" CssClass="text-danger" ValidateEmptyText="true" ErrorMessage="Password must be between 5 and 10 characters" ControlToValidate="TextBoxPasswordReg" ValidationGroup="registerGroup" ValidationExpression="[0-9a-zA-Z]{5,10}" SetFocusOnError="True"></asp:RegularExpressionValidator>
 								</div>
-									<div class="form-group">
+								<div class="form-group">
 									<asp:TextBox ID="TextBoxConfirmReg" runat="server" TextMode="Password" placeholder="Password" CssClass="tbInput" />
-										<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxConfirmReg" CssClass="text-danger" ValidationGroup="registerGroup" ErrorMessage="The password not match." />
-										<asp:CompareValidator ID="CVConfirmPassword" runat="server" ForeColor="Red" ValidationGroup="registerGroup"  ErrorMessage="Password not match" ControlToValidate="TextBoxPasswordReg" ValueToCompare="TextBoxPasswordReg" ControlToCompare="TextBoxConfirmReg" SetFocusOnError="True"></asp:CompareValidator>									
+									<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxConfirmReg" CssClass="text-danger" ValidationGroup="registerGroup" ErrorMessage="The password not match." />
+									<asp:CompareValidator ID="CVConfirmPassword" runat="server" ForeColor="Red" ValidationGroup="registerGroup" ErrorMessage="Password not match" ControlToValidate="TextBoxPasswordReg" ValueToCompare="TextBoxPasswordReg" ControlToCompare="TextBoxConfirmReg" SetFocusOnError="True"></asp:CompareValidator>
 								</div>
 								<div class="form-group">
 									<asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" placeholder="Email adderss" CssClass="tbInput" />
-		<asp:RequiredFieldValidator ID="RFVEmail" runat="server" ValidationGroup="registerGroup" ControlToValidate="TextBoxEmail" ErrorMessage="Please enter email" cssclass="text-danger" SetFocusOnError="True"></asp:RequiredFieldValidator>
+									<asp:RequiredFieldValidator ID="RFVEmail" runat="server" ValidationGroup="registerGroup" ControlToValidate="TextBoxEmail" ErrorMessage="Please enter email" CssClass="text-danger" SetFocusOnError="True"></asp:RequiredFieldValidator>
 								</div>
 								<div class="form-group">
 									<asp:TextBox ID="textBoxPhoneNumber" CssClass="tbInput" placeholder="Phone Number" TextMode="Phone" runat="server"></asp:TextBox>
-		<asp:RegularExpressionValidator ID="REVPhonenumber" runat="server" ValidationGroup="registerGroup" ErrorMessage="Invalid Phone Number" cssclass="text-danger" SetFocusOnError="True" ControlToValidate="textBoxPhoneNumber" ValidationExpression="\d{8}"></asp:RegularExpressionValidator>
+									<asp:RegularExpressionValidator ID="REVPhonenumber" runat="server" ValidationGroup="registerGroup" ErrorMessage="Invalid Phone Number" CssClass="text-danger" SetFocusOnError="True" ControlToValidate="textBoxPhoneNumber" ValidationExpression="\d{8}"></asp:RegularExpressionValidator>
 								</div>
 								<div class="form-group">
 									<asp:TextBox ID="textBoxDOB" CssClass="form-control" placeholder="Date of Birth" TextMode="Date" SetFocusOnError="True" runat="server"></asp:TextBox>

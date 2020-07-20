@@ -295,14 +295,17 @@
     <Content Include="Tutorials\Week5\Images\1.jpg" />
     <Content Include="Tutorials\Week5\Images\2.jpg" />
     <Content Include="Tutorials\Week5\Images\3.jpg" />
+    <Content Include="Tutorials\Week5\login.aspx" />
     <Content Include="Tutorials\Week5\logincrtl.ascx" />
     <Content Include="Tutorials\Week5\proprndimg.ascx" />
+    <Content Include="Tutorials\Week5\Register.aspx" />
     <Content Include="Tutorials\Week5\rndquotation.ascx" />
     <Content Include="Tutorials\Week5\showdeclarative.aspx" />
     <Content Include="Tutorials\Week5\FeaturedProducts\showfeaturedproduct.aspx" />
     <Content Include="Tutorials\Week5\showrndquotation.aspx" />
     <Content Include="Tutorials\Week5\uc\randomimage.ascx" />
     <Content Include="Tutorials\Week5\showaddress.aspx" />
+    <Content Include="Tutorials\Week5\updateprofile.aspx" />
     <Content Include="Tutorials\Week7\DeletingARecordWithTheFormViewControl.aspx" />
     <Content Include="Tutorials\Week7\details.aspx" />
     <Content Include="Tutorials\Week7\DisplayingDataWithTheFormViewControlAndEnablePagingMode.aspx" />
@@ -904,6 +907,13 @@
       <DependentUpon>featuredproduct2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week5\login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutorials\Week5\logincrtl.ascx.designer.vb">
       <DependentUpon>logincrtl.ascx</DependentUpon>
     </Compile>
@@ -917,6 +927,13 @@
     <Compile Include="Tutorials\Week5\proprndimg.ascx.vb">
       <DependentUpon>proprndimg.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week5\rndquotation.ascx.designer.vb">
       <DependentUpon>rndquotation.ascx</DependentUpon>
@@ -958,6 +975,13 @@
     </Compile>
     <Compile Include="Tutorials\Week5\showaddress.aspx.vb">
       <DependentUpon>showaddress.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week5\updateprofile.aspx.designer.vb">
+      <DependentUpon>updateprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week5\updateprofile.aspx.vb">
+      <DependentUpon>updateprofile.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week7\DeletingARecordWithTheFormViewControl.aspx.designer.vb">

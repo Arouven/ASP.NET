@@ -11,32 +11,41 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class showrndquotation
+Partial Public Class login1
 
 	'''<summary>
-	'''Label1 control.
+	'''userlogin control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents userlogin As Global.LearnAspCode.logincrtl
 
 	'''<summary>
-	'''rndquote control.
+	'''btnLogin control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents rndquote As Global.LearnAspCode.rndquotation
+	Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''UpdatePanel1 control.
+	'''lblmsg control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+	Protected WithEvents lblmsg As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''btnRegister control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnRegister As Global.System.Web.UI.WebControls.Button
 End Class

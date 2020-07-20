@@ -32,6 +32,87 @@ Partial Public Class guestMasterPage
 	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 	'''<summary>
+	'''pnlprofile control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents pnlprofile As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''hyuser control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents hyuser As Global.System.Web.UI.WebControls.HyperLink
+
+	'''<summary>
+	'''btndeacuser control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btndeacuser As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''pnlmanagemov control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents pnlmanagemov As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''pnlmanage control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents pnlmanage As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''pnllog control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents pnllog As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''lgregis control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents lgregis As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''lbllgged control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents lbllgged As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''btnlgout control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnlgout As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
 	'''maincontent control.
 	'''</summary>
 	'''<remarks>

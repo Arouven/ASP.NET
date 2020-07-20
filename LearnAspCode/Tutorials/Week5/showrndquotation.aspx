@@ -17,6 +17,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
 	<div>
 		<%= DateTime.Now %>
+			<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 		<br />
 		<user:Randomquote ID="rndquote" runat="server"></user:Randomquote>
 		<asp:UpdatePanel ID="UpdatePanel1" runat="server"></asp:UpdatePanel>
