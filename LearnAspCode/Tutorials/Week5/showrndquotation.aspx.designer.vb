@@ -30,13 +30,4 @@ Partial Public Class showrndquotation
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents rndquote As Global.LearnAspCode.rndquotation
-
-	'''<summary>
-	'''UpdatePanel1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
 End Class

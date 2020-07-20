@@ -20,7 +20,7 @@
 			<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 		<br />
 		<user:Randomquote ID="rndquote" runat="server"></user:Randomquote>
-		<asp:UpdatePanel ID="UpdatePanel1" runat="server"></asp:UpdatePanel>
+		<%--<asp:UpdatePanel ID="UpdatePanel1" runat="server"></asp:UpdatePanel>--%>
 
 	</div>
 </asp:Content>
