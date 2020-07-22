@@ -104,6 +104,15 @@ Partial Public Class master1
 	Protected WithEvents CVConfirmPassword As Global.System.Web.UI.WebControls.CompareValidator
 
 	'''<summary>
+	'''TextBoxAddress control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxAddress As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
 	'''TextBoxEmail control.
 	'''</summary>
 	'''<remarks>
@@ -149,13 +158,40 @@ Partial Public Class master1
 	Protected WithEvents textBoxDOB As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''RadioButtonList2 control.
+	'''Label1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''FileUpload1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+
+	'''<summary>
+	'''CheckBoxRegister control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents CheckBoxRegister As Global.System.Web.UI.WebControls.CheckBox
+
+	'''<summary>
+	'''RadioButtonListRegister control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RadioButtonListRegister As Global.System.Web.UI.WebControls.RadioButtonList
 
 	'''<summary>
 	'''ButtonRegister control.
@@ -185,13 +221,13 @@ Partial Public Class master1
 	Protected WithEvents TextBoxPasswordLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''RadioButtonList1 control.
+	'''RadioButtonListLogin control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
+	Protected WithEvents RadioButtonListLogin As Global.System.Web.UI.WebControls.RadioButtonList
 
 	'''<summary>
 	'''ButtonLogin control.

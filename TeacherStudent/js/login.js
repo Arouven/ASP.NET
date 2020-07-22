@@ -20,8 +20,11 @@
             $('#modLoginRegister').modal('show');
         });
     };
-
-
+    function staticModal() {
+        $(document).ready(function () {
+            $("#ButtonLogin").click(function () { $('#modLoginRegister').modal({ "backdrop": "static" }); });            
+        });
+    };
 
 
 

@@ -10,26 +10,38 @@
 	<link href="~/Content/ddmenu.css" rel="stylesheet" />
 	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
-	<script src='<%= ResolveClientUrl("~/Scripts/jquery.min.js") %>'></script>
-	<script src='<%= ResolveClientUrl("~/Scripts/bootstrap.min.js") %>'></script>
+
+
+
+
+
+
+
+
 
 	<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
-
-	<style>
-		.modal-header, h4, .close {
-			background-color: #5cb85c;
-			color: white !important;
-			text-align: center;
-			font-size: 30px;
-		}
-
-		.modal-footer {
-			background-color: #f9f9f9;
-		}
-	</style>
 </head>
 <body>
 	<form id="form1" runat="server">
+		<asp:ScriptManager runat="server">
+			<Scripts>
+				<%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+				<%--Framework Scripts--%>
+				<asp:ScriptReference Name="MsAjaxBundle" />
+				<asp:ScriptReference Name="jquery" />
+				<asp:ScriptReference Name="bootstrap" />
+				<asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+				<asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+				<asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+				<asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+				<asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+				<asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+				<asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+				<asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+				<asp:ScriptReference Name="WebFormsBundle" />
+				<%--Site Scripts--%>
+			</Scripts>
+		</asp:ScriptManager>
 		<div id="wrapper">
 			<div id="heads" class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
@@ -44,8 +56,8 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 							<li class="dropdown">
-								<a id="hov" class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span class="caret"></span></a>
-								<%--tutorials dropdown--%>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span class="caret"></span></a>
+								<!--tutorials dropdown-->
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 1</a>
@@ -104,14 +116,14 @@
 										</ul>
 									</li>
 									<li class="dropdown-submenu">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 5</a>
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 5 And 9</a>
 										<ul class="dropdown-menu">
 											<li><a runat="server" href="~/Tutorials/Week5/FeaturedProducts/showfeaturedproduct">Show featured product</a></li>
 											<li><a runat="server" href="~/Tutorials/Week5/showaddress">Show Address</a></li>
 											<li><a runat="server" href="~/Tutorials/Week5/showdeclarative">Show Declarative</a></li>
 											<li><a runat="server" href="~/Tutorials/Week5/showrndquotation">Show Random Quotation</a></li>
-											<li><a runat="server" href="Tutorials/Week5/Register.aspx">Register</a></li>
-											<li><a runat="server" href="Tutorials/Week5/login.aspx">login</a></li>
+											<li><a runat="server" href="~/Tutorials/Week5/Register.aspx">Register</a></li>
+											<li><a runat="server" href="~/Tutorials/Week5/login.aspx">login</a></li>
 										</ul>
 									</li>
 									<li class="dropdown-submenu">
@@ -146,7 +158,7 @@
 							</li>
 
 							<li class="dropdown">
-								<a id="hov2" class="dropdown-toggle" data-toggle="dropdown" href="#">Labs<span class="caret"></span></a>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Labs<span class="caret"></span></a>
 								<%--labs dropdown--%>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu">
@@ -343,14 +355,7 @@
 			</div>
 			<div id="main" class="container body-content">
 				<div class="outer">
-
-
-
-
-
-
 					<asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
-
 
 
 
@@ -372,9 +377,6 @@
 				</div>
 			</footer>
 		</div>
-
-
-
 		<script>
 			function adminModal() {
 				$(document).ready(function () {
@@ -407,9 +409,9 @@
 				</div>
 			</div>
 		</div>
-
 	</form>
-	<script src="Scripts/jquery.min.js"></script>
+	<script src="Scripts/jquery-3.4.1.min.js"></script>
 	<script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+

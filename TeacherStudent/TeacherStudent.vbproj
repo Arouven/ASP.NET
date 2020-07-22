@@ -131,10 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\MyDB.mdf" />
-    <Content Include="App_Data\MyDB_log.ldf">
-      <DependentUpon>MyDB.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\TeacherStudentDB.mdf" />
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
@@ -239,6 +235,7 @@
     <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_responsive.scssc" />
     <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_theme_color.scssc" />
     <Content Include=".sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_variables.scssc" />
+    <Content Include="Welcome.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Registration.aspx" />
@@ -383,6 +380,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Welcome.aspx.designer.vb">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.aspx.vb">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -419,7 +423,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ProfilePictures\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
