@@ -1,14 +1,10 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task12.aspx.vb" Inherits="LearnAspCode.Task12" %>
+﻿
+<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task12.aspx.vb" Inherits="LearnAspCode.Task12" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<title></title>
-</head>
-<body>
-	<form id="form1" runat="server">
-		<asp:Label ID="Label1" runat="server" Text="Flight Registration System"></asp:Label><br />
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	
+	<asp:Label ID="Label1" runat="server" Text="Flight Registration System"></asp:Label><br />
 		<br />
 		<asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
 			<asp:View ID="View1" runat="server">
@@ -56,6 +52,4 @@
 				<br />
 			</asp:View>
 		</asp:MultiView>
-	</form>
-</body>
-</html>
+</asp:Content>

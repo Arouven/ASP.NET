@@ -7,7 +7,7 @@
 	<br />
 	<br />
 	<br />
-		<h1>Home Page!</h1>
+	<h1>home Page!</h1>
 
-	
+
 </asp:Content>

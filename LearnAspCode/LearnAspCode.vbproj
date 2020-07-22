@@ -144,6 +144,7 @@
     <Content Include="Content\ddmenu.css" />
     <Content Include="Content\Site.css" />
     <Content Include="courses.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -159,6 +160,11 @@
     <Content Include="Images\1.jpg" />
     <Content Include="Images\1917.jpg" />
     <Content Include="Images\2.jpg" />
+    <Content Include="Images\ad1.jpg" />
+    <Content Include="Images\ad2.jpg" />
+    <Content Include="Images\ad3.jpg" />
+    <Content Include="Images\ad4.jpg" />
+    <Content Include="Images\ad5.jpg" />
     <Content Include="Images\blade.jpg" />
     <Content Include="Images\brave.jpg" />
     <Content Include="Images\deer.jpg" />
@@ -197,7 +203,7 @@
     <Content Include="Labs\Week3\Task10.aspx" />
     <Content Include="Labs\Week3\Task11.aspx" />
     <Content Include="Labs\Week3\Task12.aspx" />
-    <Content Include="Labs\Week3\Task13Problem.aspx" />
+    <Content Include="Labs\Week3\Task13.aspx" />
     <Content Include="Labs\Week3\Task02.aspx" />
     <Content Include="Labs\Week3\Task03.aspx" />
     <Content Include="Labs\Week3\Task04.aspx" />
@@ -353,6 +359,13 @@
       <DependentUpon>courses.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -461,11 +474,11 @@
       <DependentUpon>Task12.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Labs\Week3\Task13Problem.aspx.designer.vb">
-      <DependentUpon>Task13Problem.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task13.aspx.designer.vb">
+      <DependentUpon>Task13.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Labs\Week3\Task13Problem.aspx.vb">
-      <DependentUpon>Task13Problem.aspx</DependentUpon>
+    <Compile Include="Labs\Week3\Task13.aspx.vb">
+      <DependentUpon>Task13.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Labs\Week3\Task02.aspx.designer.vb">

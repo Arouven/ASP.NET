@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<advertisements>
+<Advertisements>
   <!-- Banner Advertisements -->
   <Ad>
     <ImageUrl>~/images/ad1.jpg</ImageUrl>
@@ -47,5 +47,4 @@
     <Impressions>50</Impressions>
     <Keyword>box</Keyword>
   </Ad>
-</advertisements>
-
+</Advertisements>

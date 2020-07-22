@@ -38,12 +38,12 @@
 		</div>
 		<br />
 		Here is the body text in the page.
-				<br />
+		<br />
 		Here is the body text in the page.
-				<br />
+		<br />
 		Here is the body text in the page.
-				<br />
+		<br />
 		Here is the body text in the page.
-				<br class="clear" />
+		<br class="clear" />
 	</div>
 </asp:Content>

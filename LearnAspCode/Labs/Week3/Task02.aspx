@@ -1,17 +1,14 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task02.aspx.vb" Inherits="LearnAspCode.Task21" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task02.aspx.vb" Inherits="LearnAspCode.Task02" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>To detect whether a checkbox is checked or unchecked. The program will have to print true or false accordingly and respond once a user checks the checkbox (refer to exercise 5 in your tutorial).</h1>
+	<br />
+	<div>
+		<asp:CheckBox ID="CheckBox1" OnCheckedChanged="CheckBox1_CheckedChanged" runat="server" AutoPostBack="True" />
+		<asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+	</div>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:CheckBox ID="CheckBox1" OnCheckedChanged="CheckBox1_CheckedChanged" runat="server" AutoPostback="True"/>
-            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-        </div>
-    </form>
-</body>
-</html>
+
+

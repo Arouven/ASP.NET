@@ -1,5 +1,5 @@
-﻿Public Class Task21
-	Inherits System.Web.UI.Page
+﻿Public Class Task02
+    Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If CheckBox1.Checked = True Then

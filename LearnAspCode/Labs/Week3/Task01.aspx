@@ -1,17 +1,24 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task01.aspx.vb" Inherits="LearnAspCode.Task11" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task01.aspx.vb" Inherits="LearnAspCode.Task01" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1> To transfer text from one Textbox control to another, once the first Textbox loses focus.</h1>
+	<br />
+	<div>
+		<div class="lostfocus">
+			<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+		</div>
+		<br />
+		<div>
+			<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$(".lostfocus").focusout(function () {
+				document.getElementById('<%= TextBox2.ClientID %>').value = document.getElementById('<%= TextBox1.ClientID %>').value;
+			});
+		});
+	</script>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:TextBox ID="TextBox1" runat="server" Text="Hello" onblur=""></asp:TextBox>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        </div>
-    </form>
-</body>
-</html>

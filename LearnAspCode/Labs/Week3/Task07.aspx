@@ -1,19 +1,27 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task07.aspx.vb" Inherits="LearnAspCode.Task71" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task07.aspx.vb" Inherits="LearnAspCode.Task71" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<style>
+		.responsive {
+			width: 100%;
+			height: auto;
+		}
+	</style>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<title></title>
-</head>
-<body>
-	<form id="form1" runat="server">
-		<p>
-			<asp:Button ID="Button1" runat="server" Text="Generate Random Image" />
-		</p>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>To display random images in an Image control. Try with the Switch statement.</h1>
+	<br />
+	<div>
 		<div>
-			<asp:Image ID="Image1" runat="server" />
-		</div>		
-	</form>
-</body>
-</html>
+			<asp:Button ID="Button1" runat="server" Text="Generate Random Image" CssClass="form-control" />
+		</div>
+		<br />
+		<br />
+		<div class="text-center">
+			<asp:Image ID="Image1" runat="server" CssClass="responsive" />
+		</div>
+	</div>
+</asp:Content>
+
+

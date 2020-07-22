@@ -1,25 +1,27 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task08.aspx.vb" Inherits="LearnAspCode.Task81" %>
+﻿
+<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task08.aspx.vb" Inherits="LearnAspCode.Task81" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<title></title>
-</head>
-<body>
-	<form id="form1" runat="server">
-		<div>
-			<asp:DropDownList ID="DropDownList1" runat="server" Style="text-align: left"></asp:DropDownList>
-			<br />
-			<br />
-			<asp:RadioButtonList ID="RadioButtonList1" runat="server" Style="text-align: left"></asp:RadioButtonList>
-			<br />
-			<br />
-			<asp:CheckBoxList ID="CheckBoxList1" runat="server" Style="text-align: left"></asp:CheckBoxList>
-			<br />
-			<br />
-			<asp:ListBox ID="ListBox1" runat="server" Style="text-align: left"></asp:ListBox>
-		</div>
-	</form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>Create the following list items declaratively to store three football clubs, namely: Chelsea, Arsenal and Liverpool.- Drop-down list, radiobuttonlist, checkboxlist, listbox</h1>
+	<br />
+	<div>
+		Drop-down list:
+		<asp:DropDownList ID="DropDownList1" runat="server" Style="text-align: left"></asp:DropDownList>
+		<br />
+		<br />
+		radiobuttonlist:
+		<asp:RadioButtonList ID="RadioButtonList1" runat="server" Style="text-align: left"></asp:RadioButtonList>
+		<br />
+		<br />
+		checkboxlist:
+		<asp:CheckBoxList ID="CheckBoxList1" runat="server" Style="text-align: left"></asp:CheckBoxList>
+		<br />
+		<br />
+		listbox:
+		<asp:ListBox ID="ListBox1" runat="server" Style="text-align: left"></asp:ListBox>
+	</div>
+</asp:Content>
+
+

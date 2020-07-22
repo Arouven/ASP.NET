@@ -1,15 +1,11 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task03.aspx.vb" Inherits="LearnAspCode.Task31" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task03.aspx.vb" Inherits="LearnAspCode.Task31" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<title></title>
-</head>
-<body>
-	<form id="form1" runat="server">
-		<div>
-			Select the source:
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>Modify example 6 in your tutorial such that the program respond once a user checks any one of the radio buttons. You will also have to use the Sender parameter rather than If Statement.</h1>
+	<br />
+	<div>
+		Select the source:
 			<ul>
 				<li>
 					<asp:RadioButton OnCheckedChanged="Radio_CheckedChanged" AutoPostBack="true" ID="rdlMagazine" Text="Magazine Article" GroupName="Source" runat="server" />
@@ -21,8 +17,8 @@
 					<asp:RadioButton OnCheckedChanged="Radio_CheckedChanged" AutoPostBack="true" ID="rdlOther" Text="Other Source" GroupName="Source" runat="server" />
 				</li>
 			</ul>
-			<asp:Label ID="lblResult" runat="server" />
-		</div>
-	</form>
-</body>
-</html>
+		<asp:Label ID="lblResult" runat="server" />
+
+	</div>
+</asp:Content>
+
