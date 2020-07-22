@@ -1,18 +1,25 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task4.aspx.vb" Inherits="LearnAspCode.Task4" %>
+﻿
 
-<!DOCTYPE html>
+<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task4.aspx.vb" Inherits="LearnAspCode.Task4" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-<form id="form1" runat="server">
-        <div>
-            <asp:TextBox ID="TextBox1" runat="server" Text="Transfer me"></asp:TextBox>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Transfer" />
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>Transfer text from one Textbox to another (button click event).</h1>
+	<br />
+	<div>
+		<div class="row">
+			<div class="col-sm-6">
+				<asp:TextBox ID="TextBox1" runat="server" Text="Transfer me" CssClass="form-control"></asp:TextBox>
+			</div>
+			<div class="col-sm-6">
+				<asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="row">
+			<asp:Button ID="Button1" runat="server" Text="Transfer" CssClass="btn btn-success form-control" />
+		</div>
+	</div>
+</asp:Content>

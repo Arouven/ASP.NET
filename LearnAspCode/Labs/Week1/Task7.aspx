@@ -1,16 +1,14 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task7.aspx.vb" Inherits="LearnAspCode.Task7" %>
+﻿
+<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task7.aspx.vb" Inherits="LearnAspCode.Task7" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<title></title>
-</head>
-<body>
-	<form id="form1" runat="server">
-		<div>
-			<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">HyperLink</asp:HyperLink>
-		</div>
-	</form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>Display hyperlink with either text ”Visit Morning Session” or “Visit Afternoon Session” based on the time of the day.</h1>
+	<br />
+	<div class="text-center">
+		<br />
+		<br />
+		<asp:HyperLink ID="HyperLink1" runat="server" Font-Size="X-Large" Font-Bold="true" Font-Italic="true" NavigateUrl="~/home.aspx">HyperLink</asp:HyperLink>
+	</div>
+</asp:Content>

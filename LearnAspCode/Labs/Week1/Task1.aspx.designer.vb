@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Task1
 
 	'''<summary>
-	'''form1 control.
+	'''Button1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+	Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
 	'''Label1 control.
@@ -30,13 +30,4 @@ Partial Public Class Task1
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''Button1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 End Class

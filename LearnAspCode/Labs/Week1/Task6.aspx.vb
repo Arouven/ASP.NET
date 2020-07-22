@@ -6,8 +6,6 @@
 	End Sub
 
 	Protected Sub RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList1.TextChanged
-		If RadioButtonList1.SelectedIndex > -1 Then
-			Label1.Text = RadioButtonList1.SelectedItem.Text
-		End If
+		Label1.Text = "You selected: " + RadioButtonList1.SelectedItem.Text
 	End Sub
 End Class

@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class Task2
 
 	'''<summary>
-	'''form1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-	'''<summary>
 	'''Label1 control.
 	'''</summary>
 	'''<remarks>
@@ -30,4 +21,13 @@ Partial Public Class Task2
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''Label2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 End Class

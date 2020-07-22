@@ -1,17 +1,19 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task1.aspx.vb" Inherits="LearnAspCode.Task1" %>
+﻿
+<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task1.aspx.vb" Inherits="LearnAspCode.Task1" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<title></title>
-</head>
-<body>
-	<form id="form1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>Clear message in a Label control by clicking button “Clear Msg” (button click event).</h1>
+	<br />
+	<div>
+		<asp:Button ID="Button1" runat="server" Text="Clear" />
+		<br />
+		<br />
 		<div>
 			<asp:Label ID="Label1" runat="server" Text="This Message is to be cleared."></asp:Label>
 		</div>
-		<asp:Button ID="Button1" runat="server" Text="Clear" />
-	</form>
-</body>
-</html>
+	</div>
+</asp:Content>
+
+

@@ -14,20 +14,11 @@ Option Explicit On
 Partial Public Class Task5
 
 	'''<summary>
-	'''form1 control.
+	'''DropDownListPages control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-	'''<summary>
-	'''DropDownList1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+	Protected WithEvents DropDownListPages As Global.System.Web.UI.WebControls.DropDownList
 End Class

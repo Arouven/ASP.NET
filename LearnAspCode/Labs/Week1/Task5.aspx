@@ -1,20 +1,19 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Task5.aspx.vb" Inherits="LearnAspCode.Task5" %>
+﻿
+<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/guestMasterPage.Master" CodeBehind="Task5.aspx.vb" Inherits="LearnAspCode.Task5" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostback="True">
-                <asp:ListItem>Image.jpg</asp:ListItem>
-                <asp:ListItem>Anim.gif</asp:ListItem>
-                <asp:ListItem>Video.mp4</asp:ListItem>
-            </asp:DropDownList>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
+	<h1>Redirects a user to a new page once the user selects a file name from a Drop-Down-List control.</h1>
+	<br />
+	<div>
+		<div class="row col-sm-12">
+			<asp:DropDownList ID="DropDownListPages" runat="server" AutoPostBack="True" CssClass="form-control">
+				<asp:ListItem Selected="True">Select page</asp:ListItem>
+				<asp:ListItem>home</asp:ListItem>
+				<asp:ListItem>courses</asp:ListItem>
+				<asp:ListItem>Contact</asp:ListItem>
+			</asp:DropDownList>
+		</div>
+	</div>
+</asp:Content>
