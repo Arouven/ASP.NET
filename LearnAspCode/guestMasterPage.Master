@@ -25,7 +25,7 @@
 	<form id="form1" runat="server">
 		<asp:ScriptManager runat="server">
 			<Scripts>
-								<asp:ScriptReference Name="MsAjaxBundle" />
+				<asp:ScriptReference Name="MsAjaxBundle" />
 				<asp:ScriptReference Name="jquery" />
 				<asp:ScriptReference Name="bootstrap" />
 				<asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
@@ -37,7 +37,7 @@
 				<asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
 				<asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
 				<asp:ScriptReference Name="WebFormsBundle" />
-							</Scripts>
+			</Scripts>
 		</asp:ScriptManager>
 		<div id="wrapper">
 			<div id="heads" class="navbar navbar-inverse navbar-fixed-top">
@@ -200,9 +200,18 @@
 										</ul>
 									</li>
 									<li class="dropdown-submenu">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 5</a>
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 9</a>
 										<ul class="dropdown-menu">
-											<li></li>
+											<li><a runat="server" href="Labs/Week9/ControllingWhenASessionTimesOut.aspx">Controlling When A Session Times Out</a></li>
+											<li><a runat="server" href="Labs/Week9/CreatingAMultiValuedCookie.aspx">Creating A Multi Valued Cookie</a></li>
+											<li><a runat="server" href="Labs/Week9/CreatingANewCookie.aspx">Creating A New Cookie </a></li>
+											<li><a runat="server" href="Labs/Week9/CreatingAPersistentCookieToTrackTheNumberOfTimesYouHaveVisitedAPage.aspx">Creating A Persistent Cookie To Track The Number Of Times You Have Visited A Page</a></li>
+											<li><a runat="server" href="Labs/Week9/DeletingCookies.aspx">Deleting Cookies </a></li>
+											<li><a runat="server" href="Labs/Week9/DisplayingACountOfUserSessions.aspx">Displaying A Count Of User Sessions </a></li>
+											<li><a runat="server" href="Labs/Week9/HandlingSessionEventsWithinTheGlobalDotAsaxFile.aspx">Handling Session Events Within The Global.Asax File </a></li>
+											<li><a runat="server" href="Labs/Week9/RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx">Retrieving The Value Of An Item That You Have Stored In Session State </a></li>
+											<li><a runat="server" href="Labs/Week9/UsingCookielessSessionState.aspx">Using Cookieless Session State </a></li>
+											<li><a runat="server" href="Labs/Week9/UsingSessionStateAddingAnItemToTheSessionObject.aspx">Using Session State Adding An Item To The Session Object </a></li>
 										</ul>
 									</li>
 
@@ -255,7 +264,10 @@
 									</ul>
 								</li>
 							</asp:Panel>
+
+
 							<!-- login register panel -->
+							<li><a runat="server" href="~Tutorials/Week5/Register">Register</a></li>
 							<asp:Panel runat="server" CssClass="nav navbar-nav navbar-right" ID="pnllog">
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
@@ -395,7 +407,7 @@
 						<br />
 						<asp:Label ID="lblmsg" runat="server"></asp:Label>
 						<div>
-							<asp:Button ID="btnLogin" CssClass="btn btn-success btn-block" runat="server" Text="Login" />
+							<asp:Button ID="btnLogin" OnClick="btnLogin_Click" CssClass="btn btn-success btn-block" runat="server" Text="Login" />
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -407,8 +419,12 @@
 			</div>
 		</div>
 	</form>
-	<%--<script src="Scripts/jquery-3.4.1.min.js"></script>
-	<script src="Scripts/bootstrap.min.js"></script>--%>
+	<%--
+		<script src="Scripts/jquery-3.4.1.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
+		<script src='<%= ResolveClientUrl("~/scripts/jquery.min.js") %>'></script>
+<script src='<%= ResolveClientUrl("~/scripts/bootstrap.min.js") %>'></script>
+	--%>
 </body>
 </html>
 

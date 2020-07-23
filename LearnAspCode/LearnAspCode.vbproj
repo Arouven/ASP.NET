@@ -131,10 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\ControllingWhenASessionTimesOut.xml" />
     <Content Include="App_Data\MoviesDB.mdf" />
     <Content Include="App_Data\MoviesDB_log.ldf">
       <DependentUpon>MoviesDB.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\UsingCookielessSessionState.xml" />
     <Content Include="App_Themes\Classic\Classic.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -216,10 +218,22 @@
     <Content Include="Labs\Week4\Task3.aspx" />
     <Content Include="Labs\Week4\Task4.aspx" />
     <Content Include="Labs\Week4\Task5.aspx" />
+    <Content Include="Labs\Week9\ControllingWhenASessionTimesOut.aspx" />
+    <Content Include="Labs\Week9\CreatingAMultiValuedCookie.aspx" />
+    <Content Include="Labs\Week9\CreatingANewCookie.aspx" />
+    <Content Include="Labs\Week9\CreatingAPersistentCookieToTrackTheNumberOfTimesYouHaveVisitedAPage.aspx" />
+    <Content Include="Labs\Week9\DeletingCookies.aspx" />
+    <Content Include="Labs\Week9\DisplayingACountOfUserSessions.aspx" />
+    <Content Include="Labs\Week9\HandlingSessionEventsWithinTheGlobalDotAsaxFile.aspx" />
+    <Content Include="Labs\Week9\RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx" />
+    <Content Include="Labs\Week9\UsingCookielessSessionState.aspx" />
+    <Content Include="Labs\Week9\UsingSessionStateAddingAnItemToTheSessionObject.aspx" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
     <Content Include="reviews.aspx" />
     <Content Include="Style\ddmenu.css" />
+    <Content Include="Tutorials\Week10\dashboard.aspx" />
+    <Content Include="Tutorials\Week10\viewusers.aspx" />
     <Content Include="Tutorials\Week1\ControlEvents.aspx" />
     <Content Include="Tutorials\Week1\DateTime.aspx" />
     <Content Include="Tutorials\Week1\DisablingViewState.aspx" />
@@ -565,6 +579,76 @@
       <DependentUpon>Task5.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Labs\Week9\ControllingWhenASessionTimesOut.aspx.designer.vb">
+      <DependentUpon>ControllingWhenASessionTimesOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\ControllingWhenASessionTimesOut.aspx.vb">
+      <DependentUpon>ControllingWhenASessionTimesOut.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\CreatingAMultiValuedCookie.aspx.designer.vb">
+      <DependentUpon>CreatingAMultiValuedCookie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\CreatingAMultiValuedCookie.aspx.vb">
+      <DependentUpon>CreatingAMultiValuedCookie.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\CreatingANewCookie.aspx.designer.vb">
+      <DependentUpon>CreatingANewCookie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\CreatingANewCookie.aspx.vb">
+      <DependentUpon>CreatingANewCookie.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\CreatingAPersistentCookieToTrackTheNumberOfTimesYouHaveVisitedAPage.aspx.designer.vb">
+      <DependentUpon>CreatingAPersistentCookieToTrackTheNumberOfTimesYouHaveVisitedAPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\CreatingAPersistentCookieToTrackTheNumberOfTimesYouHaveVisitedAPage.aspx.vb">
+      <DependentUpon>CreatingAPersistentCookieToTrackTheNumberOfTimesYouHaveVisitedAPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\DeletingCookies.aspx.designer.vb">
+      <DependentUpon>DeletingCookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\DeletingCookies.aspx.vb">
+      <DependentUpon>DeletingCookies.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\DisplayingACountOfUserSessions.aspx.designer.vb">
+      <DependentUpon>DisplayingACountOfUserSessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\DisplayingACountOfUserSessions.aspx.vb">
+      <DependentUpon>DisplayingACountOfUserSessions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\HandlingSessionEventsWithinTheGlobalDotAsaxFile.aspx.designer.vb">
+      <DependentUpon>HandlingSessionEventsWithinTheGlobalDotAsaxFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\HandlingSessionEventsWithinTheGlobalDotAsaxFile.aspx.vb">
+      <DependentUpon>HandlingSessionEventsWithinTheGlobalDotAsaxFile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx.designer.vb">
+      <DependentUpon>RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx.vb">
+      <DependentUpon>RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\UsingCookielessSessionState.aspx.designer.vb">
+      <DependentUpon>UsingCookielessSessionState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\UsingCookielessSessionState.aspx.vb">
+      <DependentUpon>UsingCookielessSessionState.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Labs\Week9\UsingSessionStateAddingAnItemToTheSessionObject.aspx.designer.vb">
+      <DependentUpon>UsingSessionStateAddingAnItemToTheSessionObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\Week9\UsingSessionStateAddingAnItemToTheSessionObject.aspx.vb">
+      <DependentUpon>UsingSessionStateAddingAnItemToTheSessionObject.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="login.aspx.designer.vb">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
@@ -611,6 +695,20 @@
     <Compile Include="Site.Master.vb">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week10\dashboard.aspx.designer.vb">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week10\dashboard.aspx.vb">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week10\viewusers.aspx.designer.vb">
+      <DependentUpon>viewusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week10\viewusers.aspx.vb">
+      <DependentUpon>viewusers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week1\ControlEvents.aspx.designer.vb">
       <DependentUpon>ControlEvents.aspx</DependentUpon>

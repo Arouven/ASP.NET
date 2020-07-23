@@ -27,7 +27,7 @@
 					</div>
 					<asp:Repeater ID="rptimg" runat="server">
 						<ItemTemplate>
-							<asp:Image ID="ImageButton1" runat="server" Width="193px" Height="195px" ImageUrl='<%# Eval(" ", "~/images/{0}")%>' />
+							<asp:Image ID="ImageButton1" runat="server" Style="border-radius: 50%;border:solid" Width="193px" Height="195px" ImageUrl='<%# Eval("imageurl", "~/images/{0}")%>' />
 						</ItemTemplate>
 					</asp:Repeater>
 				</div>
