@@ -146,7 +146,6 @@
     <Content Include="Content\ddmenu.css" />
     <Content Include="Content\Site.css" />
     <Content Include="courses.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -159,9 +158,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="home.aspx" />
-    <Content Include="Images\1.jpg" />
     <Content Include="Images\1917.jpg" />
-    <Content Include="Images\2.jpg" />
     <Content Include="Images\ad1.jpg" />
     <Content Include="Images\ad2.jpg" />
     <Content Include="Images\ad3.jpg" />
@@ -371,13 +368,6 @@
     </Compile>
     <Compile Include="courses.aspx.vb">
       <DependentUpon>courses.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">

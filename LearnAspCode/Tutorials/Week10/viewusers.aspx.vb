@@ -15,7 +15,7 @@ Public Class viewusers
 		Dim sqlCon As New SqlConnection(_conString)
 		Dim cmd1 As New SqlCommand()
 		cmd1.CommandType = CommandType.Text
-		cmd1.CommandText = "SELECT * FROM tblUser"
+		cmd1.CommandText = "SELECT * FROM tblUser;"
 		cmd1.Connection = sqlCon
 		Dim da1 As New SqlDataAdapter(cmd1)
 		' Return DataSet
@@ -30,7 +30,7 @@ Public Class viewusers
 		'add SELECT statement to search user details using above QueryString
 		Dim cmd2 As New SqlCommand
 		cmd2.CommandText = CommandType.Text
-		cmd1.CommandText = "SELECT * FROM tblUser where user_id=" & qs & ";"
+		cmd2.CommandText = "SELECT * FROM tblUser where User_id=" & qs & ";"
 		cmd2.Connection = sqlCon
 		Dim da2 As New SqlDataAdapter(cmd2)
 		Dim dstuserdetails As New DataSet()

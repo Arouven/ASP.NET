@@ -41,7 +41,7 @@ Add the user_id field and set redirect path to viewusers.aspx?ID={0}
 -->
 			<asp:DataList ID="dlstuser" RepeatColumns="8" RepeatDirection="Horizontal" runat="server">
 				<ItemTemplate>
-					<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("imageurl", "~/images/{0}") %>' PostBackUrl='<%# Eval("user_id", "viewusers.aspx?ID={0}")%>' />
+					<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("imageurl", "~/Images/{0}") %>' PostBackUrl='<%# Eval("user_id", "viewusers.aspx?ID={0}")%>' />
 					<br />
 				</ItemTemplate>
 			</asp:DataList>
