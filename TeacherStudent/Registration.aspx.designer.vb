@@ -14,20 +14,173 @@ Option Explicit On
 Partial Public Class Registration
 
 	'''<summary>
-	'''form1 control.
+	'''TextBoxFirstnameReg control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+	Protected WithEvents TextBoxFirstnameReg As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''CreateUserWizard1 control.
+	'''TextBoxLastnameReg control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents CreateUserWizard1 As Global.System.Web.UI.WebControls.CreateUserWizard
+	Protected WithEvents TextBoxLastnameReg As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''TextBoxUsernameReg control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxUsernameReg As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''TextBoxPasswordReg control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxPasswordReg As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''REVPassword control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents REVPassword As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+	'''<summary>
+	'''TextBoxConfirmReg control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxConfirmReg As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''CVConfirmPassword control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents CVConfirmPassword As Global.System.Web.UI.WebControls.CompareValidator
+
+	'''<summary>
+	'''TextBoxAddress control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxAddress As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''TextBoxEmail control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxEmail As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''RFVEmail control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RFVEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+	'''<summary>
+	'''textBoxPhoneNumber control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents textBoxPhoneNumber As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''REVPhonenumber control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents REVPhonenumber As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+	'''<summary>
+	'''textBoxDOB control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents textBoxDOB As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''Label1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''FileUpload1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+
+	'''<summary>
+	'''CheckBoxRegister control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents CheckBoxRegister As Global.System.Web.UI.WebControls.CheckBox
+
+	'''<summary>
+	'''RadioButtonListRegister control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RadioButtonListRegister As Global.System.Web.UI.WebControls.RadioButtonList
+
+	'''<summary>
+	'''ButtonRegister control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents ButtonRegister As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''lblStatus control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents lblStatus As Global.System.Web.UI.WebControls.Label
 End Class

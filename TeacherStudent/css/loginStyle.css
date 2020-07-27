@@ -5,6 +5,16 @@
 	margin: auto;
 }
 
+	.login-page h4 {
+		text-align: center;
+		color: #4CAF50;
+	}
+
+.tutor-login-form, .admin-login-form {
+	display: none;
+}
+
+
 .form .tbInput {
 	font-family: "Roboto", sans-serif;
 	outline: 0;
@@ -15,7 +25,9 @@
 	padding: 15px;
 	box-sizing: border-box;
 	font-size: 14px;
+	border-radius: 8px;
 }
+
 
 .form .logregBtn {
 	font-family: "Roboto", sans-serif;
@@ -30,11 +42,13 @@
 	/*	-webkit-transition: all 0.3 ease;
 	transition: all 0.3 ease;*/
 	cursor: pointer;
+	border-radius: 8px;
 }
 
 	.form .logregBtn:hover, .form .logregBtn:active, .form .logregBtn:focus {
 		background: #43A047;
 	}
+
 
 .message {
 	margin: 15px 0 0;
@@ -47,9 +61,6 @@
 		text-decoration: none;
 	}
 
-.register-form {
-	display: none
-}
 
 .modal-dialog {
 	max-width: 80% !important;
@@ -60,13 +71,21 @@
 	margin-top: 5%;
 }
 
-.login-page h4 {
-	color: #4CAF50;
-}
 
 
-/*
-.login-page {
+
+
+
+
+
+
+
+
+
+
+
+
+/*.login-page {
 	width: 360px;
 	padding: 8% 0 0;
 	margin: auto;
@@ -168,8 +187,8 @@
 
 			.container .info span .fa {
 				color: #EF3B3A;
-			}*/
-
+			}
+*/
 /*body {
 	background: #76b852; /* fallback for old browsers 
 	background: -webkit-linear-gradient(right, #76b852, #8DC26F);

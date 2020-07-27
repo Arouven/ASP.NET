@@ -1,30 +1,33 @@
 (function ($) {
 
 
-    $(".openRegForm").click(function () {
-        $('.login-form').hide();
-        $('.register-form').show("slow");
+    $(".openStudentLoginForm").click(function () {
+        $('.admin-login-form').hide();
+        $('.tutor-login-form').hide();
+        $('.student-login-form').slideDown(1000);
     });
-    $(".openLoginForm").click(function () {
-        $('.register-form').hide();
-        $('.login-form').show("slow");
+    $(".openTutorLoginForm").click(function () {
+        $('.admin-login-form').hide();
+        $('.student-login-form').hide();
+        $('.tutor-login-form').slideDown(1000);
     });
+    $(".openAdminLoginForm").click(function () {
+        $('.student-login-form').hide();
+        $('.tutor-login-form').hide();
+        $('.admin-login-form').slideDown(1000);
+    });
+
+
+
+
 
     $(document).keypress(function EnterEvent(e) {
         if (e.which == '13') {
             e.preventDefault();
         }
     });
-    function loginRegisterModal() {
-        $(document).ready(function () {
-            $('#modLoginRegister').modal('show');
-        });
-    };
-    function staticModal() {
-        $(document).ready(function () {
-            $("#ButtonLogin").click(function () { $('#modLoginRegister').modal({ "backdrop": "static" }); });            
-        });
-    };
+    
+ 
 
 
 

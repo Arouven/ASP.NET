@@ -41,211 +41,112 @@ Partial Public Class master1
 	Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
 	'''<summary>
-	'''TextBoxFirstnameReg control.
+	'''TextBoxUsernameStudentLog control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxFirstnameReg As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TextBoxUsernameStudentLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''TextBoxLastnameReg control.
+	'''TextBoxPasswordStudentLog control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxLastnameReg As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TextBoxPasswordStudentLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''TextBoxUsernameReg control.
+	'''ButtonStudentLogin control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxUsernameReg As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents ButtonStudentLogin As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''TextBoxPasswordReg control.
+	'''StudentRememberMe control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxPasswordReg As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents StudentRememberMe As Global.System.Web.UI.WebControls.CheckBox
 
 	'''<summary>
-	'''REVPassword control.
+	'''TextBoxUsernameTutorLog control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents REVPassword As Global.System.Web.UI.WebControls.RegularExpressionValidator
+	Protected WithEvents TextBoxUsernameTutorLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''TextBoxConfirmReg control.
+	'''TextBoxPasswordTutorLog control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxConfirmReg As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TextBoxPasswordTutorLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''CVConfirmPassword control.
+	'''ButtonTutorLogin control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents CVConfirmPassword As Global.System.Web.UI.WebControls.CompareValidator
+	Protected WithEvents ButtonTutorLogin As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''TextBoxAddress control.
+	'''TutorRememberMe control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxAddress As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TutorRememberMe As Global.System.Web.UI.WebControls.CheckBox
 
 	'''<summary>
-	'''TextBoxEmail control.
+	'''TextBoxUsernameAdminLog control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxEmail As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TextBoxUsernameAdminLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''RFVEmail control.
+	'''TextBoxPasswordAdminLog control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents RFVEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents TextBoxPasswordAdminLog As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''textBoxPhoneNumber control.
+	'''ButtonAdminLogin control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents textBoxPhoneNumber As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents ButtonAdminLogin As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''REVPhonenumber control.
+	'''AdminRememberMe control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents REVPhonenumber As Global.System.Web.UI.WebControls.RegularExpressionValidator
-
-	'''<summary>
-	'''textBoxDOB control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents textBoxDOB As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''Label1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''FileUpload1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
-
-	'''<summary>
-	'''CheckBoxRegister control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents CheckBoxRegister As Global.System.Web.UI.WebControls.CheckBox
-
-	'''<summary>
-	'''RadioButtonListRegister control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents RadioButtonListRegister As Global.System.Web.UI.WebControls.RadioButtonList
-
-	'''<summary>
-	'''ButtonRegister control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents ButtonRegister As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''TextBoxUsernameLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxUsernameLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''TextBoxPasswordLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxPasswordLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''RadioButtonListLogin control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents RadioButtonListLogin As Global.System.Web.UI.WebControls.RadioButtonList
-
-	'''<summary>
-	'''ButtonLogin control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents ButtonLogin As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''RememberMe control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
+	Protected WithEvents AdminRememberMe As Global.System.Web.UI.WebControls.CheckBox
 
 	'''<summary>
 	'''lblStatus control.
