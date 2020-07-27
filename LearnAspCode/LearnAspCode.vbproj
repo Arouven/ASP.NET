@@ -231,10 +231,17 @@
     <Content Include="Style\ddmenu.css" />
     <Content Include="Tutorials\Week10\dashboard.aspx" />
     <Content Include="Tutorials\Week10\viewusers.aspx" />
+    <Content Include="Tutorials\Week11\details.aspx" />
+    <Content Include="Tutorials\Week11\downloaddocument.aspx" />
     <Content Include="Tutorials\Week11\Exercise01.aspx" />
     <Content Include="Tutorials\Week11\Exercise02.aspx" />
     <Content Include="Tutorials\Week11\Exercise03.aspx" />
     <Content Include="Tutorials\Week11\Exercise04.aspx" />
+    <Content Include="Tutorials\Week11\Exercise05.aspx" />
+    <Content Include="Tutorials\Week11\Exercise06.aspx" />
+    <Content Include="Tutorials\Week11\Exercise07.aspx" />
+    <Content Include="Tutorials\Week11\Exercise08.aspx" />
+    <Content Include="Tutorials\Week11\uploaddocument.aspx" />
     <Content Include="Tutorials\Week1\ControlEvents.aspx" />
     <Content Include="Tutorials\Week1\DateTime.aspx" />
     <Content Include="Tutorials\Week1\DisablingViewState.aspx" />
@@ -704,6 +711,20 @@
       <DependentUpon>viewusers.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutorials\Week11\details.aspx.designer.vb">
+      <DependentUpon>details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\details.aspx.vb">
+      <DependentUpon>details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week11\downloaddocument.aspx.designer.vb">
+      <DependentUpon>downloaddocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\downloaddocument.aspx.vb">
+      <DependentUpon>downloaddocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutorials\Week11\Exercise01.aspx.designer.vb">
       <DependentUpon>Exercise01.aspx</DependentUpon>
     </Compile>
@@ -730,6 +751,41 @@
     </Compile>
     <Compile Include="Tutorials\Week11\Exercise04.aspx.vb">
       <DependentUpon>Exercise04.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise05.aspx.designer.vb">
+      <DependentUpon>Exercise05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise05.aspx.vb">
+      <DependentUpon>Exercise05.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise06.aspx.designer.vb">
+      <DependentUpon>Exercise06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise06.aspx.vb">
+      <DependentUpon>Exercise06.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise07.aspx.designer.vb">
+      <DependentUpon>Exercise07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise07.aspx.vb">
+      <DependentUpon>Exercise07.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise08.aspx.designer.vb">
+      <DependentUpon>Exercise08.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\Exercise08.aspx.vb">
+      <DependentUpon>Exercise08.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week11\uploaddocument.aspx.designer.vb">
+      <DependentUpon>uploaddocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week11\uploaddocument.aspx.vb">
+      <DependentUpon>uploaddocument.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week1\ControlEvents.aspx.designer.vb">

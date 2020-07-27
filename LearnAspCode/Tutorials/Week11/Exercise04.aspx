@@ -16,15 +16,24 @@
 		<h4>Enter Movie name</h4>
 		<asp:TextBox ID="txtmoviename" AutoPostBack="true" CssClass="form-control" OnTextChanged="txtmoviename_TextChanged" runat="server"></asp:TextBox>
 		<br />
-		<asp:DataList ID="dlstMovies" runat="server">
+		
+		<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+			<ContentTemplate>
+				<asp:DataList ID="dlstMovies" runat="server">
 			<ItemTemplate>
 				<h1><%#Eval("Moviename")%></h1>
 				Movie Description:
 				<%#Eval("Description") %>
 				<br />
 				Box Office Totals:
-				<%#Eval("BoxOfficeTotals","{0:c}") %>
+				<%#Eval("BoxOfficeTotals", "{0:c}") %>
 			</ItemTemplate>
 		</asp:DataList>
+			</ContentTemplate>
+			<Triggers>
+				<asp:AsyncPostBackTrigger ControlID="txtmoviename" EventName="TextChanged" />
+				<asp:AsyncPostBackTrigger ControlID="ddlboxtotals" EventName="selectedindexchanged" />
+			</Triggers>
+		</asp:UpdatePanel>
 	</div>
 </asp:Content>

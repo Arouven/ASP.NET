@@ -11,41 +11,41 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Exercise04
+Partial Public Class uploaddocument
 
 	'''<summary>
-	'''ddlboxtotals control.
+	'''txtfilename control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents ddlboxtotals As Global.System.Web.UI.WebControls.DropDownList
+	Protected WithEvents txtfilename As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''txtmoviename control.
+	'''upDoc control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents txtmoviename As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents upDoc As Global.System.Web.UI.WebControls.FileUpload
 
 	'''<summary>
-	'''UpdatePanel1 control.
+	'''btnAdd control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+	Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''dlstMovies control.
+	'''lblmsg control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents dlstMovies As Global.System.Web.UI.WebControls.DataList
+	Protected WithEvents lblmsg As Global.System.Web.UI.WebControls.Label
 End Class

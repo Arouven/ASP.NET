@@ -11,34 +11,25 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Exercise04
+Partial Public Class Exercise07
 
 	'''<summary>
-	'''ddlboxtotals control.
+	'''radLow control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents ddlboxtotals As Global.System.Web.UI.WebControls.DropDownList
+	Protected WithEvents radLow As Global.System.Web.UI.WebControls.RadioButton
 
 	'''<summary>
-	'''txtmoviename control.
+	'''radHigh control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents txtmoviename As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''UpdatePanel1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+	Protected WithEvents radHigh As Global.System.Web.UI.WebControls.RadioButton
 
 	'''<summary>
 	'''dlstMovies control.
