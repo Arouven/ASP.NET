@@ -56,7 +56,7 @@ Public Class dashboard
 		Dim cmd As New SqlCommand()
 		'add INSERT statement to create new category name
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "insert into tblCategroy (category_name) value (@cname);"
+		cmd.CommandText = "INSERT INTO tblCategory (Category_Name) VALUES (@cname)"
 		'create Parameterized query to prevent sql injection by
 		cmd.Parameters.AddWithValue("@cname", CatName)
 		'using above String name
@@ -93,10 +93,10 @@ Public Class dashboard
 		Dim cmd As New SqlCommand()
 		cmd.CommandType = CommandType.Text
 		'Add UPDATE statement to update category name for the above CatID
-		cmd.CommandText = "update tblcategory set category_name=@category_name where category_id=@ category_id;"
+		cmd.CommandText = "update tblcategory set category_name=@category_name where category_id=@category_id;"
 		'Create two parameterized queries [CatID and CatName]
 		cmd.Parameters.AddWithValue("@category_name", CatName)
-		cmd.Parameters.AddWithValue("@ category_id", CatID)
+		cmd.Parameters.AddWithValue("@category_id", CatID)
 		cmd.Connection = sqlCon
 		sqlCon.Open()
 		'use Command method to execute UPDATE statement and return
@@ -152,3 +152,6 @@ Public Class dashboard
 		ResetAll()
 	End Sub
 End Class
+
+
+
