@@ -41,6 +41,15 @@ Partial Public Class Registration
 	Protected WithEvents TextBoxUsernameReg As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
+	'''RegularExpressionValidatorUsername control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents RegularExpressionValidatorUsername As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+	'''<summary>
 	'''TextBoxPasswordReg control.
 	'''</summary>
 	'''<remarks>

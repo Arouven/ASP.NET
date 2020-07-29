@@ -150,8 +150,9 @@
 		<br />
 		<br />
 		<br />
-		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-
+		<div class="content">
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+		</div>
 
 
 

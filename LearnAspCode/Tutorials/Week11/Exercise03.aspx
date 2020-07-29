@@ -4,8 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
 	<div>
-		<h1>
-			<asp:Label ID="lblcount" runat="server"></asp:Label></h1>
+		<h1><asp:Label ID="lblcount" runat="server"></asp:Label></h1>
 		<asp:DataList ID="dlstMovies" runat="server" RepeatColumns="5" RepeatDirection="Horizontal" GridLines="Both" RepeatLayout="Flow">
 			<ItemTemplate>
 				<div class="card bg-warning text-white h-100" style="width: 200px; float: left; margin: 10px;">

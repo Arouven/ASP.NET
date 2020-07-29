@@ -11,14 +11,140 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Welcome
+Partial Public Class Welcome1
 
 	'''<summary>
-	'''Label1 control.
+	'''LabelWelcome control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents LabelWelcome As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''HyperLinkStudentUpdatesProfile control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkStudentUpdatesProfile As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkStudentViewsListOfCourses control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkStudentViewsListOfCourses As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkStudentAdvanceSearch control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkStudentAdvanceSearch As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkStudentViewsEvents control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkStudentViewsEvents As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkStudentDownloadsCoursMeaterials control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkStudentDownloadsCoursMeaterials As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkTutorCRUDCourse control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkTutorCRUDCourse As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkTutorPostsMaterials control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkTutorPostsMaterials As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkTutorViewsListOfStudents control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkTutorViewsListOfStudents As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkTutorPostsEvent control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkTutorPostsEvent As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkAdminViewsListOfTutorsStudents control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkAdminViewsListOfTutorsStudents As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkAdminFreezesUserAccount control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkAdminFreezesUserAccount As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkAdminCRUDCourse control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkAdminCRUDCourse As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkAdminCRUDCourseCategory control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkAdminCRUDCourseCategory As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+	'''<summary>
+	'''HyperLinkAdminViewingNumberOfStudentsCourses control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HyperLinkAdminViewingNumberOfStudentsCourses As Global.System.Web.UI.HtmlControls.HtmlAnchor
 End Class

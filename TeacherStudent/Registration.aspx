@@ -96,11 +96,13 @@
 			<div class="form-group">
 				<asp:TextBox ID="TextBoxUsernameReg" runat="server" placeholder="Username" CssClass="tbInput" />
 				<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxUsernameReg" CssClass="text-danger" ValidationGroup="registerGroup" ErrorMessage="The user name field is required." />
+				<br />
+				<asp:RegularExpressionValidator ID="RegularExpressionValidatorUsername" ControlToValidate="TextBoxUsernameReg" ValidationExpression="^[a-zA-Z]{5,}$" runat="server" CssClass="text-danger" ValidationGroup="registerGroup" ErrorMessage="Username must be minimum 5 characters"></asp:RegularExpressionValidator>
 			</div>
 			<div class="form-group">
 				<asp:TextBox ID="TextBoxPasswordReg" runat="server" TextMode="Password" placeholder="Password" CssClass="tbInput" />
 				<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxPasswordReg" CssClass="text-danger" ValidationGroup="registerGroup" ErrorMessage="The password field is required." />
-				<asp:RegularExpressionValidator ID="REVPassword" runat="server" CssClass="text-danger" ValidateEmptyText="true" ErrorMessage="Password must be between 5 and 10 characters" ControlToValidate="TextBoxPasswordReg" ValidationGroup="registerGroup" ValidationExpression="[0-9a-zA-Z]{5,10}" SetFocusOnError="True"></asp:RegularExpressionValidator>
+				<asp:RegularExpressionValidator ID="REVPassword" runat="server" CssClass="text-danger" ValidateEmptyText="true" ErrorMessage="Password Not Strong Enougth" ControlToValidate="TextBoxPasswordReg" ValidationGroup="registerGroup" ValidationExpression="^(?=.*\d{2})(?=.*[a-zA-Z]{2}).{6,}$" SetFocusOnError="True"></asp:RegularExpressionValidator>
 			</div>
 			<div class="form-group">
 				<asp:TextBox ID="TextBoxConfirmReg" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="tbInput" />
