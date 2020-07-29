@@ -9,6 +9,7 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		'AdminRequired()
 		showDetails(LabelTitle)
 	End Sub
 	Protected Sub LinkButtonUpdate_Click(sender As Object, e As EventArgs)
@@ -21,7 +22,9 @@
 		ElseIf Not deleteUser() Then : ScriptManager.RegisterStartupScript(Me, Me.GetType(), "alertmsg", "alert('Problem encounter');", True)
 		End If
 	End Sub
+	Private Sub AdminRequired()
 
+	End Sub
 	Private Function deleteUser() As Boolean
 		Dim IsDeleted As Boolean = False
 		Dim con As New SqlClient.SqlConnection(_conString)

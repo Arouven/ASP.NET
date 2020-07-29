@@ -13,7 +13,7 @@
 	Private Sub getWelcomeMessage()
 		Dim login As String = getLoginTitle()
 		Dim name As String = Session("username")
-		LabelWelcome.Text = "Welcome " + name + " you are logged in as " + login + "."
+		LabelWelcome.Text = "Welcome " & name & " you are logged in as " & login & "."
 	End Sub
 	Private Function getLoginTitle() As String
 		Dim Name As String = ""

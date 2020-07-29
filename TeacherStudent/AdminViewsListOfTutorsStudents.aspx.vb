@@ -5,6 +5,7 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		'AdminRequired()
 		FillDataList(DataListStudentUnfreeze, "StudentTable", False)
 		FillDataList(DataListTutorUnfreeze, "TutorTable", False)
 		FillDataList(DataListStudentFreeze, "StudentTable", True)
@@ -47,7 +48,9 @@
 		myDataList.DataSource = myDataSet
 		myDataList.DataBind()
 	End Sub
+	Private Sub AdminRequired()
 
+	End Sub
 	Private Function NumberInTable(tableName As String, tableContainFreeze As Boolean, freeze As Boolean)
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()

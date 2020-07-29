@@ -15,25 +15,7 @@ Public Class login1
 	Public Sub New()
 		_conString = WebConfigurationManager.ConnectionStrings("MoviesCS").ConnectionString
 	End Sub
-	Private Function Decrypt(cipherText As String) As String
-		Dim EncryptionKey As String = "MAKV2SPBNI99212"
-		Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(cipherText)
-		Using encryptor As Aes = Aes.Create()
-			Dim pdb As New Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D,
-											  &H65, &H64, &H76, &H65, &H64, &H65,
-											  &H76})
-			encryptor.Key = pdb.GetBytes(32)
-			encryptor.IV = pdb.GetBytes(16)
-			Using ms As New MemoryStream()
-				Using cs As New CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)
-					cs.Write(clearBytes, 0, clearBytes.Length)
-					cs.Close()
-				End Using
-				cipherText = Convert.ToBase64String(ms.ToArray())
-			End Using
-		End Using
-		Return cipherText
-	End Function
+
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		If (Not Page.IsPostBack) Then
 			'Verify if un and pwd cookies are not null
@@ -96,4 +78,23 @@ Public Class login1
 			lblmsg.Text = "You are not registered or your account has been suspended!"
 		End If
 	End Sub
+	Private Function Decrypt(cipherText As String) As String
+		Dim EncryptionKey As String = "MAKV2SPBNI99212"
+		Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(cipherText)
+		Using encryptor As Aes = Aes.Create()
+			Dim pdb As New Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D,
+											  &H65, &H64, &H76, &H65, &H64, &H65,
+											  &H76})
+			encryptor.Key = pdb.GetBytes(32)
+			encryptor.IV = pdb.GetBytes(16)
+			Using ms As New MemoryStream()
+				Using cs As New CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)
+					cs.Write(clearBytes, 0, clearBytes.Length)
+					cs.Close()
+				End Using
+				cipherText = Convert.ToBase64String(ms.ToArray())
+			End Using
+		End Using
+		Return cipherText
+	End Function
 End Class

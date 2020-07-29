@@ -133,8 +133,6 @@
     <Content Include="About.aspx" />
     <Content Include="Admin\AdminCRUDCourse.aspx" />
     <Content Include="Admin\AdminCRUDCourseCategory.aspx" />
-    <Content Include="Admin\AdminFreezesUserAccount.aspx" />
-    <Content Include="Admin\AdminViewingNumberOfStudentsCourses.aspx" />
     <Content Include="AdminViewsListOfTutorsStudents.aspx" />
     <Content Include="App_Data\TeacherStudentDB.mdf" />
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
@@ -252,7 +250,6 @@
     <Content Include="Tutor\TutorPostsMaterials.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
     <Content Include="UserFunctionality.aspx" />
-    <Content Include="WebUserControlLogin.ascx" />
     <Content Include="Welcome.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -301,20 +298,6 @@
     </Compile>
     <Compile Include="Admin\AdminCRUDCourseCategory.aspx.vb">
       <DependentUpon>AdminCRUDCourseCategory.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminFreezesUserAccount.aspx.designer.vb">
-      <DependentUpon>AdminFreezesUserAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\AdminFreezesUserAccount.aspx.vb">
-      <DependentUpon>AdminFreezesUserAccount.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminViewingNumberOfStudentsCourses.aspx.designer.vb">
-      <DependentUpon>AdminViewingNumberOfStudentsCourses.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\AdminViewingNumberOfStudentsCourses.aspx.vb">
-      <DependentUpon>AdminViewingNumberOfStudentsCourses.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="AdminViewsListOfTutorsStudents.aspx.designer.vb">
@@ -508,13 +491,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebUserControlLogin.ascx.designer.vb">
-      <DependentUpon>WebUserControlLogin.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebUserControlLogin.ascx.vb">
-      <DependentUpon>WebUserControlLogin.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.designer.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>
