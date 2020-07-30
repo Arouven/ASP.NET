@@ -7,9 +7,14 @@
 
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		'LoginRequired(mySession)
 		'getWelcomeMessage()
 	End Sub
-
+	Private Sub LoginRequired(mySession)
+		If Not IsNothing(mySession) Then
+		Else Response.Redirect("~/Home.aspx")
+		End If
+	End Sub
 	Private Sub getWelcomeMessage()
 		Dim login As String = getLoginTitle()
 		Dim name As String = Session("username")

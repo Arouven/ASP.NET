@@ -9,6 +9,8 @@
 	<link href="~/Content/Site.css" rel="stylesheet" />
 	<link href="~/Content/ddmenu.css" rel="stylesheet" />
 	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
+	<link href="content/ekko-lightbox.css" rel="stylesheet" />
 	<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
@@ -438,6 +440,9 @@
 			</div>
 		</div>
 	</form>
+	<script src='<%= ResolveClientUrl("~/scripts/datatablelib.js") %>'></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
+	<script src='<%= ResolveClientUrl("~/scripts/ekko-lightbox.min.js") %>'></script>
 	<%--
 		<script src="Scripts/jquery-3.4.1.min.js"></script>
 	<script src="Scripts/bootstrap.min.js"></script>

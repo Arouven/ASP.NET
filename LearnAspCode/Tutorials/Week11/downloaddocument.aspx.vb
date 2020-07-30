@@ -13,7 +13,7 @@
 		'user has uploaded – (from a user perspective)
 		'or
 		'SQL statement to show files that all users have 'uploaded –(from subadmin perspective)
-		cmd.CommandText = "select * from tbldocs"
+		cmd.CommandText = "select * from tbldocs as td, tbluuser as tu where tu.user_id=td.user_id;"
 		Dim dr As SqlClient.SqlDataReader
 		con.Open()
 		dr = cmd.ExecuteReader()

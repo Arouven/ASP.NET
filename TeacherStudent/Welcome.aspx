@@ -6,15 +6,15 @@
 	<asp:Label ID="LabelWelcome" runat="server" Text="Welcome mr/mrs x you are logged in as x"></asp:Label>
 	<div class="studentWelcome" style="background-color: darkgrey">
 		<br>
-		<a href="~/Student/StudentUpdatesProfile" id="HyperLinkStudentUpdatesProfile" runat="server">Student updates profile</a>
+		<a href="~/StudentUpdatesProfile" id="HyperLinkStudentUpdatesProfile" runat="server">Student updates profile</a>
 		<br>
-		<a href="~/Student/StudentViewsListOfCourses" id="HyperLinkStudentViewsListOfCourses" runat="server">Student views list of courses</a>
+		<a href="~/StudentViewsListOfCourses" id="HyperLinkStudentViewsListOfCourses" runat="server">Student views list of courses</a>
 		<br>
-		<a href="~/Student/StudentAdvanceSearch" id="HyperLinkStudentAdvanceSearch" runat="server">Student: Advance Search for a course by category / starting character & Student subscribes for a course (send email to tutor)</a>
+		<a href="~/StudentAdvanceSearch" id="HyperLinkStudentAdvanceSearch" runat="server">Student: Advance Search for a course by category / starting character & Student subscribes for a course (send email to tutor)</a>
 		<br>
-		<a href="~/Student/StudentViewsEvents" id="HyperLinkStudentViewsEvents" runat="server">Student views events</a>
+		<a href="~/StudentViewsEvents" id="HyperLinkStudentViewsEvents" runat="server">Student views events</a>
 		<br>
-		<a href="~/Student/StudentDownloadsCoursMeaterials" id="HyperLinkStudentDownloadsCoursMeaterials" runat="server">Student views/downloads course materials</a>
+		<a href="~/StudentDownloadsCoursMeaterials" id="HyperLinkStudentDownloadsCoursMeaterials" runat="server">Student views/downloads course materials</a>
 		<br />
 	</div>
 	<br />
@@ -22,13 +22,13 @@
 
 	<div class="tutorWelcome" style="background-color: aquamarine">
 		<br />
-		<a href="~/Tutor/TutorCRUDCourse" id="HyperLinkTutorCRUDCourse" runat="server">Tutor CRUD course</a>
+		<a href="~/TutorCRUDCourse" id="HyperLinkTutorCRUDCourse" runat="server">Tutor CRUD course</a>
 		<br>
-		<a href="~/Tutor/TutorPostsMaterials" id="HyperLinkTutorPostsMaterials" runat="server">Tutor Posts Materials</a>
+		<a href="~/TutorPostsMaterials" id="HyperLinkTutorPostsMaterials" runat="server">Tutor Posts Materials</a>
 		<br>
-		<a href="~/Tutor/TutorViewsListOfStudents" id="HyperLinkTutorViewsListOfStudents" runat="server">Tutor views list of students & Tutor accepts/rejects subscription request</a>
+		<a href="~/TutorViewsListOfStudents" id="HyperLinkTutorViewsListOfStudents" runat="server">Tutor views list of students & Tutor accepts/rejects subscription request</a>
 		<br>
-		<a href="~/Tutor/TutorPostsEvent" id="HyperLinkTutorPostsEvent" runat="server">Tutor posts event</a>
+		<a href="~/TutorPostsEvent" id="HyperLinkTutorPostsEvent" runat="server">Tutor posts event</a>
 		<br />
 	</div>
 	<br />

@@ -144,6 +144,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ddmenu.css" />
+    <Content Include="Content\ekko-lightbox.css" />
     <Content Include="Content\Site.css" />
     <Content Include="courses.aspx" />
     <Content Include="favicon.ico" />
@@ -228,6 +229,8 @@
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
     <Content Include="reviews.aspx" />
+    <Content Include="Scripts\datatablelib.js" />
+    <Content Include="Scripts\ekko-lightbox.min.js" />
     <Content Include="Style\ddmenu.css" />
     <Content Include="Tutorials\Week10\dashboard.aspx" />
     <Content Include="Tutorials\Week10\viewusers.aspx" />
@@ -242,6 +245,8 @@
     <Content Include="Tutorials\Week11\Exercise07.aspx" />
     <Content Include="Tutorials\Week11\Exercise08.aspx" />
     <Content Include="Tutorials\Week11\uploaddocument.aspx" />
+    <Content Include="Tutorials\Week12\blockuser.aspx" />
+    <Content Include="Tutorials\Week12\viewmovieschedule.aspx" />
     <Content Include="Tutorials\Week1\ControlEvents.aspx" />
     <Content Include="Tutorials\Week1\DateTime.aspx" />
     <Content Include="Tutorials\Week1\DisablingViewState.aspx" />
@@ -786,6 +791,20 @@
     </Compile>
     <Compile Include="Tutorials\Week11\uploaddocument.aspx.vb">
       <DependentUpon>uploaddocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week12\blockuser.aspx.designer.vb">
+      <DependentUpon>blockuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week12\blockuser.aspx.vb">
+      <DependentUpon>blockuser.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutorials\Week12\viewmovieschedule.aspx.designer.vb">
+      <DependentUpon>viewmovieschedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Week12\viewmovieschedule.aspx.vb">
+      <DependentUpon>viewmovieschedule.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week1\ControlEvents.aspx.designer.vb">

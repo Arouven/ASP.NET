@@ -26,6 +26,9 @@
 		<asp:Repeater ID="rptdoc" runat="server">
 			<ItemTemplate>
 				<div class="doc">
+					<asp:HyperLink ID="hkldoc" runat="server" Text='<%# Eval("f_name") %>' NavigateUrl='<%#Eval("f_path") %>' />
+					uploaded bt:
+					<asp:Label ID="lblname" runat="server" Text='<%#Eval("username" %>' />
 					<%-- add a hyperlink control with databinding
 expression to display the file name in the Text Property and
 and the path in the Navigateurl property

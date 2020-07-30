@@ -5,7 +5,9 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'AdminRequired()
+		'LoginRequired(Session("username"))
+
+
 		FillDataList(DataListStudentUnfreeze, "StudentTable", False)
 		FillDataList(DataListTutorUnfreeze, "TutorTable", False)
 		FillDataList(DataListStudentFreeze, "StudentTable", True)
@@ -21,6 +23,9 @@
 		LabelNoStudents.Text = "Number of Student not freeze In Database: " & (NumberInTable("StudentTable", True, False) + NumberInTable("StudentTable", True, True))
 		LabelNoCourses.Text = "Number of Course In Database: " & NumberInTable("CourseTable", False, Nothing)
 	End Sub
+
+
+
 	Private Sub FillDataList(myDataList As DataList, tableName As String, freeze As Boolean)
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
@@ -48,8 +53,10 @@
 		myDataList.DataSource = myDataSet
 		myDataList.DataBind()
 	End Sub
-	Private Sub AdminRequired()
-
+	Private Sub LoginRequired(mySession)
+		If Not IsNothing(mySession) Then
+		Else Response.Redirect("~/Home.aspx")
+		End If
 	End Sub
 	Private Function NumberInTable(tableName As String, tableContainFreeze As Boolean, freeze As Boolean)
 		Dim con As New SqlClient.SqlConnection(_conString)
@@ -65,7 +72,6 @@
 			sqlFreeze = ""
 		End If
 		cmd.CommandText = "SELECT count(*) FROM " + tableName + sqlFreeze + ";"
-		'cmd.Parameters.AddWithValue("@tableName", tableName)
 		con.Open()
 		Return cmd.ExecuteScalar()
 		con.Close()
