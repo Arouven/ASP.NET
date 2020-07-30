@@ -41,15 +41,17 @@
 		Dim scmd As New SqlClient.SqlCommand()
 		scmd.Connection = dbconn
 		scmd.CommandType = CommandType.Text
-		scmd.CommandText = "Select schedule from tblmovies where movie_id='" & mov_id & "'"
+		scmd.CommandText = "Select schedule,poster from tblmovies where movie_id='" & mov_id & "'"
 		scmd.Connection = dbconn
 		Dim dr As SqlClient.SqlDataReader
 		dr = scmd.ExecuteReader()
 		If (dr.HasRows) Then
 			While (dr.Read())
 				schedule = Server.MapPath(dr(0).ToString())
+				Dim poster As String = Server.MapPath("../../images/" + (dr(1).ToString()))
 				If (Not IsNothing(String.IsNullOrEmpty(schedule))) Then
 					IO.File.Delete(schedule)
+					IO.File.Delete(poster)
 				End If
 			End While
 		End If

@@ -9,7 +9,7 @@
 	<link href="~/Content/Site.css" rel="stylesheet" />
 	<link href="~/Content/ddmenu.css" rel="stylesheet" />
 	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css" />
 	<link href="content/ekko-lightbox.css" rel="stylesheet" />
 	<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
@@ -165,6 +165,13 @@
 											<li><a runat="server" href="~/Tutorials/Week11/downloaddocument.aspx">Download Document</a></li>
 										</ul>
 									</li>
+									<li class="dropdown-submenu">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 12</a>
+										<ul class="dropdown-menu">
+											<li><a runat="server" href="~/Tutorials/Week12/blockuser.aspx">Blockuser</a></li>
+											<li><a runat="server" href="~/Tutorials/Week12/viewmovieschedule.aspx">Viewmovieschedule</a></li>
+										</ul>
+									</li>
 								</ul>
 							</li>
 
@@ -228,14 +235,6 @@
 											<li><a runat="server" href="~/Labs/Week9/UsingSessionStateAddingAnItemToTheSessionObject.aspx">Using Session State Adding An Item To The Session Object </a></li>
 										</ul>
 									</li>
-
-
-
-
-
-
-
-
 								</ul>
 							</li>
 							<li><a runat="server" href="~/About">About</a></li>
@@ -248,10 +247,12 @@
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li>
-											<asp:HyperLink runat="server" ID="hyuser">View Profile</asp:HyperLink></li>
+											<asp:HyperLink runat="server" ID="hyuser" NavigateUrl="~/Tutorials/Week10/viewusers.aspx">View Profile</asp:HyperLink>
+										</li>
 										<li role="separator" class="divider"></li>
 										<li>
-											<asp:Button runat="server" ID="btndeacuser" Text="Deactivate Account" CssClass="btn btn-warning" /></li>
+											<asp:Button runat="server" ID="btndeacuser" Text="Deactivate Account" CssClass="btn btn-warning" rel="modal:open" data-toggle="modal" href="#modadmin" />
+										</li>
 									</ul>
 								</li>
 							</asp:Panel>
@@ -268,9 +269,6 @@
 										<li><a href="<%=ResolveClientUrl("~/Tutorials/Week11/Exercise06") %>">Multi-Page</a></li>
 										<li><a href="<%=ResolveClientUrl("~/Tutorials/Week11/Exercise07") %>">Using Disconnected Approach</a></li>
 										<li><a href="<%=ResolveClientUrl("~/Tutorials/Week11/Exercise08") %>">Total Box Office</a></li>
-										<li role="separator" class="divider"></li>
-										<li><a href="<%=ResolveClientUrl("~/tutorial/week/managemovies") %>">Pending request List</a></li>
-										<li><a href="<%=ResolveClientUrl("~/tutorial/week/moviesubscriptionlist") %>">Subscription List</a></li>
 									</ul>
 								</li>
 							</asp:Panel>
@@ -279,9 +277,7 @@
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Category <span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="<%=ResolveClientUrl("~/tutorial/week/managecat") %>">Add Category</a></li>
-										<li role="separator" class="divider"></li>
-										<li><a href="<%=ResolveClientUrl("~/tutorial/week/manageclassification") %>">Add Classification Level</a></li>
+										<li><a href="<%=ResolveClientUrl("~/Tutorials/Week10/dashboard") %>">Add Category</a></li>
 									</ul>
 								</li>
 							</asp:Panel>
@@ -289,12 +285,11 @@
 
 							<!-- login register panel -->
 							<asp:Panel runat="server" CssClass="nav navbar-nav navbar-right" ID="pnllog" Visible="true">
-								<li><a runat="server" href="~Tutorials/Week5/Register">Register</a></li>
+								<li><a runat="server" href="~/Tutorials/Week5/Register">Register</a></li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="<%=ResolveClientUrl("~/Tutorials/Week5/login.aspx") %>">User</a></li>
-										<li><a id="logstu" href="#" data-toggle="modal" data-target="#lgstu">Student</a></li>
 										<li role="separator" class="divider"></li>
 										<li><a rel="modal:open" id="modopen" data-toggle="modal" href="#modadmin">Admin Login</a></li>
 									</ul>
@@ -306,97 +301,12 @@
 								<asp:Button runat="server" ID="btnlgout" OnClick="btnlgout_Click" Text="Log out" CssClass="btn btn-info" Visible="false" />
 							</asp:Panel>
 						</ul>
-
-
-
-
-						<%--	<asp:LoginView runat="server" ViewStateMode="Disabled">
-							<AnonymousTemplate>
-								<ul class="nav navbar-nav navbar-right">
-									<li><a runat="server" href="~/register">Register</a></li>
-									<li><a runat="server" href="~/login">Log in</a>									</li>
-								</ul>
-							</AnonymousTemplate>
-							<LoggedInTemplate>
-								<ul class="nav navbar-nav navbar-right">
-									<li></li>
-									<li></li>
-								</ul>
-							</LoggedInTemplate>
-						</asp:LoginView>--%>
-
-
-
-						<%--						<!-- Menu to view user profile -->
-						<asp:Panel runat="server" CssClass="nav navbar-nav" ID="pnlprofile" Visible="false">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li>
-										<asp:HyperLink runat="server" ID="hyuser">View Profile</asp:HyperLink></li>
-									<li role="separator" class="divider"></li>
-									<li>
-										<asp:Button runat="server" ID="btndeacuser" Text="Deactivate Account" CssClass="btn btn-warning" /></li>
-								</ul>
-							</li>
-						</asp:Panel>
-						<!--menu to manage movies-->
-						<asp:Panel runat="server" CssClass="nav navbar-nav" ID="pnlmanagemov" Visible="false">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Movies <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="<%=ResolveClientUrl("~/tutorial/week/viewmovies") %>">View Movies</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="<%=ResolveClientUrl("~/tutorial/week/managemovies") %>">Pending request List</a></li>
-									<li><a href="<%=ResolveClientUrl("~/tutorial/week/moviesubscriptionlist") %>">Subscription List</a></li>
-								</ul>
-							</li>
-						</asp:Panel>
-						<!--menu to manage category-->
-						<asp:Panel runat="server" CssClass="nav navbar-nav" ID="pnlmanage" Visible="false">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Category <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="<%=ResolveClientUrl("~/tutorial/week/managecat") %>">Add Category</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="<%=ResolveClientUrl("~/tutorial/week/manageclassification") %>">Add Classification Level</a></li>
-								</ul>
-							</li>
-						</asp:Panel>
-						<!-- login register panel -->
-						<asp:Panel runat="server" CssClass="nav navbar-nav navbar-right" ID="pnllog">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="<%=ResolveClientUrl("~/login") %>">User</a></li>
-									<li><a id="logstu" href="#" data-toggle="modal" data-target="#lgstu">Student</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a rel="modal:open" id="modopen" data-toggle="modal" href="#modadmin">Admin Login</a></li>
-								</ul>
-							</li>
-						</asp:Panel>
-						<!-- panel logout -->
-						<asp:Panel runat="server" ID="lgregis">
-							<asp:Label runat="server" ID="lbllgged"></asp:Label>
-							<asp:Button runat="server" ID="btnlgout" OnClick="btnlgout_Click" Text="Log out" CssClass="btn btn-info" Visible="false" />
-						</asp:Panel>--%>
 					</div>
 				</div>
 			</div>
 			<div id="main" class="container body-content">
 				<div class="outer">
 					<asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
-
-
-
-
-
-
-
-
-
-
-
 				</div>
 			</div>
 			<footer>
@@ -443,12 +353,6 @@
 	<script src='<%= ResolveClientUrl("~/scripts/datatablelib.js") %>'></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
 	<script src='<%= ResolveClientUrl("~/scripts/ekko-lightbox.min.js") %>'></script>
-	<%--
-		<script src="Scripts/jquery-3.4.1.min.js"></script>
-	<script src="Scripts/bootstrap.min.js"></script>
-		<script src='<%= ResolveClientUrl("~/scripts/jquery.min.js") %>'></script>
-<script src='<%= ResolveClientUrl("~/scripts/bootstrap.min.js") %>'></script>
-	--%>
 </body>
 </html>
 

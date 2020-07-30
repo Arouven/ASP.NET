@@ -146,7 +146,6 @@
     <Content Include="Content\ddmenu.css" />
     <Content Include="Content\ekko-lightbox.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="courses.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -226,9 +225,6 @@
     <Content Include="Labs\Week9\RetrievingTheValueOfAnItemThatYouHaveStoredInSessionState.aspx" />
     <Content Include="Labs\Week9\UsingCookielessSessionState.aspx" />
     <Content Include="Labs\Week9\UsingSessionStateAddingAnItemToTheSessionObject.aspx" />
-    <Content Include="login.aspx" />
-    <Content Include="register.aspx" />
-    <Content Include="reviews.aspx" />
     <Content Include="Scripts\datatablelib.js" />
     <Content Include="Scripts\ekko-lightbox.min.js" />
     <Content Include="Style\ddmenu.css" />
@@ -351,7 +347,6 @@
     <Content Include="Tutorials\Week7\InsertingARecordWithTheDetailsViewControl.aspx" />
     <Content Include="Tutorials\Week7\EditAndUpdateARecordWithTheFormViewControl.aspx" />
     <Content Include="Tutorials\Week7\InsertNewRecordWithTheFormViewControl.aspx" />
-    <Content Include="WebForm3.aspx" />
     <Content Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx" />
     <Content Include="Tutorials\Week8\DropDownDemo.aspx" />
     <Content Include="Tutorials\Week8\ListBoxDemo.aspx" />
@@ -363,8 +358,6 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.vb" />
-    <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
@@ -372,18 +365,13 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="courses.aspx.designer.vb">
-      <DependentUpon>courses.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="courses.aspx.vb">
-      <DependentUpon>courses.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
@@ -655,13 +643,6 @@
       <DependentUpon>UsingSessionStateAddingAnItemToTheSessionObject.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.designer.vb">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="login.aspx.vb">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -680,27 +661,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="register.aspx.designer.vb">
-      <DependentUpon>register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="register.aspx.vb">
-      <DependentUpon>register.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="reviews.aspx.designer.vb">
-      <DependentUpon>reviews.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="reviews.aspx.vb">
-      <DependentUpon>reviews.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.vb">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Master.vb">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutorials\Week10\dashboard.aspx.designer.vb">
       <DependentUpon>dashboard.aspx</DependentUpon>
@@ -1276,13 +1236,6 @@
       <DependentUpon>InsertNewRecordWithTheFormViewControl.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="WebForm3.aspx.designer.vb">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm3.aspx.vb">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Tutorials\Week8\CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx.designer.vb">
       <DependentUpon>CreatingADataSetToWorkWithTheDisconnectedDataModel.aspx</DependentUpon>
     </Compile>
@@ -1339,13 +1292,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Site.Mobile.Master.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -1365,8 +1311,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Site.Master" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

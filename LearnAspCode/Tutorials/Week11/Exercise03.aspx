@@ -13,7 +13,7 @@
 						<h6 class="card-title"><%# Eval("moviename")%></h6>
 						<p class="card-text">
 							by
-							<asp:HyperLink CssClass="btn btn-primary stretched-link" runat="server" NavigateUrl='<%#Eval("movie_id","~/moviedetails.aspx?id={0}")%>'><%# Eval("director").ToString() %></asp:HyperLink>
+							<asp:HyperLink CssClass="btn btn-primary stretched-link" runat="server" NavigateUrl='<%#Eval("movie_id", "~/details.aspx?id={0}")%>'><%# Eval("director").ToString() %></asp:HyperLink>
 						</p>
 						<p class="card-text">
 							<span><strong>Box Office Totals:<br />
