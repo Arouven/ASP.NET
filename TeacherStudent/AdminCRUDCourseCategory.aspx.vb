@@ -19,9 +19,9 @@
 		gvs.DataSource = dt
 		gvs.DataBind()
 	End Sub
+
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'If (Session("ToUpdate") IsNot Nothing) Then : ScriptManager.RegisterStartupScript(Me, Me.GetType(), "pop1", "OpenModal()", True)
-		'End If
+		'loginRequired()
 		If Not Page.IsPostBack Then : GetCourseCategory()
 		End If
 	End Sub
@@ -64,6 +64,19 @@
 			Response.Redirect(Request.RawUrl)
 		End If
 
+	End Sub
+
+	Protected Sub AddButton_Click(sender As Object, e As EventArgs)
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		cmd.Connection = con
+		con.Open()
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "insert into CategoryTable(CategoryName) values (@CategoryName);"
+		cmd.Parameters.AddWithValue("@CategoryName", TextBoxAddCategory.Text.Trim)
+		cmd.ExecuteNonQuery()
+		con.Close()
+		Response.Redirect(Request.RawUrl)
 	End Sub
 End Class
 

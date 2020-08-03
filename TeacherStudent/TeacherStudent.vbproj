@@ -338,6 +338,7 @@
     <Content Include="Tutor\TutorPostsMaterials.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
     <Content Include="UserFunctionality.aspx" />
+    <Content Include="WebServiceUpdateCategoryName.asmx" />
     <Content Include="Welcome.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -410,6 +411,7 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ClassUpdateCategoryName.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -571,6 +573,10 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServiceUpdateCategoryName.asmx.vb">
+      <DependentUpon>WebServiceUpdateCategoryName.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.designer.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>

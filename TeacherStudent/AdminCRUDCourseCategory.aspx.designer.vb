@@ -23,13 +23,58 @@ Partial Public Class AdminCRUDCourseCategory
 	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
 
 	'''<summary>
-	'''updatePanelTop control.
+	'''btnAdd control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents updatePanelTop As Global.System.Web.UI.UpdatePanel
+	Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.LinkButton
+
+	'''<summary>
+	'''updatePanelTop1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents updatePanelTop1 As Global.System.Web.UI.UpdatePanel
+
+	'''<summary>
+	'''LabelAddCategoryName control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelAddCategoryName As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''TextBoxAddCategory control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxAddCategory As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''AddButton control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents AddButton As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''updatePanelTop2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents updatePanelTop2 As Global.System.Web.UI.UpdatePanel
 
 	'''<summary>
 	'''LabelUpdateCategoryName control.
