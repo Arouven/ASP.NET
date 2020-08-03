@@ -13,21 +13,31 @@
 
 	<title><%: Page.Title %> - Academy</title>
 
-	<link rel="icon" href="img/core-img/favicon.ico">
+	<link rel="icon" href="~/img/core-img/favicon.ico">
 
 	<!-- login Stylesheet -->
-	<link rel="stylesheet" href="css/loginStyle.css">
+	<link rel="stylesheet" href="~/css/loginStyle.css">
 
+
+	<%--<link href="~/Content/bootstrap.min.css" rel="stylesheet" />--%>
+	<%--<link rel="stylesheet" href="~/css/bootstrap-theme.min.css">--%>
 	<!-- Core Stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="~/style.css">
 
-
+	<%--<link rel="stylesheet" href="~/Content/bootstrap.min.css" />--%>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css" />
 
 	<asp:ContentPlaceHolder ID="headPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
 </head>
 <body>
 	<form id="myform" runat="server">
+		<asp:ScriptManager ID="ScriptManager1" runat="server" >
+			<Scripts>
+			</Scripts>
+		</asp:ScriptManager>
+
+
 		<!-- ##### Preloader ##### -->
 		<div id="preloader">
 			<i class="circle-preloader"></i>
@@ -153,7 +163,8 @@
 		<div class="content">
 			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 		</div>
-
+		<br />
+		<br />
 
 
 
@@ -262,6 +273,7 @@
 			</div>
 		</footer>
 		<!-- ##### Footer Area End ##### -->
+
 
 		<!-- Login Modal -->
 		<div class="modal fade" id="modLogin" role="dialog">
@@ -421,25 +433,30 @@
 				</div>
 			</div>
 		</div>
+
+
+
 	</form>
 
 	<!-- ##### All Javascript Script ##### -->
 
-	<!-- jQuery-2.2.4 js -->
-	<script src="js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- jQuery-2.2.4 js -->
+	<script src='<%= ResolveClientUrl("~/js/jquery/jquery-2.2.4.min.js") %>'></script>
 	<!-- Popper js -->
-	<script src="js/bootstrap/popper.min.js"></script>
+	<script src='<%= ResolveClientUrl("~/js/bootstrap/popper.min.js") %>'></script>
 	<!-- Bootstrap js -->
-	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src='<%= ResolveClientUrl("~/js/bootstrap/bootstrap.min.js") %>'></script>
 	<!-- All Plugins js -->
-	<script src="js/plugins/plugins.js"></script>
+	<script src='<%= ResolveClientUrl("~/js/plugins/plugins.js") %>'></script>
 	<!-- Active js -->
-	<script src="js/active.js"></script>
+	<script src='<%= ResolveClientUrl("~/js/active.js") %>'></script>
 	<!-- loginregister js -->
-	<script src="js/login.js"></script>
+	<script src='<%= ResolveClientUrl("~/js/login.js") %>'></script>
 
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
 
 	<script>function loginModal() { $(document).ready(function () { $('#modLogin').modal('show'); }); };</script>
+
 
 
 	<asp:ContentPlaceHolder ID="scriptPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
