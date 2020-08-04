@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class AdminCRUDCourse
+Partial Public Class LoginRequired
 End Class

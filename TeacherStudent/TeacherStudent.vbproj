@@ -130,8 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Admin\AdminCRUDCourse.aspx" />
-    <Content Include="AdminCRUDCourseCategory.aspx" />
+    <Content Include="AdminCRUDCourse.aspx" />
+    <Content Include="Admin\AdminCRUDCourseCategory.aspx" />
     <Content Include="AdminViewsListOfTutorsStudents.aspx" />
     <Content Include="App_Data\TeacherStudentDB.mdf" />
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
@@ -147,6 +147,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Course.aspx" />
     <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\classy-nav.min.css" />
     <Content Include="css\custom-icon.css" />
@@ -204,6 +205,7 @@
     <Content Include="img\core-img\logo.png" />
     <Content Include="img\core-img\logo2.png" />
     <Content Include="js\active.js" />
+    <Content Include="js\bootstrap\bootstrap-datetimepicker.min.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\bootstrap\popper.min.js" />
     <Content Include="js\google-map\map-active.js" />
@@ -211,6 +213,7 @@
     <Content Include="js\login.js" />
     <Content Include="js\plugins\plugins.js" />
     <Content Include="Login.aspx" />
+    <Content Include="LoginRequired.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="master1.Master" />
     <Content Include="fonts\classy.eot" />
@@ -332,13 +335,16 @@
     <Content Include="Student\StudentViewsEvents.aspx" />
     <Content Include="Student\StudentViewsListOfCourses.aspx" />
     <Content Include="style.css" />
-    <Content Include="UserDetails.aspx" />
+    <Content Include="Admin\UserDetails.aspx" />
+    <Content Include="Tutor\AddCourse.aspx" />
     <Content Include="Tutor\TutorCRUDCourse.aspx" />
     <Content Include="Tutor\TutorPostsEvent.aspx" />
     <Content Include="Tutor\TutorPostsMaterials.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
-    <Content Include="UserFunctionality.aspx" />
-    <Content Include="WebServiceUpdateCategoryName.asmx" />
+    <Content Include="OrdinaryUser\UserFunctionality.aspx" />
+    <Content Include="Tutor\UpdateCourse.aspx" />
+    <Content Include="WebServiceCourse.asmx" />
+    <Content Include="Admin\WebServiceUpdateCategoryName.asmx" />
     <Content Include="Welcome.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -367,17 +373,17 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AdminCRUDCourse.aspx.designer.vb">
+    <Compile Include="AdminCRUDCourse.aspx.designer.vb">
       <DependentUpon>AdminCRUDCourse.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminCRUDCourse.aspx.vb">
+    <Compile Include="AdminCRUDCourse.aspx.vb">
       <DependentUpon>AdminCRUDCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="AdminCRUDCourseCategory.aspx.designer.vb">
+    <Compile Include="Admin\AdminCRUDCourseCategory.aspx.designer.vb">
       <DependentUpon>AdminCRUDCourseCategory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminCRUDCourseCategory.aspx.vb">
+    <Compile Include="Admin\AdminCRUDCourseCategory.aspx.vb">
       <DependentUpon>AdminCRUDCourseCategory.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -411,7 +417,9 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="ClassUpdateCategoryName.vb" />
+    <Compile Include="ClassCourse.vb" />
+    <Compile Include="ClassSendMail.vb" />
+    <Compile Include="Admin\ClassUpdateCategoryName.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -449,6 +457,13 @@
     <Compile Include="Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginRequired.aspx.designer.vb">
+      <DependentUpon>LoginRequired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRequired.aspx.vb">
+      <DependentUpon>LoginRequired.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.vb">
       <DependentUpon>Logout.aspx</DependentUpon>
@@ -525,11 +540,18 @@
       <DependentUpon>StudentViewsListOfCourses.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="UserDetails.aspx.designer.vb">
+    <Compile Include="Admin\UserDetails.aspx.designer.vb">
       <DependentUpon>UserDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserDetails.aspx.vb">
+    <Compile Include="Admin\UserDetails.aspx.vb">
       <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AddCourse.aspx.designer.vb">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AddCourse.aspx.vb">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutor\TutorCRUDCourse.aspx.designer.vb">
@@ -560,11 +582,18 @@
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="UserFunctionality.aspx.designer.vb">
+    <Compile Include="OrdinaryUser\UserFunctionality.aspx.designer.vb">
       <DependentUpon>UserFunctionality.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserFunctionality.aspx.vb">
+    <Compile Include="OrdinaryUser\UserFunctionality.aspx.vb">
       <DependentUpon>UserFunctionality.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\UpdateCourse.aspx.designer.vb">
+      <DependentUpon>UpdateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\UpdateCourse.aspx.vb">
+      <DependentUpon>UpdateCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
@@ -574,7 +603,11 @@
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebServiceUpdateCategoryName.asmx.vb">
+    <Compile Include="WebServiceCourse.asmx.vb">
+      <DependentUpon>WebServiceCourse.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\WebServiceUpdateCategoryName.asmx.vb">
       <DependentUpon>WebServiceUpdateCategoryName.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
