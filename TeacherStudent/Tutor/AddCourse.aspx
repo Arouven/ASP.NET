@@ -20,9 +20,13 @@
 			-moz-osx-font-smoothing: grayscale;
 		}
 
-		.glyphicon-calendar:before {
-			content: "\e109";
+
+
+
+		.glyphicon-plus:before {
+			content: "\002b";
 		}
+
 
 		.myLable {
 			font-weight: bold;
@@ -87,46 +91,39 @@
 			</div>
 		</div>
 		<div class="row form-group">
-			<label class="col-sm-3 col-form-label myLable">Material Name : </label>
-			<div class="col-sm-9">
+			<label class="col-sm-3 col-form-label myLable">Upload Materials : </label>
+			<div class="col-sm-4">
+				<asp:FileUpload ID="FileUploadDoc" runat="server" />
+			</div>
+			<div class="col-sm-4">
 				<asp:DropDownList ID="DropDownListMaterialName" CssClass="form-control" runat="server"></asp:DropDownList>
 			</div>
+			<div class="col-sm-1">
+				<asp:LinkButton ID="btnAddMaterials" OnClick="btnAddMaterials_Click" CssClass="btn btn-primary" runat="server" Text="Add" ToolTip="Add Material"><span class="glyphicon glyphicon-plus"></span></asp:LinkButton>&nbsp;&nbsp;
+			</div>
 		</div>
+
 		<div class="row form-group">
-			<label class="col-sm-3 col-form-label myLable">Upload Materials : </label>
-			<div class="col-sm-9">
-				<asp:FileUpload ID="FileUploadDoc" runat="server" AllowMultiple="true" />
+			<div class="col-sm-3"></div>
+			<div class="col-sm-4">
+				<asp:FileUpload runat="server" />
+			</div>
+			<div class="col-sm-4" id="">
+				<asp:DropDownList CssClass="form-control" runat="server"></asp:DropDownList>
+			</div>
+			<div class="col-sm-1">
 			</div>
 		</div>
 
 
-		<div class="row form-group d-flex justify-content-around">
-			<asp:LinkButton ID="LinkButtonAdd" CssClass="btn btn-success btnsize" OnClick="LinkButtonAdd_Click" runat="server" OnClientClick="validate()" ValidationGroup="ValidationGroupUser">Add</asp:LinkButton>
+		<div class="row form-group">
+			<asp:LinkButton ID="LinkButtonAdd" CssClass="btn btn-success col-sm-4" OnClick="LinkButtonAdd_Click" runat="server" OnClientClick="return confirm('Note that existing files with same names will be overwritten');" ValidationGroup="AddCourseGroup">Add course</asp:LinkButton>
 		</div>
-		<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 	</div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
-	<script type="text/javascript">  
-		function validate() {
-			var array = ['pdf', 'doc', 'docx', 'txt', 'xlsx', 'ppt', 'zip'];
-			var xyz = $(`#<%=FileUploadDoc.ClientID%>`);
 
-			var Extension = xyz.value.substring(xyz.value.lastIndexOf('.') + 1).toLowerCase();
-			if (array.indexOf(Extension) <= -1) {
-				alert("Please Upload only pdf,doc,zip,txt.xlsx and ppt extension flle");
-				return false;
-			}
-			else {
-				var ask = confirm('Your Existing files will be overwritten if any');
-				if (ask) {
-					return true;
-				}
-				else { return false;}
-			}
-		}
-	</script>
 	<script>
 
-	</script>
+</script>
 </asp:Content>

@@ -56,6 +56,7 @@ MaterialAssociativeTable.CourseId,
 MaterialAssociativeTable.MaterialTypeId,
 MaterialAssociativeTable.MaterialPathUrl,
 MaterialAssociativeTable.DatePosted,
+MaterialAssociativeTable.MaterialName,
 MaterialTypeTable.MaterialTypeName
 from MaterialAssociativeTable
 inner join MaterialTypeTable on MaterialTypeTable.MaterialTypeId=MaterialAssociativeTable.MaterialTypeId

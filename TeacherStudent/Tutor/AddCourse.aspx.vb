@@ -115,21 +115,7 @@
 		cmd.ExecuteNonQuery()
 		con.Close()
 	End Sub
-	'Function CheckFileType(ByVal fileName As String) As Boolean
-	'	Dim ext As String = IO.Path.GetExtension(fileName)
-	'	Select Case ext.ToLower()
-	'		Case ".doc"
-	'			Return True
-	'		Case ".docx"
-	'			Return True
-	'		Case ".pdf"
-	'			Return True
-	'		Case ".pptx"
-	'			Return True
-	'		Case Else
-	'			Return False
-	'	End Select
-	'End Function
+
 	Private Sub populateMaterialName()
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
@@ -153,10 +139,15 @@
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'LoginRequired(mySession)
 		populateCategory()
+
 		populateMaterialName()
 	End Sub
 
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
 		uploadFile("tom") 'will be taken from session
+	End Sub
+
+	Protected Sub btnAddMaterials_Click(sender As Object, e As EventArgs)
+
 	End Sub
 End Class

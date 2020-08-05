@@ -68,15 +68,6 @@ Partial Public Class AddCourse
 	Protected WithEvents TextBoxAimsAndObjectives As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''DropDownListMaterialName control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents DropDownListMaterialName As Global.System.Web.UI.WebControls.DropDownList
-
-	'''<summary>
 	'''FileUploadDoc control.
 	'''</summary>
 	'''<remarks>
@@ -86,6 +77,24 @@ Partial Public Class AddCourse
 	Protected WithEvents FileUploadDoc As Global.System.Web.UI.WebControls.FileUpload
 
 	'''<summary>
+	'''DropDownListMaterialName control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents DropDownListMaterialName As Global.System.Web.UI.WebControls.DropDownList
+
+	'''<summary>
+	'''btnAddMaterials control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnAddMaterials As Global.System.Web.UI.WebControls.LinkButton
+
+	'''<summary>
 	'''LinkButtonAdd control.
 	'''</summary>
 	'''<remarks>
@@ -93,13 +102,4 @@ Partial Public Class AddCourse
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents LinkButtonAdd As Global.System.Web.UI.WebControls.LinkButton
-
-	'''<summary>
-	'''Label1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 End Class

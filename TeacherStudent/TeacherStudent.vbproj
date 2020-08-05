@@ -347,6 +347,7 @@
     <Content Include="OrdinaryUser\UserFunctionality.aspx" />
     <Content Include="Tutor\UpdateCourse.aspx" />
     <Content Include="Tutor\ViewCourse.aspx" />
+    <Content Include="Tutor\ViewEvents.aspx" />
     <Content Include="WebServiceCourse.asmx" />
     <Content Include="Admin\WebServiceUpdateCategoryName.asmx" />
     <Content Include="Welcome.aspx" />
@@ -622,6 +623,13 @@
     </Compile>
     <Compile Include="Tutor\ViewCourse.aspx.vb">
       <DependentUpon>ViewCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\ViewEvents.aspx.designer.vb">
+      <DependentUpon>ViewEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\ViewEvents.aspx.vb">
+      <DependentUpon>ViewEvents.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">

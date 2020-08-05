@@ -11,59 +11,68 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class TutorPostsEvent
+Partial Public Class ViewEvents
 
 	'''<summary>
-	'''HiddenFieldDate control.
+	'''gvs control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents HiddenFieldDate As Global.System.Web.UI.WebControls.HiddenField
+	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
 
 	'''<summary>
-	'''TextBoxEventName control.
+	'''btnAdd control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxEventName As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.LinkButton
 
 	'''<summary>
-	'''TextBoxEventDetails control.
+	'''updatePanelTop2 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxEventDetails As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents updatePanelTop2 As Global.System.Web.UI.UpdatePanel
 
 	'''<summary>
-	'''TextBoxLocation control.
+	'''LabelUpdateCategoryName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxLocation As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents LabelUpdateCategoryName As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxDateSchedule control.
+	'''myHiddenId control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxDateSchedule As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents myHiddenId As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''LinkButtonAdd control.
+	'''TextBoxUpdateCategory control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LinkButtonAdd As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents TextBoxUpdateCategory As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''UpdateButton control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents UpdateButton As Global.System.Web.UI.WebControls.Button
 End Class

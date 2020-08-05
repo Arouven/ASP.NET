@@ -166,7 +166,7 @@
 											<div class="tbldiv">
 												<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
 													<Columns>
-														<asp:BoundField DataField="MaterialPathUrl" HeaderText="Material Name" />
+														<asp:BoundField DataField="MaterialName" HeaderText="Material Name" />
 														<asp:BoundField DataField="MaterialTypeName" HeaderText="Type" />
 														<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 															<ItemTemplate>
