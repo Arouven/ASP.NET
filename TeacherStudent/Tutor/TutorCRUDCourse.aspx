@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorCRUDCourse.aspx.vb" Inherits="TeacherStudent.TutorCRUDCourse" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 	<style>
 		@font-face {
@@ -29,6 +30,10 @@
 
 		.glyphicon-plus:before {
 			content: "\002b";
+		}
+
+		.glyphicon-eye-open:before {
+			content: "\e105";
 		}
 
 		.tbldiv {
@@ -89,7 +94,7 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="col-sm-12 text-center">
+	<div class="col-sm-12 text-center">
 		<br />
 		<h2>List Of My Courses</h2>
 		<br />
@@ -101,13 +106,17 @@
 				<asp:BoundField DataField="CourseName" HeaderText="Course Name" />
 				<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
 				<asp:BoundField DataField="DateCreated" HeaderText="Date Created" />
+				<asp:BoundField DataField="CategoryName" HeaderText="Category Name" />
+				<asp:BoundField DataField="MaterialTypeName" HeaderText="Material Type" />
 				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 					<ItemTemplate>
 						<asp:UpdatePanel runat="server" ID="updatePanel000">
 							<ContentTemplate>
 								<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("CourseId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
 								&nbsp;&nbsp;
-								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning"  href='<%#Eval("CourseId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
+								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("CourseId", "~/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
+								&nbsp;&nbsp;
+								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" href='<%#Eval("CourseId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
 							</ContentTemplate>
 						</asp:UpdatePanel>
 					</ItemTemplate>
@@ -115,7 +124,7 @@
 			</Columns>
 		</asp:GridView>
 		<br />
-		<asp:LinkButton CssClass="btn btn-success col-sm-2" rel="modal:open" data-toggle="modal" OnClientClick="return OpenMod();" href="#modAddCourse" runat="server" Text="Add" ToolTip="Add Course">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
+		<asp:LinkButton ID="LinnkButtonAdd" CssClass="btn btn-success col-sm-2" OnClick="AddButton_Click" runat="server" Text="Add" ToolTip="Add Course">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
 	</div>
 
 	<%--<asp:UpdatePanel runat="server" ID="updatePanelTop1" UpdateMode="Conditional" ChildrenAsTriggers="True">
@@ -216,6 +225,6 @@
 				});
 			});
 		}(jQuery));
-		
+
 	</script>
 </asp:Content>

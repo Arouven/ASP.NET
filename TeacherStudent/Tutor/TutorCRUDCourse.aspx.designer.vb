@@ -21,4 +21,13 @@ Partial Public Class TutorCRUDCourse
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
+
+	'''<summary>
+	'''LinnkButtonAdd control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LinnkButtonAdd As Global.System.Web.UI.WebControls.LinkButton
 End Class

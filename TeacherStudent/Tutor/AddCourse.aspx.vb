@@ -67,19 +67,18 @@
 			insertCourseCategory(courseid)
 			For Each file As HttpPostedFile In FileUploadDoc.PostedFiles
 				Dim outputFileName As String = folderPath & file.FileName
+				Dim dburl As String = customfolder & file.FileName
 				If (IO.File.Exists(outputFileName)) Then
 					IO.File.Delete(outputFileName)
 					noOverwriten += 1
 				Else
 					noUploaded += 1
 					Dim MaterialId As Integer = Convert.ToInt32(DropDownListMaterialName.SelectedItem.Value)
-					insertUrl(courseid, outputFileName, MaterialId)
+					insertUrl(courseid, dburl, MaterialId)
 				End If
 				file.SaveAs(outputFileName)
 			Next
-			Response.Write("<script>alert('" & noUploaded & " file(s) uploaded & " & noOverwriten & " overwritten.')</script>")
-
-			'Response.Redirect("~/Tutor/TutorCRUDCourse.aspx")
+			Response.Redirect("~/Tutor/TutorCRUDCourse.aspx?id=" & Request.QueryString("id"))
 		End If
 	End Sub
 	Private Sub insertCourseCategory(courseid)
@@ -153,13 +152,11 @@
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'LoginRequired(mySession)
-		'CalendarScheduleDate.SelectedDate = Today
 		populateCategory()
 		populateMaterialName()
 	End Sub
 
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
-
 		uploadFile("tom") 'will be taken from session
 	End Sub
 End Class

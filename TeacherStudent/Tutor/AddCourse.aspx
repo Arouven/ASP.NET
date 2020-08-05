@@ -110,7 +110,7 @@
 	<script type="text/javascript">  
 		function validate() {
 			var array = ['pdf', 'doc', 'docx', 'txt', 'xlsx', 'ppt', 'zip'];
-			var xyz = document.getElementById("FileUploadDoc");
+			var xyz = $(`#<%=FileUploadDoc.ClientID%>`);
 
 			var Extension = xyz.value.substring(xyz.value.lastIndexOf('.') + 1).toLowerCase();
 			if (array.indexOf(Extension) <= -1) {
@@ -128,42 +128,5 @@
 	</script>
 	<script>
 
-
-		<%--$(document).ready(function () {
-			$(`#<%=TextBoxCourseName.ClientID%>`).keyup(function () {
-			var categoryName = $(this).val();
-			if (categoryName.length >= 1) {
-				$('#emptyMessageAdd').text('');
-				$.ajax({
-					url: 'WebServiceUpdateCategoryName.asmx/CategoryNameExists',
-					method: 'post',
-					data: { categoryName: categoryName },
-					dataType: 'json',
-					success: function (data) {
-						var divElement = $('#existMessageAdd');
-						if (data.CategoryNameInUse1) {
-							divElement.text(data.CategoryName1 + ' already in use');
-							divElement.css('color', 'red');
-							$(`#<%=AddButton.ClientID%>`).attr("disabled", true);
-							}
-							else {
-								divElement.text(data.CategoryName1 + ' available')
-								divElement.css('color', 'green');
-								$(`#<%=AddButton.ClientID%>`).attr("disabled", false);
-							}
-						},
-						error: function (err) {
-							alert(err);
-						}
-					});
-				}
-				if (!categoryName.replace(/\s/g, '').length) {
-					$('#emptyMessageAdd').text('Empty textbox');
-					$('#emptyMessageAdd').css('color', 'red');
-					$(`#<%=AddButton.ClientID%>`).attr("disabled", true);
-					$('#existMessageAdd').text('');
-				}
-			});
-	});--%>
 	</script>
 </asp:Content>

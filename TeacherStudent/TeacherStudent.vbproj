@@ -253,6 +253,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="DownloadFiles.ashx" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -337,12 +338,15 @@
     <Content Include="style.css" />
     <Content Include="Admin\UserDetails.aspx" />
     <Content Include="Tutor\AddCourse.aspx" />
+    <Content Include="Tutor\AddMaterials.aspx" />
+    <Content Include="Tutor\OpenDocuments.aspx" />
     <Content Include="Tutor\TutorCRUDCourse.aspx" />
     <Content Include="Tutor\TutorPostsEvent.aspx" />
     <Content Include="Tutor\TutorPostsMaterials.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
     <Content Include="OrdinaryUser\UserFunctionality.aspx" />
     <Content Include="Tutor\UpdateCourse.aspx" />
+    <Content Include="Tutor\ViewCourse.aspx" />
     <Content Include="WebServiceCourse.asmx" />
     <Content Include="Admin\WebServiceUpdateCategoryName.asmx" />
     <Content Include="Welcome.aspx" />
@@ -433,6 +437,9 @@
     <Compile Include="Course.aspx.vb">
       <DependentUpon>Course.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DownloadFiles.ashx.vb">
+      <DependentUpon>DownloadFiles.ashx</DependentUpon>
     </Compile>
     <Compile Include="Elements.aspx.designer.vb">
       <DependentUpon>Elements.aspx</DependentUpon>
@@ -554,6 +561,20 @@
       <DependentUpon>AddCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutor\AddMaterials.aspx.designer.vb">
+      <DependentUpon>AddMaterials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AddMaterials.aspx.vb">
+      <DependentUpon>AddMaterials.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\OpenDocuments.aspx.designer.vb">
+      <DependentUpon>OpenDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\OpenDocuments.aspx.vb">
+      <DependentUpon>OpenDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutor\TutorCRUDCourse.aspx.designer.vb">
       <DependentUpon>TutorCRUDCourse.aspx</DependentUpon>
     </Compile>
@@ -594,6 +615,13 @@
     </Compile>
     <Compile Include="Tutor\UpdateCourse.aspx.vb">
       <DependentUpon>UpdateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\ViewCourse.aspx.designer.vb">
+      <DependentUpon>ViewCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\ViewCourse.aspx.vb">
+      <DependentUpon>ViewCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
