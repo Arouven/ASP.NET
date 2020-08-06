@@ -14,10 +14,10 @@
 						<div class="col-12">
 							<div class="hero-slides-content">
 								<h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-								<h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our
+								<h2 data-animation="fadeInUp" data-delay="400ms">Welcome to our
 									<br>
 									Online University</h2>
-								<a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
+								<a runat="server" href="~/About" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 								<h2 data-animation="fadeInUp" data-delay="400ms">Welcome to our
 									<br>
 									Online University</h2>
-								<a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
+								<a runat="server" href="~/About" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -79,9 +79,46 @@
 		</div>
 	</div>
 	<!-- ##### Top Feature Area End ##### -->
+     <div class="col-12 section-padding-100-0">
+		<div class="academy-cool-facts-area mb-50">
+			<div class="row">
 
+				<!-- Single Cool Fact-->
+				<div class="col-16 col-sm-8 col-md-4">
+					<div class="single-cool-fact text-center">
+						<i class="icon-agenda-1"></i>
+						<h3><span class="counter">
+							<asp:Label ID="LabelnoCourses" runat="server" Text="0"></asp:Label></span></h3>
+						<p>Courses Available</p>
+					</div>
+				</div>
+
+				<!-- Single Cool Fact-->
+				<div class="col-16 col-sm-8 col-md-4">
+					<div class="single-cool-fact text-center">
+						<i class="icon-assistance"></i>
+						<h3><span class="counter">
+							<asp:Label ID="LabelNoTutors" runat="server" Text="0"></asp:Label></span></h3>
+						<p>Amazing Teachers</p>
+					</div>
+				</div>
+
+				<!-- Single Cool Fact-->
+				<div class="col-16 col-sm-8 col-md-4">
+					<div class="single-cool-fact text-center">
+						<i class="icon-id-card"></i>
+						<h3><span class="counter">
+							<asp:Label ID="LabelNoStudents" runat="server" Text="0"></asp:Label></span></h3>
+						<p>Total Students</p>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+        </div>
 	<!-- ##### Course Area Start ##### -->
-	<div class="academy-courses-area section-padding-100-0">
+	<%--<div class="academy-courses-area section-padding-100-0">
 		<div class="container">
 			<div class="row">
 				<!-- Single Course Area -->
@@ -159,7 +196,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- ##### Course Area End ##### -->
+	--%>
+    <!-- ##### Course Area End ##### -->
 	<div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(img/bg-img/bg-2.jpg);">
         <div class="container">
             <div class="row">
@@ -227,7 +265,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
-                        <a href="#" class="btn academy-btn">See More</a>
+                        <a runat="server" href="~/Registration.aspx" class="btn academy-btn">Enroll Now</a>
                     </div>
                 </div>
             </div>
@@ -261,7 +299,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-1.jpg);"></div>
                     </div>
@@ -281,7 +319,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-2.jpg);"></div>
                     </div>
@@ -301,7 +339,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-3.jpg);"></div>
                     </div>
@@ -321,7 +359,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-4.jpg);"></div>
                     </div>
@@ -337,26 +375,26 @@
             <div class="row">
                 <div class="col-12">
                     <div class="partners-logo d-flex align-items-center justify-content-between flex-wrap">
-                        <a href="#"><img src="img/clients-img/partner-1.png" alt=""></a>
-                        <a href="#"><img src="img/clients-img/partner-2.png" alt=""></a>
-                        <a href="#"><img src="img/clients-img/partner-3.png" alt=""></a>
-                        <a href="#"><img src="img/clients-img/partner-4.png" alt=""></a>
-                        <a href="#"><img src="img/clients-img/partner-5.png" alt=""></a>
+                        <asp:AdRotator ID="AdRotator1" AdvertisementFile="~/App_Data/AdList.xml" KeywordFilter="banner" CssClass="banner" runat="server" />
+                        <asp:AdRotator ID="AdRotator2" AdvertisementFile="~/App_Data/AdList.xml" KeywordFilter="banner" CssClass="banner" runat="server" />
+                        <asp:AdRotator ID="AdRotator3" AdvertisementFile="~/App_Data/AdList.xml" KeywordFilter="banner" CssClass="banner" runat="server" />
+                        <asp:AdRotator ID="AdRotator4" AdvertisementFile="~/App_Data/AdList.xml" KeywordFilter="banner" CssClass="banner" runat="server" />
+                        <asp:AdRotator ID="AdRotator5" AdvertisementFile="~/App_Data/AdList.xml" KeywordFilter="banner" CssClass="banner" runat="server" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ##### Partner Area End ##### -->
-
+   
     <!-- ##### CTA Area Start ##### -->
     <div class="call-to-action-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to enrole at our Academy? Get in touch!</h3>
-                        <a href="#" class="btn academy-btn">See More</a>
+                        <h3>Do you want to enroll at our Academy? Get in touch!</h3>
+                        <a  runat="server" href="~/Registration.aspx" class="btn academy-btn">enroll</a>
                     </div>
                 </div>
             </div>

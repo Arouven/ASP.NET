@@ -106,15 +106,15 @@
 				<asp:BoundField DataField="CourseName" HeaderText="Course Name" />
 				<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
 				<asp:BoundField DataField="DateCreated" HeaderText="Date Created" />
-				<asp:BoundField DataField="CategoryName" HeaderText="Category Name" />
-				<asp:BoundField DataField="MaterialTypeName" HeaderText="Material Type" />
+				<asp:BoundField DataField="catName" HeaderText="Category Name" />
+				<asp:BoundField DataField="matName" HeaderText="Material Type" />
 				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 					<ItemTemplate>
 						<asp:UpdatePanel runat="server" ID="updatePanel000">
 							<ContentTemplate>
 								<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("CourseId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
 								&nbsp;&nbsp;
-								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("CourseId", "~/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
+								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("CourseId", "/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
 								&nbsp;&nbsp;
 								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" href='<%#Eval("CourseId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
 							</ContentTemplate>

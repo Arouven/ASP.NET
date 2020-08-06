@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class AdminCRUDCourse
+Partial Public Class AdminCRUDMaterialType
 
 	'''<summary>
 	'''gvs control.
@@ -41,22 +41,22 @@ Partial Public Class AdminCRUDCourse
 	Protected WithEvents updatePanelTop1 As Global.System.Web.UI.UpdatePanel
 
 	'''<summary>
-	'''LabelAddCourseName control.
+	'''LabelAddMaterialName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelAddCourseName As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents LabelAddMaterialName As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxAddCourse control.
+	'''TextBoxAddMaterial control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxAddCourse As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TextBoxAddMaterial As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
 	'''AddButton control.
@@ -77,13 +77,13 @@ Partial Public Class AdminCRUDCourse
 	Protected WithEvents updatePanelTop2 As Global.System.Web.UI.UpdatePanel
 
 	'''<summary>
-	'''LabelUpdateCourseName control.
+	'''LabelUpdateMaterialName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelUpdateCourseName As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents LabelUpdateMaterialName As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''myHiddenId control.
@@ -95,13 +95,13 @@ Partial Public Class AdminCRUDCourse
 	Protected WithEvents myHiddenId As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''TextBoxUpdateCourse control.
+	'''TextBoxUpdateMaterial control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxUpdateCourse As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents TextBoxUpdateMaterial As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
 	'''UpdateButton control.

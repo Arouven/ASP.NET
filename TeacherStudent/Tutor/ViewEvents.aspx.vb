@@ -18,7 +18,7 @@
 		cmd.Connection = con
 		con.Open()
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "select EventId,EventName,EventDetails,Location,DateSchedule,DateCreated from EventTable where TutorId=@TutorId;"
+		cmd.CommandText = "select EventId,EventName,EventDetail,Location,DateSchedule,DateCreated from EventTable where TutorId=@TutorId;"
 		cmd.Parameters.AddWithValue("@TutorId", TutorId)
 		Dim sqlda As New SqlClient.SqlDataAdapter(cmd)
 		Dim dt As New DataTable()
@@ -55,5 +55,34 @@
 		cmd.ExecuteNonQuery()
 		con.Close()
 		GetEventList()
+	End Sub
+
+	Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
+		Response.Redirect("~/Tutor/TutorPostEvent.aspx")
+	End Sub
+
+	Protected Sub UpdateButton_Click(sender As Object, e As EventArgs)
+		Dim idToUpdate As Integer = Convert.ToInt32(myHiddenId.Value)
+		Dim EventName As String = TextBoxEventName.Text.Trim
+		Dim EventDetail As String = TextBoxEventDetail.Text.Trim
+		Dim location As String = TextBoxLocation.Text.Trim
+		Dim dateSchedule As String = TextBoxDateSchedule.Text.Trim
+		Dim dateCreated As String = TextBoxDateCreated.Text.Trim
+
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		cmd.Connection = con
+		con.Open()
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "update EventTable set EventName=@EventName, EventDetail=@EventDetail, location=@location, dateSchedule=@dateSchedule, dateCreated=@dateCreated where EventId=@EventId;"
+		cmd.Parameters.AddWithValue("@EventId", idToUpdate)
+		cmd.Parameters.AddWithValue("@EventName", EventName)
+		cmd.Parameters.AddWithValue("@EventDetail", EventDetail)
+		cmd.Parameters.AddWithValue("@location", location)
+		cmd.Parameters.AddWithValue("@dateSchedule", Convert.ToDateTime(dateSchedule))
+		cmd.Parameters.AddWithValue("@dateCreated", Convert.ToDateTime(dateCreated))
+		cmd.ExecuteNonQuery()
+		con.Close()
+		Response.Redirect(Request.RawUrl)
 	End Sub
 End Class

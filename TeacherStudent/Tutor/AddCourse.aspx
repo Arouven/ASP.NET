@@ -93,10 +93,10 @@
 		<div class="row form-group">
 			<label class="col-sm-3 col-form-label myLable">Upload Materials : </label>
 			<div class="col-sm-4">
-				<asp:FileUpload ID="FileUploadDoc" runat="server" />
+				<asp:FileUpload ID="FileUploadDoc" AllowMultiple="true" runat="server" />
 			</div>
 			<div class="col-sm-4">
-				<asp:DropDownList ID="DropDownListMaterialName" CssClass="form-control" runat="server"></asp:DropDownList>
+				<asp:DropDownList ID="DropDownListMaterialName"  CssClass="form-control" runat="server"></asp:DropDownList>
 			</div>
 			<div class="col-sm-1">
 				<asp:LinkButton ID="btnAddMaterials" OnClick="btnAddMaterials_Click" CssClass="btn btn-primary" runat="server" Text="Add" ToolTip="Add Material"><span class="glyphicon glyphicon-plus"></span></asp:LinkButton>&nbsp;&nbsp;

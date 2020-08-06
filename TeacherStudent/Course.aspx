@@ -6,11 +6,24 @@
 	<!-- ##### Breadcumb Area Start ##### -->
 	<div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
 		<div class="bradcumbContent">
-			<h2>Our Courses</h2>
+			<h2>Some Courses</h2>
 		</div>
 	</div>
 	<!-- ##### Breadcumb Area End ##### -->
-
+	<div class="section-padding-100-0">
+	<div class="call-to-action-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+						<h3>See all our courses here!</h3>
+						<a runat="server" href="~/User/ViewCourses" class="btn academy-btn">All Courses</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
 	<!-- ##### Top Popular Courses Area Start ##### -->
 	<div class="top-popular-courses-area mt-50 section-padding-100-70">
 		<div class="container">
@@ -38,7 +51,7 @@
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-							<a href="#" class="btn academy-btn btn-sm">See More</a>
+							<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm">Enroll</a>
 						</div>
 						<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-1.jpg);"></div>
 					</div>
@@ -58,7 +71,7 @@
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-							<a href="#" class="btn academy-btn btn-sm">See More</a>
+							<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm">Enroll</a>
 						</div>
 						<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-2.jpg);"></div>
 					</div>
@@ -78,7 +91,7 @@
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-							<a href="#" class="btn academy-btn btn-sm">See More</a>
+							<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm">Enroll</a>
 						</div>
 						<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-3.jpg);"></div>
 					</div>
@@ -98,7 +111,7 @@
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-							<a href="#" class="btn academy-btn btn-sm">See More</a>
+							<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm">Enroll</a>
 						</div>
 						<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-4.jpg);"></div>
 					</div>
@@ -118,7 +131,7 @@
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-							<a href="#" class="btn academy-btn btn-sm">See More</a>
+							<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm">Enroll</a>
 						</div>
 						<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-5.jpg);"></div>
 					</div>
@@ -138,7 +151,7 @@
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
 							<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-							<a href="#" class="btn academy-btn btn-sm">See More</a>
+							<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm">Enroll</a>
 						</div>
 						<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-6.jpg);"></div>
 					</div>
@@ -162,7 +175,7 @@
 					<i class="fa fa-star-o" aria-hidden="true"></i>
 				</div>
 				<p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
-				<a href="#" class="btn academy-btn btn-sm mt-15">See More</a>
+				<a runat="server" href="~/Registration.aspx" class="btn academy-btn btn-sm mt-15">Enroll</a>
 			</div>
 			<div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/bg-4.jpg);"></div>
 		</div>
@@ -220,13 +233,25 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-						<h3>Do you want to enrole at our Academy? Get in touch!</h3>
-						<a href="#" class="btn academy-btn">See More</a>
+						<h3>See all our courses here!</h3>
+						<a runat="server" href="~/User/ViewCourses" class="btn academy-btn">See More</a>
+					</div><br /><div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+						<h3>Do you want to enrol at our Academy? Get in touch!</h3>
+						<a runat="server" href="~/Registration.aspx" class="btn academy-btn">Enroll</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+<%--	<div class="call-to-action-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					
+				</div>
+			</div>
+		</div>
+	</div>--%>
 	<!-- ##### CTA Area End ##### -->
 
 

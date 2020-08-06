@@ -10,13 +10,13 @@
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		Dim tutorid As Integer = Convert.ToInt32(Request.QueryString("id")) 'tutorid
+		Dim tutorid As Integer = 3 'Convert.ToInt32(Request.QueryString("id")) 'tutorid
 		Dim courseId As Integer = 0
 		Dim sqlStatement As String = "insert into CourseTable( TutorId, CourseName, DateSchedule, DateCreated, CourseDescription, AimsAndObjectives) values (@TutorId, @CourseName, @DateSchedule, @DateCreated, @CourseDescription, @AimsAndObjectives);" & "SELECT @@IDENTITY AS [@@IDENTITY];"
 		cmd.CommandText = sqlStatement
 		cmd.Parameters.AddWithValue("@TutorId", tutorid)
 		cmd.Parameters.AddWithValue("@CourseName", TextBoxCourseName.Text.Trim)
-		cmd.Parameters.AddWithValue("@DateSchedule", String.Format("{0:yyyy/mm/dd hh:m:s}", TextBoxScheduleDate.Text))
+		cmd.Parameters.AddWithValue("@DateSchedule", DateTime.Now)
 		cmd.Parameters.AddWithValue("@DateCreated", DateTime.Now)
 		cmd.Parameters.AddWithValue("@CourseDescription", TextBoxCourseDescription.Text.Trim)
 		cmd.Parameters.AddWithValue("@AimsAndObjectives", TextBoxAimsAndObjectives.Text.Trim)
@@ -48,7 +48,7 @@
 		End If
 	End Sub
 
-	Private Sub uploadFile(UserName As String)
+	Private Sub uploadCourse(UserName As String)
 		'check if file upload contains a file
 		If (FileUploadDoc.HasFiles) Then
 			'add the filename as an argument
@@ -65,6 +65,7 @@
 			Dim noOverwriten As Integer = 0
 			Dim courseid As Integer = insertGetCourseId()
 			insertCourseCategory(courseid)
+			Dim MaterialId As String = DropDownListMaterialName.SelectedValue
 			For Each file As HttpPostedFile In FileUploadDoc.PostedFiles
 				Dim outputFileName As String = folderPath & file.FileName
 				Dim dburl As String = customfolder & file.FileName
@@ -73,7 +74,6 @@
 					noOverwriten += 1
 				Else
 					noUploaded += 1
-					Dim MaterialId As Integer = Convert.ToInt32(DropDownListMaterialName.SelectedItem.Value)
 					insertUrl(courseid, dburl, MaterialId)
 				End If
 				file.SaveAs(outputFileName)
@@ -106,11 +106,13 @@
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "INSERT INTO MaterialAssociativeTable (CourseId, MaterialTypeId, MaterialPathUrl,DatePosted) VALUES (@CourseId, @MaterialTypeId, @MaterialPathUrl,@DatePosted);"
+		cmd.CommandText = "INSERT INTO MaterialAssociativeTable (CourseId, MaterialTypeId, MaterialPathUrl,DatePosted,MaterialName) VALUES (@CourseId, @MaterialTypeId, @MaterialPathUrl,@DatePosted,@MaterialName);"
 		cmd.Parameters.AddWithValue("@MaterialTypeId", MaterialTypeId)
 		cmd.Parameters.AddWithValue("@CourseId", courseId)
 		cmd.Parameters.AddWithValue("@MaterialPathUrl", fileUrl)
 		cmd.Parameters.AddWithValue("@DatePosted", DateTime.Now.Date)
+		Dim fname As String = IO.Path.GetFileName(Server.MapPath(fileUrl))
+		cmd.Parameters.AddWithValue("@MaterialName", fname)
 		con.Open()
 		cmd.ExecuteNonQuery()
 		con.Close()
@@ -122,29 +124,27 @@
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
 		cmd.CommandText = "SELECT MaterialTypeId,MaterialTypeName FROM MaterialTypeTable;"
-		'Create DataReader
-		Dim reader As SqlClient.SqlDataReader
 		con.Open()
-		reader = cmd.ExecuteReader()
-		Dim startItem As ListItem = New ListItem("Select a material type", -1)
-		DropDownListMaterialName.Items.Add(startItem)
-		While reader.Read
-			Dim newlist As ListItem = New ListItem(reader(1).ToString, reader(0))
-			DropDownListMaterialName.Items.Add(newlist)
-		End While
+		DropDownListMaterialName.Items.Add(New ListItem("Select a material type", -1))
+		DropDownListMaterialName.DataSource = cmd.ExecuteReader()
+		DropDownListMaterialName.DataTextField = "MaterialTypeName"
+		DropDownListMaterialName.DataValueField = "MaterialTypeId"
+		DropDownListMaterialName.DataBind()
 		DropDownListMaterialName.SelectedIndex = 0
-		reader.Close()
 		con.Close()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'LoginRequired(mySession)
-		populateCategory()
+		If Not IsPostBack Then
+			populateCategory()
+			populateMaterialName()
+		End If
 
-		populateMaterialName()
 	End Sub
 
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
-		uploadFile("tom") 'will be taken from session
+
+		uploadCourse("tom") 'will be taken from session
 	End Sub
 
 	Protected Sub btnAddMaterials_Click(sender As Object, e As EventArgs)

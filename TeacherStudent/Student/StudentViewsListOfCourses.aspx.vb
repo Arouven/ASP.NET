@@ -27,8 +27,14 @@
 			da.Fill(dt)
 		End Using
 		'Set the DataTable as the DataSource
-		gvCatNames.DataSource = dt
-		gvCatNames.DataBind()
+		gvs.DataSource = dt
+		gvs.DataBind()
+	End Sub
+	Protected Sub gvs_PreRender(sender As Object, e As EventArgs)
+		If (gvs.Rows.Count > 0) Then
+			gvs.UseAccessibleHeader = True
+			gvs.HeaderRow.TableSection = TableRowSection.TableHeader
+		End If
 	End Sub
 End Class
 

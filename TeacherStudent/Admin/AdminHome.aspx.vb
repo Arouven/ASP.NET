@@ -1,4 +1,4 @@
-﻿Public Class Home
+﻿Public Class AdminHome
 	Inherits System.Web.UI.Page
 	Private ReadOnly _conString As String
 	Public Sub New()
@@ -23,9 +23,23 @@
 		con.Close()
 	End Function
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+		LabelUnfreezeStudent.Text = NumberInTable("StudentTable", True, False)
+		LabelFreezeStudent.Text = NumberInTable("StudentTable", True, True)
+		LabelNoStudents.Text = (Convert.ToInt32(LabelUnfreezeStudent.Text) + Convert.ToInt32(LabelFreezeStudent.Text)).ToString
+		LabelTotalStudent.Text = LabelNoStudents.Text
+
+		LabelUnfreezeTutor.Text = NumberInTable("TutorTable", True, False)
+		LabelFreezeTutor.Text = NumberInTable("TutorTable", True, True)
+		LabelNoTutors.Text = (Convert.ToInt32(LabelUnfreezeTutor.Text) + Convert.ToInt32(LabelFreezeTutor.Text)).ToString
+		LabelTotalTutor.Text = LabelNoTutors.Text
+
 		LabelnoCourses.Text = NumberInTable("CourseTable", False, Nothing)
-		LabelNoStudents.Text = NumberInTable("StudentTable", True, False) + NumberInTable("StudentTable", True, True)
-		LabelNoTutors.Text = NumberInTable("TutorTable", True, False) + NumberInTable("TutorTable", True, True)
+		LabelTotalCourse.Text = (Convert.ToInt32(LabelnoCourses.Text)).ToString
+
+		LabelTotalCategory.Text = NumberInTable("CategoryTable", False, Nothing)
+
+		LabelTotalMaterial.Text = NumberInTable("MaterialTypeTable", False, Nothing)
 	End Sub
 
 End Class

@@ -11,104 +11,113 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ViewEvents
+Partial Public Class AdminHome
 
 	'''<summary>
-	'''gvs control.
+	'''LabelTotalStudent control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
+	Protected WithEvents LabelTotalStudent As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''btnAdd control.
+	'''LabelUnfreezeStudent control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents LabelUnfreezeStudent As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''updatePanelTop2 control.
+	'''LabelFreezeStudent control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents updatePanelTop2 As Global.System.Web.UI.UpdatePanel
+	Protected WithEvents LabelFreezeStudent As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''LabelUpdateEventName control.
+	'''LabelTotalTutor control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelUpdateEventName As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents LabelTotalTutor As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''myHiddenId control.
+	'''LabelUnfreezeTutor control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents myHiddenId As Global.System.Web.UI.WebControls.HiddenField
+	Protected WithEvents LabelUnfreezeTutor As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxEventName control.
+	'''LabelFreezeTutor control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxEventName As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents LabelFreezeTutor As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxEventDetail control.
+	'''LabelTotalCourse control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxEventDetail As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents LabelTotalCourse As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxLocation control.
+	'''LabelTotalCategory control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxLocation As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents LabelTotalCategory As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxDateSchedule control.
+	'''LabelTotalMaterial control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxDateSchedule As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents LabelTotalMaterial As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''TextBoxDateCreated control.
+	'''LabelnoCourses control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents TextBoxDateCreated As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents LabelnoCourses As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''UpdateButton control.
+	'''LabelNoTutors control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents UpdateButton As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents LabelNoTutors As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelNoStudents control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelNoStudents As Global.System.Web.UI.WebControls.Label
 End Class

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class StudentViewsListOfCourses
+Partial Public Class ViewCourses
 
 	'''<summary>
 	'''gvs control.

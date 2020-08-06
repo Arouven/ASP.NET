@@ -42,7 +42,7 @@
 
 		.tbldiv {
 			margin: auto;
-			width: 100%;
+			width: 90%;
 		}
 
 		th {
@@ -82,32 +82,34 @@
 		<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
 			<Columns>
 				<asp:BoundField DataField="EventName" HeaderText="Event Name" />
-				<asp:BoundField DataField="EventDetails" HeaderText="Event Details" />
+				<asp:BoundField DataField="EventDetail" HeaderText="Event Details" />
 				<asp:BoundField DataField="Location" HeaderText="Location" />
 				<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
 				<asp:BoundField DataField="DateCreated" HeaderText="Date Created" />
 				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
-					<ItemTemplate>						
-						<asp:LinkButton ID="btnEdit" CssClass="btn btn-warning" runat="server" Text="Edit" ToolTip="Edit Material"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>&nbsp;&nbsp;
+					<ItemTemplate>
+						<asp:LinkButton ID="btnEdit" CssClass="btn btn-warning" rel="modal:open" data-toggle="modal"
+							OnClientClick='<%# String.Format("return OpenModal({0}, ""{1}"", ""{2}"", ""{3}"", ""{4}"", ""{5}"");", Eval("EventId"), Eval("EventName"), Eval("EventDetail"), Eval("Location"), Eval("DateSchedule"), Eval("DateCreated")) %>'
+							href="#modUpdateEvent" runat="server" Text="Edit" ToolTip="Edit Event"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>&nbsp;&nbsp;
 
-						<asp:LinkButton onclick="btnDelete_Click" CommandArgument='<%# Eval("EventId") %>' OnClientClick="return Confirm('Are you sure you want to delete this event?');" ID="btnDelete" CssClass="btn btn-danger" runat="server" Text="Delete" ToolTip="Delete Event"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>&nbsp;&nbsp;
+						<asp:LinkButton OnClick="btnDelete_Click" CommandArgument='<%# Eval("EventId") %>' OnClientClick="return Confirm('Are you sure you want to delete this event?');" ID="btnDelete" CssClass="btn btn-danger" runat="server" Text="Delete" ToolTip="Delete Event"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>&nbsp;&nbsp;
 
 					</ItemTemplate>
 				</asp:TemplateField>
 			</Columns>
 		</asp:GridView>
 		<br />
-		<asp:LinkButton ID="btnAdd" CssClass="btn btn-success col-sm-2" runat="server" Text="Add" ToolTip="Add Event">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
+		<asp:LinkButton ID="btnAdd" CssClass="btn btn-success col-sm-2" runat="server" OnClick="btnAdd_Click" Text="Add" ToolTip="Add Event">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
 	</div>
 
 	<asp:UpdatePanel runat="server" ID="updatePanelTop2" UpdateMode="Conditional" ChildrenAsTriggers="True">
 		<ContentTemplate>
-			<div class="modal fade" id="modUpdateCategory" role="dialog">
+			<div class="modal fade" id="modUpdateEvent" role="dialog">
 				<div class="modal-dialog modal-dialog-center">
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header" style="text-align: center;">
-							<button type="button" class="modal-title close">Update Category</button>
+							<button type="button" class="modal-title close">Update Event</button>
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 						</div>
 						<div class="modal-body">
@@ -116,17 +118,32 @@
 									<div class="form goGreen">
 										<div class="form-group">
 											<h4>
-												<asp:Label ID="LabelUpdateCategoryName" runat="server"></asp:Label>
+												<asp:Label ID="LabelUpdateEventName" runat="server"></asp:Label>
 											</h4>
 											<asp:HiddenField ID="myHiddenId" runat="server" />
 										</div>
 										<div class="form-group">
-											<asp:TextBox ID="TextBoxUpdateCategory" runat="server" CssClass="tbInput" />
-											<div id="emptyMessage"></div>
-											<div id="existMessage"></div>
+											<asp:TextBox ID="TextBoxEventName" runat="server" CssClass="tbInput" />
+											<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxEventName" CssClass="text-danger" ValidationGroup="ViewEventUpdateGroup" ErrorMessage="Field is required." />
 										</div>
 										<div class="form-group">
-											<asp:Button ID="UpdateButton" ValidationGroup="CategoryGroup" OnClientClick="return confirm('Are you sure you want to update?');" CssClass="myBtn" runat="server" Text="Update Category" OnClick="UpdateButton_Click" />
+											<asp:TextBox ID="TextBoxEventDetail" runat="server" CssClass="tbInput" />
+											<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxEventDetail" CssClass="text-danger" ValidationGroup="ViewEventUpdateGroup" ErrorMessage="Field is required." />
+										</div>
+										<div class="form-group">
+											<asp:TextBox ID="TextBoxLocation" runat="server" CssClass="tbInput" />
+											<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxLocation" CssClass="text-danger" ValidationGroup="ViewEventUpdateGroup" ErrorMessage="Field is required." />
+										</div>
+										<div class="form-group">
+											<asp:TextBox ID="TextBoxDateSchedule" runat="server" CssClass="tbInput" />
+											<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxDateSchedule" CssClass="text-danger" ValidationGroup="ViewEventUpdateGroup" ErrorMessage="Field is required." />
+										</div>
+										<div class="form-group">
+											<asp:TextBox ID="TextBoxDateCreated" runat="server" CssClass="tbInput" />
+											<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxDateCreated" CssClass="text-danger" ValidationGroup="ViewEventUpdateGroup" ErrorMessage="Field is required." />
+										</div>
+										<div class="form-group">
+											<asp:Button ID="UpdateButton" ValidationGroup="ViewEventUpdateGroup" OnClientClick="return confirm('Are you sure you want to update?');" CssClass="myBtn" runat="server" Text="Update Event" OnClick="UpdateButton_Click" />
 										</div>
 									</div>
 								</ContentTemplate>
@@ -159,5 +176,17 @@
 				});
 			});
 		}(jQuery));
+		function OpenModal(MyId, EventName, EventDetail, location, dateSchedule, dateCreated) {
+			$(document).ready(function () {
+				$(`#<%=myHiddenId.ClientID%>`).val(MyId);
+				$(`#<%=LabelUpdateEventName.ClientID%>`).text("Update Event : " + EventName);
+				$(`#<%=TextBoxEventName.ClientID%>`).val(EventName);
+				$(`#<%=TextBoxEventDetail.ClientID%>`).val(EventDetail);
+				$(`#<%=TextBoxLocation.ClientID%>`).val(location);
+				$(`#<%=TextBoxDateSchedule.ClientID%>`).val(dateSchedule);
+				$(`#<%=TextBoxDateCreated.ClientID%>`).val(dateCreated);
+				$('#modUpdateEvent').modal('show');
+			});
+		};
 	</script>
 </asp:Content>

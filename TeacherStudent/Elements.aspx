@@ -29,6 +29,126 @@
 						<a href="Contact" class="btn academy-btn btn-3 m-2">Contact Us</a>
 						<a href="Contact" class="btn academy-btn btn-4 m-2">Contact Us</a>
 					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-headset"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-woman"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-like"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-assistance"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-megaphone"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-smartphone"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-house"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-id-card"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-fax"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-contract"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-smartphone-1"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-24-hours"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-mail"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-agenda-1"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-worldwide-1"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-smartphone"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-mobile-phone"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-map"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-message"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-telephone-3"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-email"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-agenda"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-worldwide"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-laptop"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-arroba"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-chat-1"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-mouse"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-telephone-2"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-telephone-1"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-telephone"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-link"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-placeholder"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-chat"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-printer"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-calendar"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-customer-service"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-responsive"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-wall-clock"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-info"></i>
+					</div>
+					<div class="single-cool-fact text-center">
+						<i class="icon-sms"></i>
+					</div>
 				</div>
 
 				<!-- ========== Progress Bars & Accordions ========== -->

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="StudentViewsListOfCourses.aspx.vb" Inherits="TeacherStudent.StudentViewsListOfCourses" %>
+﻿<%@ Page Title="Courses List" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="ViewCourses.aspx.vb" Inherits="TeacherStudent.ViewCourses" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 	<style>
@@ -24,6 +24,9 @@
 			content: "\2709";
 		}
 
+
+
+
 		.tbldiv {
 			margin: auto;
 			width: 90%;
@@ -36,27 +39,37 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-	<h1>View all Courses</h1>
+	<div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/breadcumb.jpg);">
+		<div class="bradcumbContent">
+			<h2>List of Courses Available</h2>
+		</div>
+	</div>
+	<div class="section-padding-100-0">
 	<div class="tbldiv">
 		<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
 			<Columns>
-				<%--<asp:BoundField DataField="UserName" HeaderText="Tutor" />--%>
-				<asp:BoundField DataField="CourseName" HeaderText="Course" />
+				<asp:BoundField DataField="CourseName" HeaderText="Course Name" />
 				<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
+				<asp:BoundField DataField="AimsAndObjectives" HeaderText="Aims" />
 				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 					<ItemTemplate>
-						<asp:LinkButton href="../LoginRequired.aspx" OnClientClick="return Confirm('Subscribe To This Course?');" ID="btnSubscribe" CssClass="btn btn-success" runat="server" Text="Subscribe" ToolTip="Subscribe To Course"><span class="glyphicon glyphicon-envelope"></span></asp:LinkButton>&nbsp;&nbsp;
 
-						<%--<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("CategoryId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
-						&nbsp;&nbsp;
-						<asp:LinkButton CssClass="btn btn-warning" rel="modal:open" data-toggle="modal" OnClientClick='<%# String.Format("return OpenModal({0}, ""{1}"");", Eval("CategoryId"), Eval("CategoryName")) %>' href="#modUpdateCategory" runat="server" Text="Update" ToolTip="Update Category"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>--%>
+						<asp:LinkButton onclick="btnSubscribe_Click" OnClientClick="return Confirm('Subscribe To This Course?');" ID="btnSubscribe" CssClass="btn btn-success" runat="server" Text="Subscribe" ToolTip="Subscribe To Course"><span class="glyphicon glyphicon-envelope"></span></asp:LinkButton>&nbsp;&nbsp;
+
 					</ItemTemplate>
 				</asp:TemplateField>
-
 			</Columns>
 		</asp:GridView>
+		<br />
 	</div>
+
+</div>
+
+
+
+
+
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
 	<script>	
@@ -66,10 +79,12 @@
 				//init dataTables
 				$('#gvs').dataTable({
 					lengthChange: true,
+					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
 					info: true,
-					pageLength: 5
+					pageLength: 20
 				});
 			});
 		}(jQuery));
+
 	</script>
 </asp:Content>

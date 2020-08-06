@@ -19,7 +19,7 @@
 						<asp:Image runat="server" ImageUrl='<%# Eval("ProfilePictureUrl", "~/ProfilePictures/{0}")%>' ID="Image1" CssClass="card-img-top mx-auto d-block rounded" AlternateText="Card image" Width="190px" Height="200px" />
 						<div class="card-body">
 							<p class="card-text text-center">
-								<asp:HyperLink CssClass="btn btn-primary" runat="server" NavigateUrl='<%#Eval("TutorId", "~/UserDetails.aspx?user=Tutor&id={0}")%>'><%# Eval("UserName")%></asp:HyperLink>
+								<asp:HyperLink CssClass="btn btn-primary" runat="server" NavigateUrl='<%#Eval("TutorId", "~/Admin/UserDetails.aspx?user=Tutor&id={0}")%>'><%# Eval("UserName")%></asp:HyperLink>
 							</p>
 						</div>
 					</div>

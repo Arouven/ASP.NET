@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminCRUDCourse.aspx.vb" Inherits="TeacherStudent.AdminCRUDCourse" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminCRUDMaterialType.aspx.vb" Inherits="TeacherStudent.AdminCRUDMaterialType" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
-		<style>
+	<style>
 		@font-face {
 			font-family: "Glyphicons Halflings";
 			src: url("../fonts/glyphicons-halflings-regular.eot");
@@ -91,39 +92,35 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 	<div class="col-sm-12 text-center">
 		<br />
-		<h2>List Of Courses</h2>
+		<h2>List Of Material Type</h2>
 		<br />
 		<br />
 	</div>
 	<div class="tbldiv">
 		<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
 			<Columns>
-				<asp:BoundField DataField="CourseName" HeaderText="Course Name" />
+				<asp:BoundField DataField="MaterialTypeName" HeaderText="Material Name" />
 				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 					<ItemTemplate>
-						<asp:UpdatePanel runat="server" ID="updatePanel000">
-							<ContentTemplate>
-								<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("CourseId") %>' Text="Delete" ToolTip="Delete Course"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
-								&nbsp;&nbsp;
-								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" rel="modal:open" data-toggle="modal" OnClientClick='<%# String.Format("return OpenModal({0}, ""{1}"");", Eval("CourseId"), Eval("CourseName")) %>' href="#modUpdateCourse" runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
-							</ContentTemplate>
-						</asp:UpdatePanel>
+						<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("MaterialTypeId") %>' Text="Delete" ToolTip="Delete Material"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
+						&nbsp;&nbsp;
+						<asp:LinkButton CssClass="btn btn-warning" rel="modal:open" data-toggle="modal" OnClientClick='<%# String.Format("return OpenModal({0}, ""{1}"");", Eval("MaterialTypeId"), Eval("MaterialTypeName")) %>' href="#modUpdateMaterial" runat="server" Text="Update" ToolTip="Update Material"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
 					</ItemTemplate>
 				</asp:TemplateField>
 			</Columns>
 		</asp:GridView>
 		<br />
-		<asp:LinkButton ID="btnAdd" CssClass="btn btn-success col-sm-2" rel="modal:open" data-toggle="modal" OnClientClick="return OpenMod();" href="#modAddCourse" runat="server" Text="Add" ToolTip="Add Course">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
+		<asp:LinkButton ID="btnAdd" CssClass="btn btn-success col-sm-2" rel="modal:open" data-toggle="modal" OnClientClick="return OpenMod();" href="#modAddMaterial" runat="server" Text="Add" ToolTip="Add Material">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
 	</div>
 
 	<asp:UpdatePanel runat="server" ID="updatePanelTop1" UpdateMode="Conditional" ChildrenAsTriggers="True">
 		<ContentTemplate>
-			<div class="modal fade" id="modAddCourse" role="dialog">
+			<div class="modal fade" id="modAddMaterial" role="dialog">
 				<div class="modal-dialog modal-dialog-center">
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header" style="text-align: center;">
-							<button type="button" class="modal-title close">Add Course</button>
+							<button type="button" class="modal-title close">Add Material</button>
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 						</div>
 						<div class="modal-body">
@@ -132,17 +129,17 @@
 									<div class="form goGreen">
 										<div class="form-group">
 											<h4>
-												<asp:Label ID="LabelAddCourseName" runat="server" Text="Add New Course"></asp:Label>
+												<asp:Label ID="LabelAddMaterialName" runat="server" Text="Add New Material"></asp:Label>
 											</h4>
 										</div>
 										<br />
 										<div class="form-group">
-											<asp:TextBox ID="TextBoxAddCourse" placeholder="Programming" runat="server" CssClass="tbInput" ValidationGroup="AddCourseGroup" />
+											<asp:TextBox ID="TextBoxAddMaterial" placeholder="Assignment" runat="server" CssClass="tbInput" ValidationGroup="AddMaterialGroup" />
 											<div id="emptyMessageAdd"></div>
 											<div id="existMessageAdd"></div>
 										</div>
 										<div class="form-group">
-											<asp:Button ID="AddButton" ValidationGroup="AddCourseGroup" CssClass="myBtn" runat="server" Text="Add Course" OnClick="AddButton_Click" />
+											<asp:Button ID="AddButton" ValidationGroup="AddMaterialGroup" CssClass="myBtn" runat="server" Text="Add Material" OnClick="AddButton_Click" />
 										</div>
 									</div>
 								</ContentTemplate>
@@ -155,12 +152,12 @@
 	</asp:UpdatePanel>
 	<asp:UpdatePanel runat="server" ID="updatePanelTop2" UpdateMode="Conditional" ChildrenAsTriggers="True">
 		<ContentTemplate>
-			<div class="modal fade" id="modUpdateCourse" role="dialog">
+			<div class="modal fade" id="modUpdateMaterial" role="dialog">
 				<div class="modal-dialog modal-dialog-center">
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header" style="text-align: center;">
-							<button type="button" class="modal-title close">Update Course</button>
+							<button type="button" class="modal-title close">Update Material</button>
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 						</div>
 						<div class="modal-body">
@@ -169,17 +166,17 @@
 									<div class="form goGreen">
 										<div class="form-group">
 											<h4>
-												<asp:Label ID="LabelUpdateCourseName" runat="server"></asp:Label>
+												<asp:Label ID="LabelUpdateMaterialName" runat="server"></asp:Label>
 											</h4>
 											<asp:HiddenField ID="myHiddenId" runat="server" />
 										</div>
 										<div class="form-group">
-											<asp:TextBox ID="TextBoxUpdateCourse" runat="server" CssClass="tbInput" />
+											<asp:TextBox ID="TextBoxUpdateMaterial" runat="server" CssClass="tbInput" />
 											<div id="emptyMessage"></div>
 											<div id="existMessage"></div>
 										</div>
 										<div class="form-group">
-											<asp:Button ID="UpdateButton" ValidationGroup="CourseGroup" OnClientClick="return confirm('Are you sure you want to update?');" CssClass="myBtn" runat="server" Text="Update Course" OnClick="UpdateButton_Click" />
+											<asp:Button ID="UpdateButton" ValidationGroup="MaterialGroup" OnClientClick="return confirm('Are you sure you want to update?');" CssClass="myBtn" runat="server" Text="Update Material" OnClick="UpdateButton_Click" />
 										</div>
 									</div>
 								</ContentTemplate>
@@ -208,42 +205,71 @@
 		function OpenModal(MyId, MyName) {
 			$(document).ready(function () {
 				$(`#<%=myHiddenId.ClientID%>`).val(MyId)
-				$(`#<%=LabelUpdateCourseName.ClientID%>`).text("Update from " + MyName)
-				$(`#<%=TextBoxUpdateCourse.ClientID%>`).val(MyName)
-				$('#modUpdateCourse').modal('show');
+				$(`#<%=LabelUpdateMaterialName.ClientID%>`).text("Update from " + MyName)
+				$(`#<%=TextBoxUpdateMaterial.ClientID%>`).val(MyName)
+				$('#modUpdateMaterial').modal('show');
 			});
 		};
 		function OpenMod() {
 			$(document).ready(function () {
-				$('#modAddCourse').modal('show');
+				$('#modAddMaterial').modal('show');
 			});
 		};
-	
 		$(document).ready(function () {
-			$(`#<%=TextBoxAddCourse.ClientID%>`).keyup(function () {
-				var courseName = $(this).val();
-				if (!courseName.replace(/\s/g, '').length) {
-					$('#emptyMessageAdd').text('Empty textbox');
-					$('#emptyMessageAdd').css('color', 'red');
-					$(`#<%=AddButton.ClientID%>`).attr("disabled", true);
-					$('#existMessageAdd').text('');
+			$(`#<%=TextBoxUpdateMaterial.ClientID%>`).keyup(function () {
+				var materialName = $(this).val();
+				if (materialName.length >= 1) {
+					$('#emptyMessage').text('');
+					$.ajax({
+						url: 'WebServiceMaterial.asmx/MaterialNameExists',
+						method: 'post',
+						data: { materialName: materialName },
+						dataType: 'json',
+						success: function (data) {
+							var divElement = $('#existMessage');
+							if (data.MaterialNameInUse1) {
+								divElement.text(data.MaterialName1 + ' already in use');
+								divElement.css('color', 'red');
+								$(`#<%=UpdateButton.ClientID%>`).attr("disabled", true);
+							}
+							else {
+								divElement.text(data.MaterialName1 + ' available')
+								divElement.css('color', 'green');
+								$(`#<%=UpdateButton.ClientID%>`).attr("disabled", false);
+							}
+						},
+						error: function (err) {
+							alert(err);
+						}
+					});
 				}
-				if (courseName.length >= 1) {
+				if (!materialName.replace(/\s/g, '').length) {
+					$('#emptyMessage').text('Empty textbox');
+					$('#emptyMessage').css('color', 'red');
+					$(`#<%=UpdateButton.ClientID%>`).attr("disabled", true);
+					$('#existMessage').text('');
+				}
+			});
+		});
+		$(document).ready(function () {
+			$(`#<%=TextBoxAddMaterial.ClientID%>`).keyup(function () {
+				var materialName = $(this).val();
+				if (materialName.length >= 1) {
 					$('#emptyMessageAdd').text('');
 					$.ajax({
-						url: 'WebServiceUpdateCategoryName.asmx/CategoryNameExists',///////////////////////////
+						url: 'WebServiceMaterial.asmx/MaterialNameExists',
 						method: 'post',
-						data: { courseName: courseName },
+						data: { materialName: materialName },
 						dataType: 'json',
 						success: function (data) {
 							var divElement = $('#existMessageAdd');
-							if (data.CourseNameInUse1) {
-								divElement.text(data.CourseName1 + ' already in use');
+							if (data.MaterialNameInUse1) {
+								divElement.text(data.MaterialName1 + ' already in use');
 								divElement.css('color', 'red');
 								$(`#<%=AddButton.ClientID%>`).attr("disabled", true);
 							}
 							else {
-								divElement.text(data.CourseName1 + ' available')
+								divElement.text(data.MaterialName1 + ' available')
 								divElement.css('color', 'green');
 								$(`#<%=AddButton.ClientID%>`).attr("disabled", false);
 							}
@@ -252,6 +278,12 @@
 							alert(err);
 						}
 					});
+				}
+				if (!materialName.replace(/\s/g, '').length) {
+					$('#emptyMessageAdd').text('Empty textbox');
+					$('#emptyMessageAdd').css('color', 'red');
+					$(`#<%=AddButton.ClientID%>`).attr("disabled", true);
+					$('#existMessageAdd').text('');
 				}
 			});
 		});
