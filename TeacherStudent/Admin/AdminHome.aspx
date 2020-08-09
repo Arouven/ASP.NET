@@ -1,8 +1,16 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminHome.aspx.vb" Inherits="TeacherStudent.AdminHome" %>
+﻿<%@ Page Title="Admin Homepage" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminHome.aspx.vb" Inherits="TeacherStudent.AdminHome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+	<div class="welcome"><h1>
+		<asp:Label ID="LabelWelcome" runat="server" Text="Welcome xxx you are logged in as admin"></asp:Label>
+		</h1>
+	</div>
+
+
+
+
 	<div class="mystudent">
 		<div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/bg-1.jpg);">
 			<div class="bradcumbContent">

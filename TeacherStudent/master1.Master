@@ -363,7 +363,6 @@
 	<script src='<%= ResolveClientUrl("~/js/bootstrap/popper.min.js") %>'></script>
 	<!-- Bootstrap js -->
 	<script src='<%= ResolveClientUrl("~/js/bootstrap/bootstrap.min.js") %>'></script>
-	<%--<script src='<%= ResolveClientUrl("~/js/bootstrap/bootstrap-datetimepicker.min.js") %>'></script>--%>
 	<!-- All Plugins js -->
 	<script src='<%= ResolveClientUrl("~/js/plugins/plugins.js") %>'></script>
 	<!-- Active js -->

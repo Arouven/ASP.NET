@@ -76,69 +76,73 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<div class="form" style="width: 80%; margin: auto;">
-		<div class="row form-group">
-			<div class="col-sm-10">
-				<br />
-				<h1>Viewing Course: 
-				<asp:Label ID="LabelTitle" runat="server"></asp:Label>
-				</h1>
-				<asp:HiddenField ID="HiddenFieldCourseId" runat="server" />
-				<asp:HiddenField ID="HiddenFieldTutorId" runat="server" />
+
+	<div class="form">
+		<div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/gallery1.jpg);">
+			<div class="bradcumbContent">
+				<h2>Viewing Course</h2>
 			</div>
 		</div>
-
-		<div>
-			<div class="row form-group">
-				<label class="col-sm-3 ">Course Name : </label>
-				<div class="col-sm-9">
-					<asp:Label ID="LabelCourseName" runat="server"></asp:Label>
-				</div>
+		<asp:HiddenField ID="HiddenFieldCourseId" runat="server" />
+		<asp:HiddenField ID="HiddenFieldTutorId" runat="server" />
+		<div class="section-padding-100-0">
+			<div class="text-center" style="margin: auto;">
+				<h2>
+					<asp:Label ID="LabelTitle" runat="server"></asp:Label></h2>
+				<br />
+				<br />
 			</div>
-			<div class="row form-group">
-				<label class="col-sm-3 ">Date Created : </label>
-				<div class="col-sm-9">
-					<asp:Label ID="LabelDateCreated" runat="server"></asp:Label>
+			<div>
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3 ">Course Name : </label>
+					<div class="col-sm-4">
+						<asp:Label ID="LabelCourseName" runat="server"></asp:Label>
+					</div>
 				</div>
-			</div>
-			<div class="row form-group">
-				<label class="col-sm-3">Date Schedule : </label>
-				<div class="col-sm-9">
-					<asp:Label ID="LabelDateSchedule" runat="server"></asp:Label>
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3 ">Date Created : </label>
+					<div class="col-sm-4">
+						<asp:Label ID="LabelDateCreated" runat="server"></asp:Label>
+					</div>
 				</div>
-			</div>
-			<div class="row form-group">
-				<label class="col-sm-3 col-form-label">Description : </label>
-				<div class="col-sm-9">
-					<asp:Label ID="LabelCourseDescription" runat="server"></asp:Label>
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3">Date Schedule : </label>
+					<div class="col-sm-4">
+						<asp:Label ID="LabelDateSchedule" runat="server"></asp:Label>
+					</div>
 				</div>
-			</div>
-			<div class="row form-group">
-				<label class="col-sm-3 col-form-label">Aims And Objectives : </label>
-				<div class="col-sm-9">
-					<asp:Label ID="LabelAimsAndObjectives" runat="server"></asp:Label>
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3 col-form-label">Description : </label>
+					<div class="col-sm-4">
+						<asp:Label ID="LabelCourseDescription" runat="server"></asp:Label>
+					</div>
 				</div>
-			</div>
-			<div class="row form-group">
-				<label class="col-sm-3 col-form-label">Category Name : </label>
-				<div class="col-sm-9">
-					<asp:Label ID="LabelCategoryName" runat="server"></asp:Label>
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3 col-form-label">Aims And Objectives : </label>
+					<div class="col-sm-4">
+						<asp:Label ID="LabelAimsAndObjectives" runat="server"></asp:Label>
+					</div>
 				</div>
-			</div>
-			<br />
-			<br />
-			<div class="row form-group">
-				<label class="col-sm-3 col-form-label">Materials : </label>
-				<div class="col-sm-9">
-					<asp:LinkButton CssClass="btn btn-primary" rel="modal:open" data-toggle="modal" OnClientClick="return OpenModalViewList();" href="#modMatList" runat="server" Text="Materials" ToolTip="Materials List"></asp:LinkButton>
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3 col-form-label">Category Name : </label>
+					<div class="col-sm-4">
+						<asp:Label ID="LabelCategoryName" runat="server"></asp:Label>
+					</div>
 				</div>
-			</div>
-			<div class="row form-group d-flex justify-content-around">
-
-				<asp:LinkButton ID="LinkButtonBack" CssClass="btn btn-success btnsize" runat="server" ValidationGroup="ValidationGroupUser">Back</asp:LinkButton>
-				<asp:LinkButton ID="LinkButtonUpdate" CssClass="btn btn-primary btnsize" OnClientClick="return confirm('Are you sure you want to update this user status?')" runat="server" ValidationGroup="ValidationGroupUser">Freeze/ Unfreeze</asp:LinkButton>
-				<asp:LinkButton ID="LinkButtonDelete" CssClass="btn btn-danger btnsize" OnClientClick="return confirm('Are you sure you want to delete this user?')" runat="server" ValidationGroup="ValidationGroupUser">Delete</asp:LinkButton>
-				<asp:LinkButton ID="LinkButtonResetPassword" CssClass="btn btn-warning btnsize" runat="server" ValidationGroup="ValidationGroupUser">Reset Password</asp:LinkButton>
+				<br />
+				<div class="row form-group">
+					<div class="col-sm-3"></div>
+					<label class="col-sm-3 col-form-label">Materials : </label>
+					<div class="col-sm-4">
+						<asp:LinkButton CssClass="btn btn-primary" rel="modal:open" data-toggle="modal" OnClientClick="return OpenModalViewList();" href="#modMatList" runat="server" Text="Materials" ToolTip="Materials List"></asp:LinkButton>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -172,7 +176,7 @@
 															<ItemTemplate>
 																<asp:LinkButton ID="btnView" CssClass="btn btn-info" runat="server" target="_blank" href='<%#String.Format("OpenDocuments.aspx?filepath={0}", Eval("MaterialPathUrl")) %>' Text="View" ToolTip="View Material"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>&nbsp;&nbsp;
 
-																<asp:LinkButton ID="btnEdit" CssClass="btn btn-warning" runat="server" Text="Edit" ToolTip="Edit Material"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>&nbsp;&nbsp;
+																<asp:LinkButton ID="btnEdit" CssClass="btn btn-warning" runat="server" Text="Edit" OnClick="btnEdit_Click" ToolTip="Edit Material"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>&nbsp;&nbsp;
 
 																<asp:LinkButton ID="btnDownload" OnClick="btnDownload_Click" CommandArgument='<%#Eval("MaterialPathUrl") %>' CssClass="btn btn-success" runat="server" Text="Download" ToolTip="Download Material"><span class="glyphicon glyphicon-download"></span></asp:LinkButton>
 															</ItemTemplate>
@@ -180,7 +184,7 @@
 													</Columns>
 												</asp:GridView>
 												<br />
-												<asp:LinkButton ID="btnAdd" CssClass="btn btn-success col-sm-2"  OnClick="btnAdd_Click"   runat="server" Text="Add" ToolTip="Add Category">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
+												<asp:LinkButton ID="btnAdd" CssClass="btn btn-success col-sm-2" OnClick="btnAdd_Click" runat="server" Text="Add" ToolTip="Add Category">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
 											</div>
 										</div>
 									</div>

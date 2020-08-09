@@ -27,6 +27,7 @@ where coursetable.CourseId=@courseid;"
 		Dim reader As SqlClient.SqlDataReader
 		con.Open()
 		reader = cmd.ExecuteReader()
+		Dim str As String = ""
 		If reader.HasRows Then
 			While reader.Read
 				HiddenFieldCourseId.Value = reader(0)
@@ -37,9 +38,11 @@ where coursetable.CourseId=@courseid;"
 				LabelDateSchedule.Text = reader(4)
 				LabelCourseDescription.Text = reader(5)
 				LabelAimsAndObjectives.Text = reader(6)
-				LabelCategoryName.Text = reader(7)
+				str += ", " & reader(7).ToString
 			End While
 		End If
+		str = str.Remove(0, 2)
+		LabelCategoryName.Text = str
 		reader.Close()
 		con.Close()
 	End Sub
@@ -92,5 +95,9 @@ where MaterialAssociativeTable.courseid=@courseid;"
 
 	Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
 		Response.Redirect("~/Tutor/AddMaterials.aspx?id=" & HiddenFieldTutorId.Value)
+	End Sub
+
+	Protected Sub btnEdit_Click(sender As Object, e As EventArgs)
+
 	End Sub
 End Class

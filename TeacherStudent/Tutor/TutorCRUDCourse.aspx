@@ -94,39 +94,39 @@
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<div class="col-sm-12 text-center">
-		<br />
-		<h2>List Of My Courses</h2>
-		<br />
-		<br />
+	<div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/tea2.jpg);">
+		<div class="bradcumbContent">
+			<h2>List Of My Courses</h2>
+		</div>
 	</div>
-	<div class="tbldiv">
-		<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
-			<Columns>
-				<asp:BoundField DataField="CourseName" HeaderText="Course Name" />
-				<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
-				<asp:BoundField DataField="DateCreated" HeaderText="Date Created" />
-				<asp:BoundField DataField="catName" HeaderText="Category Name" />
-				<asp:BoundField DataField="matName" HeaderText="Material Type" />
-				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
-					<ItemTemplate>
-						<asp:UpdatePanel runat="server" ID="updatePanel000">
-							<ContentTemplate>
-								<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("CourseId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
-								&nbsp;&nbsp;
-								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("CourseId", "/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
-								&nbsp;&nbsp;
-								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" href='<%#Eval("CourseId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
-							</ContentTemplate>
-						</asp:UpdatePanel>
-					</ItemTemplate>
-				</asp:TemplateField>
-			</Columns>
-		</asp:GridView>
-		<br />
-		<asp:LinkButton ID="LinnkButtonAdd" CssClass="btn btn-success col-sm-2" OnClick="AddButton_Click" runat="server" Text="Add" ToolTip="Add Course">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
+	<div class="section-padding-100-0">
+		<div class="tbldiv">
+			<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
+				<Columns>
+					<asp:BoundField DataField="coursesNames" HeaderText="Course Name" />
+					<asp:BoundField DataField="datesSchedule" HeaderText="Date Schedule" />
+					<asp:BoundField DataField="datesCreated" HeaderText="Date Created" />
+					<asp:BoundField DataField="categoriesNames" HeaderText="Category Name" />
+					<%--				<asp:BoundField DataField="matName" HeaderText="Material Type" />--%>
+					<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
+						<ItemTemplate>
+							<asp:UpdatePanel runat="server" ID="updatePanel000">
+								<ContentTemplate>
+									<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("coursesId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
+									&nbsp;&nbsp;
+								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("coursesId", "/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
+									&nbsp;&nbsp;
+								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" href='<%#Eval("coursesId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
+								</ContentTemplate>
+							</asp:UpdatePanel>
+						</ItemTemplate>
+					</asp:TemplateField>
+				</Columns>
+			</asp:GridView>
+			<br />
+			<asp:LinkButton ID="LinnkButtonAdd" CssClass="btn btn-success col-sm-2" OnClick="AddButton_Click" runat="server" Text="Add" ToolTip="Add Course">Add&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></asp:LinkButton>
+		</div>
 	</div>
-
 	<%--<asp:UpdatePanel runat="server" ID="updatePanelTop1" UpdateMode="Conditional" ChildrenAsTriggers="True">
 		<ContentTemplate>
 			<div class="modal fade" id="modAddCourse" role="dialog">
@@ -221,7 +221,7 @@
 					lengthChange: true,
 					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
 					info: true,
-					pageLength: 5
+					pageLength: 10
 				});
 			});
 		}(jQuery));

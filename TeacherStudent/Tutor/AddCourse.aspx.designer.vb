@@ -41,6 +41,15 @@ Partial Public Class AddCourse
 	Protected WithEvents CheckBoxListCourseCategory As Global.System.Web.UI.WebControls.CheckBoxList
 
 	'''<summary>
+	'''cvmodulelist control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents cvmodulelist As Global.System.Web.UI.WebControls.CustomValidator
+
+	'''<summary>
 	'''TextBoxScheduleDate control.
 	'''</summary>
 	'''<remarks>
@@ -68,31 +77,40 @@ Partial Public Class AddCourse
 	Protected WithEvents TextBoxAimsAndObjectives As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''FileUploadDoc control.
+	'''file0 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents FileUploadDoc As Global.System.Web.UI.WebControls.FileUpload
+	Protected WithEvents file0 As Global.System.Web.UI.HtmlControls.HtmlInputFile
 
 	'''<summary>
-	'''DropDownListMaterialName control.
+	'''ddl0 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents DropDownListMaterialName As Global.System.Web.UI.WebControls.DropDownList
+	Protected WithEvents ddl0 As Global.System.Web.UI.HtmlControls.HtmlSelect
 
 	'''<summary>
-	'''btnAddMaterials control.
+	'''SendA control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents btnAddMaterials As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents SendA As Global.System.Web.UI.WebControls.HiddenField
+
+	'''<summary>
+	'''Label1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''LinkButtonAdd control.

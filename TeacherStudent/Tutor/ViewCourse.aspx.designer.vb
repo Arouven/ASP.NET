@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class ViewCourse
 
 	'''<summary>
-	'''LabelTitle control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LabelTitle As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
 	'''HiddenFieldCourseId control.
 	'''</summary>
 	'''<remarks>
@@ -39,6 +30,15 @@ Partial Public Class ViewCourse
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents HiddenFieldTutorId As Global.System.Web.UI.WebControls.HiddenField
+
+	'''<summary>
+	'''LabelTitle control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelTitle As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''LabelCourseName control.
@@ -93,42 +93,6 @@ Partial Public Class ViewCourse
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents LabelCategoryName As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''LinkButtonBack control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LinkButtonBack As Global.System.Web.UI.WebControls.LinkButton
-
-	'''<summary>
-	'''LinkButtonUpdate control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LinkButtonUpdate As Global.System.Web.UI.WebControls.LinkButton
-
-	'''<summary>
-	'''LinkButtonDelete control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LinkButtonDelete As Global.System.Web.UI.WebControls.LinkButton
-
-	'''<summary>
-	'''LinkButtonResetPassword control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LinkButtonResetPassword As Global.System.Web.UI.WebControls.LinkButton
 
 	'''<summary>
 	'''updatePanelTop1 control.

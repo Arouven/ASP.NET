@@ -55,8 +55,8 @@
 			Dim cmd As New SqlClient.SqlCommand()
 			cmd.Connection = con
 			con.Open()
-			cmd.CommandType = CommandType.Text
-			cmd.CommandText = "update MaterialTypeTable set MaterialTypeName=@MaterialTypeName where MaterialTypeId=@MaterialTypeId;"
+			cmd.CommandType = CommandType.StoredProcedure
+			cmd.CommandText = "ProcedureUpdateMaterialTypeTable"
 			cmd.Parameters.AddWithValue("@MaterialTypeId", idToUpdate)
 			cmd.Parameters.AddWithValue("@MaterialTypeName", nameToUpdate)
 			cmd.ExecuteNonQuery()

@@ -11,18 +11,8 @@
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		con.Open()
-		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "select 
-coursetable.courseId,coursetable.TutorId,coursetable.CourseName,coursetable.DateCreated,coursetable.DateSchedule,coursetable.CourseDescription,coursetable.AimsAndObjectives,
-CategoryTable.CategoryName,
-MaterialAssociativeTable.MaterialPathUrl,MaterialAssociativeTable.DatePosted,
-MaterialTypeTable.MaterialTypeName
-from coursetable
-inner join  categoryassociativetable on CategoryAssociativeTable.CourseId=coursetable.CourseId 
-inner join CategoryTable on CategoryTable.CategoryId=categoryassociativetable.CategoryId
-inner join  MaterialAssociativeTable on MaterialAssociativeTable.CourseId=coursetable.CourseId 
-inner join MaterialTypeTable on MaterialTypeTable.MaterialTypeId=MaterialAssociativeTable.MaterialTypeId
-where coursetable.TutorId=@tutorid;"
+		cmd.CommandType = CommandType.StoredProcedure
+		cmd.CommandText = "ProcedureGetTutorCoursesList"
 		cmd.Parameters.AddWithValue("@tutorid", tutorid)
 		Dim sqlda As New SqlClient.SqlDataAdapter(cmd)
 		Dim dt As New DataTable()

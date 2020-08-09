@@ -264,6 +264,7 @@
     <Content Include="Scripts\jquery-3.5.1.min.js" />
     <Content Include="Scripts\jquery-3.5.1.slim.js" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -344,16 +345,19 @@
     <Content Include="Admin\UserDetails.aspx" />
     <Content Include="Tutor\AddCourse.aspx" />
     <Content Include="Tutor\AddMaterials.aspx" />
+    <Content Include="Tutor\jquery.validate.js" />
     <Content Include="Tutor\OpenDocuments.aspx" />
     <Content Include="Tutor\TutorCRUDCourse.aspx" />
     <Content Include="Tutor\TutorPostsEvent.aspx" />
     <Content Include="Tutor\TutorPostsMaterials.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
+    <Content Include="Tutor\WebForm1.aspx" />
     <Content Include="User\UserFunctionality.aspx" />
     <Content Include="Tutor\UpdateCourse.aspx" />
     <Content Include="Tutor\ViewCourse.aspx" />
     <Content Include="Tutor\ViewEvents.aspx" />
     <Content Include="User\ViewCourses.aspx" />
+    <Content Include="User\ViewTutors.aspx" />
     <Content Include="WebServiceCourse.asmx" />
     <Content Include="Admin\WebServiceUpdateCategoryName.asmx" />
     <Content Include="Welcome.aspx" />
@@ -636,6 +640,13 @@
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutor\WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="User\UserFunctionality.aspx.designer.vb">
       <DependentUpon>UserFunctionality.aspx</DependentUpon>
     </Compile>
@@ -669,6 +680,13 @@
     </Compile>
     <Compile Include="User\ViewCourses.aspx.vb">
       <DependentUpon>ViewCourses.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewTutors.aspx.designer.vb">
+      <DependentUpon>ViewTutors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewTutors.aspx.vb">
+      <DependentUpon>ViewTutors.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
