@@ -14,13 +14,22 @@ Option Explicit On
 Partial Public Class AddCourse
 
 	'''<summary>
-	'''HiddenFieldDate control.
+	'''HiddenFieldCourseId control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents HiddenFieldDate As Global.System.Web.UI.WebControls.HiddenField
+	Protected WithEvents HiddenFieldCourseId As Global.System.Web.UI.WebControls.HiddenField
+
+	'''<summary>
+	'''HiddenFieldTutorId control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HiddenFieldTutorId As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
 	'''TextBoxCourseName control.
@@ -41,13 +50,13 @@ Partial Public Class AddCourse
 	Protected WithEvents CheckBoxListCourseCategory As Global.System.Web.UI.WebControls.CheckBoxList
 
 	'''<summary>
-	'''cvmodulelist control.
+	'''Label1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents cvmodulelist As Global.System.Web.UI.WebControls.CustomValidator
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''TextBoxScheduleDate control.
@@ -104,20 +113,11 @@ Partial Public Class AddCourse
 	Protected WithEvents SendA As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''Label1 control.
+	'''btnSubmit control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''LinkButtonAdd control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LinkButtonAdd As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class

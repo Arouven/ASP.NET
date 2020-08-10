@@ -103,20 +103,18 @@
 		<div class="tbldiv">
 			<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
 				<Columns>
-					<asp:BoundField DataField="coursesNames" HeaderText="Course Name" />
-					<asp:BoundField DataField="datesSchedule" HeaderText="Date Schedule" />
-					<asp:BoundField DataField="datesCreated" HeaderText="Date Created" />
-					<asp:BoundField DataField="categoriesNames" HeaderText="Category Name" />
-					<%--				<asp:BoundField DataField="matName" HeaderText="Material Type" />--%>
+					<asp:BoundField DataField="courseName" HeaderText="Course Name" />
+					<asp:BoundField DataField="dateSchedule" HeaderText="Date Schedule" />
+					<asp:BoundField DataField="dateCreated" HeaderText="Date Created" />
 					<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 						<ItemTemplate>
 							<asp:UpdatePanel runat="server" ID="updatePanel000">
 								<ContentTemplate>
-									<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("coursesId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
+									<asp:LinkButton ID="btnDelete" CssClass="btn btn-danger" runat="server" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete?');" CommandArgument='<%# Eval("courseId") %>' Text="Delete" ToolTip="Delete Category"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>
 									&nbsp;&nbsp;
-								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("coursesId", "/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
+								<asp:LinkButton ID="btnViewCourse" CssClass="btn btn-light" href='<%#Eval("courseId", "/Tutor/ViewCourse.aspx?id={0}")%>' runat="server" Text="View" ToolTip="View Course"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>
 									&nbsp;&nbsp;
-								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" href='<%#Eval("coursesId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
+								<asp:LinkButton ID="btnUpdate" CssClass="btn btn-warning" href='<%#Eval("courseId", "~/Tutor/UpdateCourse.aspx?id={0}")%>' runat="server" Text="Update" ToolTip="Update Course"><span class="glyphicon glyphicon-edit"></span></asp:LinkButton>
 								</ContentTemplate>
 							</asp:UpdatePanel>
 						</ItemTemplate>
@@ -211,7 +209,7 @@
 		</ContentTemplate>
 	</asp:UpdatePanel>--%>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server"><script src="https://cdn.datatables.net/plug-ins/1.10.21/sorting/date-euro.js"></script>
 	<script>
 		(function ($) {
 			"use strict";
@@ -219,7 +217,8 @@
 				//init dataTables
 				$('#gvs').dataTable({
 					lengthChange: true,
-					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
+					columnDefs: [{ type: 'date-euro', targets: 2 }, { type: 'date-euro', targets: 1 }, { "orderable": false, "targets": -1 }],
+					//aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
 					info: true,
 					pageLength: 10
 				});

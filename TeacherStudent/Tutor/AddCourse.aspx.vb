@@ -60,16 +60,24 @@
 		If (reader.HasRows) Then : Return True
 		Else : Return False
 		End If
+		reader.Close()
+		con.Close()
 	End Function
+
+
 	Private Sub uploadCourse(UserName As String)
+
+
+		Dim courseid As Integer = insertGetCourseId()
+
 		Dim MaterialAssociativeTable As New DataTable
+		Dim noUploaded As Integer = 0
+		Dim noAlreadyExist As Integer = 0
 		MaterialAssociativeTable.Columns.Add("CourseId")
 		MaterialAssociativeTable.Columns.Add("MaterialTypeId")
 		MaterialAssociativeTable.Columns.Add("MaterialPathUrl")
 		MaterialAssociativeTable.Columns.Add("DatePosted")
 		MaterialAssociativeTable.Columns.Add("MaterialName")
-
-
 
 		Dim counter As Integer = Convert.ToInt32(SendA.Value)
 		Dim myVal As New List(Of String)
@@ -82,11 +90,8 @@
 			End If
 		Next
 
-		Dim courseid As Integer = insertGetCourseId()
 		Dim customfolder As String = "~/Tutor/files/" & UserName & "/docs/"
 		IO.Directory.CreateDirectory(Server.MapPath(customfolder))
-		Dim noUploaded As Integer = 0
-		Dim noAlreadyExist As Integer = 0
 		For i As Integer = 0 To Request.Files.Count - 1
 			Dim PostedFile As HttpPostedFile = Request.Files(i)
 			If PostedFile.ContentLength > 0 Then
@@ -108,109 +113,64 @@
 				End If
 			End If
 		Next
-		If noUploaded + noAlreadyExist = 0 Then : Label1.Text = "select files and material type"
-		End If
+
 
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.StoredProcedure
-		cmd.CommandText = "ProcedureInsertMaterialAssociative"
-		Dim param As SqlClient.SqlParameter = New SqlClient.SqlParameter
-		param.ParameterName = "@TypeMaterialAssociativeTable"
-		param.Value = MaterialAssociativeTable
-		cmd.Parameters.Add(param)
+		cmd.CommandText = "ProcedureMaterialAssociativeCategoryAssociative"
+		Dim param1 As SqlClient.SqlParameter = New SqlClient.SqlParameter
+		param1.ParameterName = "@TypeMaterialAssociativeTable"
+		param1.Value = MaterialAssociativeTable
+		cmd.Parameters.Add(param1)
+		Dim param2 As SqlClient.SqlParameter = New SqlClient.SqlParameter
+		param2.ParameterName = "@TypeCategoryAssociativeTable"
+		Dim CategoryAssociativeTable As DataTable = GetCourseCategoryDataTable(courseid)
+		param2.Value = CategoryAssociativeTable
+		cmd.Parameters.Add(param2)
 		con.Open()
 		cmd.ExecuteNonQuery()
 		con.Close()
 
-		Dim con2 As New SqlClient.SqlConnection(_conString)
-		Dim cmd2 As New SqlClient.SqlCommand()
-		cmd2.Connection = con2
-		cmd2.CommandType = CommandType.StoredProcedure
-		cmd2.CommandText = "ProcedureInsertCategoryAssociative"
-		Dim param2 As New SqlClient.SqlParameter
-		param2.ParameterName = "@TypeCategoryAssociativeTable"
-		param2.Value = GetCourseCategoryDataTable(courseid)
-		cmd2.Parameters.Add(param2)
-		con2.Open()
-		cmd2.ExecuteNonQuery()
-		con2.Close()
-
-
-		Response.Write("<script>return alert('" & noUploaded & " files uploaded & " & noAlreadyExist & " already exist');</script")
-		Response.Redirect("~/Tutor/TutorCRUDCourse.aspx")
 
 
 
 
-		'cmd.parameter.add(param)
-		'If (FileUploadDoc.HasFiles) Then
-		'	Dim customfolder As String = "~/Tutor/files/" & UserName & "/docs/"
-		'	Dim folderPath As String = Server.MapPath(customfolder)
-		'	IO.Directory.CreateDirectory(folderPath)
-		'	Dim noUploaded As Integer = 0
-		'	Dim noOverwriten As Integer = 0
-		'	Dim courseid As Integer = insertGetCourseId()
-		'	insertCourseCategory(courseid)
-		'	Dim MaterialId As String = DropDownListMaterialName.SelectedValue
-		'	For Each file As HttpPostedFile In FileUploadDoc.PostedFiles
-		'		Dim outputFileName As String = folderPath & file.FileName
-		'		Dim dburl As String = customfolder & file.FileName
-		'		If (IO.File.Exists(outputFileName)) Then
-		'			IO.File.Delete(outputFileName)
-		'			noOverwriten += 1
-		'		Else
-		'			noUploaded += 1
-		'			insertUrl(courseid, dburl, MaterialId)
-		'		End If
-		'		file.SaveAs(outputFileName)
-		'	Next
-		'	Response.Write("<script>return alert('total files uploaded=" & noUploaded & " & overwritten=" & noOverwriten & "');</script")
-		'	Response.Redirect("~/Tutor/TutorCRUDCourse.aspx?id=" & Request.QueryString("id"))
-		'End If
+
+		Response.Write("<script>
+var x=confirm('" & noUploaded & " files uploaded & " & noAlreadyExist & " already exist'); 
+if (x == true){window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
+else{window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
+</script")
+		'Response.Redirect("~/Tutor/TutorCRUDCourse.aspx")
+
 	End Sub
 	Private Function GetCourseCategoryDataTable(courseid) As DataTable
 		Dim CategoryAssociativeTable As New DataTable
 		CategoryAssociativeTable.Columns.Add("CourseId")
 		CategoryAssociativeTable.Columns.Add("CategoryId")
 		For Each listItem As ListItem In CheckBoxListCourseCategory.Items
-			If (listItem.Selected) Then
+			If (listItem.Selected = True) Then
 				Dim CategoryId As Integer = listItem.Value
 				CategoryAssociativeTable.Rows.Add(courseid, CategoryId)
-				'insertingCat(CategoryId, courseid)
 			End If
 		Next
 		Return CategoryAssociativeTable
 	End Function
-	'Private Sub insertingCat(CategoryId, courseId)
-	'	Dim con As New SqlClient.SqlConnection(_conString)
-	'	Dim cmd As New SqlClient.SqlCommand()
-	'	cmd.Connection = con
-	'	cmd.CommandType = CommandType.Text
-	'	cmd.CommandText = "INSERT INTO CategoryAssociativeTable (CourseId, CategoryId) VALUES (@CourseId, @CategoryId);"
-	'	cmd.Parameters.AddWithValue("@CourseId", courseId)
-	'	cmd.Parameters.AddWithValue("@CategoryId", CategoryId)
-	'	con.Open()
-	'	cmd.ExecuteNonQuery()
-	'	con.Close()
-	'End Sub
-	'Private Sub insertUrl(courseId As Integer, fileUrl As String, MaterialTypeId As Integer)
-	'	Dim con As New SqlClient.SqlConnection(_conString)
-	'	Dim cmd As New SqlClient.SqlCommand()
-	'	cmd.Connection = con
-	'	cmd.CommandType = CommandType.Text
-	'	cmd.CommandText = "INSERT INTO MaterialAssociativeTable (CourseId, MaterialTypeId, MaterialPathUrl,DatePosted,MaterialName) VALUES (@CourseId, @MaterialTypeId, @MaterialPathUrl,@DatePosted,@MaterialName);"
-	'	cmd.Parameters.AddWithValue("@MaterialTypeId", MaterialTypeId)
-	'	cmd.Parameters.AddWithValue("@CourseId", courseId)
-	'	cmd.Parameters.AddWithValue("@MaterialPathUrl", fileUrl)
-	'	cmd.Parameters.AddWithValue("@DatePosted", DateTime.Now.Date)
-	'	Dim fname As String = IO.Path.GetFileName(Server.MapPath(fileUrl))
-	'	cmd.Parameters.AddWithValue("@MaterialName", fname)
-	'	con.Open()
-	'	cmd.ExecuteNonQuery()
-	'	con.Close()
-	'End Sub
+	Private Sub insertingCat(CategoryId, courseId)
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		cmd.Connection = con
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "INSERT INTO CategoryAssociativeTable (CourseId, CategoryId) VALUES (@CourseId, @CategoryId);"
+		cmd.Parameters.AddWithValue("@CourseId", courseId)
+		cmd.Parameters.AddWithValue("@CategoryId", CategoryId)
+		con.Open()
+		cmd.ExecuteNonQuery()
+		con.Close()
+	End Sub
+
 
 	Private Sub populateMaterialName()
 		Dim con As New SqlClient.SqlConnection(_conString)
@@ -223,21 +183,38 @@
 		ddl0.DataTextField = "MaterialTypeName"
 		ddl0.DataValueField = "MaterialTypeId"
 		ddl0.DataBind()
-		ddl0.Items.Insert(0, New ListItem("Select a material type", -1))
+		ddl0.Items.Insert(0, New ListItem("Select a material type", ""))
 		ddl0.SelectedIndex = 0
 		con.Close()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'LoginRequired(mySession)
+		Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
+		mydate = mydate.AddDays(1)
+		TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
 		If Not IsPostBack Then
 			populateCategory()
 			populateMaterialName()
 		End If
 
 	End Sub
-
+	Private Function CheckboxhasChecked() As Boolean
+		Dim CategoryAssociativeTable As Integer = 0
+		For Each listItem As ListItem In CheckBoxListCourseCategory.Items
+			If (listItem.Selected = True) Then
+				CategoryAssociativeTable += 1
+			End If
+		Next
+		If CategoryAssociativeTable > 0 Then : Return True
+		Else : Return False
+		End If
+	End Function
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
-		If Page.IsValid Then : uploadCourse("tom") 'will be taken from session
+		If CheckboxhasChecked() = False Then
+			Label1.Text = "Please select at least one"
+		Else
+			Label1.Text = ""
+			uploadCourse("tom") 'will be taken from session
 		End If
 	End Sub
 

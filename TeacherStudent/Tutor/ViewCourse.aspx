@@ -198,13 +198,16 @@
 	</asp:UpdatePanel>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
+	
 	<script>	
+
+
 		(function ($) {
 			"use strict";
 			$(document).ready(function () {
 				//init dataTables
 				$('#gvs').dataTable({
-					lengthChange: true,
+					lengthChange: true, 
 					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
 					info: true,
 					pageLength: 5

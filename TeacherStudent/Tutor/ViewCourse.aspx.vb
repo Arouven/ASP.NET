@@ -11,7 +11,7 @@
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		Dim courseid As Integer = 15 'Request.QueryString("id")
+		Dim courseid As Integer = Request.QueryString("id")
 		cmd.CommandText = "select 
 coursetable.courseId,coursetable.TutorId,coursetable.CourseName,coursetable.DateCreated,coursetable.DateSchedule,coursetable.CourseDescription,coursetable.AimsAndObjectives,
 CategoryTable.CategoryName,
@@ -47,7 +47,7 @@ where coursetable.CourseId=@courseid;"
 		con.Close()
 	End Sub
 	Private Sub GetMaterialList()
-		Dim courseid As Integer = 15 'Request.QueryString("id")
+		Dim courseid As Integer = Request.QueryString("id")
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con

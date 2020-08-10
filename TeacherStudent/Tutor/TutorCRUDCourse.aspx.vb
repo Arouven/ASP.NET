@@ -4,9 +4,8 @@
 	Public Sub New()
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
-
+	Dim tutorid As Integer
 	Private Sub GetCourses()
-		Dim tutorid As Integer = Convert.ToInt32(Request.QueryString("id")) 'tutorid
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
@@ -23,6 +22,7 @@
 	End Sub
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		tutorid = 3 ''''''''''''''''''''''''tutorid form session
 		GetCourses()
 	End Sub
 	Protected Sub btnDelete_Click(sender As Object, e As EventArgs)
@@ -50,7 +50,6 @@
 	End Sub
 
 	Protected Sub AddButton_Click(sender As Object, e As EventArgs)
-		Dim tutorid As Integer = Convert.ToInt32(Request.QueryString("id")) 'tutorid
-		Response.Redirect("~/Tutor/AddCourse.aspx?id=" & TutorId)
+		Response.Redirect("~/Tutor/AddCourse.aspx?id=" & tutorid)
 	End Sub
 End Class

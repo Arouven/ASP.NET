@@ -38,125 +38,141 @@
 			margin-right: 8px;
 		}
 
-
+		label.error, span.error {
+			color: red;
+		}
 	</style>
 
-	<script src="jquery.validate.js"></script>
-	
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-	<div id="addcourse" class="form" style="width: 80%; margin: auto;">
-		<fieldset></fieldset>
-		<div class="row form-group">
-			<h1>Add New course</h1>
-			<asp:HiddenField ID="HiddenFieldDate" Value='<%# DateTime.Now.Date.ToLocalTime %>' runat="server" />
+	<div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/gallery1.jpg);">
+		<div class="bradcumbContent">
+			<h2>Add New course</h2>
 		</div>
-		<div class="row form-group">
-			<label for="inputEmail3" class="col-sm-3 col-form-label myLable">Course Name : </label>
-			<div class="col-sm-9">
-				<p>
-				<asp:TextBox ID="TextBoxCourseName" runat="server" minlength="3"   required></asp:TextBox>
-					</p>
-				<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseName" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The course name field is required." />
+	</div>
+	<asp:HiddenField ID="HiddenFieldCourseId" runat="server" />
+	<asp:HiddenField ID="HiddenFieldTutorId" runat="server" />
+	<div class="section-padding-100-0">
+		<div id="addcourse" class="form" style="width: 80%; margin: auto;">
+			<div class="row form-group">
+				<label for="inputEmail3" class="col-sm-3 col-form-label myLable">Course Name : </label>
+				<div class="col-sm-9">
+					<asp:TextBox ID="TextBoxCourseName" CssClass="form-control" runat="server" minlength="4" required></asp:TextBox>
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseName" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The course name field is required." />
+				</div>
 			</div>
-		</div>
-		<div class="form-group row">
-			<div class="col-sm-3">
-				<label class="myLable">Course Category : </label>
+			<div class="form-group row">
+				<div class="col-sm-3">
+					<label class="myLable">Course Category : </label>
+				</div>
+				<div class="col-sm-9">
+					<asp:CheckBoxList ID="CheckBoxListCourseCategory" CssClass="mycheckbox" runat="server">
+					</asp:CheckBoxList>
+					<span id="errorToShow" style="position: absolute;">
+						<asp:Label ID="Label1" runat="server" CssClass="error"></asp:Label></span>
+					<br />
+				</div>
 			</div>
-			<div class="col-sm-6">
-				<asp:CheckBoxList ID="CheckBoxListCourseCategory" CssClass="mycheckbox" runat="server" >
-				</asp:CheckBoxList>
-				<%--<asp:RequiredFieldValidator runat="server" ControlToValidate="CheckBoxListCourseCategory" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="Select At least one." />--%>
+			<div class="row form-group">
+				<label class="col-sm-3 myLable">Schedule Date : </label>
+				<div class="col-sm-9">
+					<asp:TextBox runat="server" ID="TextBoxScheduleDate" TextMode="DateTimeLocal" CssClass="form-control" required></asp:TextBox>
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxScheduleDate" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="Pick a date." />
+				</div>
 			</div>
-			<div id="isCheckedMsg" class="col-sm-3">
-				<asp:CustomValidator runat="server" ID="cvmodulelist"  ClientValidationFunction="ValidateModuleList"  ValidationGroup="AddCourseGroup" ErrorMessage="Please Select At least one Module" ></asp:CustomValidator>
+			<div class="row form-group">
+				<label class="col-sm-3 col-form-label myLable">Course Description : </label>
+				<div class="col-sm-9">
+					<asp:TextBox ID="TextBoxCourseDescription" CssClass="form-control" runat="server" Style="height: 100px" minlengty="5"  required></asp:TextBox>
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseDescription" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The Description field is required." />
+				</div>
 			</div>
-		</div>
-
-
-		<div class="row form-group">
-			<label class="col-sm-3 myLable">Schedule Date : </label>
-			<div class="col-sm-9">
-				<asp:TextBox runat="server" ID="TextBoxScheduleDate" TextMode="DateTimeLocal" CssClass="form-control"></asp:TextBox>
-				<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxScheduleDate" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="Pick a date." />
+			<div class="row form-group">
+				<label class="col-sm-3 col-form-label myLable">Aims And Objectives : </label>
+				<div class="col-sm-9">
+					<asp:TextBox ID="TextBoxAimsAndObjectives" CssClass="form-control" runat="server" required></asp:TextBox>
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxAimsAndObjectives" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The Aims And Objectives field is required." />
+				</div>
 			</div>
-		</div>
-		<div class="row form-group">
-			<label class="col-sm-3 col-form-label myLable">Course Description : </label>
-			<div class="col-sm-9">
-				<asp:TextBox ID="TextBoxCourseDescription" CssClass="form-control" runat="server"   Style="height: 100px"></asp:TextBox>
-				<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseDescription" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The Description field is required." />
-			</div>
-		</div>
-		<div class="row form-group">
-			<label class="col-sm-3 col-form-label myLable">Aims And Objectives : </label>
-			<div class="col-sm-9">
-				<asp:TextBox ID="TextBoxAimsAndObjectives" CssClass="form-control" runat="server"></asp:TextBox>
-				<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxAimsAndObjectives" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The Aims And Objectives field is required." />
-			</div>
-		</div>
-		<div class="row form-group">
-			<label class="col-sm-3 col-form-label myLable">Upload Materials : </label>
+			<div class="row form-group">
+				<label class="col-sm-3 col-form-label myLable">Upload Materials : </label>
 
 				<div class="col-sm-4">
-					<input id="file0" name="file0" type="file" runat="server" required />
+					<input id="file0" name="file0" type="file" runat="server" required class="form-control-file" />
 				</div>
 				<div class="col-sm-4">
-					<select runat="server" id="ddl0" name="ddl0" class="form-control"></select>
+					<select runat="server" id="ddl0" name="ddl0" class="form-control required"></select>
 				</div>
-
-			<asp:HiddenField ID="SendA" runat="server" Value="0" />
-
-
-
-
-
-			<div class="col-sm-1">
-				<button id="Button00" class="btn btn-primary" type="button" value="Add" onclick="AddFileUpload()" data-toggle="tooltip"><span class="glyphicon glyphicon-plus"></span></button>
+				<asp:HiddenField ID="SendA" runat="server" Value="0" />
+				<div class="col-sm-1">
+					<button id="Button00" class="btn btn-primary" type="button" value="Add" onclick="AddFileUpload()" data-toggle="tooltip"><span class="glyphicon glyphicon-plus"></span></button>
+				</div>
 			</div>
-		</div>
-	
+			<div id="duplicateHere">
+				<!--FileUpload Controls will be added here -->
+			</div>
+			<div class="row form-group">
 
-
-
-
-
-		<div id="duplicateHere">
-			<!--FileUpload Controls will be added here -->
-		</div>
-		<asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
-
-
-
-		<div class="row form-group">
-			<asp:LinkButton ID="LinkButtonAdd" CssClass="btn btn-success col-sm-4"  runat="server" OnClientClick="return verify();" ValidationGroup="AddCourseGroup">Add course</asp:LinkButton>
+				<asp:Button CssClass="btn btn-success col-sm-4" OnClick="LinkButtonAdd_Click" ID="btnSubmit" Text="Add course" runat="server" ValidationGroup="AddCourseGroup" />
+			</div>
 		</div>
 	</div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
 
+	<script src='<%= ResolveClientUrl("~/js/jquery/validate/jquery.validate.js") %>'></script>
 
-<script>
-	 $(`#myform`).validate();
-	//validator.element(`#<%=TextBoxCourseName.ClientID%>`);
+	<script src='<%= ResolveClientUrl("~/js/jquery/validate/additional-methods.js") %>'></script>
+
+	<script>
+
+		//if ($('#videoUploadFile').get(0).files.length === 0) {
+		//	console.log("No files selected.");
+		//}
+		//$.validator.addMethod("valueNotEquals", function (value, element, arg) {
+		//	return arg !== value;
+		//}, "Value must not equal arg.");
+
+
+
+
+		//$("input[type=checkbox]").attr("name", "checkedornot");
+		var validator = $('#myform').validate({
+			//rules: {
+			//	checkedornot: {required:true }
+			//},
+			//messages: {
+			//	//checkedornot: { minlength: "Please select at least one." }
+			//},
+			//errorPlacement: function (error, element) {
+			//	if (element.attr("name") == "checkedornot") {
+			//		error.appendTo("#errorToShow");
+			//	} else {
+			//		error.insertAfter(element);
+			//	}
+			//}
+
+		});
+		$('[name*="ddl"]').each(function () {
+			$(this).rules('add', {
+				required: true,
+				messages: {
+					required: "Please Select a Type"
+				}
+			});
+		});
+
+
+
+
+
+	</script>
+	<script type="text/javascript">
 		function verify() {
 			var x = confirm('Note that existing files with same names will be overwritten');
-			//if (x == true) {
-			//	$('#addcourse').submit(function () {
-			//		if ($('input:checkbox', this).is(':checked') &&
-			//			$('input:radio', this).is(':checked')) {
-			//			// everything's fine...
-			//		} else {
-			//			alert('Please select something!');
-			//			return false;
-			//		}
-			//	});
-			//}
 		}
-</script>
-	<script type="text/javascript">
+
 		var counter = 1;
 		function AddFileUpload() {
 			var options = document.getElementById(`<%=ddl0.ClientID%>`).innerHTML;
@@ -170,7 +186,7 @@
 				'</div>' +
 				'<div class="col-sm-4">' +
 				'<select id="ddl' + counter + '" name = "ddl' + counter +
-				'" class="form-control" >' + options + '</select>' +
+				'" class="form-control required" >' + options + '</select>' +
 				'</div>' +
 				'<div class="col-sm-1">' +
 				'<button id="Button' + counter + '" type="button" ' +

@@ -1,12 +1,20 @@
 ﻿<%@ Page Title="Admin Homepage" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminHome.aspx.vb" Inherits="TeacherStudent.AdminHome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
+	<style>
+	
+	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<div class="welcome"><h1>
-		<asp:Label ID="LabelWelcome" runat="server" Text="Welcome xxx you are logged in as admin"></asp:Label>
-		</h1>
+	<div class="text-center" style="margin: auto;">	<br />
+		<br />
+		<h2>
+			<asp:Label ID="LabelWelcome" runat="server" Text="Welcome xxx you are logged in as admin"></asp:Label>
+		</h2>
+		<br />
+		<br />
 	</div>
+
 
 
 
@@ -178,7 +186,8 @@
 							</div>
 						</div>
 						<div class="col-24 col-sm-12 col-md-6">
-							<br /><br />
+							<br />
+							<br />
 							<div class="academy-buttons-area text-center">
 								<a runat="server" href="~/Admin/AdminCRUDMaterialType" class="btn academy-btn btn-4 m-2" style="width: 100%;">View More Info</a>
 							</div>
