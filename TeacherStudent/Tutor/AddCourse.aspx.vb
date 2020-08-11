@@ -158,18 +158,6 @@ else{window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
 		Next
 		Return CategoryAssociativeTable
 	End Function
-	Private Sub insertingCat(CategoryId, courseId)
-		Dim con As New SqlClient.SqlConnection(_conString)
-		Dim cmd As New SqlClient.SqlCommand()
-		cmd.Connection = con
-		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "INSERT INTO CategoryAssociativeTable (CourseId, CategoryId) VALUES (@CourseId, @CategoryId);"
-		cmd.Parameters.AddWithValue("@CourseId", courseId)
-		cmd.Parameters.AddWithValue("@CategoryId", CategoryId)
-		con.Open()
-		cmd.ExecuteNonQuery()
-		con.Close()
-	End Sub
 
 
 	Private Sub populateMaterialName()

@@ -14,128 +14,119 @@ Option Explicit On
 Partial Public Class UpdateCourse
 
 	'''<summary>
-	'''LabelTitle control.
+	'''HiddenFieldCourseId control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelTitle As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents HiddenFieldCourseId As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''Image1 control.
+	'''HiddenFieldTutorId control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
+	Protected WithEvents HiddenFieldTutorId As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''LabelUserName control.
+	'''TextBoxCourseName control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelUserName As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents TextBoxCourseName As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''LabelFirstName control.
+	'''CheckBoxListCourseCategory control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelFirstName As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents CheckBoxListCourseCategory As Global.System.Web.UI.WebControls.CheckBoxList
 
 	'''<summary>
-	'''LabelLastName control.
+	'''Label1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelLastName As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''LabelAddress control.
+	'''TextBoxScheduleDate control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelAddress As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents TextBoxScheduleDate As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''LabelBirthDate control.
+	'''TextBoxCourseDescription control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelBirthDate As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents TextBoxCourseDescription As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''LabelPhoneNumber control.
+	'''TextBoxAimsAndObjectives control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelPhoneNumber As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents TextBoxAimsAndObjectives As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''LabelEmail control.
+	'''file0 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelEmail As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents file0 As Global.System.Web.UI.HtmlControls.HtmlInputFile
 
 	'''<summary>
-	'''CheckBoxFreeze control.
+	'''ddl0 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents CheckBoxFreeze As Global.System.Web.UI.WebControls.CheckBox
+	Protected WithEvents ddl0 As Global.System.Web.UI.HtmlControls.HtmlSelect
 
 	'''<summary>
-	'''LinkButtonBack control.
+	'''SendA control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LinkButtonBack As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents SendA As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''LinkButtonUpdate control.
+	'''gvs control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LinkButtonUpdate As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
 
 	'''<summary>
-	'''LinkButtonDelete control.
+	'''btnSubmit control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LinkButtonDelete As Global.System.Web.UI.WebControls.LinkButton
-
-	'''<summary>
-	'''LinkButtonResetPassword control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents LinkButtonResetPassword As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class

@@ -95,24 +95,6 @@ Partial Public Class ViewCourse
 	Protected WithEvents LabelCategoryName As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''updatePanelTop1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents updatePanelTop1 As Global.System.Web.UI.UpdatePanel
-
-	'''<summary>
-	'''Label1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
 	'''gvs control.
 	'''</summary>
 	'''<remarks>
@@ -122,11 +104,47 @@ Partial Public Class ViewCourse
 	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
 
 	'''<summary>
-	'''btnAdd control.
+	'''file0 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents file0 As Global.System.Web.UI.HtmlControls.HtmlInputFile
+
+	'''<summary>
+	'''ddl0 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents ddl0 As Global.System.Web.UI.HtmlControls.HtmlSelect
+
+	'''<summary>
+	'''SendA control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents SendA As Global.System.Web.UI.WebControls.HiddenField
+
+	'''<summary>
+	'''btUpdate control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btUpdate As Global.System.Web.UI.WebControls.LinkButton
+
+	'''<summary>
+	'''btUpload control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btUpload As Global.System.Web.UI.WebControls.Button
 End Class

@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class TutorPostsEvent
 
 	'''<summary>
-	'''HiddenFieldDate control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents HiddenFieldDate As Global.System.Web.UI.WebControls.HiddenField
-
-	'''<summary>
 	'''TextBoxEventName control.
 	'''</summary>
 	'''<remarks>
@@ -59,11 +50,11 @@ Partial Public Class TutorPostsEvent
 	Protected WithEvents TextBoxDateSchedule As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''LinkButtonAdd control.
+	'''btnSubmit control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LinkButtonAdd As Global.System.Web.UI.WebControls.LinkButton
+	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class

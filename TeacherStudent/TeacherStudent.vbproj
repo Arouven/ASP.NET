@@ -348,16 +348,11 @@
     <Content Include="Admin\UserDetails.aspx" />
     <Content Include="Tutor\AddCourse.aspx" />
     <Content Include="js\jquery\validate\additional-methods.js" />
-    <Content Include="Tutor\AddMaterials.aspx" />
     <Content Include="js\jquery\validate\jquery.validate.js" />
     <Content Include="Tutor\OpenDocuments.aspx" />
     <Content Include="Tutor\TutorCRUDCourse.aspx" />
     <Content Include="Tutor\TutorPostsEvent.aspx" />
-    <Content Include="Tutor\TutorPostsMaterials.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
-    <Content Include="Tutor\WebForm1.aspx" />
-    <Content Include="Tutor\WebForm2.aspx" />
-    <Content Include="Tutor\WebForm3.aspx" />
     <Content Include="User\UserFunctionality.aspx" />
     <Content Include="Tutor\UpdateCourse.aspx" />
     <Content Include="Tutor\ViewCourse.aspx" />
@@ -604,13 +599,6 @@
       <DependentUpon>AddCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Tutor\AddMaterials.aspx.designer.vb">
-      <DependentUpon>AddMaterials.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tutor\AddMaterials.aspx.vb">
-      <DependentUpon>AddMaterials.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Tutor\OpenDocuments.aspx.designer.vb">
       <DependentUpon>OpenDocuments.aspx</DependentUpon>
     </Compile>
@@ -632,39 +620,11 @@
       <DependentUpon>TutorPostsEvent.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Tutor\TutorPostsMaterials.aspx.designer.vb">
-      <DependentUpon>TutorPostsMaterials.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tutor\TutorPostsMaterials.aspx.vb">
-      <DependentUpon>TutorPostsMaterials.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Tutor\TutorViewsListOfStudents.aspx.designer.vb">
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TutorViewsListOfStudents.aspx.vb">
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Tutor\WebForm1.aspx.designer.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tutor\WebForm1.aspx.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Tutor\WebForm2.aspx.designer.vb">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tutor\WebForm2.aspx.vb">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Tutor\WebForm3.aspx.designer.vb">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tutor\WebForm3.aspx.vb">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="User\UserFunctionality.aspx.designer.vb">

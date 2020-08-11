@@ -218,7 +218,6 @@
 				$('#gvs').dataTable({
 					lengthChange: true,
 					columnDefs: [{ type: 'date-euro', targets: 2 }, { type: 'date-euro', targets: 1 }, { "orderable": false, "targets": -1 }],
-					//aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
 					info: true,
 					pageLength: 10
 				});

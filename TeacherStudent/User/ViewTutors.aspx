@@ -31,7 +31,7 @@
 		<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
 			<ContentTemplate>
 				<div class="row">
-					<asp:ListView ID="lvMovies" runat="server" ItemPlaceholderID="itemPlaceholder" DataKeyNames="CategoryName" ClientIDMode="Static">
+					<asp:ListView ID="lvMovies" runat="server" ItemPlaceholderID="itemPlaceholder" DataKeyNames="UserName" ClientIDMode="Static">
 						<ItemTemplate>
 							<div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="400ms">
 								<div class="card h-100" style="width: 195px; float: left; margin: 8px;">
@@ -42,7 +42,7 @@
 										<div class="teachers-info mt-30">
 
 											<h5><%# Eval("UserName")%></h5>
-											<span>Marketing Proffesor</span>
+											<span><%# Eval("CertificaionName")%></span>
 										</div>
 
 										<asp:LinkButton ID="LinkButton1" runat="server" Text="Request access" CommandArgument='<%#Eval("TutorId") %>' CommandName="btnAccess" CssClass="btn btn-primary" />
@@ -55,7 +55,7 @@
 							</div>
 							<hr style="clear: both" />
 							<div class="text-right">
-								<asp:DataPager ID="DataPager1" runat="server" PageSize="5">
+								<asp:DataPager ID="DataPager1" runat="server" PageSize="20">
 									<Fields>
 										<asp:NextPreviousPagerField ButtonType="Link" ShowNextPageButton="false" ShowFirstPageButton="true" />
 										<asp:NumericPagerField />

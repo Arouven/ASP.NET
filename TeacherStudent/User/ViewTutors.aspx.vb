@@ -13,7 +13,7 @@ Public Class ViewTutors1
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "SELECT TutorId, UserName, ProfilePictureUrl FROM TutorTable;"
+		cmd.CommandText = "SELECT TutorTable.TutorId, TutorTable.UserName, TutorTable.ProfilePictureUrl FROM TutorTable inner join CertificateTable on CertificateTable.TutorId=TutorTable.TutorId;"
 
 		'Create DataAdapter
 		Dim myDataAdapter As New SqlClient.SqlDataAdapter(cmd)
@@ -27,6 +27,7 @@ Public Class ViewTutors1
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		Label1.Text = DateTime.Now.ToString()
+		FillListView(lvMovies)
 		If (Not Page.IsPostBack) Then
 			'LoadCategory()
 			TextBox1_TextChanged(TextBox1, Nothing)
@@ -46,14 +47,14 @@ Public Class ViewTutors1
 			sqlParam = "UserName LIKE '%' + @UserName + '%'"
 		End If
 
-		cmd.CommandText = "select * From TutorTable " & sqlParam
+		cmd.CommandText = "select * From TutorTable ;" ' & sqlParam
 		'		'"Select distinct Username,CategoryName from CourseTable
 		'inner join  TutorTable on CourseTable.TutorId=TutorTable.TutorId 
 		'inner join  CategoryAssociativeTable on CourseTable.CourseId=CategoryAssociativeTable.CourseId 
 		'inner join  CategoryTable on CategoryAssociativeTable.CategoryId=CategoryTable.CategoryId 
 		' WHERE " & sqlParam & "
 		';" '"SELECT TutorId, UserName,  ProfilePictureUrl FROM TutorTable WHERE " + sqlParam + sqlParamCat
-		cmd.Parameters.AddWithValue("@UserName", TextBox1.Text.Trim())
+		'cmd.Parameters.AddWithValue("@UserName", TextBox1.Text.Trim())
 		'Dim table As New DataTable()
 		'Dim da As New SqlClient.SqlDataAdapter(cmd)
 		con.Open()

@@ -1,6 +1,7 @@
 ﻿Public Class ViewEvents
 	Inherits System.Web.UI.Page
 	Private ReadOnly _conString As String
+	Dim TutorId As Integer
 	Public Sub New()
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
@@ -12,7 +13,6 @@
 	End Sub
 
 	Private Sub GetEventList()
-		Dim TutorId As Integer = 2 'Request.QueryString("id")
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
@@ -40,6 +40,7 @@
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		' LoginRequired(mySession)
+		TutorId = 3 'Request.QueryString("id")
 		GetEventList()
 	End Sub
 
@@ -58,7 +59,7 @@
 	End Sub
 
 	Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
-		Response.Redirect("~/Tutor/TutorPostEvent.aspx")
+		Response.Redirect("~/Tutor/TutorPostsEvent.aspx")
 	End Sub
 
 	Protected Sub UpdateButton_Click(sender As Object, e As EventArgs)
@@ -74,13 +75,12 @@
 		cmd.Connection = con
 		con.Open()
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "update EventTable set EventName=@EventName, EventDetail=@EventDetail, location=@location, dateSchedule=@dateSchedule, dateCreated=@dateCreated where EventId=@EventId;"
+		cmd.CommandText = "update EventTable set EventName=@EventName, EventDetail=@EventDetail, location=@location, dateSchedule=@dateSchedule where EventId=@EventId;"
 		cmd.Parameters.AddWithValue("@EventId", idToUpdate)
 		cmd.Parameters.AddWithValue("@EventName", EventName)
 		cmd.Parameters.AddWithValue("@EventDetail", EventDetail)
 		cmd.Parameters.AddWithValue("@location", location)
 		cmd.Parameters.AddWithValue("@dateSchedule", Convert.ToDateTime(dateSchedule))
-		cmd.Parameters.AddWithValue("@dateCreated", Convert.ToDateTime(dateCreated))
 		cmd.ExecuteNonQuery()
 		con.Close()
 		Response.Redirect(Request.RawUrl)
