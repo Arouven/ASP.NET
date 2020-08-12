@@ -185,19 +185,6 @@ where MaterialAssociativeTable.courseid=@courseid;"
 	Protected Sub btnMatList_Click(sender As Object, e As EventArgs)
 
 	End Sub
-
-
-
-	Protected Sub btnDownload_Click(sender As Object, e As EventArgs)
-		Dim filePath As String = (Server.MapPath(CType(sender, LinkButton).CommandArgument))
-		HttpContext.Current.Response.Redirect("~/DownloadFiles.ashx?file=" + filePath)
-	End Sub
-
-	Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
-		Response.Redirect("~/Tutor/AddMaterials.aspx?id=" & HiddenFieldTutorId.Value)
-	End Sub
-
-
 	Private Sub delServerFiles(MaterialId As Integer)
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
@@ -220,6 +207,19 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		con.Close()
 
 	End Sub
+
+
+	Protected Sub btnDownload_Click(sender As Object, e As EventArgs)
+		Dim filePath As String = (Server.MapPath(CType(sender, LinkButton).CommandArgument))
+		HttpContext.Current.Response.Redirect("~/DownloadFiles.ashx?file=" + filePath)
+	End Sub
+
+	Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
+		Response.Redirect("~/Tutor/AddMaterials.aspx?id=" & HiddenFieldTutorId.Value)
+	End Sub
+
+
+
 	Protected Sub btnDelete_Click(sender As Object, e As EventArgs)
 		Dim MaterialId As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
 		delServerFiles(MaterialId)
@@ -234,7 +234,6 @@ where MaterialAssociativeTable.courseid=@courseid;"
 
 		GetMaterialList()
 		con.Close()
-		ScriptManager.RegisterStartupScript(CType(sender, Control), Me.GetType(), "Pop", "OpenModalViewList();", True)
 	End Sub
 
 	Protected Sub btnParam_Click(sender As Object, e As EventArgs)

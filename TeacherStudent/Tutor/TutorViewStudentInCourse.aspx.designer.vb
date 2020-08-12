@@ -11,41 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class TutorViewsListOfStudents
+Partial Public Class TutorViewStudentInCourse
 
 	'''<summary>
-	'''LabelTotalStudent control.
+	'''LabelTotalTutorUnfreeze control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelTotalStudent As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents LabelTotalTutorUnfreeze As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''LabelTotalStudentPending control.
+	'''UpdatePanel1 control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelTotalStudentPending As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
 
 	'''<summary>
-	'''LabelTotalStudentRejected control.
+	'''ddlCategory control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelTotalStudentRejected As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents ddlCategory As Global.System.Web.UI.WebControls.DropDownList
 
 	'''<summary>
-	'''gvs control.
+	'''txtSearch control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
+	Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''Repeater1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents Repeater1 As Global.System.Web.UI.WebControls.Repeater
 End Class

@@ -68,6 +68,15 @@ Partial Public Class UpdateCourse
 	Protected WithEvents TextBoxScheduleDate As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
+	'''TextBoxCreatedDate control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents TextBoxCreatedDate As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
 	'''TextBoxCourseDescription control.
 	'''</summary>
 	'''<remarks>
@@ -84,6 +93,24 @@ Partial Public Class UpdateCourse
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents TextBoxAimsAndObjectives As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
+	'''btnUpdate control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''gvs control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
 
 	'''<summary>
 	'''file0 control.
@@ -113,20 +140,20 @@ Partial Public Class UpdateCourse
 	Protected WithEvents SendA As Global.System.Web.UI.WebControls.HiddenField
 
 	'''<summary>
-	'''gvs control.
+	'''btnview control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
+	Protected WithEvents btnview As Global.System.Web.UI.WebControls.LinkButton
 
 	'''<summary>
-	'''btnSubmit control.
+	'''btUpload control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btUpload As Global.System.Web.UI.WebControls.Button
 End Class

@@ -353,6 +353,8 @@
     <Content Include="Tutor\TutorCRUDCourse.aspx" />
     <Content Include="Tutor\TutorPostsEvent.aspx" />
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
+    <Content Include="Tutor\TutorViewStudentInCourse.aspx" />
+    <Content Include="Tutor\WebServiceGetStudStats.asmx" />
     <Content Include="User\UserFunctionality.aspx" />
     <Content Include="Tutor\UpdateCourse.aspx" />
     <Content Include="Tutor\ViewCourse.aspx" />
@@ -599,6 +601,7 @@
       <DependentUpon>AddCourse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Tutor\ClassStudentStats.vb" />
     <Compile Include="Tutor\OpenDocuments.aspx.designer.vb">
       <DependentUpon>OpenDocuments.aspx</DependentUpon>
     </Compile>
@@ -626,6 +629,17 @@
     <Compile Include="Tutor\TutorViewsListOfStudents.aspx.vb">
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\TutorViewStudentInCourse.aspx.designer.vb">
+      <DependentUpon>TutorViewStudentInCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\TutorViewStudentInCourse.aspx.vb">
+      <DependentUpon>TutorViewStudentInCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\WebServiceGetStudStats.asmx.vb">
+      <DependentUpon>WebServiceGetStudStats.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="User\UserFunctionality.aspx.designer.vb">
       <DependentUpon>UserFunctionality.aspx</DependentUpon>

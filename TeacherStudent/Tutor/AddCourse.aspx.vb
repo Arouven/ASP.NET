@@ -1,7 +1,7 @@
 ﻿Public Class AddCourse
 	Inherits System.Web.UI.Page
 	Private ReadOnly _conString As String
-
+	Private tutorid As Integer
 	Public Sub New()
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
@@ -11,7 +11,7 @@
 		cmd.Connection = con
 		cmd.CommandType = CommandType.StoredProcedure
 		cmd.CommandText = "ProcedureInsertCourse"
-		Dim tutorid As Integer = 3 ''''''''''''''''''''''''''''''''''Convert.ToInt32(Request.QueryString("id")) 'tutorid
+
 		cmd.Parameters.AddWithValue("@TutorId", tutorid)
 		cmd.Parameters.AddWithValue("@CourseName", TextBoxCourseName.Text.Trim)
 		cmd.Parameters.AddWithValue("@DateSchedule", Convert.ToDateTime(TextBoxScheduleDate.Text))
@@ -175,17 +175,7 @@ else{window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
 		ddl0.SelectedIndex = 0
 		con.Close()
 	End Sub
-	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'LoginRequired(mySession)
-		Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
-		mydate = mydate.AddDays(1)
-		TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
-		If Not IsPostBack Then
-			populateCategory()
-			populateMaterialName()
-		End If
 
-	End Sub
 	Private Function CheckboxhasChecked() As Boolean
 		Dim CategoryAssociativeTable As Integer = 0
 		For Each listItem As ListItem In CheckBoxListCourseCategory.Items
@@ -197,6 +187,18 @@ else{window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
 		Else : Return False
 		End If
 	End Function
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		'LoginRequired(mySession)
+		tutorid = 3 ''''''''''''''''''''''''''''''''''Convert.ToInt32(Request.QueryString("id")) 'tutorid
+		Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
+		mydate = mydate.AddDays(1)
+		TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
+		If Not IsPostBack Then
+			populateCategory()
+			populateMaterialName()
+		End If
+
+	End Sub
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
 		If CheckboxhasChecked() = False Then
 			Label1.Text = "Please select at least one"

@@ -1,45 +1,94 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="UpdateCourse.aspx.vb" Inherits="TeacherStudent.UpdateCourse" %>
+﻿<%@ Page Title="Update Course" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="UpdateCourse.aspx.vb" Inherits="TeacherStudent.UpdateCourse" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 
-<style>
+	<style>
 		@font-face {
-			font-family: 'Glyphicons Halflings';
-			src: url('../fonts/glyphicons-halflings-regular.eot');
-			src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+			font-family: "Glyphicons Halflings";
+			src: url("../fonts/glyphicons-halflings-regular.eot");
+			src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 		}
 
 		.glyphicon {
 			position: relative;
 			top: 1px;
 			display: inline-block;
-			font-family: 'Glyphicons Halflings';
+			font-family: "Glyphicons Halflings";
 			font-style: normal;
-			font-weight: normal;
+			font-weight: 400;
 			line-height: 1;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 		}
 
-		.glyphicon-minus:before {
-			content: "\2212";
+		.glyphicon-wrench:before {
+			content: "\e136";
 		}
 
+		.glyphicon-upload:before {
+			content: "\e027";
+		}
+
+		.glyphicon-trash:before {
+			content: "\e020";
+		}
+
+		.glyphicon-download:before {
+			content: "\e026";
+		}
+
+		.glyphicon-edit:before {
+			content: "\e065";
+		}
 
 		.glyphicon-plus:before {
 			content: "\002b";
 		}
 
+		.glyphicon-eye-open:before {
+			content: "\e105";
+		}
 
-		.myLable {
+		.tbldiv {
+			margin: auto;
+			width: 100%;
+		}
+
+		th {
+			background: #4CAF50;
+			color: White;
+		}
+
+		label {
 			font-weight: bold;
 		}
 
-		.mycheckbox input[type="checkbox"] {
-			margin-right: 8px;
+		.btnsize {
+			width: 160px !important;
+		}
+
+
+
+		.goGreen h4 {
+			text-align: center;
+			color: #4CAF50;
+		}
+
+		.modal-dialog {
+			max-width: 80% !important;
+			margin: auto;
+		}
+
+		.modal-dialog-center {
+			margin-top: 5%;
 		}
 
 		label.error, span.error {
 			color: red;
+		}
+
+		.glyphicon-minus:before {
+			content: "\2212";
 		}
 	</style>
 
@@ -59,7 +108,7 @@
 				<label for="inputEmail3" class="col-sm-3 col-form-label myLable">Course Name : </label>
 				<div class="col-sm-9">
 					<asp:TextBox ID="TextBoxCourseName" CssClass="form-control" runat="server" minlength="4" required></asp:TextBox>
-					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseName" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The course name field is required." />
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseName" CssClass="text-danger" ValidationGroup="UpdateCourseGroup" ErrorMessage="The course name field is required." />
 				</div>
 			</div>
 			<div class="form-group row">
@@ -78,21 +127,58 @@
 				<label class="col-sm-3 myLable">Schedule Date : </label>
 				<div class="col-sm-9">
 					<asp:TextBox runat="server" ID="TextBoxScheduleDate" TextMode="DateTimeLocal" CssClass="form-control" required></asp:TextBox>
-					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxScheduleDate" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="Pick a date." />
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxScheduleDate" CssClass="text-danger" ValidationGroup="UpdateCourseGroup" ErrorMessage="Pick a date." />
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-3 myLable">Created Date : </label>
+				<div class="col-sm-9">
+					<asp:TextBox runat="server" ID="TextBoxCreatedDate" ReadOnly="true" Enabled="false" CssClass="form-control"></asp:TextBox>
 				</div>
 			</div>
 			<div class="row form-group">
 				<label class="col-sm-3 col-form-label myLable">Course Description : </label>
 				<div class="col-sm-9">
-					<asp:TextBox ID="TextBoxCourseDescription" CssClass="form-control" runat="server" Style="height: 100px" minlengty="5"  required></asp:TextBox>
-					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseDescription" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The Description field is required." />
+					<asp:TextBox ID="TextBoxCourseDescription" CssClass="form-control" runat="server" Style="height: 100px" minlengty="5" required></asp:TextBox>
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxCourseDescription" CssClass="text-danger" ValidationGroup="UpdateCourseGroup" ErrorMessage="The Description field is required." />
 				</div>
 			</div>
 			<div class="row form-group">
 				<label class="col-sm-3 col-form-label myLable">Aims And Objectives : </label>
 				<div class="col-sm-9">
 					<asp:TextBox ID="TextBoxAimsAndObjectives" CssClass="form-control" runat="server" required></asp:TextBox>
-					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxAimsAndObjectives" CssClass="text-danger" ValidationGroup="AddCourseGroup" ErrorMessage="The Aims And Objectives field is required." />
+					<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxAimsAndObjectives" CssClass="text-danger" ValidationGroup="UpdateCourseGroup" ErrorMessage="The Aims And Objectives field is required." />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-9"></div>
+				<asp:Button CssClass="mybtn btn btn-warning col-sm-3" OnClick="btnUpdate_Click" ID="btnUpdate" OnClientClick="return confirm('Are you sure you want to update');" Text="Update Course" runat="server" ValidationGroup="UpdateCourseGroup" />
+			</div>
+			<br />
+			<br />
+			<div class="row form-group">
+				<label class="col-sm-3 col-form-label myLable">Materials : </label>
+			</div>
+			<div class="row form-group">
+				<div class="tbldiv">
+					<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
+
+						<Columns>
+							<asp:BoundField DataField="MaterialName" HeaderText="Material Name" />
+							<asp:BoundField DataField="MaterialTypeName" HeaderText="Type" />
+							<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
+								<ItemTemplate>
+									<asp:LinkButton ID="btnDelete" OnClick="btnDelete_Click" CommandArgument='<%#Eval("MaterialID") %>' CssClass="btn btn-danger" runat="server" Text="Delete" ToolTip="Delete Material"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>&nbsp;&nbsp;
+
+										<asp:LinkButton ID="btnView" CssClass="btn btn-info" runat="server" target="_blank" href='<%#String.Format("OpenDocuments.aspx?filepath={0}", Eval("MaterialPathUrl")) %>' Text="View" ToolTip="View Material"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>&nbsp;&nbsp;
+																																
+											<asp:LinkButton ID="btnDownload" OnClick="btnDownload_Click" CommandArgument='<%#Eval("MaterialPathUrl") %>' CssClass="btn btn-success" runat="server" Text="Download" ToolTip="Download Material"><span class="glyphicon glyphicon-download"></span></asp:LinkButton>
+
+
+								</ItemTemplate>
+							</asp:TemplateField>
+						</Columns>
+					</asp:GridView>
 				</div>
 			</div>
 			<div class="row form-group">
@@ -109,39 +195,21 @@
 					<button id="Button00" class="btn btn-primary" type="button" value="Add" onclick="AddFileUpload()" data-toggle="tooltip"><span class="glyphicon glyphicon-plus"></span></button>
 				</div>
 			</div>
-			<div class="row formgroup">
-				<div class="tbldiv">
-						<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
-
-							<Columns>
-								<asp:BoundField DataField="MaterialName" HeaderText="Material Name" />
-								<asp:BoundField DataField="MaterialTypeName" HeaderText="Type" />
-								<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
-									<ItemTemplate>
-										<asp:LinkButton ID="btnDelete" OnClick="btnDelete_Click" CommandArgument='<%#Eval("MaterialID") %>' CssClass="btn btn-danger" runat="server" Text="Delete" ToolTip="Delete Material"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>&nbsp;&nbsp;
-
-										<asp:LinkButton ID="btnView" CssClass="btn btn-info" runat="server" target="_blank" href='<%#String.Format("OpenDocuments.aspx?filepath={0}", Eval("MaterialPathUrl")) %>' Text="View" ToolTip="View Material"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>&nbsp;&nbsp;
-																																
-											<asp:LinkButton ID="btnDownload" OnClick="btnDownload_Click" CommandArgument='<%#Eval("MaterialPathUrl") %>' CssClass="btn btn-success" runat="server" Text="Download" ToolTip="Download Material"><span class="glyphicon glyphicon-download"></span></asp:LinkButton>
-
-
-									</ItemTemplate>
-								</asp:TemplateField>
-							</Columns>
-						</asp:GridView>
-					</div>
-			</div>
-
-
-
-
 			<div id="duplicateHere">
 				<!--FileUpload Controls will be added here -->
 			</div>
+			<br />
+			<br />
 			<div class="row form-group">
 
-				<asp:Button CssClass="btn btn-success col-sm-4" OnClick="LinkButtonAdd_Click" ID="btnSubmit" Text="Add course" runat="server" ValidationGroup="AddCourseGroup" />
+				<asp:linkButton CssClass="btn btn-primary col-sm-3" ID="btnview" OnClick="btview_Click" Text="View Courses" runat="server" ValidationGroup="ViewMaterialAddGroup" />
+				<div class="col-sm-6"></div>
+				<asp:Button CssClass="btn btn-success col-sm-3 float-right" OnClick="btnUpload_Click" OnClientClick="return	confirm('Note that existing files with same names will be overwritten');" ID="btUpload" Text="Add Material" runat="server" ValidationGroup="ViewMaterialAddGroup" />
 			</div>
+			<br />
+			<br />
+
+
 		</div>
 	</div>
 </asp:Content>
@@ -151,63 +219,53 @@
 
 	<script src='<%= ResolveClientUrl("~/js/jquery/validate/additional-methods.js") %>'></script>
 
-	<script>
-
-		//if ($('#videoUploadFile').get(0).files.length === 0) {
-		//	console.log("No files selected.");
-		//}
-		//$.validator.addMethod("valueNotEquals", function (value, element, arg) {
-		//	return arg !== value;
-		//}, "Value must not equal arg.");
+	<script>	
 
 
-
-
-		//$("input[type=checkbox]").attr("name", "checkedornot");
-		var validator = $('#myform').validate({
-			//rules: {
-			//	checkedornot: {required:true }
-			//},
-			//messages: {
-			//	//checkedornot: { minlength: "Please select at least one." }
-			//},
-			//errorPlacement: function (error, element) {
-			//	if (element.attr("name") == "checkedornot") {
-			//		error.appendTo("#errorToShow");
-			//	} else {
-			//		error.insertAfter(element);
-			//	}
-			//}
-
-		});
-		$.validator.addMethod('filesize', function (value, element, param) {
-			return this.optional(element) || (element.files[0].size <= param * 1000000)
-		}, 'File size must be less than {0} MB');
-		$('[name*="file"]').each(function () {
-			$(this).rules('add', {
-				required: true,
-				filesize: 3
-
+		(function ($) {
+			"use strict";
+			$(document).ready(function () {
+				//init dataTables
+				$('#gvs').dataTable({
+					lengthChange: true,
+					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
+					info: true,
+					pageLength: 5
+				});
 			});
-		});
-		$('[name*="ddl"]').each(function () {
-			$(this).rules('add', {
-				required: true,
-				messages: {
-					required: "Please Select a Type"
-				}
+		}(jQuery));
+		function OpenModalViewList() {
+			$(document).ready(function () {
+				$('#modMatList').modal('show');
 			});
-		});
-
-
-
-
+		}
 
 	</script>
 	<script type="text/javascript">
-		function verify() {
-			var x = confirm('Note that existing files with same names will be overwritten');
-		}
+		$(`#<%=btUpload.ClientID%>`).click(function () {
+			$('#myform').validate();
+			$.validator.addMethod('filesize', function (value, element, param) {
+				return this.optional(element) || (element.files[0].size <= param * 1000000)
+			}, 'File size must be less than {0} MB');
+			$('[name*="ddl"]').each(function () { $(this).rules('add', { required: true, messages: { required: "Please Select a Type" } }); });
+			$('[name*="file"]').each(function () { $(this).rules('add', { required: true, filesize: 3 }); });
+			$('#<%=TextBoxCourseName.ClientID%>').rules('add', { required: false });
+		$('#<%=TextBoxScheduleDate.ClientID%>').rules('add', { required: false });
+		$('#<%=TextBoxCourseDescription.ClientID%>').rules('add', { required: false });
+		$('#<%=TextBoxAimsAndObjectives.ClientID%>').rules('add', { required: false });
+	});
+		$(`#<%=btnUpdate.ClientID%>`).click(function () {
+			$('#myform').validate();
+			$('[name*="ddl"]').each(function () { $(this).rules('add', { required: false }); });
+			$('[name*="file"]').each(function () { $(this).rules('add', { required: false }); });
+			$('#<%=TextBoxCourseName.ClientID%>').rules('add', { required: true });
+		$('#<%=TextBoxScheduleDate.ClientID%>').rules('add', { required: true });
+		$('#<%=TextBoxCourseDescription.ClientID%>').rules('add', { required: true });
+		$('#<%=TextBoxAimsAndObjectives.ClientID%>').rules('add', { required: true });
+	});
+
+
+
 
 		var counter = 1;
 		function AddFileUpload() {
