@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class Registration
 
 	'''<summary>
+	'''HiddenFieldCourseId control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HiddenFieldCourseId As Global.System.Web.UI.WebControls.HiddenField
+
+	'''<summary>
+	'''HiddenFieldTutorId control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HiddenFieldTutorId As Global.System.Web.UI.WebControls.HiddenField
+
+	'''<summary>
 	'''TextBoxFirstnameReg control.
 	'''</summary>
 	'''<remarks>

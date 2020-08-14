@@ -23,6 +23,8 @@
 		con.Close()
 	End Function
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		LabelWelcome.Text = "Welcome " & Session("AdminUsername") & " you are logged in as admin"
+
 
 		LabelUnfreezeStudent.Text = NumberInTable("StudentTable", True, False)
 		LabelFreezeStudent.Text = NumberInTable("StudentTable", True, True)

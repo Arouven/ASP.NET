@@ -108,12 +108,18 @@
 					End If
 
 					myReader.Close()
-					'call the sendemail method
-					sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, "http://localhost/login")
 					con1.Close()
-					Response.Redirect("Welcome.aspx")
+					If Not IsNothing(Session("StudentUsername")) Then
+						'call the sendemail method
+						sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, ClassSendMail.StudentViewProfileUrl)
+						Response.Redirect("~/Student/StudentHome.aspx")
+					ElseIf Not IsNothing(Session("TutorUsername")) Then
+						'call the sendemail method
+						sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, ClassSendMail.TutorViewProfileUrl)
+						Response.Redirect("~/Tutor/TutorHome.aspx")
+					End If
 				End If
-			End If
+				End If
 		End If
 	End Sub
 
@@ -126,12 +132,12 @@
 		Try
 			msg.From = New Net.Mail.MailAddress(sentFrom)
 			msg.To.Add(sendTo)
-			msg.Subject = "This is a Test Mail"
+			msg.Subject = "Welcome to Academy"
 			msg.IsBodyHtml = True
 			Dim msgBody As New StringBuilder()
-			msgBody.Append("Dear " + welcomeUsername + ", your registration is successful, thank you for signing up on xyz.")
+			msgBody.Append("Dear " + welcomeUsername + ", your registration is successful, thank you for signing up on Academy.")
 			msg.Attachments.Add(New Net.Mail.Attachment(Server.MapPath(profilePicUrl)))
-			msgBody.Append("<a href='" + clickHereLoginUrl + "'>Click here to login to ...</a>")
+			msgBody.Append("<a href='" + clickHereLoginUrl + "'>Click here to view your profile.</a>")
 			msg.Body = msgBody.ToString()
 			sc.Host = "smtp.gmail.com"
 			sc.Port = 587

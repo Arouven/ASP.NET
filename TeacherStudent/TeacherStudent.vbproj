@@ -136,6 +136,7 @@
     <Content Include="Admin\AdminCRUDMaterialType.aspx" />
     <Content Include="Admin\AdminCRUDCourseCategory.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
     <Content Include="Admin\AdminViewsListOfTutorsStudents.aspx" />
     <Content Include="Admin\ViewStudents.aspx" />
     <Content Include="Admin\ViewTutors.aspx" />
@@ -340,6 +341,10 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Student\OpenDoc.aspx" />
+    <Content Include="Student\StudentHome.aspx" />
+    <Content Include="Student\StudentLogin.aspx" />
+    <Content Include="Tutor\TutorHome.aspx" />
+    <Content Include="Tutor\TutorLogin.aspx" />
     <Content Include="User\StudentAdvanceSearch.aspx" />
     <Content Include="Student\StudentUpdatesProfile.aspx" />
     <Content Include="Student\StudentViewsEvents.aspx" />
@@ -414,6 +419,13 @@
     <Compile Include="Admin\AdminHome.aspx.vb">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.vb">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.vb">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminViewsListOfTutorsStudents.aspx.designer.vb">
       <DependentUpon>AdminViewsListOfTutorsStudents.aspx</DependentUpon>
@@ -563,6 +575,34 @@
     <Compile Include="Student\OpenDoc.aspx.vb">
       <DependentUpon>OpenDoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentHome.aspx.designer.vb">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentHome.aspx.vb">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentLogin.aspx.designer.vb">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentLogin.aspx.vb">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\TutorHome.aspx.designer.vb">
+      <DependentUpon>TutorHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\TutorHome.aspx.vb">
+      <DependentUpon>TutorHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\TutorLogin.aspx.designer.vb">
+      <DependentUpon>TutorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\TutorLogin.aspx.vb">
+      <DependentUpon>TutorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="User\StudentAdvanceSearch.aspx.designer.vb">
       <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>

@@ -41,6 +41,42 @@ Partial Public Class master1
 	Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
 	'''<summary>
+	'''pnlmanage control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents pnlmanage As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''lgregis control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents lgregis As Global.System.Web.UI.WebControls.Panel
+
+	'''<summary>
+	'''lbllgged control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents lbllgged As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''btnlgout control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents btnlgout As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
 	'''ContentPlaceHolder1 control.
 	'''</summary>
 	'''<remarks>
@@ -48,123 +84,6 @@ Partial Public Class master1
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
-
-	'''<summary>
-	'''TextBoxUsernameStudentLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxUsernameStudentLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''TextBoxPasswordStudentLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxPasswordStudentLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''ButtonStudentLogin control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents ButtonStudentLogin As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''StudentRememberMe control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents StudentRememberMe As Global.System.Web.UI.WebControls.CheckBox
-
-	'''<summary>
-	'''TextBoxUsernameTutorLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxUsernameTutorLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''TextBoxPasswordTutorLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxPasswordTutorLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''ButtonTutorLogin control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents ButtonTutorLogin As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''TutorRememberMe control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TutorRememberMe As Global.System.Web.UI.WebControls.CheckBox
-
-	'''<summary>
-	'''TextBoxUsernameAdminLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxUsernameAdminLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''TextBoxPasswordAdminLog control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents TextBoxPasswordAdminLog As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''ButtonAdminLogin control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents ButtonAdminLogin As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''AdminRememberMe control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents AdminRememberMe As Global.System.Web.UI.WebControls.CheckBox
-
-	'''<summary>
-	'''lblStatus control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents lblStatus As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''scriptPlaceHolder1 control.

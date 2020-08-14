@@ -59,10 +59,28 @@
 									</a>
 								</div>
 								<div class="login-content">
-									<a runat="server" href="~/Registration.aspx">Register</a>
-								</div>
-								<div class="login-content">
-									<a rel="modal:open" id="modopen" data-toggle="modal" href="#modLogin">Login</a>
+<%--									<a rel="modal:open" id="modopen" data-toggle="modal" href="#modLogin">Login</a>--%>
+									<ul>
+										<asp:Panel runat="server" CssClass="nav navbar-nav" ID="pnlmanage" Visible="true">
+
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register/Login<span class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li><a href="<%=ResolveClientUrl("~/Registration.aspx") %>">Register</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a href="<%=ResolveClientUrl("~/Student/StudentLogin") %>">Student Login</a></li>
+													<li><a href="<%=ResolveClientUrl("~/Tutor/TutorLogin") %>">Tutor Login</a></li>
+													<li><a href="<%=ResolveClientUrl("~/Admin/AdminLogin") %>">Admin Login</a></li>
+												</ul>
+											</li>
+
+										</asp:Panel>
+
+										<asp:Panel runat="server" ID="lgregis">
+											<asp:Label runat="server" ID="lbllgged"></asp:Label>
+											<asp:Button runat="server" ID="btnlgout" Text="Log out" CssClass="btn btn-info" Visible="false" />
+										</asp:Panel>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -270,7 +288,7 @@
 
 
 		<!-- Login Modal -->
-		<div class="modal fade" id="modLogin" role="dialog">
+	<%--	<div class="modal fade" id="modLogin" role="dialog">
 			<div class="modal-dialog modal-dialog-center">
 				<!-- Modal content-->
 				<div class="modal-content">
@@ -292,7 +310,7 @@
 									<asp:TextBox ID="TextBoxPasswordStudentLog" runat="server" TextMode="Password" placeholder="Password" CssClass="tbInput"></asp:TextBox><br />
 									<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxPasswordStudentLog" CssClass="text-danger" ValidationGroup="studentLoginGroup" ErrorMessage="The password field is required." />
 								</div>
-								<asp:Button ID="ButtonStudentLogin" ValidationGroup="studentLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
+								<asp:Button ID="ButtonStudentLogin" OnClick="ButtonStudentLogin_Click" ValidationGroup="studentLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
 								<div>
 									<br />
 									<asp:CheckBox runat="server" ValidationGroup="studentLoginGroup" ID="StudentRememberMe" Text="Remember me?" />
@@ -313,7 +331,7 @@
 									<asp:TextBox ID="TextBoxPasswordTutorLog" runat="server" TextMode="Password" placeholder="Password" CssClass="tbInput"></asp:TextBox><br />
 									<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxPasswordTutorLog" CssClass="text-danger" ValidationGroup="tutorLoginGroup" ErrorMessage="The password field is required." />
 								</div>
-								<asp:Button ID="ButtonTutorLogin" ValidationGroup="tutorLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
+								<asp:Button ID="ButtonTutorLogin" OnClick="ButtonTutorLogin_Click" ValidationGroup="tutorLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
 								<div>
 									<br />
 									<asp:CheckBox runat="server" ID="TutorRememberMe" ValidationGroup="tutorLoginGroup" Text="Remember me?" />
@@ -334,7 +352,7 @@
 									<asp:TextBox ID="TextBoxPasswordAdminLog" runat="server" TextMode="Password" placeholder="Password" CssClass="tbInput"></asp:TextBox><br />
 									<asp:RequiredFieldValidator runat="server" ControlToValidate="TextBoxPasswordAdminLog" CssClass="text-danger" ValidationGroup="adminLoginGroup" ErrorMessage="The password field is required." />
 								</div>
-								<asp:Button ID="ButtonAdminLogin" ValidationGroup="adminLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
+								<asp:Button ID="ButtonAdminLogin" OnClick="ButtonAdminLogin_Click" ValidationGroup="adminLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
 								<div>
 									<br />
 									<asp:CheckBox runat="server" ID="AdminRememberMe" ValidationGroup="adminLoginGroup" Text="Remember me?" />
@@ -346,11 +364,94 @@
 							</div>
 							<asp:Label ID="lblStatus" runat="server"></asp:Label>
 						</div>
+						<script>
+							(function ($) {
+
+
+								$(".openStudentLoginForm").click(function ShowStudent() {
+									$('.admin-login-form').hide();
+									$('.tutor-login-form').hide();
+									$('.student-login-form').slideDown(1000);
+								});
+								$(".openTutorLoginForm").click(function ShowTutor() {
+									$('.admin-login-form').hide();
+									$('.student-login-form').hide();
+									$('.tutor-login-form').slideDown(1000);
+								});
+								$(".openAdminLoginForm").click(function ShowAdmin() {
+									$('.student-login-form').hide();
+									$('.tutor-login-form').hide();
+									$('.admin-login-form').slideDown(1000);
+								});
+
+
+
+
+
+								$(document).keypress(function EnterEvent(e) {
+									if (e.which == '13') {
+										e.preventDefault();
+									}
+								});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								//$('.message a').click(function changeForm() {
+								//    $('.form div').animate({ height: "toggle", opacity: "toggle" }, "slow");
+								//});
+
+								//$(document).keypress(function EnterEvent(e) {
+								//    if (e.which == '13') {
+								//        e.preventDefault();
+								//    }
+								//});
+
+
+								//$(document).ready(function () {
+								//    $("#loginout").click(function () {
+								//        var hideshow = $('#logindiv').css("display");
+
+								//        if (hideshow == 'none') {
+								//            $('#logindiv').fadeIn("slow");
+								//            displaylogin = true;
+								//            $('#blurme').css("-webkit-filter", "blur(10px)");
+								//        }
+								//        else {
+								//            $('#logindiv').fadeOut("slow");
+								//            displaylogin = false;
+								//            $('#blurme').css("-webkit-filter", "blur(0px)");
+								//        }
+								//        return false;
+								//    });
+								//});
+
+
+							})(jQuery);</script>
 					</div>
 				</div>
 			</div>
-		</div>
-
+		</div>--%>
 
 
 	</form>
@@ -367,14 +468,12 @@
 	<script src='<%= ResolveClientUrl("~/js/plugins/plugins.js") %>'></script>
 	<!-- Active js -->
 	<script src='<%= ResolveClientUrl("~/js/active.js") %>'></script>
-	<!-- loginregister js -->
-	<script src='<%= ResolveClientUrl("~/js/login.js") %>'></script>
 
 	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
-	
+
 	<script>function loginModal() { $(document).ready(function () { $('#modLogin').modal('show'); }); };</script>
 
-	
+
 
 	<asp:ContentPlaceHolder ID="scriptPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
