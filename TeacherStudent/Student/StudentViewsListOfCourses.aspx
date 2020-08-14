@@ -47,7 +47,7 @@
 				<Columns>
 					<asp:BoundField DataField="UserName" HeaderText="Tutor" />
 					<asp:BoundField DataField="CourseName" HeaderText="Course" />
-					<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
+					<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule"  dataformatstring="{0:ddd dd, MMMM, yyyy}" htmlencode="false" />
 					<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
 						<ItemTemplate>
 							<asp:LinkButton ID="btnSubscribe" CssClass="btn btn-primary" OnClick="btnSubscribe_Click" CommandArgument='<%#Eval("courseid") %>' runat="server" name='<%# String.Format("courseidis{0}", Eval("courseid")) %>' Text="Subscribe"></asp:LinkButton>&nbsp;&nbsp;
@@ -152,17 +152,36 @@
 				});
 			});
 		}
-		(function ($) {
-			"use strict";
-			$(document).ready(function () {
-				//init dataTables
-				$('#gvs').dataTable({
-					lengthChange: true,
-					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
-					info: true,
-					pageLength: 5
-				});
-			});
-		}(jQuery));
+
+		//var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+		//prm.add_endRequest(function () {
+		//	createDataTable();
+		//	mystats();
+		//});
+
+		//createDataTable();
+
+		//function createDataTable() {
+		//	var table = $('#gvs').DataTable({
+		//		aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
+		//	});
+		//	$('#gvs tbody').on('click', 'tr', function () {
+		//		$(this).toggleClass('selected');
+		//	});
+		//	mystats();
+		//}
+		//(function ($) {
+		//	"use strict";
+		//	$(document).ready(function () {
+		//		//init dataTables
+		//		$('#gvs').dataTable({
+		//			lengthChange: true,
+		//			aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
+		//			info: true,
+		//			pageLength: 5
+		//		});
+		//	});
+		//}(jQuery));
 	</script>
 </asp:Content>

@@ -339,8 +339,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Student\StudentAdvanceSearch.aspx" />
-    <Content Include="Student\StudentDownloadsCourseMaterials.aspx" />
+    <Content Include="Student\OpenDoc.aspx" />
+    <Content Include="User\StudentAdvanceSearch.aspx" />
     <Content Include="Student\StudentUpdatesProfile.aspx" />
     <Content Include="Student\StudentViewsEvents.aspx" />
     <Content Include="Student\StudentViewsListOfCourses.aspx" />
@@ -365,6 +365,7 @@
     <Content Include="User\ViewTutors.aspx" />
     <Content Include="WebServiceCourse.asmx" />
     <Content Include="Admin\WebServiceUpdateCategoryName.asmx" />
+    <Content Include="WebServiceUserNameExist.asmx" />
     <Content Include="Welcome.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -466,6 +467,7 @@
     <Compile Include="ClassCourse.vb" />
     <Compile Include="ClassSendMail.vb" />
     <Compile Include="Admin\ClassUpdateCategoryName.vb" />
+    <Compile Include="ClassUserName.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -555,18 +557,18 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\ClassStudentStatsPerCourse.vb" />
-    <Compile Include="Student\StudentAdvanceSearch.aspx.designer.vb">
-      <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
+    <Compile Include="Student\OpenDoc.aspx.designer.vb">
+      <DependentUpon>OpenDoc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student\StudentAdvanceSearch.aspx.vb">
-      <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
+    <Compile Include="Student\OpenDoc.aspx.vb">
+      <DependentUpon>OpenDoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\StudentDownloadsCourseMaterials.aspx.designer.vb">
-      <DependentUpon>StudentDownloadsCourseMaterials.aspx</DependentUpon>
+    <Compile Include="User\StudentAdvanceSearch.aspx.designer.vb">
+      <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student\StudentDownloadsCourseMaterials.aspx.vb">
-      <DependentUpon>StudentDownloadsCourseMaterials.aspx</DependentUpon>
+    <Compile Include="User\StudentAdvanceSearch.aspx.vb">
+      <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentUpdatesProfile.aspx.designer.vb">
@@ -710,6 +712,10 @@
     </Compile>
     <Compile Include="Admin\WebServiceUpdateCategoryName.asmx.vb">
       <DependentUpon>WebServiceUpdateCategoryName.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServiceUserNameExist.asmx.vb">
+      <DependentUpon>WebServiceUserNameExist.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.designer.vb">

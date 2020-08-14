@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="ViewCourseDetails.aspx.vb" Inherits="TeacherStudent.ViewCourseDetails" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 	<style>
 		@font-face {
@@ -107,7 +108,7 @@
 				<br />
 				<br />
 			</div>
-			<div  style="width: 80%; margin: auto;">
+			<div style="width: 80%; margin: auto;">
 				<div class="row form-group">
 					<div class="col-sm-3"></div>
 					<label class="col-sm-3 ">Course Name : </label>
@@ -150,55 +151,44 @@
 						<asp:Label ID="LabelCategoryName" runat="server"></asp:Label>
 					</div>
 				</div>
-				<br />
-				<div class="form-group">
-					<div class="tbldiv">
-						<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
+				<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+					<ContentTemplate>
 
-							<Columns>
-								<asp:BoundField DataField="MaterialName" HeaderText="Material Name" />
-								<asp:BoundField DataField="MaterialTypeName" HeaderText="Type" />
-								<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
-									<ItemTemplate>
-										<asp:LinkButton ID="btnDelete" OnClick="btnDelete_Click" CommandArgument='<%#Eval("MaterialID") %>' CssClass="btn btn-danger" runat="server" Text="Delete" ToolTip="Delete Material"><span class="glyphicon glyphicon-trash"></span></asp:LinkButton>&nbsp;&nbsp;
 
-										<asp:LinkButton ID="btnView" CssClass="btn btn-info" runat="server" target="_blank" href='<%#String.Format("OpenDocuments.aspx?filepath={0}", Eval("MaterialPathUrl")) %>' Text="View" ToolTip="View Material"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>&nbsp;&nbsp;
+						<div class="row form-group">
+							<div class="col-sm-3"></div>
+							<label class="col-sm-3 col-form-label">Show Materials : </label>
+							<div class="col-sm-4">
+								<asp:Button ID="ButtonShowMaterials" OnClick="ButtonShowMaterials_Click"  CssClass="btn btn-primary" runat="server" Text="Show Materials" />
+								<br />
+								<asp:Label ID="LabelMaterialMessage" runat="server" ForeColor="red"></asp:Label>
+							</div>
+						</div>
+						<br />
+						<div class="form-group">
+							<div class="tbldiv">
+								<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
+
+									<Columns>
+										<asp:BoundField DataField="MaterialName" HeaderText="Material Name" />
+										<asp:BoundField DataField="MaterialTypeName" HeaderText="Type" />
+										<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
+											<ItemTemplate>
+
+												<asp:LinkButton ID="btnView" CssClass="btn btn-info" runat="server" target="_blank" href='<%#String.Format("OpenDoc.aspx?filepath={0}", Eval("MaterialPathUrl")) %>' Text="View" ToolTip="View Material"><span class="glyphicon glyphicon-eye-open"></span></asp:LinkButton>&nbsp;&nbsp;
 																																
 											<asp:LinkButton ID="btnDownload" OnClick="btnDownload_Click" CommandArgument='<%#Eval("MaterialPathUrl") %>' CssClass="btn btn-success" runat="server" Text="Download" ToolTip="Download Material"><span class="glyphicon glyphicon-download"></span></asp:LinkButton>
 
 
-									</ItemTemplate>
-								</asp:TemplateField>
-							</Columns>
-						</asp:GridView>
-					</div>
-				</div>
+											</ItemTemplate>
+										</asp:TemplateField>
+									</Columns>
+								</asp:GridView>
+							</div>
+						</div>
+					</ContentTemplate>
+				</asp:UpdatePanel>
 
-				<div class="row form-group">
-					<label class="col-sm-3 col-form-label myLable">Upload Materials : </label>
-
-					<div class="col-sm-4">
-						<input id="file0" name="file0" type="file" runat="server" required class="form-control-file" />
-					</div>
-					<div class="col-sm-4">
-						<select runat="server" id="ddl0" name="ddl0" class="form-control required"></select>
-					</div>
-					<asp:HiddenField ID="SendA" runat="server" Value="0" />
-					<div class="col-sm-1">
-						<button id="Button00" class="btn btn-primary" type="button" value="Add" onclick="AddFileUpload()" data-toggle="tooltip"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-				</div>
-				<div id="duplicateHere">
-					<!--FileUpload Controls will be added here -->
-				</div>
-				<br />
-				<br />
-
-				<div class="row form-group">
-					<asp:linkButton CssClass="btn btn-primary col-sm-3 float-left" OnClick="btnUpdate_Click" ID="btUpdate" Text="Update Course" runat="server" ValidationGroup="ViewMaterialAddGroup" />
-					<div class="col-sm-6"></div>
-					<asp:Button CssClass="btn btn-success col-sm-3 float-right" OnClick="btnUpload_Click" OnClientClick="verify()" ID="btUpload" Text="Add Material" runat="server" ValidationGroup="ViewMaterialAddGroup" />
-				</div>
 				<br />
 				<br />
 
@@ -208,86 +198,29 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
-	<script src='<%= ResolveClientUrl("~/js/jquery/validate/jquery.validate.js") %>'></script>
-
-	<script src='<%= ResolveClientUrl("~/js/jquery/validate/additional-methods.js") %>'></script>
-
 	<script>	
 
+		var prm = Sys.WebForms.PageRequestManager.getInstance();
 
-		(function ($) {
-			"use strict";
-			$(document).ready(function () {
-				//init dataTables
-				$('#gvs').dataTable({
-					lengthChange: true,
-					aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
-					info: true,
-					pageLength: 5
-				});
-			});
-		}(jQuery));
-		function OpenModalViewList() {
-			$(document).ready(function () {
-				$('#modMatList').modal('show');
-			});
-		}
-
-	</script>
-	<script type="text/javascript">
-		$('#myform').validate();
-		$.validator.addMethod('filesize', function (value, element, param) {
-			return this.optional(element) || (element.files[0].size <= param * 1000000)
-		}, 'File size must be less than {0} MB');
-		$('[name*="ddl"]').each(function () {
-			$(this).rules('add', {
-				required: true,
-				messages: {
-					required: "Please Select a Type"
-				}
-			});
-		});
-		$('[name*="file"]').each(function () {
-			$(this).rules('add', {
-				required: true,
-				filesize: 3
-
-			});
+		prm.add_endRequest(function () {
+			createDataTable();
 		});
 
-		function verify() {
-			var x = confirm('Note that existing files with same names will be overwritten');
+		createDataTable();
+
+		function createDataTable() {
+			var table = $('#gvs').DataTable({
+				lengthChange: true,
+				aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
+				info: true,
+				pageLength: 5
+			});
+			$('#gvs tbody').on('click', 'tr', function () {
+				$(this).toggleClass('selected');
+			});
 		}
 
-		var counter = 1;
-		function AddFileUpload() {
-			var options = document.getElementById(`<%=ddl0.ClientID%>`).innerHTML;
-
-			var div = document.createElement('DIV');
-			div.innerHTML = '<div class="row form-group">' +
-				'<div class="col-sm-3"></div>' +
-				'<div class="col-sm-4">' +
-				'<input id="file' + counter + '" name = "file' + counter +
-				'" type="file" required />' +
-				'</div>' +
-				'<div class="col-sm-4">' +
-				'<select id="ddl' + counter + '" name = "ddl' + counter +
-				'" class="form-control required" >' + options + '</select>' +
-				'</div>' +
-				'<div class="col-sm-1">' +
-				'<button id="Button' + counter + '" type="button" ' +
-				'value="Remove" onclick = "RemoveFileUpload(this)" Class="btn btn-warning" title="Remove Materials"  ><span class="glyphicon glyphicon-minus"></span></button>' +
-				'</div>' +
-				'</div>';
-			document.getElementById("duplicateHere").appendChild(div);
-			document.getElementById("<%=SendA.ClientID%>").value = counter;
-			document.getElementById("ddl" + counter).selectedIndex = "0";
-			counter++;
-		}
-
-		function RemoveFileUpload(div) {
-			document.getElementById("duplicateHere").removeChild(div.parentNode.parentNode.parentNode);
-		}
+	
 
 	</script>
 </asp:Content>

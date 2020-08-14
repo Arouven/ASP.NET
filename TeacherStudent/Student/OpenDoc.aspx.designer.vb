@@ -11,5 +11,5 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class StudentDownloadsCourseMaterials
+Partial Public Class OpenDoc
 End Class

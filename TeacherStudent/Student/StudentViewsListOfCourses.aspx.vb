@@ -45,20 +45,39 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 			gvs.HeaderRow.TableSection = TableRowSection.TableHeader
 		End If
 	End Sub
-
-	Protected Sub btnSubscribe_Click(sender As Object, e As EventArgs)
-		Dim courseid As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
+	Private Function DoesSubscribe(courseId)
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
-		con.Open()
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "insert into StudentCourseAssociativeTable(StudentId,CourseId,Subscribe,Pending,Accepted) values (@StudentId,@CourseId,1,1,0);"
+		cmd.CommandText = "SELECT * FROM StudentCourseAssociativeTable WHERE Subscribe=1 and StudentId=@StudentId and CourseId=@CourseId "
 		cmd.Parameters.AddWithValue("@StudentId", StudentId)
-		cmd.Parameters.AddWithValue("@CourseId", courseid)
-		cmd.ExecuteNonQuery()
+		cmd.Parameters.AddWithValue("@CourseId", courseId)
+		Dim reader As SqlClient.SqlDataReader
+		con.Open()
+		reader = cmd.ExecuteReader()
+		If (reader.HasRows) Then : Return True
+		Else : Return False
+		End If
+		reader.Close()
 		con.Close()
-		Response.Redirect(Request.RawUrl)
+	End Function
+	Protected Sub btnSubscribe_Click(sender As Object, e As EventArgs)
+		Dim courseid As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
+		If Not DoesSubscribe(courseid) Then
+			Dim con As New SqlClient.SqlConnection(_conString)
+			Dim cmd As New SqlClient.SqlCommand()
+			cmd.Connection = con
+			con.Open()
+			cmd.CommandType = CommandType.Text
+			cmd.CommandText = "insert into StudentCourseAssociativeTable(StudentId,CourseId,Subscribe,Pending,Accepted) values (@StudentId,@CourseId,1,1,0);"
+			cmd.Parameters.AddWithValue("@StudentId", StudentId)
+			cmd.Parameters.AddWithValue("@CourseId", courseid)
+			cmd.ExecuteNonQuery()
+			con.Close()
+			Response.Redirect(Request.RawUrl)
+		End If
+
 
 	End Sub
 

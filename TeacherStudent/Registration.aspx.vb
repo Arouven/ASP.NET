@@ -2,6 +2,9 @@
 	Inherits System.Web.UI.Page
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-dd")
+		mydate = mydate.AddYears(-18)
+		textBoxDOB.Attributes("max") = mydate.ToString("yyyy-MM-dd")
 
 	End Sub
 	Private ReadOnly _conString As String
@@ -64,28 +67,49 @@
 					myReader = cmd1.ExecuteReader()
 					Dim chk As Boolean = CheckBoxRegister.Checked
 					If myReader.Read Then
-						'create a memory cookie to store username and pwd
-						Response.Cookies("un").Value = TextBoxUsernameReg.Text
-						Response.Cookies("pwd").Value = TextBoxConfirmReg.Text
-						If (chk) Then
-							'if checkbox is checked, make cookies persistent
-							Response.Cookies("un").Expires = DateAndTime.Now.AddDays(100)
-							Response.Cookies("pwd").Expires = DateAndTime.Now.AddDays(100)
-						Else
-							'delete the cookies if checkbox is unchecked
-							Response.Cookies("un").Expires = DateAndTime.Now.AddDays(-100)
-							Response.Cookies("pwd").Expires = DateAndTime.Now.AddDays(-100)
-							'delete content of password field
+						If tblName = "StudentTable" Then
+							'create a memory cookie to store username and pwd
+							Response.Cookies("Sun").Value = TextBoxUsernameReg.Text
+							Response.Cookies("Spwd").Value = TextBoxConfirmReg.Text
+							If (chk) Then
+								'if checkbox is checked, make cookies persistent
+								Response.Cookies("Sun").Expires = DateAndTime.Now.AddDays(100)
+								Response.Cookies("Spwd").Expires = DateAndTime.Now.AddDays(100)
+							Else
+								'delete the cookies if checkbox is unchecked
+								Response.Cookies("Sun").Expires = DateAndTime.Now.AddDays(-100)
+								Response.Cookies("Spwd").Expires = DateAndTime.Now.AddDays(-100)
+								'delete content of password field
+							End If
+							'create and save username in a session variable
+							Session("StudentUsername") = TextBoxUsernameReg.Text
+							'create and save userid in a session variable
+							Session("Studentid") = myReader("StudentId")
+						ElseIf tblName = "TutorTable" Then
+							'create a memory cookie to store username and pwd
+							Response.Cookies("Tun").Value = TextBoxUsernameReg.Text
+							Response.Cookies("Tpwd").Value = TextBoxConfirmReg.Text
+							If (chk) Then
+								'if checkbox is checked, make cookies persistent
+								Response.Cookies("Tun").Expires = DateAndTime.Now.AddDays(100)
+								Response.Cookies("Tpwd").Expires = DateAndTime.Now.AddDays(100)
+							Else
+								'delete the cookies if checkbox is unchecked
+								Response.Cookies("Tun").Expires = DateAndTime.Now.AddDays(-100)
+								Response.Cookies("Tpwd").Expires = DateAndTime.Now.AddDays(-100)
+								'delete content of password field
+							End If
+							'create and save username in a session variable
+							Session("TutorUsername") = TextBoxUsernameReg.Text
+							'create and save userid in a session variable
+							Session("TutorId") = myReader("TutorId")
 						End If
-						'create and save username in a session variable
-						Session("username") = TextBoxUsernameReg.Text
-						'create and save userid in a session variable
-						Session("userid") = myReader(tblId)
+
 					End If
 
 					myReader.Close()
 					'call the sendemail method
-					sendMail("admin@gmail.com", "password", TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, "http://localhost/login")
+					sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, "http://localhost/login")
 					con1.Close()
 					Response.Redirect("Welcome.aspx")
 				End If
