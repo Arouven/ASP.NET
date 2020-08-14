@@ -21,4 +21,13 @@ Partial Public Class StudentViewsListOfCourses
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
 	Protected WithEvents gvs As Global.System.Web.UI.WebControls.GridView
+
+	'''<summary>
+	'''HiddenFieldStudentId control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents HiddenFieldStudentId As Global.System.Web.UI.WebControls.HiddenField
 End Class

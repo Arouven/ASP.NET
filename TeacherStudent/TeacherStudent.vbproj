@@ -344,6 +344,8 @@
     <Content Include="Student\StudentUpdatesProfile.aspx" />
     <Content Include="Student\StudentViewsEvents.aspx" />
     <Content Include="Student\StudentViewsListOfCourses.aspx" />
+    <Content Include="Student\ViewCourseDetails.aspx" />
+    <Content Include="Student\WebServiceStatus.asmx" />
     <Content Include="style.css" />
     <Content Include="Admin\UserDetails.aspx" />
     <Content Include="Tutor\AddCourse.aspx" />
@@ -396,28 +398,28 @@
     </Compile>
     <Compile Include="Admin\AdminCRUDMaterialType.aspx.vb">
       <DependentUpon>AdminCRUDMaterialType.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminCRUDCourseCategory.aspx.designer.vb">
       <DependentUpon>AdminCRUDCourseCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminCRUDCourseCategory.aspx.vb">
       <DependentUpon>AdminCRUDCourseCategory.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.designer.vb">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.vb">
       <DependentUpon>AdminHome.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminViewsListOfTutorsStudents.aspx.designer.vb">
       <DependentUpon>AdminViewsListOfTutorsStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminViewsListOfTutorsStudents.aspx.vb">
       <DependentUpon>AdminViewsListOfTutorsStudents.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ClassMaterialName.vb" />
     <Compile Include="Admin\ViewStudents.aspx.designer.vb">
@@ -425,14 +427,14 @@
     </Compile>
     <Compile Include="Admin\ViewStudents.aspx.vb">
       <DependentUpon>ViewStudents.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ViewTutors.aspx.designer.vb">
       <DependentUpon>ViewTutors.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ViewTutors.aspx.vb">
       <DependentUpon>ViewTutors.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\WebServiceMaterial.asmx.vb">
       <DependentUpon>WebServiceMaterial.asmx</DependentUpon>
@@ -445,21 +447,21 @@
     </Compile>
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Blog.aspx.designer.vb">
       <DependentUpon>Blog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Blog.aspx.vb">
       <DependentUpon>Blog.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.vb">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.vb">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ClassCourse.vb" />
     <Compile Include="ClassSendMail.vb" />
@@ -469,14 +471,14 @@
     </Compile>
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Course.aspx.designer.vb">
       <DependentUpon>Course.aspx</DependentUpon>
     </Compile>
     <Compile Include="Course.aspx.vb">
       <DependentUpon>Course.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DownloadFiles.ashx.vb">
       <DependentUpon>DownloadFiles.ashx</DependentUpon>
@@ -486,7 +488,7 @@
     </Compile>
     <Compile Include="Elements.aspx.vb">
       <DependentUpon>Elements.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -496,7 +498,7 @@
     </Compile>
     <Compile Include="Home.aspx.vb">
       <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -510,14 +512,14 @@
     </Compile>
     <Compile Include="LoginRequired.aspx.vb">
       <DependentUpon>LoginRequired.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.vb">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.vb">
       <DependentUpon>Logout.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="master1.Master.designer.vb">
       <DependentUpon>master1.Master</DependentUpon>
@@ -550,56 +552,68 @@
     </Compile>
     <Compile Include="Registration.aspx.vb">
       <DependentUpon>Registration.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Student\ClassStudentStatsPerCourse.vb" />
     <Compile Include="Student\StudentAdvanceSearch.aspx.designer.vb">
       <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentAdvanceSearch.aspx.vb">
       <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentDownloadsCourseMaterials.aspx.designer.vb">
       <DependentUpon>StudentDownloadsCourseMaterials.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentDownloadsCourseMaterials.aspx.vb">
       <DependentUpon>StudentDownloadsCourseMaterials.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentUpdatesProfile.aspx.designer.vb">
       <DependentUpon>StudentUpdatesProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentUpdatesProfile.aspx.vb">
       <DependentUpon>StudentUpdatesProfile.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentViewsEvents.aspx.designer.vb">
       <DependentUpon>StudentViewsEvents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentViewsEvents.aspx.vb">
       <DependentUpon>StudentViewsEvents.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentViewsListOfCourses.aspx.designer.vb">
       <DependentUpon>StudentViewsListOfCourses.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentViewsListOfCourses.aspx.vb">
       <DependentUpon>StudentViewsListOfCourses.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\UserDetails.aspx.designer.vb">
       <DependentUpon>UserDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserDetails.aspx.vb">
       <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ViewCourseDetails.aspx.designer.vb">
+      <DependentUpon>ViewCourseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ViewCourseDetails.aspx.vb">
+      <DependentUpon>ViewCourseDetails.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\WebServiceStatus.asmx.vb">
+      <DependentUpon>WebServiceStatus.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tutor\AddCourse.aspx.designer.vb">
       <DependentUpon>AddCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\AddCourse.aspx.vb">
       <DependentUpon>AddCourse.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\ClassStudentStats.vb" />
     <Compile Include="Tutor\OpenDocuments.aspx.designer.vb">
@@ -607,35 +621,35 @@
     </Compile>
     <Compile Include="Tutor\OpenDocuments.aspx.vb">
       <DependentUpon>OpenDocuments.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\TutorCRUDCourse.aspx.designer.vb">
       <DependentUpon>TutorCRUDCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TutorCRUDCourse.aspx.vb">
       <DependentUpon>TutorCRUDCourse.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\TutorPostsEvent.aspx.designer.vb">
       <DependentUpon>TutorPostsEvent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TutorPostsEvent.aspx.vb">
       <DependentUpon>TutorPostsEvent.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\TutorViewsListOfStudents.aspx.designer.vb">
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TutorViewsListOfStudents.aspx.vb">
       <DependentUpon>TutorViewsListOfStudents.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\TutorViewStudentInCourse.aspx.designer.vb">
       <DependentUpon>TutorViewStudentInCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TutorViewStudentInCourse.aspx.vb">
       <DependentUpon>TutorViewStudentInCourse.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\WebServiceGetStudStats.asmx.vb">
       <DependentUpon>WebServiceGetStudStats.asmx</DependentUpon>
@@ -646,42 +660,42 @@
     </Compile>
     <Compile Include="User\UserFunctionality.aspx.vb">
       <DependentUpon>UserFunctionality.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\UpdateCourse.aspx.designer.vb">
       <DependentUpon>UpdateCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\UpdateCourse.aspx.vb">
       <DependentUpon>UpdateCourse.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\ViewCourse.aspx.designer.vb">
       <DependentUpon>ViewCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\ViewCourse.aspx.vb">
       <DependentUpon>ViewCourse.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\ViewEvents.aspx.designer.vb">
       <DependentUpon>ViewEvents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\ViewEvents.aspx.vb">
       <DependentUpon>ViewEvents.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\ViewCourses.aspx.designer.vb">
       <DependentUpon>ViewCourses.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\ViewCourses.aspx.vb">
       <DependentUpon>ViewCourses.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\ViewTutors.aspx.designer.vb">
       <DependentUpon>ViewTutors.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\ViewTutors.aspx.vb">
       <DependentUpon>ViewTutors.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -703,7 +717,7 @@
     </Compile>
     <Compile Include="Welcome.aspx.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
