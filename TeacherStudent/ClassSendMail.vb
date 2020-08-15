@@ -4,4 +4,7 @@
 	Public Shared ReadOnly StudentViewProfileUrl As String = "~/Student/StudentViewProfile"
 	Public Shared ReadOnly TutorViewProfileUrl As String = "~/Tutor/TutorViewProfile"
 	Public Shared ReadOnly tutorViewStudentUrl As String = "~/Tutor/TutorViewsListOfStudents"
+	Public Shared ReadOnly tutorProfileUpdateUrl As String = "~/Tutor/TutorUpdateProfile"
+	Public Shared ReadOnly studentProfileUpdateUrl As String = "~/Student/StudentUpdatesProfile"
+
 End Class

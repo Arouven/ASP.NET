@@ -146,6 +146,7 @@
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Student\TutorViewDetailStudent.aspx" />
     <Content Include="Tutor\WebServiceCertExist.asmx" />
     <Content Include="User\Blog.aspx" />
     <Content Include="Contact.aspx" />
@@ -460,6 +461,13 @@
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\TutorViewDetailStudent.aspx.designer.vb">
+      <DependentUpon>TutorViewDetailStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\TutorViewDetailStudent.aspx.vb">
+      <DependentUpon>TutorViewDetailStudent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tutor\ClassCertName.vb" />
     <Compile Include="Tutor\WebServiceCertExist.asmx.vb">

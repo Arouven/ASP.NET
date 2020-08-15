@@ -41,7 +41,6 @@
 										</div>
 
 										<div class="course-content">
-											<div class="course-price ">$50</div>
 
 											<h4><a href="#"><%# Eval("UserName") %></a></h4>
 
@@ -49,9 +48,8 @@
 
 											<div class="course-footer d-lg-flex align-items-center justify-content-between">
 												
-
-
-												<div class="btn btn-success"><a href="/<%# Eval("StudentId") %>" class="btn btn-main-2 btn-small"><%# Eval("UserName") %></a></div>
+												<asp:linkButton ID="ButtonOpenStudent" class="btn btn-success" runat="server" Text="StudentUsername" CommandArgument='<%# Eval("StudentId") %>' OnClick="ButtonOpenStudent_Click" />
+												<div class="btn btn-success"><a class="btn btn-main-2 btn-small"><%# Eval("UserName") %></a></div>
 											</div>
 										</div>
 									</div>

@@ -69,14 +69,17 @@
 		cmd.CommandType = CommandType.Text
 		Dim requestId As Integer = Convert.ToInt32(Request.QueryString("id"))
 		Dim requestUser As String = Request.QueryString("user")
+		Dim profileUpdateUrl As String = ""
 		Dim tableName As String = ""
 		Dim tableId As String = ""
 		If requestUser = "Tutor" Then
 			tableName = "TutorTable"
 			tableId = "TutorId"
+			profileUpdateUrl = ClassSendMail.tutorProfileUpdateUrl
 		ElseIf requestUser = "Student" Then
 			tableName = "StudentTable"
 			tableId = "StudentId"
+			profileUpdateUrl = ClassSendMail.studentProfileUpdateUrl
 		End If
 		cmd.CommandText = "SELECT  ProfilePictureUrl, Email FROM " & tableName & " where " & tableId & "=@requestId;" '
 		cmd.Parameters.AddWithValue("@requestId", requestId)
@@ -101,17 +104,33 @@
 		cmd2.CommandType = CommandType.Text
 		cmd2.CommandText = "update " & tableName & " set Password=@Password where " & tableId & "=@requestId;"
 		'Create two parameterized queries
-		cmd2.Parameters.AddWithValue("@Password", newPassword)
+		cmd2.Parameters.AddWithValue("@Password", encrypt(newPassword))
 		cmd2.Parameters.AddWithValue("@requestId", requestId)
 		con2.Open()
 		'use Command method to execute UPDATE statement and return
 		'boolean if number of records UPDATED is greater than zero
 		IsUpdated = cmd2.ExecuteNonQuery() > 0
 		con2.Close()
-		If (IsUpdated) Then : sendResetPasswordMail(ClassSendMail.email, ClassSendMail.pass, UserEmail, requestUser, ProfilePictureUrl, "http://localhost/login")
+		If (IsUpdated) Then : sendResetPasswordMail(ClassSendMail.email, ClassSendMail.pass, UserEmail, requestUser, ProfilePictureUrl, profileUpdateUrl)
 		End If
 	End Sub
-
+	Private Function Encrypt(clearText As String) As String
+		Dim EncryptionKey As String = "MAKV2SPBNI99212"
+		Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(clearText)
+		Using encryptor As Security.Cryptography.Aes = Security.Cryptography.Aes.Create()
+			Dim pdb As New Security.Cryptography.Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D, &H65, &H64, &H76, &H65, &H64, &H65, &H76})
+			encryptor.Key = pdb.GetBytes(32)
+			encryptor.IV = pdb.GetBytes(16)
+			Using ms As New IO.MemoryStream()
+				Using cs As New Security.Cryptography.CryptoStream(ms, encryptor.CreateEncryptor(), Security.Cryptography.CryptoStreamMode.Write)
+					cs.Write(clearBytes, 0, clearBytes.Length)
+					cs.Close()
+				End Using
+				clearText = Convert.ToBase64String(ms.ToArray())
+			End Using
+		End Using
+		Return clearText
+	End Function
 	Private Function CreateRandomPassword(ByVal PasswordLength As Integer) As String
 		Dim _allowedChars As String = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789*$-+?_&=!%{}/"
 		Dim randomNumber As New Random()
@@ -134,7 +153,7 @@
 			msg.Subject = "Password Reset!"
 			msg.IsBodyHtml = True
 			Dim msgBody As New StringBuilder()
-			msgBody.Append("Dear " + username + ", Admin has reset your password, thank you for staying.")
+			msgBody.Append("Dear " + username + ", Admin has reset your password, thank you for staying on Academy.")
 			msg.Attachments.Add(New Net.Mail.Attachment(Server.MapPath(profilePicUrl)))
 			msgBody.Append("<a href='" & clickHereUrl & "'>Click here and update your password</a>")
 			msg.Body = msgBody.ToString()

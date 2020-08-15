@@ -78,17 +78,17 @@ where  StudentCourseAssociativeTable.courseId=@courseId;"
 
 
 		If ddlCategory.SelectedValue = "Rejected" Then
-			param2 = "and StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=0 "
+			param2 = "and StudentCourseAssociativeTable.accepted=0 and StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
 		ElseIf ddlCategory.SelectedValue = "Pending" Then
-			param2 = "and StudentCourseAssociativeTable.Pending=1 "
+			param2 = "and StudentCourseAssociativeTable.Pending=1 and StudentCourseAssociativeTable.subscribe=1 "
 		ElseIf ddlCategory.SelectedValue = "Accepted" Then
-			param2 = "and StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
+			param2 = "and StudentCourseAssociativeTable.accepted=1 and  StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
 		Else
 			param2 = ""
 		End If
 
 		Dim sqlcom As String = "select StudentTable.StudentId,StudentTable.FirstName,StudentTable.LastName,StudentTable.ProfilePictureUrl,StudentTable.Address,StudentTable.PhoneNumber,StudentTable.Email,StudentTable.Username,StudentTable.Freeze,
-StudentCourseAssociativeTable.StudentCourseId,StudentCourseAssociativeTable.Subscribe,StudentCourseAssociativeTable.Pending
+StudentCourseAssociativeTable.StudentCourseId,StudentCourseAssociativeTable.Subscribe,StudentCourseAssociativeTable.accepted,StudentCourseAssociativeTable.Pending
 from StudentTable
 Inner join StudentCourseAssociativeTable On StudentCourseAssociativeTable.StudentId = StudentTable.Studentid
 where  StudentCourseAssociativeTable.courseId=@courseId " & param1 & param2
@@ -121,5 +121,10 @@ where  StudentCourseAssociativeTable.courseId=@courseId " & param1 & param2
 
 	Protected Sub ddlCategory_SelectedIndexChanged(sender As Object, e As EventArgs)
 		Search()
+	End Sub
+
+	Protected Sub ButtonOpenStudent_Click(sender As Object, e As EventArgs)
+		Dim StudentId As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
+		Response.Redirect("~/Tutor/TutorViewDetailStudent.aspx?StudentId=" & StudentId & "&CourseId=" & courseid)
 	End Sub
 End Class

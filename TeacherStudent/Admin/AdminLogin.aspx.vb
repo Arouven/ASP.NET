@@ -15,23 +15,7 @@
 			End If
 		End If
 	End Sub
-	Private Function Decrypt(cipherText As String) As String
-		Dim EncryptionKey As String = "MAKV2SPBNI99212"
-		Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(cipherText)
-		Using encryptor As Security.Cryptography.Aes = Security.Cryptography.Aes.Create()
-			Dim pdb As New Security.Cryptography.Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D, &H65, &H64, &H76, &H65, &H64, &H65, &H76})
-			encryptor.Key = pdb.GetBytes(32)
-			encryptor.IV = pdb.GetBytes(16)
-			Using ms As New IO.MemoryStream()
-				Using cs As New Security.Cryptography.CryptoStream(ms, encryptor.CreateEncryptor(), Security.Cryptography.CryptoStreamMode.Write)
-					cs.Write(clearBytes, 0, clearBytes.Length)
-					cs.Close()
-				End Using
-				cipherText = Convert.ToBase64String(ms.ToArray())
-			End Using
-		End Using
-		Return cipherText
-	End Function
+
 
 	Protected Sub ButtonAdminLogin_Click(sender As Object, e As EventArgs)
 		Dim username As String = TextBoxUsernameAdminLog.Text
@@ -47,7 +31,7 @@
 		'create three parameterized query for the above select statement
 		'use above variables and decrypt password
 		cmd.Parameters.AddWithValue("@username", username)
-		cmd.Parameters.AddWithValue("@password", Decrypt(password))
+		cmd.Parameters.AddWithValue("@password", password)
 		Dim myReader As SqlClient.SqlDataReader
 		con.Open()
 		myReader = cmd.ExecuteReader()

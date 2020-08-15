@@ -11,14 +11,32 @@
 	Public Sub New()
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
-
+	Private Function EmailExistInTable(tableName As String, Email As String)
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "select email from " & tableName & " where Email=@Email;"
+		cmd.Connection = con
+		'create a parameterized query
+		cmd.Parameters.AddWithValue("@Email", Email)
+		'Create DataReader
+		Dim myReader As SqlClient.SqlDataReader
+		con.Open()
+		myReader = cmd.ExecuteReader()
+		If (myReader.HasRows) Then : Return True
+		Else : Return False
+		End If
+		'Ensure the DataReader is closed
+		myReader.Close()
+		con.Close()
+	End Function
 	Protected Sub ButtonRegister_Click(sender As Object, e As EventArgs)
 		'Check whether the fileupload contains a file
 		If (FileUpload1.HasFile) Then
 			'Add the filename name as a parameter
 			If (CheckFileType(FileUpload1.FileName)) Then
 				Dim fileName As String = IO.Path.GetFileName(FileUpload1.PostedFile.FileName)
-				FileUpload1.PostedFile.SaveAs(Server.MapPath("~/ProfilePictures/") + fileName)
+				FileUpload1.PostedFile.SaveAs(Server.MapPath("~/ProfilePictures/") + TextBoxUsernameReg.Text + fileName)
 
 				Dim tblName As String = ""
 				Dim tblId As String = ""
@@ -36,6 +54,11 @@
 					lblStatus.Text = "Username Already Exist, Please Choose Another"
 					lblStatus.ForeColor = System.Drawing.Color.Red
 					TextBoxUsernameReg.Focus()
+				ElseIf (EmailExistInTable("StudentTable", TextBoxEmail.Text)) OrElse (EmailExistInTable("TutorTable", TextBoxEmail.Text)) OrElse (EmailExistInTable("AdminTable", TextBoxEmail.Text)) Then
+					lblStatus.Text = "Email Already Exist, Please Choose Another"
+					lblStatus.ForeColor = System.Drawing.Color.Red
+					TextBoxUsernameReg.Focus()
+
 				Else
 					Dim dt As DateTime = Convert.ToDateTime(textBoxDOB.Text)
 					'Create another Command object to store insert statement
@@ -50,7 +73,7 @@
 
 						cmd1.Parameters.AddWithValue("@FirstName", TextBoxFirstnameReg.Text)
 						cmd1.Parameters.AddWithValue("@LastName", TextBoxLastnameReg.Text)
-						cmd1.Parameters.AddWithValue("@ProfilePictureUrl", fileName)
+						cmd1.Parameters.AddWithValue("@ProfilePictureUrl", TextBoxUsernameReg.Text + fileName)
 						cmd1.Parameters.AddWithValue("@Address", TextBoxAddress.Text)
 						cmd1.Parameters.AddWithValue("@BirthDate", dt)
 						cmd1.Parameters.AddWithValue("@PhoneNumber", textBoxPhoneNumber.Text)
@@ -68,7 +91,7 @@ Insert into certificationTable(Tutorid,certificationName) values (@lastTutorIdIn
 
 						cmd1.Parameters.AddWithValue("@FirstName", TextBoxFirstnameReg.Text)
 						cmd1.Parameters.AddWithValue("@LastName", TextBoxLastnameReg.Text)
-						cmd1.Parameters.AddWithValue("@ProfilePictureUrl", fileName)
+						cmd1.Parameters.AddWithValue("@ProfilePictureUrl", TextBoxUsernameReg.Text + fileName)
 						cmd1.Parameters.AddWithValue("@Address", TextBoxAddress.Text)
 						cmd1.Parameters.AddWithValue("@BirthDate", dt)
 						cmd1.Parameters.AddWithValue("@PhoneNumber", textBoxPhoneNumber.Text)
@@ -132,11 +155,11 @@ Insert into certificationTable(Tutorid,certificationName) values (@lastTutorIdIn
 					con1.Close()
 					If Not IsNothing(Session("StudentUsername")) Then
 						'call the sendemail method
-						sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, ClassSendMail.StudentViewProfileUrl)
+						sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + TextBoxUsernameReg.Text + fileName, ClassSendMail.StudentViewProfileUrl)
 						Response.Redirect("~/Student/StudentHome.aspx")
 					ElseIf Not IsNothing(Session("TutorUsername")) Then
 						'call the sendemail method
-						sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + fileName, ClassSendMail.TutorViewProfileUrl)
+						sendMail(ClassSendMail.email, ClassSendMail.pass, TextBoxEmail.Text, TextBoxUsernameReg.Text, "~/ProfilePictures/" + TextBoxUsernameReg.Text + fileName, ClassSendMail.TutorViewProfileUrl)
 						Response.Redirect("~/Tutor/TutorHome.aspx")
 					End If
 				End If
