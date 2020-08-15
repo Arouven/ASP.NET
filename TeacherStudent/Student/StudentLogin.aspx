@@ -30,7 +30,7 @@
 				<asp:Button ID="ButtonStudentLogin" OnClick="ButtonStudentLogin_Click" ValidationGroup="studentLoginGroup" CssClass="logregBtn" runat="server" Text="login" />
 				<div>
 					<br />
-					<asp:CheckBox runat="server" ValidationGroup="studentLoginGroup" ID="StudentRememberMe" Text="Remember me?" />
+					<asp:CheckBox runat="server" ValidationGroup="studentLoginGroup" ID="StudentRememberMe" Text="Remember me?" Checked="true" />
 				</div>
 				<div class="form-group">
 					<p class="message">Not registered? <a runat="server" href="~/Registration.aspx">Create an account</a></p>

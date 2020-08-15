@@ -146,7 +146,7 @@
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Blog.aspx" />
+    <Content Include="User\Blog.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -154,7 +154,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Course.aspx" />
+    <Content Include="User\Course.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -221,9 +221,7 @@
     <Content Include="js\jquery\jquery-2.2.4.min.js" />
     <Content Include="js\login.js" />
     <Content Include="js\plugins\plugins.js" />
-    <Content Include="Login.aspx" />
     <Content Include="LoginRequired.aspx" />
-    <Content Include="Logout.aspx" />
     <Content Include="master1.Master" />
     <Content Include="fonts\classy.eot" />
     <Content Include="fonts\classy.ttf" />
@@ -343,8 +341,11 @@
     <Content Include="Student\OpenDoc.aspx" />
     <Content Include="Student\StudentHome.aspx" />
     <Content Include="Student\StudentLogin.aspx" />
+    <Content Include="Student\StudentViewProfile.aspx" />
     <Content Include="Tutor\TutorHome.aspx" />
     <Content Include="Tutor\TutorLogin.aspx" />
+    <Content Include="Tutor\TutorUpdateProfile.aspx" />
+    <Content Include="Tutor\TutorViewProfile.aspx" />
     <Content Include="User\StudentAdvanceSearch.aspx" />
     <Content Include="Student\StudentUpdatesProfile.aspx" />
     <Content Include="Student\StudentViewsEvents.aspx" />
@@ -462,10 +463,10 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Blog.aspx.designer.vb">
+    <Compile Include="User\Blog.aspx.designer.vb">
       <DependentUpon>Blog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Blog.aspx.vb">
+    <Compile Include="User\Blog.aspx.vb">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -487,10 +488,10 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Course.aspx.designer.vb">
+    <Compile Include="User\Course.aspx.designer.vb">
       <DependentUpon>Course.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Course.aspx.vb">
+    <Compile Include="User\Course.aspx.vb">
       <DependentUpon>Course.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -514,25 +515,11 @@
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="LoginRequired.aspx.designer.vb">
       <DependentUpon>LoginRequired.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginRequired.aspx.vb">
       <DependentUpon>LoginRequired.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Logout.aspx.designer.vb">
-      <DependentUpon>Logout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Logout.aspx.vb">
-      <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="master1.Master.designer.vb">
@@ -590,6 +577,13 @@
       <DependentUpon>StudentLogin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Student\StudentViewProfile.aspx.designer.vb">
+      <DependentUpon>StudentViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentViewProfile.aspx.vb">
+      <DependentUpon>StudentViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Tutor\TutorHome.aspx.designer.vb">
       <DependentUpon>TutorHome.aspx</DependentUpon>
     </Compile>
@@ -602,6 +596,20 @@
     </Compile>
     <Compile Include="Tutor\TutorLogin.aspx.vb">
       <DependentUpon>TutorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\TutorUpdateProfile.aspx.designer.vb">
+      <DependentUpon>TutorUpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\TutorUpdateProfile.aspx.vb">
+      <DependentUpon>TutorUpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\TutorViewProfile.aspx.designer.vb">
+      <DependentUpon>TutorViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\TutorViewProfile.aspx.vb">
+      <DependentUpon>TutorViewProfile.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="User\StudentAdvanceSearch.aspx.designer.vb">

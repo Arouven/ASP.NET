@@ -64,7 +64,7 @@
 					<%--<asp:TextBox ID="textBox1" CssClass="form-control" placeholder="Date of Birth" TextMode="Date" SetFocusOnError="True" runat="server"></asp:TextBox>--%>
 				</div>
 				<div class="form-group">
-					<asp:CheckBox runat="server" ID="CheckBoxRegister" Text="Remember me?" />
+					<asp:CheckBox runat="server" ID="CheckBoxRegister" Text="Remember me?" Checked="true" />
 				</div>
 				<div class="form-group">
 				</div>

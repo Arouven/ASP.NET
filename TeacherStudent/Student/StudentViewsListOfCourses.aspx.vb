@@ -62,6 +62,34 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 		reader.Close()
 		con.Close()
 	End Function
+	Private Function Tutormail(courseId)
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		cmd.Connection = con
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "SELECT Email FROM TutorTable inner join courseTable on TutorTable.Tutorid=courseTable.Tutorid WHERE CourseId=@CourseId "
+		cmd.Parameters.AddWithValue("@CourseId", courseId)
+		Dim reader As SqlClient.SqlDataReader
+		con.Open()
+		reader = cmd.ExecuteReader()
+		Return reader(0)
+		reader.Close()
+		con.Close()
+	End Function
+	Private Function courseName(courseId)
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		cmd.Connection = con
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "SELECT coursename FROM courseTable  WHERE CourseId=@CourseId "
+		cmd.Parameters.AddWithValue("@CourseId", courseId)
+		Dim reader As SqlClient.SqlDataReader
+		con.Open()
+		reader = cmd.ExecuteReader()
+		Return reader(0)
+		reader.Close()
+		con.Close()
+	End Function
 	Protected Sub btnSubscribe_Click(sender As Object, e As EventArgs)
 		Dim courseid As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
 		If Not DoesSubscribe(courseid) Then
@@ -73,6 +101,10 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 			cmd.CommandText = "insert into StudentCourseAssociativeTable(StudentId,CourseId,Subscribe,Pending,Accepted) values (@StudentId,@CourseId,1,1,0);"
 			cmd.Parameters.AddWithValue("@StudentId", StudentId)
 			cmd.Parameters.AddWithValue("@CourseId", courseid)
+			Dim studentName As String = Session("StudentUsername")
+
+			sendMail(ClassSendMail.email, ClassSendMail.pass, Tutormail(courseid), studentName, courseName(courseid))
+
 			cmd.ExecuteNonQuery()
 			con.Close()
 			Response.Redirect(Request.RawUrl)
@@ -80,7 +112,29 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 
 
 	End Sub
+	Private Sub sendMail(sentFrom As String, senderMailPassword As String, sendTo As String, studentName As String, courseName As String)
 
+		Dim msg As New Net.Mail.MailMessage()
+		Dim sc As New Net.Mail.SmtpClient()
+		Try
+			msg.From = New Net.Mail.MailAddress(sentFrom)
+			msg.To.Add(sendTo)
+			msg.Subject = "New Student"
+			msg.IsBodyHtml = True
+			Dim msgBody As New StringBuilder()
+			msgBody.Append("Dear Tutor, " + studentName + " Want to subscribe to your course: " + courseName)
+			msg.Body = msgBody.ToString()
+			sc.Host = "smtp.gmail.com"
+			sc.Port = 587
+			sc.UseDefaultCredentials = False
+			sc.Credentials = New Net.NetworkCredential(sentFrom, senderMailPassword)
+			sc.EnableSsl = True
+			sc.Send(msg)
+			Response.Write("Email Sent successfully")
+		Catch ex As Exception
+			Response.Write(ex.Message)
+		End Try
+	End Sub
 	Protected Sub btnDescription_Click(sender As Object, e As EventArgs)
 		Dim courseid As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
 		Response.Redirect("~/Student/ViewCourseDetails.aspx?id=" & courseid)

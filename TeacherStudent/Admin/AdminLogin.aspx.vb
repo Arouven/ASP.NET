@@ -34,8 +34,8 @@
 	End Function
 
 	Protected Sub ButtonAdminLogin_Click(sender As Object, e As EventArgs)
-		Dim username As String = Request.Cookies("Aun").Value
-		Dim password As String = Request.Cookies("Apwd").Value
+		Dim username As String = TextBoxUsernameAdminLog.Text
+		Dim password As String = TextBoxPasswordAdminLog.Text
 		Dim chk As Boolean = AdminRememberMe.Checked
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()

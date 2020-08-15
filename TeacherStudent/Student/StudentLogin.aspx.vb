@@ -30,8 +30,8 @@
 		Return cipherText
 	End Function
 	Protected Sub ButtonStudentLogin_Click(sender As Object, e As EventArgs)
-		Dim username As String = Request.Cookies("Sun").Value
-		Dim password As String = Request.Cookies("Spwd").Value
+		Dim username As String = TextBoxUsernameStudentLog.Text
+		Dim password As String = TextBoxPasswordStudentLog.Text
 		Dim chk As Boolean = StudentRememberMe.Checked
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()

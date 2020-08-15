@@ -6,59 +6,44 @@ Public Class master1
 
 
 
-	Private Sub lgout()
-		If (Not IsNothing(Session("username")) Or Not IsNothing(Session("adminuname"))) Then
-			'Remove all session
-			Session.RemoveAll()
-			'Destroy all Session objects
-			Session.Abandon()
-			'Redirect to homepage or login page
-			Response.Redirect("~/Tutorials/Week5/login.aspx")
-		End If
-	End Sub
+
 	Private ReadOnly _conString As String
 	Public Sub New()
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'If (Session("un") Is Nothing) Or (Session("un") = "Register / Login") Then
-		'	LabelUsername.Text = "Register / Login"
-		'	Logout.HRef = "Login"
-		'Else
-		'	LabelUsername.Text = Session("un") & " | Logout"
-		'	Logout.HRef = "Logout"
-		'End If
-		If (Not IsNothing(Session("adminuname"))) Then
-			lgregis.CssClass = "nav navbar-nav navbar-right"
-			lbllgged.CssClass = "btn btn-success text-white"
-			lbllgged.Text = "Welcome " + Session("adminuname")
+
+		If (Not IsNothing(Session("StudentUsername"))) Then
+			lbllgged.Text = Session("TutorUsername")
+			lgregis.Visible = False
 			btnlgout.Visible = True
-			pnlmanage.Visible = True
-			pnlmanagemov.Style.Add("visibility", "hidden")
-			Page.Controls.Remove(pnlmanagemov)
-			pnlprofile.Style.Add("visibility", "hidden")
-			Page.Controls.Remove(pnlprofile)
-			pnllog.Style.Add("visibility", "hidden")
-			Page.Controls.Remove(pnllog)
+			pnlmanage.Visible = False
+			pnlmanage.Style.Add("visibility", "hidden")
+			Page.Controls.Remove(pnlmanage)
+		End If
+		If (Not IsNothing(Session("TutorUsername"))) Then
+		End If
+		If (Not IsNothing(Session("AdminUsername"))) Then
 		End If
 
-		If (Not Page.IsPostBack) Then
-			If (Not IsNothing(Request.Cookies("Sun")) And Not IsNothing(Request.Cookies("Spwd"))) Then
-				btnlgout.Visible = True
-			End If
-			If (Not IsNothing(Request.Cookies("Tun")) And Not IsNothing(Request.Cookies("Tpwd"))) Then
-				btnlgout.Visible = True
-			End If
-			If (Not IsNothing(Request.Cookies("Aun")) And Not IsNothing(Request.Cookies("Apwd"))) Then
-				btnlgout.Visible = True
-			End If
-		End If
 
 
 	End Sub
-
-
+	Protected Sub btnlgout_Click(sender As Object, e As EventArgs)
+		lgout()
+	End Sub
+	Private Sub lgout()
+		If (Not IsNothing(Session("StudentUsername")) Or Not IsNothing(Session("TutorUsername")) Or Not IsNothing(Session("AdminUsername"))) Then
+			'Remove all session
+			Session.RemoveAll()
+			'Destroy all Session objects
+			Session.Abandon()
+			'Redirect to homepage or login page
+			Response.Redirect("~/Home.aspx")
+		End If
+	End Sub
+	Select Case TOP 1 * FROM Table ORDER BY ID DESC
 	'	Private Function Decrypt(cipherText As String) As String
 	'		Dim EncryptionKey As String = "MAKV2SPBNI99212"
 	'		Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(cipherText)

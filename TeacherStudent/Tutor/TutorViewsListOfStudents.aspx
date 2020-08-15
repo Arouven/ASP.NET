@@ -127,7 +127,7 @@
 				</div>
 
 			</div>
-		</div>
+		</div></div>
 		<hr />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
