@@ -45,18 +45,39 @@
 					cmd1.CommandType = CommandType.Text
 					'tblName=TutorTable | StudentTable
 					'tblId=TutorId | StudentId
-					cmd1.CommandText = "INSERT INTO " & tblName & " (FirstName, LastName, ProfilePictureUrl, Address,  BirthDate, PhoneNumber, Email, UserName, Password, Freeze) VALUES (@FirstName, @LastName, @ProfilePictureUrl, @Address, @BirthDate, @PhoneNumber, @Email, @UserName, @Password, @Freeze);"
+					If (RadioButtonListRegister.SelectedItem.Text = "Student") Then
+						cmd1.CommandText = "INSERT INTO StudentTable (FirstName, LastName, ProfilePictureUrl, Address,  BirthDate, PhoneNumber, Email, UserName, Password, Freeze) VALUES (@FirstName, @LastName, @ProfilePictureUrl, @Address, @BirthDate, @PhoneNumber, @Email, @UserName, @Password, @Freeze);"
 
-					cmd1.Parameters.AddWithValue("@FirstName", TextBoxFirstnameReg.Text)
-					cmd1.Parameters.AddWithValue("@LastName", TextBoxLastnameReg.Text)
-					cmd1.Parameters.AddWithValue("@ProfilePictureUrl", fileName)
-					cmd1.Parameters.AddWithValue("@Address", TextBoxAddress.Text)
-					cmd1.Parameters.AddWithValue("@BirthDate", dt)
-					cmd1.Parameters.AddWithValue("@PhoneNumber", textBoxPhoneNumber.Text)
-					cmd1.Parameters.AddWithValue("@Email", TextBoxEmail.Text)
-					cmd1.Parameters.AddWithValue("@UserName", TextBoxUsernameReg.Text)
-					cmd1.Parameters.AddWithValue("@Password", Encrypt(TextBoxConfirmReg.Text))
-					cmd1.Parameters.AddWithValue("@Freeze", 0)
+						cmd1.Parameters.AddWithValue("@FirstName", TextBoxFirstnameReg.Text)
+						cmd1.Parameters.AddWithValue("@LastName", TextBoxLastnameReg.Text)
+						cmd1.Parameters.AddWithValue("@ProfilePictureUrl", fileName)
+						cmd1.Parameters.AddWithValue("@Address", TextBoxAddress.Text)
+						cmd1.Parameters.AddWithValue("@BirthDate", dt)
+						cmd1.Parameters.AddWithValue("@PhoneNumber", textBoxPhoneNumber.Text)
+						cmd1.Parameters.AddWithValue("@Email", TextBoxEmail.Text)
+						cmd1.Parameters.AddWithValue("@UserName", TextBoxUsernameReg.Text)
+						cmd1.Parameters.AddWithValue("@Password", Encrypt(TextBoxConfirmReg.Text))
+						cmd1.Parameters.AddWithValue("@Freeze", 0)
+					ElseIf (RadioButtonListRegister.SelectedItem.Text = "Tutor") Then
+						cmd1.CommandText = "
+declare @lastTutorIdInserted int;
+INSERT INTO TutorTable (FirstName, LastName, ProfilePictureUrl, Address,  BirthDate, PhoneNumber, Email, UserName, Password, Freeze) VALUES (@FirstName, @LastName, @ProfilePictureUrl, @Address, @BirthDate, @PhoneNumber, @Email, @UserName, @Password, @Freeze);
+SET @lastTutorIdInserted = SCOPE_IDENTITY();
+Insert into certificationTable(Tutorid,certificationName) values (@lastTutorIdInserted,@certificationName);
+"
+
+						cmd1.Parameters.AddWithValue("@FirstName", TextBoxFirstnameReg.Text)
+						cmd1.Parameters.AddWithValue("@LastName", TextBoxLastnameReg.Text)
+						cmd1.Parameters.AddWithValue("@ProfilePictureUrl", fileName)
+						cmd1.Parameters.AddWithValue("@Address", TextBoxAddress.Text)
+						cmd1.Parameters.AddWithValue("@BirthDate", dt)
+						cmd1.Parameters.AddWithValue("@PhoneNumber", textBoxPhoneNumber.Text)
+						cmd1.Parameters.AddWithValue("@Email", TextBoxEmail.Text)
+						cmd1.Parameters.AddWithValue("@UserName", TextBoxUsernameReg.Text)
+						cmd1.Parameters.AddWithValue("@Password", Encrypt(TextBoxConfirmReg.Text))
+						cmd1.Parameters.AddWithValue("@Freeze", 0)
+						cmd1.Parameters.AddWithValue("@certificationName", textBoxCertification.Text)
+					End If
 
 					con1.Open()
 					cmd1.ExecuteNonQuery()

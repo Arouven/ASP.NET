@@ -13,10 +13,10 @@
 		Dim paraPending As String = ""
 		Dim paraRejected As String = ""
 		If Pending Then
-			paraPending = " and pending=1"
+			paraPending = " and pending=1 and StudentCourseAssociativeTable.subscribe=1"
 		End If
 		If Rejected Then
-			paraRejected = " and StudentCourseAssociativeTable.subscribe=0 and pending=0"
+			paraRejected = " and StudentCourseAssociativeTable.subscribe=1 and StudentCourseAssociativeTable.pending=0 and StudentCourseAssociativeTable.accepted=0"
 		End If
 		Dim sqlcom As String = "select count(*) 
 from StudentTable

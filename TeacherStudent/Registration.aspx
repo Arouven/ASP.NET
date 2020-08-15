@@ -74,6 +74,9 @@
 						<asp:ListItem>Tutor</asp:ListItem>
 					</asp:RadioButtonList>
 				</div>
+				<div class="form-group" id="hideme">
+					<asp:TextBox ID="textBoxCertification" CssClass="tbInput" placeholder="Certification" SetFocusOnError="True" runat="server"></asp:TextBox>
+				</div>
 				<asp:Button ID="ButtonRegister" ValidationGroup="registerGroup" CssClass="logregBtn" runat="server" Text="Register" OnClick="ButtonRegister_Click" />
 				<div class="form-group">
 					<p class="message">Already registered? <a class="openLoginForm" href="#">Sign In</a></p>
@@ -89,7 +92,6 @@
 
 	<script src='<%= ResolveClientUrl("~/js/jquery/validate/additional-methods.js") %>'></script>
 	<script>
-
 		var validator = $('#myform').validate({
 		});
 
@@ -111,7 +113,23 @@
 				required: "Insert a file..."
 			}
 		});
-
+		var div = $('#hideme');
+		div.hide();
+		var tb = $(`#<%=textBoxCertification.ClientID%>`);
+		$('input[type="radio"]').change(function () {
+			if ($(this).val() == 'Tutor') {
+				div.show();
+				tb.rules('add', {
+					required: true
+				});
+			}
+			else {
+				div.hide();
+				tb.rules('add', {
+					required: false
+				});
+			}
+		});
 
 		$(`#<%=TextBoxUsernameReg.ClientID%>`).focus(function () {
 			var firstName = $(`#<%=TextBoxFirstnameReg.ClientID%>`).val();

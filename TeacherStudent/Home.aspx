@@ -279,7 +279,7 @@
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
                         <span>The Best</span>
-                        <h3>Top Popular Courses</h3>
+                        <h3>Latest Courses</h3>
                     </div>
                 </div>
             </div>
@@ -289,8 +289,9 @@
                 <div class="col-12 col-lg-6">
                     <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
                         <div class="popular-course-content">
-                            <h5>Business for begginers</h5>
-                            <span>By Simon Smith   |  March 18, 2018</span>
+                            <h5>
+								<asp:Label ID="LabelCourseTitle1" runat="server" Text="Business for begginers"></asp:Label></h5>
+                            <span>By <asp:Label ID="LabelTutorName1" runat="server" Text="Simon Smith"></asp:Label>   |  <asp:Label ID="LabelDateSchedule1" runat="server" Text="March 18, 2018"></asp:Label></span>
                             <div class="course-ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -298,7 +299,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
+                            <p><asp:Label ID="LabelCourseDescription1" runat="server" Text="Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod."></asp:Label></p>
                             <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-1.jpg);"></div>
@@ -309,16 +310,17 @@
                 <div class="col-12 col-lg-6">
                     <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="500ms">
                         <div class="popular-course-content">
-                            <h5>Advanced HTML5</h5>
-                            <span>By Simon Smith   |  March 18, 2018</span>
-                            <div class="course-ratings">
+                            <h5>
+								<asp:Label ID="LabelCourseTitle2" runat="server" Text="Advanced HTML5"></asp:Label></h5>
+                            <span>By <asp:Label ID="LabelTutorName2" runat="server" Text="Simon Smith"></asp:Label>   |  <asp:Label ID="LabelDateSchedule2" runat="server" Text="March 18, 2018"></asp:Label></span>
+                            <div class="course-ratings">                           
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
+                            <p><asp:Label ID="LabelCourseDescription2" runat="server" Text="Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod."></asp:Label></p>
                             <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-2.jpg);"></div>
@@ -329,8 +331,8 @@
                 <div class="col-12 col-lg-6">
                     <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="600ms">
                         <div class="popular-course-content">
-                            <h5>Marketing 101</h5>
-                            <span>By Simon Smith   |  March 18, 2018</span>
+                            <h5>								<asp:Label ID="LabelCourseTitle3" runat="server" Text="Marketing 101"></asp:Label></h5>                           
+                            <span>By <asp:Label ID="LabelTutorName3" runat="server" Text="Simon Smith"></asp:Label>   |  <asp:Label ID="LabelDateSchedule3" runat="server" Text="March 18, 2018"></asp:Label></span>
                             <div class="course-ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -338,7 +340,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
+                            <p><asp:Label ID="LabelCourseDescription3" runat="server" Text="Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod."></asp:Label></p>
                             <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-3.jpg);"></div>
@@ -349,8 +351,9 @@
                 <div class="col-12 col-lg-6">
                     <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="700ms">
                         <div class="popular-course-content">
-                            <h5>Business for begginers</h5>
-                            <span>By Simon Smith   |  March 18, 2018</span>
+                            <h5><asp:Label ID="LabelCourseTitle4" runat="server" Text="Business for begginers"></asp:Label></h5>                           
+                           
+                            <span>By <asp:Label ID="LabelTutorName4" runat="server" Text="Simon Smith"></asp:Label>   |  <asp:Label ID="LabelDateSchedule4" runat="server" Text="March 18, 2018"></asp:Label></span>
                             <div class="course-ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -358,7 +361,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
+                           <p><asp:Label ID="LabelCourseDescription4" runat="server" Text="Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod."></asp:Label></p>
                             <a runat="server" href="~/User/ViewCourses.aspx" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-4.jpg);"></div>

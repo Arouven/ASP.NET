@@ -194,6 +194,15 @@ Partial Public Class Registration
 	Protected WithEvents RadioButtonListRegister As Global.System.Web.UI.WebControls.RadioButtonList
 
 	'''<summary>
+	'''textBoxCertification control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents textBoxCertification As Global.System.Web.UI.WebControls.TextBox
+
+	'''<summary>
 	'''ButtonRegister control.
 	'''</summary>
 	'''<remarks>

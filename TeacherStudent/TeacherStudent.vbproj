@@ -147,7 +147,6 @@
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
     </Content>
     <Content Include="User\Blog.aspx" />
-    <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -363,7 +362,6 @@
     <Content Include="Tutor\TutorViewsListOfStudents.aspx" />
     <Content Include="Tutor\TutorViewStudentInCourse.aspx" />
     <Content Include="Tutor\WebServiceGetStudStats.asmx" />
-    <Content Include="User\UserFunctionality.aspx" />
     <Content Include="Tutor\UpdateCourse.aspx" />
     <Content Include="Tutor\ViewCourse.aspx" />
     <Content Include="Tutor\ViewEvents.aspx" />
@@ -372,7 +370,6 @@
     <Content Include="WebServiceCourse.asmx" />
     <Content Include="Admin\WebServiceUpdateCategoryName.asmx" />
     <Content Include="WebServiceUserNameExist.asmx" />
-    <Content Include="Welcome.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -470,14 +467,6 @@
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ChangePassword.aspx.designer.vb">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ChangePassword.aspx.vb">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ClassCourse.vb" />
     <Compile Include="ClassSendMail.vb" />
     <Compile Include="Admin\ClassUpdateCategoryName.vb" />
     <Compile Include="ClassUserName.vb" />
@@ -705,13 +694,6 @@
       <DependentUpon>WebServiceGetStudStats.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="User\UserFunctionality.aspx.designer.vb">
-      <DependentUpon>UserFunctionality.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User\UserFunctionality.aspx.vb">
-      <DependentUpon>UserFunctionality.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Tutor\UpdateCourse.aspx.designer.vb">
       <DependentUpon>UpdateCourse.aspx</DependentUpon>
     </Compile>
@@ -765,13 +747,6 @@
     <Compile Include="WebServiceUserNameExist.asmx.vb">
       <DependentUpon>WebServiceUserNameExist.asmx</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Welcome.aspx.designer.vb">
-      <DependentUpon>Welcome.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Welcome.aspx.vb">
-      <DependentUpon>Welcome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

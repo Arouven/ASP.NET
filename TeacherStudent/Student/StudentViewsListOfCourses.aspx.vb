@@ -103,7 +103,7 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 			cmd.Parameters.AddWithValue("@CourseId", courseid)
 			Dim studentName As String = Session("StudentUsername")
 
-			sendMail(ClassSendMail.email, ClassSendMail.pass, Tutormail(courseid), studentName, courseName(courseid))
+			sendMail(ClassSendMail.email, ClassSendMail.pass, Tutormail(courseid), studentName, courseName(courseid), ClassSendMail.tutorViewStudentUrl)
 
 			cmd.ExecuteNonQuery()
 			con.Close()
@@ -112,7 +112,7 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 
 
 	End Sub
-	Private Sub sendMail(sentFrom As String, senderMailPassword As String, sendTo As String, studentName As String, courseName As String)
+	Private Sub sendMail(sentFrom As String, senderMailPassword As String, sendTo As String, studentName As String, courseName As String, tutorViewStudentUrl As String)
 
 		Dim msg As New Net.Mail.MailMessage()
 		Dim sc As New Net.Mail.SmtpClient()
@@ -123,6 +123,7 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 			msg.IsBodyHtml = True
 			Dim msgBody As New StringBuilder()
 			msgBody.Append("Dear Tutor, " + studentName + " Want to subscribe to your course: " + courseName)
+			msgBody.Append("<a href='" + tutorViewStudentUrl + "'>Click here to view your Students.</a>")
 			msg.Body = msgBody.ToString()
 			sc.Host = "smtp.gmail.com"
 			sc.Port = 587

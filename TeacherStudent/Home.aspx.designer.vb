@@ -41,6 +41,150 @@ Partial Public Class Home
 	Protected WithEvents LabelNoStudents As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
+	'''LabelCourseTitle1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseTitle1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelTutorName1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelTutorName1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelDateSchedule1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelDateSchedule1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseDescription1 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseDescription1 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseTitle2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseTitle2 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelTutorName2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelTutorName2 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelDateSchedule2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelDateSchedule2 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseDescription2 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseDescription2 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseTitle3 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseTitle3 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelTutorName3 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelTutorName3 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelDateSchedule3 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelDateSchedule3 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseDescription3 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseDescription3 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseTitle4 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseTitle4 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelTutorName4 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelTutorName4 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelDateSchedule4 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelDateSchedule4 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''LabelCourseDescription4 control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents LabelCourseDescription4 As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
 	'''AdRotator1 control.
 	'''</summary>
 	'''<remarks>

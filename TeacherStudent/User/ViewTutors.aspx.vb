@@ -13,7 +13,7 @@ Public Class ViewTutors1
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "SELECT TutorTable.TutorId, TutorTable.UserName, TutorTable.ProfilePictureUrl FROM TutorTable inner join CertificateTable on CertificateTable.TutorId=TutorTable.TutorId;"
+		cmd.CommandText = "SELECT TutorTable.TutorId, TutorTable.UserName, TutorTable.ProfilePictureUrl, certificationTable.certificationname FROM TutorTable inner join CertificationTable on CertificationTable.TutorId=TutorTable.TutorId;"
 
 		'Create DataAdapter
 		Dim myDataAdapter As New SqlClient.SqlDataAdapter(cmd)

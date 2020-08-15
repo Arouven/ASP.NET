@@ -43,7 +43,7 @@ Public Class master1
 			Response.Redirect("~/Home.aspx")
 		End If
 	End Sub
-	Select Case TOP 1 * FROM Table ORDER BY ID DESC
+	'Select Case TOP 1 * FROM Table ORDER BY ID DESC
 	'	Private Function Decrypt(cipherText As String) As String
 	'		Dim EncryptionKey As String = "MAKV2SPBNI99212"
 	'		Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(cipherText)
