@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorLogin.aspx.vb" Inherits="TeacherStudent.TutorLogin" %>
+﻿<%@ Page Title="Tutor Login" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorLogin.aspx.vb" Inherits="TeacherStudent.TutorLogin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 	<link rel="stylesheet" href="~/css/loginStyle.css">

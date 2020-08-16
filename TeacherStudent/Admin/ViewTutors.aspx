@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="ViewTutors.aspx.vb" Inherits="TeacherStudent.ViewTutors" %>
+﻿<%@ Page Title="View Tutor" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="ViewTutors.aspx.vb" Inherits="TeacherStudent.ViewTutors" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
 	<div class="container">
 		<div class="row form-group" runat="server">
 			<div class="col-sm-6 " style="float: left">
-				<h2>List of Movies</h2>
+				<h2>List of Tutors</h2>
 			</div>
 			<div class="col-sm-3" style="float: right;">
 				<div class="input-group">

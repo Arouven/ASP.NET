@@ -75,7 +75,6 @@ MaterialAssociativeTable.MaterialId,
 MaterialAssociativeTable.CourseId,
 MaterialAssociativeTable.MaterialTypeId,
 MaterialAssociativeTable.MaterialPathUrl,
-MaterialAssociativeTable.DatePosted,
 MaterialAssociativeTable.MaterialName,
 MaterialTypeTable.MaterialTypeName
 from MaterialAssociativeTable
@@ -113,7 +112,6 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		MaterialAssociativeTable.Columns.Add("CourseId")
 		MaterialAssociativeTable.Columns.Add("MaterialTypeId")
 		MaterialAssociativeTable.Columns.Add("MaterialPathUrl")
-		MaterialAssociativeTable.Columns.Add("DatePosted")
 		MaterialAssociativeTable.Columns.Add("MaterialName")
 
 		Dim counter As Integer = Convert.ToInt32(SendA.Value)
@@ -139,12 +137,11 @@ where MaterialAssociativeTable.courseid=@courseid;"
 				End If
 				Dim MaterialName As String = IO.Path.GetFileName(PostedFile.FileName)
 				Dim MaterialPathUrl As String = customfolder & MaterialName
-				Dim DatePosted As DateTime = DateTime.Now
 
 				If DoesExist(MaterialPathUrl) Then
 					noAlreadyExist += 1
 				Else
-					MaterialAssociativeTable.Rows.Add(courseId, MaterialTypeId, MaterialPathUrl, DatePosted, MaterialName)
+					MaterialAssociativeTable.Rows.Add(courseId, MaterialTypeId, MaterialPathUrl, MaterialName)
 					PostedFile.SaveAs(Server.MapPath(customfolder) + MaterialName)
 					noUploaded += 1
 				End If
@@ -158,7 +155,7 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		cmd.CommandType = CommandType.StoredProcedure
 		cmd.CommandText = "ProcedureInsertMaterialAssociative"
 		Dim param1 As SqlClient.SqlParameter = New SqlClient.SqlParameter
-		param1.ParameterName = "@TypeMaterialAssociativeTable"
+		param1.ParameterName = "@TypeMaterialAssociativeeTable"
 		param1.Value = MaterialAssociativeTable
 		cmd.Parameters.Add(param1)
 		con.Open()
@@ -298,7 +295,7 @@ where MaterialAssociativeTable.courseid=@courseid;"
 	End Sub
 
 	Protected Sub btnUpload_Click(sender As Object, e As EventArgs)
-		uploadMaterial("tom") 'will be taken from session
+		uploadMaterial(Session("TutorUsername"))
 	End Sub
 
 	Protected Sub btnUpdate_Click(sender As Object, e As EventArgs)
@@ -315,18 +312,24 @@ where MaterialAssociativeTable.courseid=@courseid;"
 	End Sub
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'LoginRequired(mySession)
-		Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
-		mydate = mydate.AddDays(1)
-		TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
-		courseId = Convert.ToInt32(Request.QueryString("id"))
-		If Not Page.IsPostBack Then
-			populateCategory()
-			populateMaterialName()
-			CheckCheckbox()
-			PopulateTexboxes()
-			GetMaterialList()
+		If Not IsNothing(Session("TutorId")) Then
+			Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
+			mydate = mydate.AddDays(1)
+			TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
+			courseId = Convert.ToInt32(Request.QueryString("id"))
+			If Not Page.IsPostBack Then
+				populateCategory()
+				populateMaterialName()
+				CheckCheckbox()
+				PopulateTexboxes()
+				GetMaterialList()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
+
+
+		'LoginRequired(mySession)
+
 
 	End Sub
 

@@ -5,23 +5,28 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'LoginRequired(Session("username"))
+
+		If Not IsNothing(Session("AdminId")) Then
+
+			FillDataList(DataListStudentUnfreeze, "StudentTable", False)
+			FillDataList(DataListTutorUnfreeze, "TutorTable", False)
+			FillDataList(DataListStudentFreeze, "StudentTable", True)
+			FillDataList(DataListTutorFreeze, "TutorTable", True)
 
 
-		FillDataList(DataListStudentUnfreeze, "StudentTable", False)
-		FillDataList(DataListTutorUnfreeze, "TutorTable", False)
-		FillDataList(DataListStudentFreeze, "StudentTable", True)
-		FillDataList(DataListTutorFreeze, "TutorTable", True)
+			LabelTotalStudentUnfreeze.Text = "Number of Student not freeze In Database: " & NumberInTable("StudentTable", True, False)
+			LabelTotalTutorUnfreeze.Text = "Number of Tutor not freeze In Database: " & NumberInTable("TutorTable", True, False)
+			LabelTotalStudentFreeze.Text = "Number of Student freeze In Database: " & NumberInTable("StudentTable", True, True)
+			LabelTotalTutorFreeze.Text = "Number of Tutor freeze In Database: " & NumberInTable("TutorTable", True, True)
 
 
-		LabelTotalStudentUnfreeze.Text = "Number of Student not freeze In Database: " & NumberInTable("StudentTable", True, False)
-		LabelTotalTutorUnfreeze.Text = "Number of Tutor not freeze In Database: " & NumberInTable("TutorTable", True, False)
-		LabelTotalStudentFreeze.Text = "Number of Student freeze In Database: " & NumberInTable("StudentTable", True, True)
-		LabelTotalTutorFreeze.Text = "Number of Tutor freeze In Database: " & NumberInTable("TutorTable", True, True)
+			LabelNoStudents.Text = "Number of Student not freeze In Database: " & (NumberInTable("StudentTable", True, False) + NumberInTable("StudentTable", True, True))
+			LabelNoCourses.Text = "Number of Course In Database: " & NumberInTable("CourseTable", False, Nothing)
 
 
-		LabelNoStudents.Text = "Number of Student not freeze In Database: " & (NumberInTable("StudentTable", True, False) + NumberInTable("StudentTable", True, True))
-		LabelNoCourses.Text = "Number of Course In Database: " & NumberInTable("CourseTable", False, Nothing)
+		Else Response.Redirect("~/Admin/AdminLogin.aspx")
+		End If
+
 	End Sub
 
 
@@ -52,11 +57,6 @@
 		End Using
 		myDataList.DataSource = myDataSet
 		myDataList.DataBind()
-	End Sub
-	Private Sub LoginRequired(mySession)
-		If Not IsNothing(mySession) Then
-		Else Response.Redirect("~/Home.aspx")
-		End If
 	End Sub
 	Private Function NumberInTable(tableName As String, tableContainFreeze As Boolean, freeze As Boolean)
 		Dim con As New SqlClient.SqlConnection(_conString)

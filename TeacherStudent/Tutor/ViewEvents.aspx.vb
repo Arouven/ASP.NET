@@ -40,8 +40,13 @@
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		' LoginRequired(mySession)
-		TutorId = 3 'Request.QueryString("id")
-		GetEventList()
+		If Not IsNothing(Session("TutorId")) Then
+			TutorId = Session("TutorId")
+			GetEventList()
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
+		End If
+
+
 	End Sub
 
 	Protected Sub btnDelete_Click(sender As Object, e As EventArgs)

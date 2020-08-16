@@ -27,7 +27,7 @@ from coursetable
 inner join  categoryassociativetable on CategoryAssociativeTable.CourseId=coursetable.CourseId 
 inner join CategoryTable on CategoryTable.CategoryId=categoryassociativetable.CategoryId
 where coursetable.CourseId=@courseid;"
-		cmd.Parameters.AddWithValue("@courseid", courseid)
+		cmd.Parameters.AddWithValue("@courseid", courseId)
 		Dim reader As SqlClient.SqlDataReader
 		con.Open()
 		reader = cmd.ExecuteReader()
@@ -67,7 +67,7 @@ MaterialTypeTable.MaterialTypeName
 from MaterialAssociativeTable
 inner join MaterialTypeTable on MaterialTypeTable.MaterialTypeId=MaterialAssociativeTable.MaterialTypeId
 where MaterialAssociativeTable.courseid=@courseid;"
-		cmd.Parameters.AddWithValue("@courseid", courseid)
+		cmd.Parameters.AddWithValue("@courseid", courseId)
 		Dim sqlda As New SqlClient.SqlDataAdapter(cmd)
 		Dim dt As New DataTable()
 		sqlda.Fill(dt)
@@ -76,13 +76,13 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		gvs.DataBind()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		studentId = 1 'session
-		courseId = Convert.ToInt32(Request.QueryString("id"))
-		showCourseDetails()
-		'GetMaterialList()
-		If Not IsPostBack Then
-			'populateMaterialName()
+		If Not IsNothing(Session("StudentId")) Then
+			studentId = Session("StudentId")
+			courseId = Convert.ToInt32(Request.QueryString("id"))
+			showCourseDetails()
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
 		End If
+
 	End Sub
 
 
@@ -115,7 +115,7 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
 		cmd.CommandText = "SELECT * FROM StudentCourseAssociativeTable WHERE  Accepted=1 and Pending=0 and Subscribe=1 and StudentId=@StudentId and CourseId=@CourseId "
-		cmd.Parameters.AddWithValue("@StudentId", StudentId)
+		cmd.Parameters.AddWithValue("@StudentId", studentId)
 		cmd.Parameters.AddWithValue("@CourseId", courseId)
 		Dim reader As SqlClient.SqlDataReader
 		con.Open()

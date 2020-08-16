@@ -250,10 +250,10 @@
 			$('[name*="ddl"]').each(function () { $(this).rules('add', { required: true, messages: { required: "Please Select a Type" } }); });
 			$('[name*="file"]').each(function () { $(this).rules('add', { required: true, filesize: 3 }); });
 			$('#<%=TextBoxCourseName.ClientID%>').rules('add', { required: false });
-		$('#<%=TextBoxScheduleDate.ClientID%>').rules('add', { required: false });
-		$('#<%=TextBoxCourseDescription.ClientID%>').rules('add', { required: false });
-		$('#<%=TextBoxAimsAndObjectives.ClientID%>').rules('add', { required: false });
-	});
+			$('#<%=TextBoxScheduleDate.ClientID%>').rules('add', { required: false });
+			$('#<%=TextBoxCourseDescription.ClientID%>').rules('add', { required: false });
+			$('#<%=TextBoxAimsAndObjectives.ClientID%>').rules('add', { required: false });
+		});
 		$(`#<%=btnUpdate.ClientID%>`).click(function () {
 			$('#myform').validate();
 			$('[name*="ddl"]').each(function () { $(this).rules('add', { required: false }); });
@@ -266,7 +266,7 @@
 
 
 
-
+		</script><script>
 		var counter = 1;
 		function AddFileUpload() {
 			var options = document.getElementById(`<%=ddl0.ClientID%>`).innerHTML;
@@ -289,13 +289,13 @@
 				'</div>';
 			document.getElementById("duplicateHere").appendChild(div);
 			document.getElementById("<%=SendA.ClientID%>").value = counter;
-			document.getElementById("ddl" + counter).selectedIndex = "0";
-			counter++;
-		}
+						 document.getElementById("ddl" + counter).selectedIndex = "0";
+						 counter++;
+					 }
 
-		function RemoveFileUpload(div) {
-			document.getElementById("duplicateHere").removeChild(div.parentNode.parentNode.parentNode);
-		}
+					 function RemoveFileUpload(div) {
+						 document.getElementById("duplicateHere").removeChild(div.parentNode.parentNode.parentNode);
+					 }
 
 	</script>
 </asp:Content>

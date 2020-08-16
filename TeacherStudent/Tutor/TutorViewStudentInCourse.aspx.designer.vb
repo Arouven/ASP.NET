@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class TutorViewStudentInCourse
 
 	'''<summary>
-	'''LabelTotalTutorUnfreeze control.
+	'''Labelcoursename control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents LabelTotalTutorUnfreeze As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents Labelcoursename As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''UpdatePanel1 control.

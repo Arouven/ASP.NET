@@ -76,7 +76,6 @@
 		MaterialAssociativeTable.Columns.Add("CourseId")
 		MaterialAssociativeTable.Columns.Add("MaterialTypeId")
 		MaterialAssociativeTable.Columns.Add("MaterialPathUrl")
-		MaterialAssociativeTable.Columns.Add("DatePosted")
 		MaterialAssociativeTable.Columns.Add("MaterialName")
 
 		Dim counter As Integer = Convert.ToInt32(SendA.Value)
@@ -102,12 +101,11 @@
 				End If
 				Dim MaterialName As String = IO.Path.GetFileName(PostedFile.FileName)
 				Dim MaterialPathUrl As String = customfolder & MaterialName
-				Dim DatePosted As DateTime = DateTime.Now
 
 				If DoesExist(MaterialPathUrl) Then
 					noAlreadyExist += 1
 				Else
-					MaterialAssociativeTable.Rows.Add(courseid, MaterialTypeId, MaterialPathUrl, DatePosted, MaterialName)
+					MaterialAssociativeTable.Rows.Add(courseid, MaterialTypeId, MaterialPathUrl, MaterialName)
 					PostedFile.SaveAs(Server.MapPath(customfolder) + MaterialName)
 					noUploaded += 1
 				End If
@@ -121,7 +119,7 @@
 		cmd.CommandType = CommandType.StoredProcedure
 		cmd.CommandText = "ProcedureMaterialAssociativeCategoryAssociative"
 		Dim param1 As SqlClient.SqlParameter = New SqlClient.SqlParameter
-		param1.ParameterName = "@TypeMaterialAssociativeTable"
+		param1.ParameterName = "@TypeMaterialAssociativeeTable"
 		param1.Value = MaterialAssociativeTable
 		cmd.Parameters.Add(param1)
 		Dim param2 As SqlClient.SqlParameter = New SqlClient.SqlParameter
@@ -132,12 +130,6 @@
 		con.Open()
 		cmd.ExecuteNonQuery()
 		con.Close()
-
-
-
-
-
-
 		Response.Write("<script>
 var x=confirm('" & noUploaded & " files uploaded & " & noAlreadyExist & " already exist'); 
 if (x == true){window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
@@ -189,14 +181,19 @@ else{window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
 	End Function
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'LoginRequired(mySession)
-		tutorid = 3 ''''''''''''''''''''''''''''''''''Convert.ToInt32(Request.QueryString("id")) 'tutorid
-		Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
-		mydate = mydate.AddDays(1)
-		TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
-		If Not IsPostBack Then
-			populateCategory()
-			populateMaterialName()
+		If Not IsNothing(Session("TutorId")) Then
+			tutorid = Session("TutorId")
+			Dim mydate As DateTime = DateTime.Now.ToString("yyyy-MM-ddThh:mm")
+			mydate = mydate.AddDays(1)
+			TextBoxScheduleDate.Attributes("min") = mydate.ToString("yyyy-MM-ddThh:mm")
+			If Not IsPostBack Then
+				populateCategory()
+				populateMaterialName()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
+
+
 
 	End Sub
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
@@ -204,7 +201,7 @@ else{window.location.href = '../Tutor/TutorCRUDCourse.aspx';}
 			Label1.Text = "Please select at least one"
 		Else
 			Label1.Text = ""
-			uploadCourse("tom") 'will be taken from session
+			uploadCourse(Session("TutorUsername")) 'will be taken from session
 		End If
 	End Sub
 

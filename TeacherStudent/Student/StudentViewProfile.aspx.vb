@@ -36,8 +36,10 @@
 	End Sub
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-		StudentId = 32 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+		If Not IsNothing(Session("StudentId")) Then
+			StudentId = Session("StudentId")
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
+		End If
 		If Not IsPostBack Then
 			showCourseDetails()
 		End If
@@ -46,7 +48,7 @@
 
 
 	Protected Sub btnUpdate_Click(sender As Object, e As EventArgs)
-		Response.Redirect("~/Student/StudentUpdateprofile")
+		Response.Redirect("~/Student/StudentUpdatesprofile")
 	End Sub
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="StudentHome.aspx.vb" Inherits="TeacherStudent.StudentHome" %>
+﻿<%@ Page Title="Dashboard" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="StudentHome.aspx.vb" Inherits="TeacherStudent.StudentHome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 
@@ -36,7 +36,7 @@
 						</div>
 						<div class="col-24 col-sm-12 col-md-6">
 							<div class="single-cool-fact text-center">
-								<i class="icon-email"></i>
+								<i class="icon-contract"></i>
 								<h3><span class="counter">
 									<asp:Label ID="LabelMyTotalCourses" runat="server" Text="0"></asp:Label></span></h3>
 								<p>Sent Subscription</p>
@@ -76,7 +76,7 @@
 						</div>
 						<div class="col-16 col-sm-8 col-md-4">
 							<div class="single-cool-fact text-center">
-								<i class="icon-assistance" style="color: green;"></i>
+								<i class="icon-email" style="color: green;"></i>
 								<h3><span class="counter">
 									<asp:Label ID="LabelEvents" runat="server" Text="0"></asp:Label></span></h3>
 								<p>Total Events</p>

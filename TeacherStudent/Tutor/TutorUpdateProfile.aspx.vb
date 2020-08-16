@@ -34,10 +34,12 @@
 		con.Close()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-		TutorId = 28
-		If Not IsPostBack Then
-			showCourseDetails()
+		If Not IsNothing(Session("TutorId")) Then
+			TutorId = Session("TutorId")
+			If Not IsPostBack Then
+				showCourseDetails()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
 
 	End Sub
@@ -136,6 +138,7 @@
 		'create a parameterized query
 		cmd.Parameters.AddWithValue("@UserName", userName)
 		'Create DataReader
+		con.Open()
 		Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar)
 		If count > 1 Then
 			Return True 'exist

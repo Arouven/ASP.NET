@@ -7,25 +7,29 @@
 	End Sub
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'If (Not IsNothing(Session("adminuname"))) Then
-		'	Response.Redirect("~/Tutorials/Week5/login.aspx")
-		'End If
-		StudentId = 1 ''''''''''''''''''''''''''''''''''''session
-		HiddenFieldStudentId.Value = StudentId
-		If Not IsPostBack Then
-			BindCategoryData()
+		If Not IsNothing(Session("StudentId")) Then
+			StudentId = Session("StudentId")
+			If Not IsPostBack Then
+				BindCategoryData()
+			End If
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
+
+			HiddenFieldStudentId.Value = StudentId
 		End If
+
+
 	End Sub
 	Private Sub BindCategoryData()
 		Dim sqlCon As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.CommandType = CommandType.Text
 		cmd.CommandText = "
-SELECT TutorTable.UserName,
-CourseTable.Courseid,CourseTable.CourseName,CourseTable.DateSchedule
+SELECT TutorTable.UserName as username,
+CourseTable.Courseid as courseid,CourseTable.CourseName as coursename,CourseTable.DateSchedule as dateschedule
 FROM CourseTable
 inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 "
+
 		cmd.Connection = sqlCon
 		Dim da As New SqlClient.SqlDataAdapter(cmd)
 		'Create a DataTable
@@ -62,37 +66,53 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 		reader.Close()
 		con.Close()
 	End Function
-	Private Function Tutormail(courseId)
-		Dim con As New SqlClient.SqlConnection(_conString)
-		Dim cmd As New SqlClient.SqlCommand()
-		cmd.Connection = con
-		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "SELECT Email FROM TutorTable inner join courseTable on TutorTable.Tutorid=courseTable.Tutorid WHERE CourseId=@CourseId "
-		cmd.Parameters.AddWithValue("@CourseId", courseId)
+	Private Function Tutormail(courseId As Integer) As String
+		Dim con2 As New SqlClient.SqlConnection(_conString)
+		Dim cmd2 As New SqlClient.SqlCommand()
+		Dim mail As String = ""
+		cmd2.Connection = con2
+		cmd2.CommandType = CommandType.Text
+		cmd2.CommandText = "SELECT TutorTable.Email FROM TutorTable inner join CourseTable on TutorTable.Tutorid=CourseTable.Tutorid WHERE CourseId=@CourseId "
+		Dim cId As Integer = Convert.ToInt32(courseId)
+		cmd2.Parameters.AddWithValue("@CourseId", cId)
 		Dim reader As SqlClient.SqlDataReader
-		con.Open()
-		reader = cmd.ExecuteReader()
-		Return reader(0)
+		con2.Open()
+		reader = cmd2.ExecuteReader()
+		While reader.Read
+			mail = reader("Email").ToString
+		End While
+
 		reader.Close()
-		con.Close()
+		con2.Close()
+		Return mail
 	End Function
 	Private Function courseName(courseId)
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
+		Dim cname As String = ""
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "SELECT coursename FROM courseTable  WHERE CourseId=@CourseId "
+		cmd.CommandText = "SELECT coursename FROM courseTable WHERE CourseId=@CourseId "
 		cmd.Parameters.AddWithValue("@CourseId", courseId)
 		Dim reader As SqlClient.SqlDataReader
 		con.Open()
 		reader = cmd.ExecuteReader()
-		Return reader(0)
+		While reader.Read
+			cname = reader("coursename")
+		End While
+
 		reader.Close()
 		con.Close()
+		Return cname
 	End Function
 	Protected Sub btnSubscribe_Click(sender As Object, e As EventArgs)
-		Dim courseid As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
+		Dim btn As LinkButton = CType(sender, LinkButton)
+		Dim courseid As Integer = btn.CommandArgument
+		Dim cName As String = courseName(courseid)
+		Dim tEMail As String = Tutormail(courseid).ToString
 		If Not DoesSubscribe(courseid) Then
+			Dim studentName As String = Session("StudentUsername")
+			sendMail(ClassSendMail.email, ClassSendMail.pass, tEMail, studentName, cName, ClassSendMail.tutorViewStudentUrl)
 			Dim con As New SqlClient.SqlConnection(_conString)
 			Dim cmd As New SqlClient.SqlCommand()
 			cmd.Connection = con
@@ -101,10 +121,6 @@ inner join TutorTable on CourseTable.TutorId= TutorTable.TutorId
 			cmd.CommandText = "insert into StudentCourseAssociativeTable(StudentId,CourseId,Subscribe,Pending,Accepted) values (@StudentId,@CourseId,1,1,0);"
 			cmd.Parameters.AddWithValue("@StudentId", StudentId)
 			cmd.Parameters.AddWithValue("@CourseId", courseid)
-			Dim studentName As String = Session("StudentUsername")
-
-			sendMail(ClassSendMail.email, ClassSendMail.pass, Tutormail(courseid), studentName, courseName(courseid), ClassSendMail.tutorViewStudentUrl)
-
 			cmd.ExecuteNonQuery()
 			con.Close()
 			Response.Redirect(Request.RawUrl)

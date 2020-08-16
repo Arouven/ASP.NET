@@ -38,11 +38,14 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		If Not IsNothing(Session("TutorId")) Then
+			StudentId = Convert.ToInt32(Request.QueryString("StudentId"))
+			CourseId = Convert.ToInt32(Request.QueryString("CourseId"))
+			'LoginRequired()
+			showDetails()
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
+		End If
 
-		StudentId = Convert.ToInt32(Request.QueryString("StudentId"))
-		CourseId = Convert.ToInt32(Request.QueryString("CourseId"))
-		'LoginRequired()
-		showDetails()
 	End Sub
 
 
@@ -76,10 +79,7 @@
 		con.Close()
 	End Sub
 
-
-
-
-
-
-
+	Protected Sub LinkButtonBack_Click(sender As Object, e As EventArgs)
+		Response.Redirect("~/Tutor/TutorViewStudentInCourse.aspx?id=" & CourseId)
+	End Sub
 End Class

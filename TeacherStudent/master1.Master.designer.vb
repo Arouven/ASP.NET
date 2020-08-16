@@ -59,22 +59,49 @@ Partial Public Class master1
 	Protected WithEvents lgregis As Global.System.Web.UI.WebControls.Panel
 
 	'''<summary>
-	'''lbllgged control.
+	'''btnlogout control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents lbllgged As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents btnlogout As Global.System.Web.UI.WebControls.LinkButton
 
 	'''<summary>
-	'''btnlgout control.
+	'''guestlinknav control.
 	'''</summary>
 	'''<remarks>
 	'''Auto-generated field.
 	'''To modify move field declaration from designer file to code-behind file.
 	'''</remarks>
-	Protected WithEvents btnlgout As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents guestlinknav As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+	'''<summary>
+	'''Adminlinknav control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents Adminlinknav As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+	'''<summary>
+	'''studentlinknav control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents studentlinknav As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+	'''<summary>
+	'''tutorlinknav control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents tutorlinknav As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
 	'''<summary>
 	'''ContentPlaceHolder1 control.

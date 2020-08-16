@@ -163,7 +163,7 @@ Insert into certificationTable(Tutorid,certificationName) values (@lastTutorIdIn
 						Response.Redirect("~/Tutor/TutorHome.aspx")
 					End If
 				End If
-				End If
+			End If
 		End If
 	End Sub
 

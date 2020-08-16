@@ -47,48 +47,10 @@ Public Class ViewTutors1
 			sqlParam = "UserName LIKE '%' + @UserName + '%'"
 		End If
 
-		cmd.CommandText = "select * From TutorTable ;" ' & sqlParam
-		'		'"Select distinct Username,CategoryName from CourseTable
-		'inner join  TutorTable on CourseTable.TutorId=TutorTable.TutorId 
-		'inner join  CategoryAssociativeTable on CourseTable.CourseId=CategoryAssociativeTable.CourseId 
-		'inner join  CategoryTable on CategoryAssociativeTable.CategoryId=CategoryTable.CategoryId 
-		' WHERE " & sqlParam & "
-		';" '"SELECT TutorId, UserName,  ProfilePictureUrl FROM TutorTable WHERE " + sqlParam + sqlParamCat
-		'cmd.Parameters.AddWithValue("@UserName", TextBox1.Text.Trim())
-		'Dim table As New DataTable()
-		'Dim da As New SqlClient.SqlDataAdapter(cmd)
+		cmd.CommandText = "select * From TutorTable where " + sqlParam
 		con.Open()
 		Dim rdr As SqlClient.SqlDataReader = cmd.ExecuteReader
 
-		'If rdr.HasRows Then
-		'	Do While rdr.Read()
-
-		'		Dim item As ListViewItem
-
-		'		item.Text = rdr("au_lname")
-		'		item.SubItems.Add(rdr("au_fname"))
-		'		item.SubItems.Add(rdr("zip"))
-
-		'		lvMovies.Items.Add(item)
-
-		'	Loop
-		'Else
-		'	MsgBox("no records")
-		'End If
-		'con.Open()
-		'Dim dr As SqlClient.SqlDataReader
-		'dr = cmd.ExecuteReader
-
-		'While (dr.Read)
-		'	Dim itm As ListViewItem = New ListViewItem(dr(0).ToString)
-		'	lvMovies.Items.Add(itm)
-
-
-		'End While
-		'Dim obj As ListViewItem = New ListViewItem(,)
-		'da.Fill(table)
-		'lvMovies.DataSource = table
-		'lvMovies.DataBind()
 	End Sub
 	Protected Sub lvMovies_PagePropertiesChanging(sender As Object, e As PagePropertiesChangingEventArgs)
 		TryCast(lvMovies.FindControl("DataPager1"), DataPager).SetPageProperties(e.StartRowIndex, e.MaximumRows, False)

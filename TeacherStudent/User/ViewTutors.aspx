@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="ViewTutors.aspx.vb" Inherits="TeacherStudent.ViewTutors1" %>
+﻿<%@ Page Title="All Tutors" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="ViewTutors.aspx.vb" Inherits="TeacherStudent.ViewTutors1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 </asp:Content>
@@ -42,10 +42,10 @@
 										<div class="teachers-info mt-30">
 
 											<h5><%# Eval("UserName")%></h5>
-											<span><%# Eval("CertificaionName")%></span>
+											<span><%# Eval("CertificationName")%></span>
 										</div>
 
-										<asp:LinkButton ID="LinkButton1" runat="server" Text="Request access" CommandArgument='<%#Eval("TutorId") %>' CommandName="btnAccess" CssClass="btn btn-primary" />
+										
 									</div>
 								</div>
 							</div>

@@ -78,9 +78,7 @@
 					<asp:TextBox ID="textBoxCertification" CssClass="tbInput" placeholder="Certification" SetFocusOnError="True" runat="server"></asp:TextBox>
 				</div>
 				<asp:Button ID="ButtonRegister" ValidationGroup="registerGroup" CssClass="logregBtn" runat="server" Text="Register" OnClick="ButtonRegister_Click" />
-				<div class="form-group">
-					<p class="message">Already registered? <a class="openLoginForm" href="#">Sign In</a></p>
-				</div>
+				
 			</div>
 			<asp:Label ID="lblStatus" runat="server"></asp:Label>
 		</div>

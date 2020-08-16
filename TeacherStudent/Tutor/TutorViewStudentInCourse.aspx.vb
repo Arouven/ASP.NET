@@ -34,6 +34,8 @@ where  StudentCourseAssociativeTable.courseId=@courseId;"
 		End Using
 		myDataList.DataSource = myDataSet
 		myDataList.DataBind()
+
+
 	End Sub
 	Private Sub LoginRequired(mySession)
 		If Not IsNothing(mySession) Then
@@ -41,17 +43,39 @@ where  StudentCourseAssociativeTable.courseId=@courseId;"
 		End If
 	End Sub
 
-
+	Private Function getCourseName(courseid)
+		Dim con As New SqlClient.SqlConnection(_conString)
+		Dim cmd As New SqlClient.SqlCommand()
+		Dim cname As String = ""
+		cmd.Connection = con
+		cmd.CommandType = CommandType.Text
+		cmd.CommandText = "SELECT coursename FROM courseTable WHERE CourseId=@CourseId "
+		cmd.Parameters.AddWithValue("@CourseId", courseid)
+		Dim reader As SqlClient.SqlDataReader
+		con.Open()
+		reader = cmd.ExecuteReader()
+		While reader.Read
+			cname = reader("coursename")
+		End While
+		reader.Close()
+		con.Close()
+		Return cname
+	End Function
 
 
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		courseid = Request.QueryString("id")
-		'FillDataList(DataListTutorUnfreeze)
-		If Not Page.IsPostBack Then
-			Search()
-			GetCategory()
+		If Not IsNothing(Session("TutorId")) Then
+			courseid = Request.QueryString("id")
+			Labelcoursename.Text = getCourseName(courseid)
+			'FillDataList(DataListTutorUnfreeze)
+			If Not Page.IsPostBack Then
+				Search()
+				GetCategory()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
+
 	End Sub
 
 	Protected Sub GetCategory()
@@ -78,11 +102,11 @@ where  StudentCourseAssociativeTable.courseId=@courseId;"
 
 
 		If ddlCategory.SelectedValue = "Rejected" Then
-			param2 = "and StudentCourseAssociativeTable.accepted=0 and StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
+			param2 = " and StudentCourseAssociativeTable.accepted=0 and StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
 		ElseIf ddlCategory.SelectedValue = "Pending" Then
-			param2 = "and StudentCourseAssociativeTable.Pending=1 and StudentCourseAssociativeTable.subscribe=1 "
+			param2 = " and StudentCourseAssociativeTable.Pending=1 and StudentCourseAssociativeTable.subscribe=1 "
 		ElseIf ddlCategory.SelectedValue = "Accepted" Then
-			param2 = "and StudentCourseAssociativeTable.accepted=1 and  StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
+			param2 = " and StudentCourseAssociativeTable.accepted=1 and  StudentCourseAssociativeTable.Pending=0 and StudentCourseAssociativeTable.Subscribe=1 "
 		Else
 			param2 = ""
 		End If

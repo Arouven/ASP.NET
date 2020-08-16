@@ -5,11 +5,17 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		Label1.Text = DateTime.Now.ToString()
-		If (Not Page.IsPostBack) Then
-			LoadCategory()
-			TextBox1_TextChanged(TextBox1, Nothing)
+
+		If Not IsNothing(Session("AdminId")) Then
+			If (Not Page.IsPostBack) Then
+				LoadCategory()
+				TextBox1_TextChanged(TextBox1, Nothing)
+			End If
+		Else Response.Redirect("~/Admin/AdminLogin.aspx")
 		End If
+
+
+
 	End Sub
 	Private Sub LoadCategory()
 
@@ -27,12 +33,12 @@
 		Dim sqlParam As String = ""
 		Dim sqlParamCat As String = ""
 		If (Not IsNothing(TextBox1.Text.Trim())) Then
-			sqlParam = "and UserName LIKE '%' + @mname + '%'"
+			sqlParam = " UserName LIKE '%' + @mname + '%'"
 		End If
 		If (Freeze <> "-1") Then
-			sqlParamCat = "and Freeze = @Freeze"
+			sqlParamCat = " and Freeze = @Freeze"
 		End If
-		cmd.CommandText = "SELECT TutorId, ProfilePictureUrl, UserName FROM TutorTable WHERE  " + sqlParam + sqlParamCat
+		cmd.CommandText = "SELECT TutorId, ProfilePictureUrl, UserName FROM TutorTable WHERE" + sqlParam + sqlParamCat
 		cmd.Parameters.AddWithValue("@mname", TextBox1.Text.Trim())
 		cmd.Parameters.AddWithValue("@Freeze", Freeze)
 		Dim table As New DataTable()

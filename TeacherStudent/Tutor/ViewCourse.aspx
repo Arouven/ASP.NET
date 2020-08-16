@@ -284,6 +284,21 @@
 			document.getElementById("<%=SendA.ClientID%>").value = counter;
 			document.getElementById("ddl" + counter).selectedIndex = "0";
 			counter++;
+			$('[name*="ddl"]').each(function () {
+				$(this).rules('add', {
+					required: true,
+					messages: {
+						required: "Please Select a Type"
+					}
+				});
+			});
+			$('[name*="file"]').each(function () {
+				$(this).rules('add', {
+					required: true,
+					filesize: 3
+
+				});
+			});
 		}
 
 		function RemoveFileUpload(div) {

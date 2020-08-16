@@ -5,15 +5,15 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 
-	Dim StudentId As Integer
+	Private StudentId As Integer
 
 	Private Sub showCourseDetails()
 		Dim con As New SqlClient.SqlConnection(_conString)
 		Dim cmd As New SqlClient.SqlCommand()
 		cmd.Connection = con
 		cmd.CommandType = CommandType.Text
-		cmd.CommandText = "select * from StudentTable where TutorId=@TutorId;"
-		cmd.Parameters.AddWithValue("@StudentId", Studentid)
+		cmd.CommandText = "select * from StudentTable where Studentid=@Studentid;"
+		cmd.Parameters.AddWithValue("@StudentId", StudentId)
 		Dim reader As SqlClient.SqlDataReader
 		con.Open()
 		reader = cmd.ExecuteReader()
@@ -34,8 +34,10 @@
 		con.Close()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-		StudentId = 32 '''''''''''''''''''''''''''''''''''
+		If Not IsNothing(Session("StudentId")) Then
+			StudentId = Session("StudentId")
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
+		End If
 		If Not IsPostBack Then
 			showCourseDetails()
 		End If
@@ -136,6 +138,7 @@
 		'create a parameterized query
 		cmd.Parameters.AddWithValue("@UserName", userName)
 		'Create DataReader
+		con.Open()
 		Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar)
 		If count > 1 Then
 			Return True 'exist
@@ -254,7 +257,7 @@ where StudentId=@StudentId;"
 				lblStatus.Text = "Username Already Exist, Please Choose Another"
 				lblStatus.ForeColor = System.Drawing.Color.Red
 				TextBoxUsernameReg.Focus()
-			ElseIf (UsernameExistInStudenttable(TextBoxUsernameReg.Text)) Then
+			ElseIf (UsernameExistInStudentTable(TextBoxUsernameReg.Text)) Then
 				lblStatus.Text = "Username Already Exist, Please Choose Another"
 				lblStatus.ForeColor = System.Drawing.Color.Red
 				TextBoxUsernameReg.Focus()

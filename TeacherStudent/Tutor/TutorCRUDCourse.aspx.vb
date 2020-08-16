@@ -22,8 +22,12 @@
 	End Sub
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		tutorid = 3 ''''''''''''''''''''''''tutorid form session
-		GetCourses()
+		If Not IsNothing(Session("TutorId")) Then
+			tutorid = Session("TutorId")
+			GetCourses()
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
+		End If
+
 	End Sub
 	Protected Sub btnDelete_Click(sender As Object, e As EventArgs)
 		Dim con As New SqlClient.SqlConnection(_conString)

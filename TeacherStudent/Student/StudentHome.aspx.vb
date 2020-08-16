@@ -39,11 +39,15 @@ where  StudentId=@StudentId;"
 		con.Close()
 	End Function
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		StudentId = 32 '''''''''''''''''''''''''''''
-		LabelWelcome.Text = "Welcome " & Session("StudentUsername") & " you are logged in as Student"
-		LabelTotalCourse.Text = TotalCourse()
-		LabelMyTotalCourses.Text = MyTotalCourses()
-		LabelEvents.Text = MyEvents()
+		If Not IsNothing(Session("StudentId")) Then
+			StudentId = Session("StudentId")
+			LabelWelcome.Text = "Welcome " & Session("StudentUsername") & " you are logged in as Student"
+			LabelTotalCourse.Text = TotalCourse()
+			LabelMyTotalCourses.Text = MyTotalCourses()
+			LabelEvents.Text = MyEvents()
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
+		End If
+
 	End Sub
 
 End Class

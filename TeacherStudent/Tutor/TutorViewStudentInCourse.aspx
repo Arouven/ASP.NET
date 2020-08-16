@@ -1,12 +1,11 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorViewStudentInCourse.aspx.vb" Inherits="TeacherStudent.TutorViewStudentInCourse" %>
+﻿<%@ Page Title="Students in course" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorViewStudentInCourse.aspx.vb" Inherits="TeacherStudent.TutorViewStudentInCourse" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 	<div class="col-sm-12">
-		<h1>Tutor</h1>
+		<h1>Course : <asp:Label ID="Labelcoursename" runat="server" Text=""></asp:Label></h1>
 		<h3>
-			<asp:Label ID="LabelTotalTutorUnfreeze" runat="server" Text="Label"></asp:Label>
 		</h3>
 
 		<asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -22,7 +21,7 @@
 								
 							</div>
 							<div class="col-sm-3">
-									<asp:TextBox ID="txtSearch" AutoPostBack="true" CssClass="form-control"  runat="server" CausesValidation="false" OnTextChanged="txtSearch_TextChanged" placeholder="Search Course"></asp:TextBox>								
+									<asp:TextBox ID="txtSearch" AutoPostBack="true" CssClass="form-control"  runat="server" CausesValidation="false" OnTextChanged="txtSearch_TextChanged" placeholder="Search Student"></asp:TextBox>								
 							</div>
 							<div class="col-sm-1">
 									<label><i class="fa fa-search"></i></label>								
@@ -48,8 +47,8 @@
 
 											<div class="course-footer d-lg-flex align-items-center justify-content-between">
 												
-												<asp:linkButton ID="ButtonOpenStudent" class="btn btn-success" runat="server" Text="StudentUsername" CommandArgument='<%# Eval("StudentId") %>' OnClick="ButtonOpenStudent_Click" />
-												<div class="btn btn-success"><a class="btn btn-main-2 btn-small"><%# Eval("UserName") %></a></div>
+												<asp:linkButton ID="ButtonOpenStudent" class="btn btn-success" runat="server" Text="Details" CommandArgument='<%# Eval("StudentId") %>' OnClick="ButtonOpenStudent_Click" />
+											
 											</div>
 										</div>
 									</div>
@@ -60,18 +59,6 @@
 						</asp:Repeater>
 
 
-						<%--		<asp:DataList ID="DataListTutorUnfreeze" runat="server" RepeatColumns="5" RepeatDirection="Horizontal" GridLines="Both" RepeatLayout="Flow">
-			<ItemTemplate>
-				<div class="card bg-warning text-white h-60" style="width: 195px; float: left; margin: 8px;">
-					<asp:Image runat="server" ImageUrl='<%# Eval("ProfilePictureUrl", "~/ProfilePictures/{0}")%>' ID="Image1" CssClass="card-img-top mx-auto d-block rounded" AlternateText="Card image" Width="190px" Height="200px" />
-					<div class="card-body">
-						<p class="card-text text-center">
-							<asp:HyperLink CssClass="btn btn-primary" runat="server" NavigateUrl='<%#Eval("StudentId", "~/Admin/UserDetails.aspx?user=Tutor&id={0}")%>'><%# Eval("UserName")%></asp:HyperLink>
-						</p>
-					</div>
-				</div>
-			</ItemTemplate>
-		</asp:DataList>--%>
 					</div>
 				</div>
 			</ContentTemplate>

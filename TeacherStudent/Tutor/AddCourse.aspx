@@ -127,36 +127,15 @@
 
 	<script>
 
-		//if ($('#videoUploadFile').get(0).files.length === 0) {
-		//	console.log("No files selected.");
-		//}
-		//$.validator.addMethod("valueNotEquals", function (value, element, arg) {
-		//	return arg !== value;
-		//}, "Value must not equal arg.");
-
-
-
-
-		//$("input[type=checkbox]").attr("name", "checkedornot");
+		
 		var validator = $('#myform').validate({
-			//rules: {
-			//	checkedornot: {required:true }
-			//},
-			//messages: {
-			//	//checkedornot: { minlength: "Please select at least one." }
-			//},
-			//errorPlacement: function (error, element) {
-			//	if (element.attr("name") == "checkedornot") {
-			//		error.appendTo("#errorToShow");
-			//	} else {
-			//		error.insertAfter(element);
-			//	}
-			//}
+
 
 		});
 		$.validator.addMethod('filesize', function (value, element, param) {
 			return this.optional(element) || (element.files[0].size <= param * 1000000)
 		}, 'File size must be less than {0} MB');
+
 		$('[name*="file"]').each(function () {
 			$(this).rules('add', {
 				required: true,
@@ -207,6 +186,21 @@
 			document.getElementById("<%=SendA.ClientID%>").value = counter;
 			document.getElementById("ddl" + counter).selectedIndex = "0";
 			counter++;
+			$('[name*="file"]').each(function () {
+				$(this).rules('add', {
+					required: true,
+					filesize: 3
+
+				});
+			});
+			$('[name*="ddl"]').each(function () {
+				$(this).rules('add', {
+					required: true,
+					messages: {
+						required: "Please Select a Type"
+					}
+				});
+			});
 		}
 
 		function RemoveFileUpload(div) {

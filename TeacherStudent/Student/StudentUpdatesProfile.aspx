@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="StudentUpdatesProfile.aspx.vb" Inherits="TeacherStudent.StudentUpdatesProfile" %>
+﻿<%@ Page Title="Update Profile" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="StudentUpdatesProfile.aspx.vb" Inherits="TeacherStudent.StudentUpdatesProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 <style>
 		@font-face {
@@ -120,5 +120,5 @@
 	<script>
 
 
-	</script>
+</script>
 </asp:Content>

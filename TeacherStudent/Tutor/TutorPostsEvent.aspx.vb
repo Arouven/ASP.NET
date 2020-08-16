@@ -24,11 +24,6 @@
 		Response.Redirect("~/Tutor/ViewEvents")
 	End Sub
 
-	Private Sub LoginRequired(mySession)
-		If Not IsNothing(mySession) Then 'there is something
-		Else : Response.Redirect("~/LoginRequired")
-		End If
-	End Sub
 
 
 
@@ -42,8 +37,12 @@
 	End Sub
 
 	Protected Sub LinkButtonAdd_Click(sender As Object, e As EventArgs)
-		Dim tutorid As Integer = 3 ''''''tutorid
-		insertEvent(tutorid) 'will be taken from session
+		If Not IsNothing(Session("TutorId")) Then
+			Dim tutorid As Integer = Session("TutorId")
+			insertEvent(tutorid) 'will be taken from session
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
+		End If
+
 	End Sub
 
 

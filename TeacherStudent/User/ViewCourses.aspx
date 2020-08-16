@@ -41,14 +41,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 	<div class="breadcumb-area bg-img" style="background-image: url(../img/bg-img/breadcumb.jpg);">
 		<div class="bradcumbContent">
-			<h2>List of Courses Available</h2>
+			<h2>Courses Available</h2>
 		</div>
 	</div>
 	<div class="section-padding-100-0">
 	<div class="container">
 		<div class="row form-group" runat="server">
 			<div class="col-sm-6 " style="float: left">
-				<h2>List of Movies</h2>
+				<h2>List of Courses</h2>
 			</div>
 			<div class="col-sm-3" style="float: right;">
 				<div class="input-group">
@@ -71,7 +71,7 @@
 				<asp:ListView ID="lvMovies" runat="server" ItemPlaceholderID="itemPlaceholder" DataKeyNames="courseid" ClientIDMode="Static">
 					<ItemTemplate>
 						<div class="card h-100" style="width: 195px; float: left; margin: 8px;">
-							<image runat="server" ID="Image1" class="card-img-top" alt="Card image" Width="193px" Height="195px"><i class="icon-contract"></i></image>
+							<asp:image runat="server" ID="Image1" imageurl="~/img/course.png" class="card-img-top" alt="Card image" Width="193px" Height="195px"></asp:image>
 							<div class="card-body">
 								<h6 class="card-title"><%# Eval("coursename")%></h6>
 								<p class="card-text">
@@ -82,7 +82,7 @@
 									</strong></span><%# Eval("aimsandobjectives")%>
 								</p>
 								<%--Eval movie_id as the commandargument--%>
-								<asp:LinkButton ID="LinkButton1" runat="server" Text="Request access" CommandArgument='<%#Eval("courseid") %>' CommandName="btnAccess" CssClass="btn btn-primary" />
+								<asp:LinkButton ID="LinkButtonDescription" runat="server" Text="Details" CommandArgument='<%#Eval("courseid") %>' OnClick="LinkButtonDescription_Click" CommandName="btnAccess" CssClass="btn btn-primary" />
 							</div>
 						</div>
 					</ItemTemplate>
@@ -111,23 +111,7 @@
 	</div>
 		
 		
-	<%--	<div class="tbldiv">
-		<asp:GridView ID="gvs" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="gvs_PreRender">
-			<Columns>
-				<asp:BoundField DataField="CourseName" HeaderText="Course Name" />
-				<asp:BoundField DataField="DateSchedule" HeaderText="Date Schedule" />
-				<asp:BoundField DataField="AimsAndObjectives" HeaderText="Aims" />
-				<asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center">
-					<ItemTemplate>
-
-						<asp:LinkButton onclick="btnSubscribe_Click" OnClientClick="return Confirm('Subscribe To This Course?');" ID="btnSubscribe" CssClass="btn btn-success" runat="server" Text="Subscribe" ToolTip="Subscribe To Course"><span class="glyphicon glyphicon-envelope"></span></asp:LinkButton>&nbsp;&nbsp;
-
-					</ItemTemplate>
-				</asp:TemplateField>
-			</Columns>
-		</asp:GridView>
-		<br />
-	</div>--%>
+	
 
 </div>
 
@@ -139,18 +123,6 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scriptPlaceHolder1" runat="server">
 	<script>	
-		//(function ($) {
-		//	"use strict";
-		//	$(document).ready(function () {
-		//		//init dataTables
-		//		$('#gvs').dataTable({
-		//			lengthChange: true,
-		//			aoColumnDefs: [{ bSortable: false, aTargets: [-1] }],
-		//			info: true,
-		//			pageLength: 20
-		//		});
-		//	});
-		//}(jQuery));
 
 	</script>
 </asp:Content>

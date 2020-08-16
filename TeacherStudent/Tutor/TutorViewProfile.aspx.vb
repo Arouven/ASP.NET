@@ -50,12 +50,15 @@
 		gvs.DataBind()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-		TutorId = 28 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-		If Not IsPostBack Then
-			showCourseDetails()
-			GetMaterialList()
+		If Not IsNothing(Session("TutorId")) Then
+			TutorId = Session("TutorId")
+			If Not IsPostBack Then
+				showCourseDetails()
+				GetMaterialList()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
+
 
 	End Sub
 

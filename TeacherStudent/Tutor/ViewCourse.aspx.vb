@@ -58,7 +58,6 @@ MaterialAssociativeTable.MaterialId,
 MaterialAssociativeTable.CourseId,
 MaterialAssociativeTable.MaterialTypeId,
 MaterialAssociativeTable.MaterialPathUrl,
-MaterialAssociativeTable.DatePosted,
 MaterialAssociativeTable.MaterialName,
 MaterialTypeTable.MaterialTypeName
 from MaterialAssociativeTable
@@ -73,12 +72,18 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		gvs.DataBind()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		showCourseDetails()
-		GetMaterialList()
-		gvs_PreRender(gvs, Nothing)
-		If Not IsPostBack Then
-			populateMaterialName()
+		If Not IsNothing(Session("TutorId")) Then
+			showCourseDetails()
+			GetMaterialList()
+			gvs_PreRender(gvs, Nothing)
+			If Not IsPostBack Then
+				populateMaterialName()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
+
+
+
 
 	End Sub
 	Private Function DoesExist(MaterialPathUrl)
@@ -99,14 +104,13 @@ where MaterialAssociativeTable.courseid=@courseid;"
 	End Function
 	Private Sub uploadMaterial(UserName As String)
 
-		Dim courseid As Integer = Request.QueryString("id")
+		Dim courseid As Integer = Convert.ToInt64(Request.QueryString("id"))
 		Dim MaterialAssociativeTable As New DataTable
 		Dim noUploaded As Integer = 0
 		Dim noAlreadyExist As Integer = 0
 		MaterialAssociativeTable.Columns.Add("CourseId")
 		MaterialAssociativeTable.Columns.Add("MaterialTypeId")
 		MaterialAssociativeTable.Columns.Add("MaterialPathUrl")
-		MaterialAssociativeTable.Columns.Add("DatePosted")
 		MaterialAssociativeTable.Columns.Add("MaterialName")
 
 		Dim counter As Integer = Convert.ToInt32(SendA.Value)
@@ -132,12 +136,11 @@ where MaterialAssociativeTable.courseid=@courseid;"
 				End If
 				Dim MaterialName As String = IO.Path.GetFileName(PostedFile.FileName)
 				Dim MaterialPathUrl As String = customfolder & MaterialName
-				Dim DatePosted As DateTime = DateTime.Now
 
 				If DoesExist(MaterialPathUrl) Then
 					noAlreadyExist += 1
 				Else
-					MaterialAssociativeTable.Rows.Add(courseid, MaterialTypeId, MaterialPathUrl, DatePosted, MaterialName)
+					MaterialAssociativeTable.Rows.Add(courseid, MaterialTypeId, MaterialPathUrl, MaterialName)
 					PostedFile.SaveAs(Server.MapPath(customfolder) + MaterialName)
 					noUploaded += 1
 				End If
@@ -151,7 +154,7 @@ where MaterialAssociativeTable.courseid=@courseid;"
 		cmd.CommandType = CommandType.StoredProcedure
 		cmd.CommandText = "ProcedureInsertMaterialAssociative"
 		Dim param1 As SqlClient.SqlParameter = New SqlClient.SqlParameter
-		param1.ParameterName = "@TypeMaterialAssociativeTable"
+		param1.ParameterName = "@TypeMaterialAssociativeeTable"
 		param1.Value = MaterialAssociativeTable
 		cmd.Parameters.Add(param1)
 		con.Open()
@@ -241,7 +244,7 @@ where MaterialAssociativeTable.courseid=@courseid;"
 	End Sub
 
 	Protected Sub btnUpload_Click(sender As Object, e As EventArgs)
-		uploadMaterial("tom") 'will be taken from session
+		uploadMaterial(Session("TutorUsername")) 'will be taken from session
 	End Sub
 
 	Protected Sub btnUpdate_Click(sender As Object, e As EventArgs)

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminLogin.aspx.vb" Inherits="TeacherStudent.AdminLogin" %>
+﻿<%@ Page Title="Admin login" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="AdminLogin.aspx.vb" Inherits="TeacherStudent.AdminLogin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 
@@ -34,7 +34,6 @@
 					<asp:CheckBox runat="server" ID="AdminRememberMe" ValidationGroup="adminLoginGroup" Text="Remember me?" Checked="true" />
 				</div>
 				<div class="form-group">
-					<p class="message">Not registered? <a runat="server" href="~/Registration.aspx">Create an account</a></p>
 					<p class="message">Forgot <a href="#">Password?</a></p>
 				</div>
 			</div>

@@ -5,11 +5,7 @@
 		_conString = Web.Configuration.WebConfigurationManager.ConnectionStrings("TeacherStudentDBConnectionString").ConnectionString
 	End Sub
 
-	Private Sub LoginRequired(mySession)
-		If Not IsNothing(mySession) Then 'there is something
-		Else : Response.Redirect("~/LoginRequired")
-		End If
-	End Sub
+
 
 	Private Sub GetEventList()
 		Dim con As New SqlClient.SqlConnection(_conString)
@@ -33,8 +29,11 @@ inner join  tutortable on tutortable.TutorId=EventTable.TutorId ;"
 		End If
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		'LoginRequired(mySession)
-		GetEventList()
+		If Not IsNothing(Session("StudentId")) Then
+			GetEventList()
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
+		End If
+
 	End Sub
 
 End Class

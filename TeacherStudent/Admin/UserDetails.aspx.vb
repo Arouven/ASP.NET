@@ -8,7 +8,14 @@
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'LoginRequired()
-		showDetails(LabelTitle)
+		If Not IsNothing(Session("AdminId")) Then
+
+
+			showDetails(LabelTitle)
+
+		Else Response.Redirect("~/Admin/AdminLogin.aspx")
+		End If
+
 	End Sub
 	Private Sub LoginRequired()
 
@@ -104,7 +111,7 @@
 		cmd2.CommandType = CommandType.Text
 		cmd2.CommandText = "update " & tableName & " set Password=@Password where " & tableId & "=@requestId;"
 		'Create two parameterized queries
-		cmd2.Parameters.AddWithValue("@Password", encrypt(newPassword))
+		cmd2.Parameters.AddWithValue("@Password", Encrypt(newPassword))
 		cmd2.Parameters.AddWithValue("@requestId", requestId)
 		con2.Open()
 		'use Command method to execute UPDATE statement and return

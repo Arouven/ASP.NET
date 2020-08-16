@@ -22,8 +22,13 @@
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		'loginRequired()
-		If Not Page.IsPostBack Then : GetCourseCategory()
+		If Not IsNothing(Session("AdminId")) Then
+			If Not Page.IsPostBack Then : GetCourseCategory()
+			End If
+		Else Response.Redirect("~/Admin/AdminLogin.aspx")
 		End If
+
+
 	End Sub
 
 	Protected Sub btnDelete_Click(sender As Object, e As EventArgs)

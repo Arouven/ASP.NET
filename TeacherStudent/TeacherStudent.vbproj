@@ -146,7 +146,7 @@
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Student\TutorViewDetailStudent.aspx" />
+    <Content Include="Tutor\TutorViewDetailStudent.aspx" />
     <Content Include="Tutor\WebServiceCertExist.asmx" />
     <Content Include="User\Blog.aspx" />
     <Content Include="Contact.aspx" />
@@ -347,7 +347,6 @@
     <Content Include="Tutor\TutorLogin.aspx" />
     <Content Include="Tutor\TutorUpdateProfile.aspx" />
     <Content Include="Tutor\TutorViewProfile.aspx" />
-    <Content Include="User\StudentAdvanceSearch.aspx" />
     <Content Include="Student\StudentUpdatesProfile.aspx" />
     <Content Include="Student\StudentViewsEvents.aspx" />
     <Content Include="Student\StudentViewsListOfCourses.aspx" />
@@ -462,10 +461,10 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\TutorViewDetailStudent.aspx.designer.vb">
+    <Compile Include="Tutor\TutorViewDetailStudent.aspx.designer.vb">
       <DependentUpon>TutorViewDetailStudent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student\TutorViewDetailStudent.aspx.vb">
+    <Compile Include="Tutor\TutorViewDetailStudent.aspx.vb">
       <DependentUpon>TutorViewDetailStudent.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -614,13 +613,6 @@
     <Compile Include="Tutor\TutorViewProfile.aspx.vb">
       <DependentUpon>TutorViewProfile.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="User\StudentAdvanceSearch.aspx.designer.vb">
-      <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User\StudentAdvanceSearch.aspx.vb">
-      <DependentUpon>StudentAdvanceSearch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentUpdatesProfile.aspx.designer.vb">
       <DependentUpon>StudentUpdatesProfile.aspx</DependentUpon>

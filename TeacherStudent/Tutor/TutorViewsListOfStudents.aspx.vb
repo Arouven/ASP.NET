@@ -53,12 +53,16 @@ where  CourseTable.TutorId=@TutorId"
 		End If
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		TutorId = 1 'ssssssssssession
-		LabelTotalStudent.Text = TotalStudentInCourses(False, False).ToString
-		LabelTotalStudentPending.Text = TotalStudentInCourses(True, False).ToString
-		LabelTotalStudentRejected.Text = TotalStudentInCourses(False, True).ToString
-		If Not IsPostBack Then : GetEventList()
+		If Not IsNothing(Session("TutorId")) Then
+			TutorId = Session("TutorId")
+			LabelTotalStudent.Text = TotalStudentInCourses(False, False).ToString
+			LabelTotalStudentPending.Text = TotalStudentInCourses(True, False).ToString
+			LabelTotalStudentRejected.Text = TotalStudentInCourses(False, True).ToString
+			If Not IsPostBack Then : GetEventList()
+			End If
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
 		End If
+
 	End Sub
 
 	Protected Sub btnStud_Click(sender As Object, e As EventArgs)

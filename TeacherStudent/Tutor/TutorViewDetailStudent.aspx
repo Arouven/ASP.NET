@@ -1,9 +1,12 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorViewDetailStudent.aspx.vb" Inherits="TeacherStudent.TutorViewDetailStudent" %>
+﻿<%@ Page Title="Student Details" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorViewDetailStudent.aspx.vb" Inherits="TeacherStudent.TutorViewDetailStudent" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
+	<style>
+		.btnsize{width:200px;}
+	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<div class="form" style="width: 80%; margin: auto;">
+	<div class="form" style="width: 80%; ">
 		<div class="row form-group">
 			<div class="col-sm-10">
 				<br />
@@ -14,7 +17,7 @@
 			<asp:Image ID="Image1" CssClass="pull-right" runat="server" Style="display: block; margin-left: auto; width: 100px; height: 100px; border-radius: 50%;" AlternateText="Profile Picture" />
 		</div>
 
-		<div>
+		<div class="text-center">
 			<div class="row form-group">
 				<div class="col-sm-10">
 					<label class="col-sm-3 ">Username : </label>
@@ -66,12 +69,12 @@
 
 			<div class="row form-group d-flex justify-content-around">
 
-				<asp:LinkButton ID="LinkButtonBack" CssClass="btn btn-success btnsize" href="TutorViewStudentInCourse.aspx" runat="server">Back</asp:LinkButton>
+				<asp:LinkButton ID="LinkButtonBack" CssClass="btn btn-success btnsize" OnClick="LinkButtonBack_Click" runat="server">Back</asp:LinkButton>
 
 
 
-				<asp:LinkButton ID="ButtonAccept" runat="server" OnClientClick="return confirm('Are you sure you want to accept?')" Text="Accept" class="btn btn-primary" OnClick="ButtonAccept_Click" />
-				<asp:LinkButton ID="ButtonRejected" runat="server" OnClientClick="return confirm('Are you sure you want to reject?')" Text="Reject" class="btn btn-primary" OnClick="ButtonRejected_Click" />
+				<asp:LinkButton ID="ButtonAccept" runat="server" OnClientClick="return confirm('Are you sure you want to accept?')" Text="Accept" class="btn btn-primary btnsize" OnClick="ButtonAccept_Click" />
+				<asp:LinkButton ID="ButtonRejected" runat="server" OnClientClick="return confirm('Are you sure you want to reject?')" Text="Reject" class="btn btn-danger btnsize" OnClick="ButtonRejected_Click" />
 
 
 

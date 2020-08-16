@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorViewProfile.aspx.vb" Inherits="TeacherStudent.TutorViewProfile" %>
+﻿<%@ Page Title="View Profile" Language="vb" AutoEventWireup="false" MasterPageFile="~/master1.Master" CodeBehind="TutorViewProfile.aspx.vb" Inherits="TeacherStudent.TutorViewProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder1" runat="server">
 	<style>
 		@font-face {
@@ -131,7 +131,7 @@
 				</div>
 
 				<div class="row form-group">
-					<label class="col-sm-3 col-form-label myLable">New Certifite : </label>
+					<label class="col-sm-3 col-form-label myLable">New Certificate : </label>
 					<div class="col-sm-6">
 					<asp:TextBox ID="TextBoxCert" CssClass="form-control" runat="server" required></asp:TextBox></div>
 					<asp:Button ID="ButtonAddCert" runat="server" Text="Add Certification" OnClick="ButtonAddCert_Click" CssClass="btn btn-success col-sm-3"/>					
@@ -174,7 +174,7 @@
 		}(jQuery));
 
 		$('#myform').validate();
-		
+
 		$(document).ready(function () {
 			$(`#<%=TextBoxCert.ClientID%>`).keyup(function () {
 				var certificationName = $(this).val();
@@ -206,8 +206,7 @@
 				}
 			});
 		});
-		
+
 
 	</script>
 </asp:Content>
-

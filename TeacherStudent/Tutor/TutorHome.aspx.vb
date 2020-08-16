@@ -53,12 +53,16 @@ where  CourseTable.TutorId=@TutorId;"
 		con.Close()
 	End Function
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		TutorId = 28 '''''''''''''''''''''''''''''
-		LabelWelcome.Text = "Welcome " & Session("TutorUsername") & " you are logged in as Tutor"
-		LabelTotalCourse.Text = TotalCourse()
-		LabelMyTotalCourses.Text = MyTotalCourse()
-		LabelMyTotalStudent.Text = MyTotalStudent()
-		LabelMyEvents.Text = MyEvents()
+		If Not IsNothing(Session("TutorId")) Then
+			TutorId = Session("TutorId")
+			LabelWelcome.Text = "Welcome " & Session("TutorUsername") & " you are logged in as Tutor"
+			LabelTotalCourse.Text = TotalCourse()
+			LabelMyTotalCourses.Text = MyTotalCourse()
+			LabelMyTotalStudent.Text = MyTotalStudent()
+			LabelMyEvents.Text = MyEvents()
+		Else Response.Redirect("~/Tutor/TutorLogin.aspx")
+		End If
+
 	End Sub
 
 End Class

@@ -38,14 +38,14 @@
 		Dim sqlParam As String = ""
 		Dim sqlParamCat As String = ""
 		If (Not IsNothing(TextBox1.Text.Trim())) Then
-			sqlParam = "and coursetable.coursename LIKE '%' + @coursename + '%'"
+			sqlParam = " coursetable.coursename LIKE '%' + @coursename + '%'"
 		End If
 		If (CatIDs <> "-1") Then
-			sqlParamCat = "and categoryAssociativeTable.categoryid = @CatID"
+			sqlParamCat = " and categoryAssociativeTable.categoryid = @CatID"
 		End If
 		cmd.CommandText = "SELECT coursetable.courseid, coursetable.coursename, coursetable.AimsAndObjectives FROM coursetable
 inner join categoryAssociativeTable on coursetable.courseid=categoryAssociativeTable.courseid
-WHERE  " + sqlParam + sqlParamCat
+WHERE" + sqlParam + sqlParamCat
 		cmd.Parameters.AddWithValue("@coursename", TextBox1.Text.Trim())
 		cmd.Parameters.AddWithValue("@CatID", CatIDs)
 		Dim table As New DataTable()
@@ -66,56 +66,13 @@ WHERE  " + sqlParam + sqlParamCat
 
 
 
+	Protected Sub LinkButtonDescription_Click(sender As Object, e As EventArgs)
+		Dim courseid As Integer = Convert.ToInt32(CType(sender, LinkButton).CommandArgument)
+		If Not IsNothing(Session("StudentId")) Then
+			Response.Redirect("~/Student/ViewCourseDetails.aspx?id=" & courseid)
+		Else Response.Redirect("~/Student/StudentLogin.aspx")
+		End If
+	End Sub
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	'Private Sub GetCourselist()
-	'	Dim con As New SqlClient.SqlConnection(_conString)
-	'	Dim cmd As New SqlClient.SqlCommand()
-	'	cmd.Connection = con
-	'	con.Open()
-	'	cmd.CommandType = CommandType.Text
-	'	cmd.CommandText = "Select CourseName, DateSchedule,AimsAndObjectives from CourseTable;"
-	'	Dim sqlda As New SqlClient.SqlDataAdapter(cmd)
-	'	Dim dt As New DataTable()
-	'	sqlda.Fill(dt)
-	'	con.Close()
-	'	gvs.DataSource = dt
-	'	gvs.DataBind()
-	'End Sub
-
-	'Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-	'	'loginRequired()
-	'	If Not Page.IsPostBack Then : GetCourselist()
-	'	End If
-	'End Sub
-
-
-	'Protected Sub gvs_PreRender(sender As Object, e As EventArgs)
-	'	If (gvs.Rows.Count > 0) Then
-	'		gvs.UseAccessibleHeader = True
-	'		gvs.HeaderRow.TableSection = TableRowSection.TableHeader
-	'	End If
-	'End Sub
-
-	'Protected Sub btnSubscribe_Click(sender As Object, e As EventArgs)
-	'	Response.Redirect("~/LoginRequired.aspx")
-	'End Sub
 End Class
