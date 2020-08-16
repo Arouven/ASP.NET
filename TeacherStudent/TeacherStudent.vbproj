@@ -146,6 +146,7 @@
     <Content Include="App_Data\TeacherStudentDB_log.ldf">
       <DependentUpon>TeacherStudentDB.mdf</DependentUpon>
     </Content>
+    <Content Include="img\course.png" />
     <Content Include="Tutor\TutorViewDetailStudent.aspx" />
     <Content Include="Tutor\WebServiceCertExist.asmx" />
     <Content Include="User\Blog.aspx" />
