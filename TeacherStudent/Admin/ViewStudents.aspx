@@ -35,7 +35,6 @@
 								<p class="card-text">
 								</p>
 								<p class="card-text">
-									<span><strong>Box Office Totals:<br />
 								</p>
 								<%--Eval movie_id as the commandargument--%>
 								<asp:HyperLink CssClass="btn btn-primary" runat="server" NavigateUrl='<%#Eval("StudentId", "~/Admin/UserDetails.aspx?user=Student&id={0}")%>'>Details</asp:HyperLink>

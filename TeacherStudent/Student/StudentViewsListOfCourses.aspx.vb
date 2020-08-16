@@ -14,10 +14,10 @@
 			End If
 		Else Response.Redirect("~/Student/StudentLogin.aspx")
 
-			HiddenFieldStudentId.Value = StudentId
+
 		End If
 
-
+		HiddenFieldStudentId.Value = StudentId
 	End Sub
 	Private Sub BindCategoryData()
 		Dim sqlCon As New SqlClient.SqlConnection(_conString)

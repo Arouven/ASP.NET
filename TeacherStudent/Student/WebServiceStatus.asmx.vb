@@ -21,8 +21,8 @@ Public Class WebServiceStatus
         Using (con)
             Dim cmd As SqlClient.SqlCommand = New SqlClient.SqlCommand("ProcedureCheckStudStatsPerCourse", con)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add(New SqlClient.SqlParameter(parameterName:="@StudentId", value:=Convert.ToInt32(studentId)))
-            cmd.Parameters.Add(New SqlClient.SqlParameter(parameterName:="@CourseId", value:=Convert.ToInt32(courseId)))
+            cmd.Parameters.Add(New SqlClient.SqlParameter(parameterName:="@StudentId", value:=(studentId)))
+            cmd.Parameters.Add(New SqlClient.SqlParameter(parameterName:="@CourseId", value:=(courseId)))
             con.Open()
             Dim dr As SqlClient.SqlDataReader
             dr = cmd.ExecuteReader
@@ -35,8 +35,8 @@ Public Class WebServiceStatus
         End Using
 
         Dim o1 As ClassStudentStatsPerCourse = New ClassStudentStatsPerCourse()
-        o1.CourseId1 = Convert.ToInt32(courseId)
-        o1.studentId1 = Convert.ToInt32(studentId)
+        o1.CourseId1 = (courseId)
+        o1.StudentId1 = (studentId)
         o1.Pending1 = pending
         o1.Subscribe1 = subscribe
         o1.Accept1 = accept

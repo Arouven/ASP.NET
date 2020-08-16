@@ -26,7 +26,7 @@ Public Class ViewTutors1
 		myList.DataBind()
 	End Sub
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		Label1.Text = DateTime.Now.ToString()
+		TextBox1.Style.Add("display", "none")
 		FillListView(lvMovies)
 		If (Not Page.IsPostBack) Then
 			'LoadCategory()
@@ -46,11 +46,51 @@ Public Class ViewTutors1
 		If (Not IsNothing(TextBox1.Text.Trim())) Then
 			sqlParam = "UserName LIKE '%' + @UserName + '%'"
 		End If
+		Dim sql As String = "select * From TutorTable ;" ' & sqlParam
+		cmd.CommandText = sql
 
-		cmd.CommandText = "select * From TutorTable where " + sqlParam
+
+		'		'"Select distinct Username,CategoryName from CourseTable
+		'inner join  TutorTable on CourseTable.TutorId=TutorTable.TutorId 
+		'inner join  CategoryAssociativeTable on CourseTable.CourseId=CategoryAssociativeTable.CourseId 
+		'inner join  CategoryTable on CategoryAssociativeTable.CategoryId=CategoryTable.CategoryId 
+		' WHERE " & sqlParam & "
+		';" '"SELECT TutorId, UserName,  ProfilePictureUrl FROM TutorTable WHERE " + sqlParam + sqlParamCat
+		'cmd.Parameters.AddWithValue("@UserName", TextBox1.Text.Trim())
+		'Dim table As New DataTable()
+		'Dim da As New SqlClient.SqlDataAdapter(cmd)
 		con.Open()
 		Dim rdr As SqlClient.SqlDataReader = cmd.ExecuteReader
 
+		'If rdr.HasRows Then
+		'	Do While rdr.Read()
+
+		'		Dim item As ListViewItem
+
+		'		item.Text = rdr("au_lname")
+		'		item.SubItems.Add(rdr("au_fname"))
+		'		item.SubItems.Add(rdr("zip"))
+
+		'		lvMovies.Items.Add(item)
+
+		'	Loop
+		'Else
+		'	MsgBox("no records")
+		'End If
+		'con.Open()
+		'Dim dr As SqlClient.SqlDataReader
+		'dr = cmd.ExecuteReader
+
+		'While (dr.Read)
+		'	Dim itm As ListViewItem = New ListViewItem(dr(0).ToString)
+		'	lvMovies.Items.Add(itm)
+
+
+		'End While
+		'Dim obj As ListViewItem = New ListViewItem(,)
+		'da.Fill(table)
+		'lvMovies.DataSource = table
+		'lvMovies.DataBind()
 	End Sub
 	Protected Sub lvMovies_PagePropertiesChanging(sender As Object, e As PagePropertiesChangingEventArgs)
 		TryCast(lvMovies.FindControl("DataPager1"), DataPager).SetPageProperties(e.StartRowIndex, e.MaximumRows, False)

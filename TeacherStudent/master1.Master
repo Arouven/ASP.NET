@@ -110,7 +110,6 @@
 									<ul id="guestlinknav" runat="server">
 
 										<li><a runat="server" href="~/Home">Home</a></li>
-										<li><a runat="server" href="~/User/Course">Course</a>
 										<li><a runat="server" href="~/User/ViewCourses">Courses</a></li>
 										<li><a runat="server" href="~/User/ViewTutors">Tutors</a></li>
 										<li><a runat="server" href="~/About">About Us</a></li>

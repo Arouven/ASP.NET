@@ -59,7 +59,7 @@
 	End Function
 
 	Protected Sub LinkButtonBack_Click(sender As Object, e As EventArgs)
-		Response.Redirect("~/AdminViewsListOfTutorsStudents.aspx")
+		Response.Redirect("~/Admin/AdminHome")
 	End Sub
 
 

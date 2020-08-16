@@ -6,11 +6,10 @@
 
 
 
-	<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 	<div class="container">
 		<div class="row form-group" runat="server">
 			<div class="col-sm-6 " style="float: left">
-				<h2>List of Movies</h2>
+				<h2>List of Tutors</h2>
 			</div>
 			<div class="col-sm-3" style="float: right;">
 				<div class="input-group">

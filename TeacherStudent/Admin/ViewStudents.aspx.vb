@@ -21,7 +21,7 @@
 		ddlCategory.Items.Add(New ListItem("Freeze", "1"))
 		ddlCategory.Items.Add(New ListItem("Unfreeze", "0"))
 
-		ddlCategory.Items.Insert(0, New ListItem("Select Category", "-1"))
+		ddlCategory.Items.Insert(0, New ListItem("Select...", "-1"))
 	End Sub
 	Protected Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 		Dim Freeze As String = ddlCategory.SelectedValue
