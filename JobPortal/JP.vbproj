@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JP</RootNamespace>
+    <AssemblyName>JP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44388</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\AdList.xml" />
+    <Content Include="HouseKeeper\HKViewsListOfJobs.aspx" />
+    <Content Include="HouseKeeper\WebServiceStatus.asmx" />
+    <Content Include="HouseKeeper\ViewJobDetails.aspx" />
+    <Content Include="HouseKeeper\HKHome.aspx" />
+    <Content Include="HouseKeeper\WebServiceCertExist.asmx" />
+    <Content Include="HouseOwner\HORateHK.aspx" />
+    <Content Include="HouseKeeper\HKLogin.aspx" />
+    <Content Include="HouseOwner\HOHome.aspx" />
+    <Content Include="HouseOwner\HOLogin.aspx" />
+    <Content Include="HouseOwner\HOUpdateProfile.aspx" />
+    <Content Include="HouseOwner\HOViewProfile.aspx" />
+    <Content Include="HouseOwner\HOViewHKinJob.aspx" />
+    <Content Include="HouseOwner\HOViewHKProfile.aspx" />
+    <Content Include="HouseOwner\HOViewsListOfHK.aspx" />
+    <Content Include="HouseOwner\WebServiceGetHKStats.asmx" />
+    <Content Include="HouseOwner\AddJob.aspx" />
+    <Content Include="HouseOwner\UpdateJob.aspx" />
+    <Content Include="HouseOwner\ViewJob.aspx" />
+    <Content Include="Admin\AdminCRUDJob.aspx" />
+    <Content Include="Admin\ViewJob.aspx" />
+    <Content Include="HouseOwner\HOCRUDJob.aspx" />
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\AdminViewsListOfHOHK.aspx" />
+    <Content Include="Admin\ViewHK.aspx" />
+    <Content Include="Admin\ViewHO.aspx" />
+    <Content Include="HouseKeeper\HKUpdateProfile.aspx" />
+    <Content Include="HouseKeeper\HKViewProfile.aspx" />
+    <Content Include="Admin\AdminCRUDLocation.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\UserDetails.aspx" />
+    <Content Include="Admin\WebServiceLocation.asmx" />
+    <Content Include="Admin\WebServiceCategory.asmx" />
+    <Content Include="about-us.aspx" />
+    <Content Include="Admin\AdminCRUDCategory.aspx" />
+    <Content Include="App_Data\HOHKDB.mdf" />
+    <Content Include="App_Data\HOHKDB_log.ldf">
+      <DependentUpon>HOHKDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="blog-classic-sidebar.aspx" />
+    <Content Include="blog-classic.aspx" />
+    <Content Include="blog-detailed-grid-sidebar.aspx" />
+    <Content Include="blog-detailed-grid.aspx" />
+    <Content Include="blog-details.aspx" />
+    <Content Include="blog-left-img.aspx" />
+    <Content Include="browse-candidates.aspx" />
+    <Content Include="browse-job.aspx" />
+    <Content Include="coming-soon.aspx" />
+    <Content Include="companies.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="error-404.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="index.aspx" />
+    <Content Include="job-detail.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="MasterPage.Master" />
+    <Content Include="00Assignment\CheckMe.docx" />
+    <Content Include="00Assignment\CW_N20_InternetProgramming2.pdf" />
+    <Content Include="00Assignment\List of Functionalities.pdf" />
+    <Content Include="WebServiceUserNameExist.asmx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="portfolio-grid-2.aspx" />
+    <Content Include="portfolio-grid-3.aspx" />
+    <Content Include="portfolio-grid-4.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="submit-resume.aspx" />
+    <Content Include="User\ViewHOs.aspx" />
+    <Content Include="User\ViewJobs.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassUserName.vb" />
+    <Compile Include="HouseKeeper\ClassHKStatsPerJob.vb" />
+    <Compile Include="HouseKeeper\HKViewsListOfJobs.aspx.designer.vb">
+      <DependentUpon>HKViewsListOfJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeper\HKViewsListOfJobs.aspx.vb">
+      <DependentUpon>HKViewsListOfJobs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\WebServiceStatus.asmx.vb">
+      <DependentUpon>WebServiceStatus.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\ViewJobDetails.aspx.designer.vb">
+      <DependentUpon>ViewJobDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeper\ViewJobDetails.aspx.vb">
+      <DependentUpon>ViewJobDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\HKHome.aspx.designer.vb">
+      <DependentUpon>HKHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeper\HKHome.aspx.vb">
+      <DependentUpon>HKHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\ClassCertName.vb" />
+    <Compile Include="HouseKeeper\WebServiceCertExist.asmx.vb">
+      <DependentUpon>WebServiceCertExist.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HORateHK.aspx.designer.vb">
+      <DependentUpon>HORateHK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HORateHK.aspx.vb">
+      <DependentUpon>HORateHK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\HKLogin.aspx.designer.vb">
+      <DependentUpon>HKLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeper\HKLogin.aspx.vb">
+      <DependentUpon>HKLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOHome.aspx.designer.vb">
+      <DependentUpon>HOHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOHome.aspx.vb">
+      <DependentUpon>HOHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOLogin.aspx.designer.vb">
+      <DependentUpon>HOLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOLogin.aspx.vb">
+      <DependentUpon>HOLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOUpdateProfile.aspx.designer.vb">
+      <DependentUpon>HOUpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOUpdateProfile.aspx.vb">
+      <DependentUpon>HOUpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewProfile.aspx.designer.vb">
+      <DependentUpon>HOViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewProfile.aspx.vb">
+      <DependentUpon>HOViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\ClassHKStats.vb" />
+    <Compile Include="HouseOwner\HOViewHKinJob.aspx.designer.vb">
+      <DependentUpon>HOViewHKinJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewHKinJob.aspx.vb">
+      <DependentUpon>HOViewHKinJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewHKProfile.aspx.designer.vb">
+      <DependentUpon>HOViewHKProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewHKProfile.aspx.vb">
+      <DependentUpon>HOViewHKProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewsListOfHK.aspx.designer.vb">
+      <DependentUpon>HOViewsListOfHK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOViewsListOfHK.aspx.vb">
+      <DependentUpon>HOViewsListOfHK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\WebServiceGetHKStats.asmx.vb">
+      <DependentUpon>WebServiceGetHKStats.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\AddJob.aspx.designer.vb">
+      <DependentUpon>AddJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\AddJob.aspx.vb">
+      <DependentUpon>AddJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\UpdateJob.aspx.designer.vb">
+      <DependentUpon>UpdateJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\UpdateJob.aspx.vb">
+      <DependentUpon>UpdateJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\ViewJob.aspx.designer.vb">
+      <DependentUpon>ViewJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\ViewJob.aspx.vb">
+      <DependentUpon>ViewJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCRUDJob.aspx.designer.vb">
+      <DependentUpon>AdminCRUDJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCRUDJob.aspx.vb">
+      <DependentUpon>AdminCRUDJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewJob.aspx.designer.vb">
+      <DependentUpon>ViewJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewJob.aspx.vb">
+      <DependentUpon>ViewJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseOwner\HOCRUDJob.aspx.designer.vb">
+      <DependentUpon>HOCRUDJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwner\HOCRUDJob.aspx.vb">
+      <DependentUpon>HOCRUDJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.designer.vb">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.vb">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminViewsListOfHOHK.aspx.designer.vb">
+      <DependentUpon>AdminViewsListOfHOHK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminViewsListOfHOHK.aspx.vb">
+      <DependentUpon>AdminViewsListOfHOHK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewHK.aspx.designer.vb">
+      <DependentUpon>ViewHK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewHK.aspx.vb">
+      <DependentUpon>ViewHK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewHO.aspx.designer.vb">
+      <DependentUpon>ViewHO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewHO.aspx.vb">
+      <DependentUpon>ViewHO.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\HKUpdateProfile.aspx.designer.vb">
+      <DependentUpon>HKUpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeper\HKUpdateProfile.aspx.vb">
+      <DependentUpon>HKUpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HouseKeeper\HKViewProfile.aspx.designer.vb">
+      <DependentUpon>HKViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeper\HKViewProfile.aspx.vb">
+      <DependentUpon>HKViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCRUDLocation.aspx.designer.vb">
+      <DependentUpon>AdminCRUDLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCRUDLocation.aspx.vb">
+      <DependentUpon>AdminCRUDLocation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.vb">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.vb">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.designer.vb">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.vb">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ClassLocationName.vb" />
+    <Compile Include="Admin\WebServiceLocation.asmx.vb">
+      <DependentUpon>WebServiceLocation.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\ClassCategoryName.vb" />
+    <Compile Include="Admin\WebServiceCategory.asmx.vb">
+      <DependentUpon>WebServiceCategory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="about-us.aspx.designer.vb">
+      <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about-us.aspx.vb">
+      <DependentUpon>about-us.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCRUDCategory.aspx.designer.vb">
+      <DependentUpon>AdminCRUDCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCRUDCategory.aspx.vb">
+      <DependentUpon>AdminCRUDCategory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="blog-classic-sidebar.aspx.designer.vb">
+      <DependentUpon>blog-classic-sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-classic-sidebar.aspx.vb">
+      <DependentUpon>blog-classic-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="blog-classic.aspx.designer.vb">
+      <DependentUpon>blog-classic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-classic.aspx.vb">
+      <DependentUpon>blog-classic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="blog-detailed-grid-sidebar.aspx.designer.vb">
+      <DependentUpon>blog-detailed-grid-sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-detailed-grid-sidebar.aspx.vb">
+      <DependentUpon>blog-detailed-grid-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="blog-detailed-grid.aspx.designer.vb">
+      <DependentUpon>blog-detailed-grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-detailed-grid.aspx.vb">
+      <DependentUpon>blog-detailed-grid.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="blog-details.aspx.designer.vb">
+      <DependentUpon>blog-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-details.aspx.vb">
+      <DependentUpon>blog-details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="blog-left-img.aspx.designer.vb">
+      <DependentUpon>blog-left-img.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-left-img.aspx.vb">
+      <DependentUpon>blog-left-img.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="browse-candidates.aspx.designer.vb">
+      <DependentUpon>browse-candidates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="browse-candidates.aspx.vb">
+      <DependentUpon>browse-candidates.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="browse-job.aspx.designer.vb">
+      <DependentUpon>browse-job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="browse-job.aspx.vb">
+      <DependentUpon>browse-job.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClassSendMail.vb" />
+    <Compile Include="coming-soon.aspx.designer.vb">
+      <DependentUpon>coming-soon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="coming-soon.aspx.vb">
+      <DependentUpon>coming-soon.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="companies.aspx.designer.vb">
+      <DependentUpon>companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="companies.aspx.vb">
+      <DependentUpon>companies.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.vb">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.vb">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="error-404.aspx.designer.vb">
+      <DependentUpon>error-404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error-404.aspx.vb">
+      <DependentUpon>error-404.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="job-detail.aspx.designer.vb">
+      <DependentUpon>job-detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job-detail.aspx.vb">
+      <DependentUpon>job-detail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.vb">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.vb">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="portfolio-grid-2.aspx.designer.vb">
+      <DependentUpon>portfolio-grid-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="portfolio-grid-2.aspx.vb">
+      <DependentUpon>portfolio-grid-2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="portfolio-grid-3.aspx.designer.vb">
+      <DependentUpon>portfolio-grid-3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="portfolio-grid-3.aspx.vb">
+      <DependentUpon>portfolio-grid-3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="portfolio-grid-4.aspx.designer.vb">
+      <DependentUpon>portfolio-grid-4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="portfolio-grid-4.aspx.vb">
+      <DependentUpon>portfolio-grid-4.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.vb">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.vb">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="submit-resume.aspx.designer.vb">
+      <DependentUpon>submit-resume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="submit-resume.aspx.vb">
+      <DependentUpon>submit-resume.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewHOs.aspx.designer.vb">
+      <DependentUpon>ViewHOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewHOs.aspx.vb">
+      <DependentUpon>ViewHOs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewJobs.aspx.designer.vb">
+      <DependentUpon>ViewJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewJobs.aspx.vb">
+      <DependentUpon>ViewJobs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServiceUserNameExist.asmx.vb">
+      <DependentUpon>WebServiceUserNameExist.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="ViewSwitcher.ascx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="0HouseOwner\" />
+    <Folder Include="ProfilePictures\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61774</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44388/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

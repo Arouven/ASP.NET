@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <!-- Banner Advertisements -->
+  <Ad>
+    <ImageUrl>~/img/clients-img/partner-1.png</ImageUrl>
+    <NavigateUrl>https://www.dpr.com/</NavigateUrl>
+    <AlternateText>pixar</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/img/clients-img/partner-2.png</ImageUrl>
+    <NavigateUrl>https://www.pirateproxy-bay.com/</NavigateUrl>
+    <AlternateText>The Pirate</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/img/clients-img/partner-3.png</ImageUrl>
+    <NavigateUrl>https://www.tripadvisor.com/ShowUserReviews-g293890-d8370203-r614828668-Himalayan_Mentor-Kathmandu_Kathmandu_Valley_Bagmati_Zone_Central_Region.html</NavigateUrl>
+    <AlternateText>Hymalayas</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/img/clients-img/partner-4.png</ImageUrl>
+    <NavigateUrl>https://www.collinsdictionary.com/dictionary/english/s-a</NavigateUrl>
+    <AlternateText>S'A</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/img/clients-img/partner-5.png</ImageUrl>
+    <NavigateUrl>https://www.tripadvisor.com/Restaurants-g1819746-Porth_Rhondda_Cynon_Taf_South_Wales_Wales.html</NavigateUrl>
+    <AlternateText>South Porth</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+</Advertisements>
